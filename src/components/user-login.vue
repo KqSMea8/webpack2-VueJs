@@ -10,6 +10,7 @@
 				<user-name :placeholder = "placeholder"></user-name>
 				<user-pass plahol = "请输入用户密码"></user-pass>
 				<user-area></user-area>
+				<user-fav></user-fav>
 				<user-submit></user-submit>
 			</form>
 		</div>
@@ -28,6 +29,7 @@
 	import username from "./user/user-name.vue";
 	import userpass from "./user/user-pass.vue";
 	import userarea from "./user/user-area.vue";
+	import userfav from "./user/user-fav.vue";
 	import usersubmit from "./user/user-submit.vue";
 	
 	export default{
@@ -46,6 +48,7 @@
 			"user-name"   : username,
 			"user-pass"   : userpass,
 			"user-area"   : userarea,
+			"user-fav"   : userfav,
 			"user-submit" : usersubmit
 		},
 		created(){

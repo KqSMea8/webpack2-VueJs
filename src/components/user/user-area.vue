@@ -7,7 +7,7 @@
 		<div class = "form-group">
 			<label class = "col-sm-2">地区</label>
 			<div class = "col-sm-10">
-				<select :value = "selectedIndex" @input = "selectedIndex=$event.target.value" class = "form-group" v-on:change = "seletecChange">
+				<select :value = "selectedIndex" @input = "selectedIndex=$event.target.value" v-on:change = "seletecChange">
 					<option v-for = "a in areas" v-bind:value = "a.id">{{a.text}}</option>
 				</select>
 			</div>
