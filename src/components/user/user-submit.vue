@@ -21,6 +21,8 @@
 				//console.log(this.$parent.$refs.username.$data.username);
 				//拿到父组件定义的属性username，也就是user-name触发change事件发送过来的数据
 				console.log(this.$parent.$data.username);
+				console.log(this.$parent.$data.userpass);
+				console.log(this.$parent.$data.userarea);
 			}
 		}
 	}
