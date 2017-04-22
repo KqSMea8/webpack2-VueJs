@@ -9,25 +9,24 @@ import VueResource from "vue-resource";
 // 导入组件
 import pageNav from "./../components/page-nav.vue";
 import aboutMe from "./../components/aboutme.vue";
-
 //import userLogin from "./../components/user-login.vue";
 const userLogin = resolve => {
 	// 成功之后的回调
-	resolve(require("./../components/user-login.vue")); // 这就是异步加载的方式
+	resolve( require( "./../components/user-login.vue" ) ); // 这就是异步加载的方式
 }
-
 import news from "./../components/news.vue";
-
 //import newsDetail from "./../components/news-detail.vue";
-
 const newsDetail = resolve => {
 	// 成功之后的回调
-	resolve(require("./../components/news-detail.vue")); // 这就是异步加载的方式
+	resolve( require( "./../components/news-detail.vue" ) ); // 这就是异步加载的方式
 }
-
+import validate from "./../components/validate";
 // 全局使用插件
 Vue.use( VueRouter );
 Vue.use( VueResource );
+Vue.use( validate );
+
+
 const routes = [
 	{ path : '/news',component : news,name : 'news', },
 	{ path : '/news/:newsid',component : newsDetail,name : 'newsDetail', },
@@ -42,6 +41,5 @@ Vue.component( "nav_component",pageNav );
 const myvue = new Vue( {
 	router : router
 } ).$mount( '.container' )
-
-router.push({name : 'aboutMe'})
+router.push( { name : 'aboutMe' } )
 
