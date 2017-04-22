@@ -20,6 +20,56 @@ export default{
 				el.focus()
 			}
 		})
+		// 注册一个全局自定义指令 v-uname
+		Vue.directive( 'uname',{
+			// 只调用一次，指令第一次绑定到元素时调用，用这个钩子函数可以定义一个在绑定时执行一次的初始化动作。
+			//el: 指令所绑定的元素，可以用来直接操作 DOM
+			//binding: 一个对象，包含指令名、指令的绑定值等属性
+			//vnode: Vue 编译生成的虚拟节点
+			bind : function( el,binding,vnode ) {
+				let s = JSON.stringify
+				let str = ''
+				str =
+					'name: '+  s( binding.name ) +
+					'\n value: '+  s( binding.value ) +
+					'\n expression: '+  s( binding.expression ) +
+					'\n argument: '+  s( binding.arg ) +
+					'\n modifiers: '+  s( binding.modifiers ) +
+					'\n vnode keys: '+  Object.keys( vnode ).join( ', ' )
+				;
+				console.log( str );
+				
+				//使用基础 Vue 构造器，创建一个“子类”。
+				let errorTpl = Vue.extend({
+					template:'<label class="label label-danger">用户不合法</label>'
+				});
+				//Vue 实例在实例化时没有收到 el 选项，则它处于“未挂载”状态，没有关联的 DOM 元素。
+				//返回值： vm - 实例自身
+				let component = new errorTpl().$mount()
+				//一个HTMLElement元素
+				Vue.errorLabel = component.$el;
+			},
+			//被绑定元素所在的模板更新时调用，而不论绑定值是否变化。通过比较更新前后的绑定值，可以忽略不必要的模板更新。
+			update( el,binding,vnode ){
+				console.log( el );
+				console.dir( binding );
+				console.dir( vnode );
+				if(/\w{6,10}/.test(el.value)){
+					// 验证通过
+					if (Vue.hasError){
+						el.parentNode.removeChild(Vue.errorLabel);
+						Vue.hasError = !Vue.hasError;
+					}
+				}else{
+					// 验证没有通过
+					if (!Vue.hasError){
+						el.parentNode.appendChild(Vue.errorLabel);
+						Vue.hasError = ! Vue.hasError;
+					}
+					
+				}
+			}
+		})
 		
 		// 3. 注入组件
 		Vue.mixin({
@@ -30,6 +80,10 @@ export default{
 		
 		// 4. 添加实例方法
 		// Vue.prototype.$myName = "zhagngsan";
+		//errorLabel错误提示模板
+		Vue.prototype.errorLabel = null;
+		//hasError 是辅助属性，方便我们用来判断当前是有错误还是没有错误。
+		Vue.prototype.hasError = false;
 		Vue.prototype.checkUserName = ( value ) => {
 			if( value == "" ) {
 				return true; // 如果没有填写,默认为true

@@ -40,34 +40,6 @@
 				}
 			}
 		},
-		mounted(){},
-		//注册局部指令，组件中接受一个 directives 的选项
-		directives : {
-			uname : {
-				// 只调用一次，指令第一次绑定到元素时调用，用这个钩子函数可以定义一个在绑定时执行一次的初始化动作。
-				//el: 指令所绑定的元素，可以用来直接操作 DOM
-				//binding: 一个对象，包含指令名、指令的绑定值等属性
-				//vnode: Vue 编译生成的虚拟节点
-				bind : function( el,binding,vnode ) {
-					let s = JSON.stringify
-					let str = ''
-					str =
-						'name: '+  s( binding.name ) +
-						'\n value: '+  s( binding.value ) +
-						'\n expression: '+  s( binding.expression ) +
-						'\n argument: '+  s( binding.arg ) +
-						'\n modifiers: '+  s( binding.modifiers ) +
-						'\n vnode keys: '+  Object.keys( vnode ).join( ', ' )
-					;
-					console.log( str );
-				},
-				//被绑定元素所在的模板更新时调用，而不论绑定值是否变化。通过比较更新前后的绑定值，可以忽略不必要的模板更新。
-				update( el,binding,vnode ){
-					console.log( el );
-					console.dir( binding );
-					console.dir( vnode );
-				}
-			}
-		}
+		mounted(){}
 	}
 </script>
