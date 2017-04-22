@@ -22,7 +22,8 @@
 		},
 		methods:{
 			passchg(){
-				this.$emit("iptChange","userpass",this.passwrd)
+				//this.$emit("iptChange","userpass",this.passwrd)
+				this.$store.state.password = this.passwrd;
 			}
 		}
 		

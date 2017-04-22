@@ -6,6 +6,8 @@ import Vue from "vue";
 //通过 Browserify 或 Webpack 使用 CommonJS 兼容模块
 import VueRouter  from "vue-router";
 import VueResource from "vue-resource";
+import Vuex from 'vuex';
+
 // 导入组件
 import pageNav from "./../components/page-nav.vue";
 import aboutMe from "./../components/aboutme.vue";
@@ -25,6 +27,7 @@ import validate from "./../components/validate";
 Vue.use( VueRouter );
 Vue.use( VueResource );
 Vue.use( validate );
+Vue.use( Vuex );
 
 
 const routes = [
@@ -37,9 +40,21 @@ const router = new VueRouter( {
 	routes
 } )
 //注册全局组件，使用 Vue.component(tagName, options)
-Vue.component( "nav_component",pageNav );
+Vue.component( "nav_component",pageNav )
+
+const vuex_store = new Vuex.Store({
+	state: {
+		password: ''
+	},
+	mutations: {
+		showPassword: state => alert(state.password)
+	}
+})
+
+
 const myvue = new Vue( {
-	router : router
+	router : router,
+	store:vuex_store
 } ).$mount( '.container' )
 router.push( { name : 'aboutMe' } )
 
