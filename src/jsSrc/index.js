@@ -9,9 +9,21 @@ import VueResource from "vue-resource";
 // 导入组件
 import pageNav from "./../components/page-nav.vue";
 import aboutMe from "./../components/aboutme.vue";
-import userLogin from "./../components/user-login.vue";
+
+//import userLogin from "./../components/user-login.vue";
+const userLogin = resolve => {
+	// 成功之后的回调
+	resolve(require("./../components/user-login.vue")); // 这就是异步加载的方式
+}
+
 import news from "./../components/news.vue";
-import newsDetail from "./../components/news-detail.vue";
+
+//import newsDetail from "./../components/news-detail.vue";
+
+const newsDetail = resolve => {
+	// 成功之后的回调
+	resolve(require("./../components/news-detail.vue")); // 这就是异步加载的方式
+}
 
 // 全局使用插件
 Vue.use( VueRouter );
@@ -31,4 +43,5 @@ const myvue = new Vue( {
 	router : router
 } ).$mount( '.container' )
 
+router.push({name : 'aboutMe'})
 

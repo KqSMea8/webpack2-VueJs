@@ -18,8 +18,6 @@
 </template>
 
 <style>
-	@import "./../css/bootstrap.min.css";
-	
 	#user-login {
 		margin-top: 50px;
 	}
