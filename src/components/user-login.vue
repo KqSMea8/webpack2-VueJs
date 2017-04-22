@@ -7,7 +7,8 @@
 		<div id = "user-login" class = "col-md-8 col-md-offset-2">
 			<h2 class = "text-center">用户登录</h2>
 			<form class = "form-horizontal" role = "form">
-				<user-name :placeholder = "placeholder"></user-name>
+				<!--user-login父组件给子组件user-name的placeholder传data-->
+				<user-name :childPlaceholder = "placeholder"></user-name>
 				<user-pass plahol = "请输入用户密码"></user-pass>
 				<user-area></user-area>
 				<user-fav></user-fav>
@@ -24,6 +25,7 @@
 </style>
 
 <script>
+	
 	import username from "./user/user-name.vue";
 	import userpass from "./user/user-pass.vue";
 	import userarea from "./user/user-area.vue";
@@ -31,10 +33,10 @@
 	import usersubmit from "./user/user-submit.vue";
 	
 	export default{
-		
-		props      : [ 'placeholder' ],
 		data() {
-			return {};
+			return {
+				placeholder:'请输入用户名称'
+			};
 		},
 		methods    : {
 			//将子组件user-area变化的值，更新到本组件的data数据中
