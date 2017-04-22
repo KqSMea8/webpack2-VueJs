@@ -11,11 +11,14 @@ import pageNav from "./../components/page-nav.vue";
 import aboutMe from "./../components/aboutme.vue";
 import userLogin from "./../components/user-login.vue";
 import news from "./../components/news.vue";
+import newsDetail from "./../components/news-detail.vue";
+
 // 全局使用插件
 Vue.use( VueRouter );
 Vue.use( VueResource );
 const routes = [
 	{ path : '/news',component : news,name : 'news', },
+	{ path : '/news/:newsid',component : newsDetail,name : 'newsDetail', },
 	{ path : '/login',component : userLogin,name : 'userLogin', },
 	{ path : '/about',component : aboutMe,name : 'aboutMe', },
 ]
