@@ -21,7 +21,7 @@ export default {
 		}
 	},
 	//可以认为是 store 的计算属性
-	//数据过滤处理，保留isdeleted为false 的记录
+	//数据过滤处理，保留isdeleted为false 的数据
 	//注意：store子模块NewsModules.js内的getters初始化比子组件news.vue为news.newsList传入后台数据要早
 	//所以：一开始初始化的state.newsList是空的,自然过滤不到
 	getters:{
