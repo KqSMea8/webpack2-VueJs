@@ -44,10 +44,20 @@ Vue.component( "nav_component",pageNav )
 
 const vuex_store = new Vuex.Store({
 	state: {
-		password: ''
+		password: '',
+		newsList:[]
 	},
 	mutations: {
 		showPassword: state => alert(state.password)
+	},
+	//可以认为是 store 的计算属性
+	//数据过滤处理，保留isdeleted为false 的记录
+	getters:{
+		getNews(state,getters){
+			return state.newsList.filter(news =>{
+				return !news.isdelected;
+			});
+		}
 	}
 })
 

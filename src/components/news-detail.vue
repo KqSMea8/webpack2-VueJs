@@ -23,7 +23,7 @@
 			};
 		},
 		created(){
-			this.$http.get("../news.php?newsid="+this.$route.params.newsid).then(res=>{
+			this.$http.get("../newsdetail.php?newsid="+this.$route.params.newsid).then(res=>{
 				console.log(res);
 				this.newsdetail = res.body;
 			},error=>{
