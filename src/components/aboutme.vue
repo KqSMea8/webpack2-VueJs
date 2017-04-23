@@ -6,7 +6,7 @@
 <template>
 	<div id="aboutme">
 		<myage :age="age"></myage>
-		<myname :myname="myname"></myname>
+		<myname :myname="fname"></myname>
 	</div>
 </template>
 
@@ -15,7 +15,12 @@
 	import name  from "./myname.vue";
 	
 	export default{
-		props:['age','myname'],
+		data(){
+			return {
+				age:22,
+				fname:'拎出墙'
+			};
+		},
 		components:{
 			"myname":name,
 			"myage":age

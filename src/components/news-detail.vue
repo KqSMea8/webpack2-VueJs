@@ -6,11 +6,11 @@
 	<div class = "row">
 		<div class = "news-detail">
 			<div class = "page-header">
-				<h2>{{this.$store.state.newsDetl.title}}
-					<small>{{this.$store.state.newsDetl.pubtime}}</small>
+				<h2>{{this.$store.state.news.newsDetl.title}}
+					<small>{{this.$store.state.news.newsDetl.pubtime}}</small>
 				</h2>
-				<p>点赞数:{{this.$store.state.newsDetl.agree}} <button class="btn btn-success" @click="submitAgree">点赞</button></p>
-				<p>{{this.$store.state.newsDetl.desc}}</p>
+				<p>点赞数:{{this.$store.state.news.newsDetl.agree}} <button class="btn btn-success" @click="submitAgree">点赞</button></p>
+				<p>{{this.$store.state.news.newsDetl.desc}}</p>
 			</div>
 		</div>
 	</div>
@@ -28,7 +28,7 @@
 				//console.log(res);
 				//this.newsdetail = res.body;
 				this.id=this.$route.params.newsid;
-				this.$store.state.newsDetl=res.body;
+				this.$store.state.news.newsDetl=res.body;
 			},error=>{
 				console.log(error);
 			})
@@ -39,6 +39,9 @@
 				//console.log(this.id);
 				this.$store.dispatch("agree",this.id)
 			}
+		},
+		mounted(){
+		
 		}
 	}
 </script>

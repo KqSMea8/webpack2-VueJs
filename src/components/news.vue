@@ -14,11 +14,16 @@
 
 <script>
 	export default {
+		data(){
+			return {};
+		},
 		created(){
-			if (this.$store.state.newsList.length == 0){
+			//初始化并为news.newsList传入后台数据
+			if ( this.$store.state.news.newsList.length == 0){
 				// 请求服务器获取数据
 				this.$http.get("../news.php").then(function (res) {
-					this.$store.state.newsList = res.body;
+					this.$store.state.news.newsList = res.body;
+					//console.log('created news:',this.$store.state.news);
 				},function (res) {
 					// 请求失败处理
 				})

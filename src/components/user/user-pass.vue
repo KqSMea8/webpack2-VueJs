@@ -23,7 +23,9 @@
 		methods:{
 			passchg(){
 				//this.$emit("iptChange","userpass",this.passwrd)
-				this.$store.state.password = this.passwrd;
+				//从Store模块中获取数据
+				console.log(this.$store.state);
+				this.$store.state.users.password = this.passwrd;
 			}
 		}
 		
