@@ -45,10 +45,21 @@ Vue.component( "nav_component",pageNav )
 const vuex_store = new Vuex.Store({
 	state: {
 		password: '',
-		newsList:[]
+		newsList:[],
+		newsDetl:{}
 	},
+	//更改 Vuex 的 store 中的状态的唯一方法是提交 mutation
+	//不能直接调用一个 mutation.handler()
+	//只是事件注册
+	//每个 mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler)。这个回调函数就是我们实际进行状态更改的地方
 	mutations: {
-		showPassword: state => alert(state.password)
+		//当触发一个类型为 showPassword 的 mutation 时，调用此函数。
+		showPassword: state => alert(state.password),
+		//agreeNum为mutation的载荷（Payload）
+		//在大多数情况下，载荷应该是一个对象
+		setAgree(state,agreeNum){
+			state.newsDetl.agree += agreeNum;
+		}
 	},
 	//可以认为是 store 的计算属性
 	//数据过滤处理，保留isdeleted为false 的记录
@@ -57,6 +68,18 @@ const vuex_store = new Vuex.Store({
 			return state.newsList.filter(news =>{
 				return !news.isdelected;
 			});
+		}
+	},
+	actions:{
+		//Action 函数接受一个与 store 实例具有相同方法和属性的 context 对象，因此你可以调用 context.commit 提交一个 mutation，或者通过 context.state 和 context.getters 来获取 state 和 getters。
+		agree(context,newsid){
+			//基于全局Vue对象使用http
+			Vue.http.post('../agree.php',{newsid:newsid},{emulateJSON:true}).then( function( res ) {
+				//唤醒mutations中的setAgree方法，将从后台获取到的点赞数更新到Store.state
+				context.commit("setAgree",res.body.agree);
+			},function( error ) {
+			
+			})
 		}
 	}
 })

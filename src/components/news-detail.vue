@@ -6,10 +6,11 @@
 	<div class = "row">
 		<div class = "news-detail">
 			<div class = "page-header">
-				<h2>{{newsdetail.title}}
-					<small>{{newsdetail.pubtime}}</small>
+				<h2>{{this.$store.state.newsDetl.title}}
+					<small>{{this.$store.state.newsDetl.pubtime}}</small>
 				</h2>
-				<p>{{newsdetail.desc}}</p>
+				<p>点赞数:{{this.$store.state.newsDetl.agree}} <button class="btn btn-success" @click="submitAgree">点赞</button></p>
+				<p>{{this.$store.state.newsDetl.desc}}</p>
 			</div>
 		</div>
 	</div>
@@ -19,16 +20,25 @@
 	export default{
 		data(){
 			return {
-				newsdetail:[]
+				id:''
 			};
 		},
 		created(){
 			this.$http.get("../newsdetail.php?newsid="+this.$route.params.newsid).then(res=>{
-				console.log(res);
-				this.newsdetail = res.body;
+				//console.log(res);
+				//this.newsdetail = res.body;
+				this.id=this.$route.params.newsid;
+				this.$store.state.newsDetl=res.body;
 			},error=>{
 				console.log(error);
 			})
+		},
+		methods:{
+			submitAgree(){
+				//本组件调用了Store中actions里定义的agree方法
+				//console.log(this.id);
+				this.$store.dispatch("agree",this.id)
+			}
 		}
 	}
 </script>
