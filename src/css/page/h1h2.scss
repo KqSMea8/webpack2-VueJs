@@ -1,0 +1,13 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "./_myvariable";
+
+h1:hover{
+	border:2px solid $hoverClr;
+	color:$hoverClr;
+}
+h2:hover{
+	border:2px solid $todayTopicRight;
+	color:$todayTopicRight;;
+}
+

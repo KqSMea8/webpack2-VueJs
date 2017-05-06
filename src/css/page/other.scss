@@ -1,0 +1,7 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "./_myvariable";
+div{
+	border: 1px solid $tabBorderTop;
+	background-color: black;
+}

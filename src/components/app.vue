@@ -1,0 +1,36 @@
+<template>
+	<div class = "row">
+		<div class = "col-xs-12 col-md-8">
+			<h1 class = "text-danger">
+				<a href = "#">实时修改项目！</a></h1>
+			<img src = "../img/logo.png">
+		</div>
+		<div class = "col-xs-6 col-md-4">
+			<h2 class = "text-success">{{ msg }}</h2>
+		</div>
+	</div>
+</template>
+
+<script>
+	/* eslint-disable semi */
+    export default {
+      data() {
+        return {
+          msg: '这是一个webpackVue项目'
+        }
+      }
+    }
+</script>
+<style rel="stylesheet/scss" lang="scss">
+	$fs14: 14px;
+	.text-success {
+		padding: 15px;
+		color: #0d519c;
+		background-color: white;
+		text-shadow: grey 2px 2px;
+		transition: all .1s;
+		border:2px solid red;
+		border-radius: $fs14;
+		transform: rotateX(60deg);
+	}
+</style>
