@@ -21,8 +21,9 @@ if (TARGET === 'build') {
     //参考：https://segmentfault.com/a/1190000007891318?utm_source=tuicool&utm_medium=referral
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      //filename选项已经由output.chunkFilename决定公共文件的放置路径和名称
+      // filename选项已经由output.chunkFilename决定公共文件的放置路径和名称
       //filename : 'static/js/vendor-chunk.js',
+      // 最终生成文件的路径是根据webpack配置中的ouput.path和上面CommonsChunkPlugin的filename参数来拼的
       
       // 如果模块是一个路径，而且在路径中有 ".js" 这个结尾文件出现，
       // 并且是node_modules目录下的文件，那请将它拆分到
@@ -45,6 +46,8 @@ if (TARGET === 'build') {
     // prevent vendor hash from being updated whenever app bundle is updated
     new webpack.optimize.CommonsChunkPlugin({
       name  : 'manifest',
+      filename: '[name].bundle.js',
+      //表示需要在哪些chunk（也可以理解为webpack配置中entry的每一项）里寻找公共代码进行打包。不设置此参数则默认提取范围为所有的chunk。
       chunks: ['vendor']
     })
   ]

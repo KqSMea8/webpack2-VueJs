@@ -20,10 +20,13 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active">
-						<router-link to="/about">about页面<span class="sr-only">(current)</span></router-link>
+						<router-link to="/about">关于<span class="sr-only">(current)</span></router-link>
 					</li>
 					<li>
-						<router-link to="/login">登录框<span class="sr-only">(current)</span></router-link>
+						<router-link to="/login">登录<span class="sr-only">(current)</span></router-link>
+					</li>
+					<li>
+						<router-link to="/home">HOME<span class="sr-only">(current)</span></router-link>
 					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>

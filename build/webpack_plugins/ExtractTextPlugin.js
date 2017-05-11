@@ -11,6 +11,8 @@ const TARGET = process.env.npm_lifecycle_event
 if (TARGET === 'dev') {
   console.log(`dev：ExtractTextPlugin正在分离CSS文件！`)
   var cssExtract = new ExtractTextPlugin({
+    // href="/static/css/app.css"
+    // [name]对应的是各个entry的key
     filename: utils.assetsPath('css/[name].css')
   })
   module.exports = cssExtract

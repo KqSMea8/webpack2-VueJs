@@ -8,12 +8,16 @@
 		<div class = "col-xs-6 col-md-4">
 			<h2 class = "text-success">{{ msg }}</h2>
 		</div>
+		<SlideImg></SlideImg>
 	</div>
 </template>
 
 <script>
+	import SlideImg from './Home-slide.vue'
+	
 	/* eslint-disable semi */
     export default {
+      components:{SlideImg},
       data() {
         return {
           msg: '这是一个webpackVue项目'
