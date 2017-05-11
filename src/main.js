@@ -22,7 +22,7 @@ import vuexStore from './store/index';
 // 导入插件
 import validatePlugin from './plugin/validate';
 // 导入组件
-import pageNav from './components/page-nav.vue';
+import NavBar from './components/NavBar.vue';
 
 
 // 同步加载：var moment = require('moment'); console.log(moment().format());
@@ -43,8 +43,9 @@ determineDate();
 
 Vue.use(VueRouter)
 Vue.use(VueResource)
+//Vue 插件 https://cn.vuejs.org/v2/guide/plugins.html
 Vue.use(validatePlugin);
-Vue.component('nav_component', pageNav);
+Vue.component('nav_component', NavBar);
 
 const router = new VueRouter({
   routes
@@ -56,6 +57,6 @@ const myvue = new Vue({
   store: vuexStore
 }).$mount('#index');
 
-router.push({name:'home'})
+router.push({name:'Todo'})
 
 

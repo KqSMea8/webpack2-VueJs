@@ -12,7 +12,8 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Brand</a>
+				<router-link to="/todo" class="navbar-brand">TODO<span class="sr-only">(current)</span></router-link>
+				<!--<a class="navbar-brand" href="#">Brand</a>-->
 			</div>
 			
 			<!-- Collect the nav links, forms, and other content for toggling -->

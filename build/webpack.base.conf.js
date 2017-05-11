@@ -25,10 +25,11 @@ module.exports = {
   //配置模块如何解析
   resolve: {
     //自动解析确定的扩展
-    extensions: ['.js', '.vue', '.json', '*'],
+    extensions: ['.js', '.vue', '.json', '.css'],
     //alias优先从resolve.modules中的node_modules下寻找
     alias     : {
       'vue$': 'vue/dist/vue.esm.js',
+      'vuex$': 'vuex/dist/vuex.esm.js',
       '@'   : resolve('src')
     }
   },
