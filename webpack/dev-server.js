@@ -3,6 +3,7 @@ require( './check-versions' )()
 //NodeJS
 const opn = require( 'opn' )
 const path = require( 'path' )
+const fs = require('fs');
 
 //Express
 const express = require( 'express' )
@@ -95,6 +96,12 @@ app.use( hotMiddleware )
 const staticPath = path.posix.join( option.dev.assetsPublicPath,option.dev.assetsSubDirectory )
 //不可以通过带有 "/static" 前缀的地址来访问 /static 目录下面的文件?
 app.use( staticPath,express.static( 'public' ) )
+
+var mockDir = path.resolve(__dirname, '../mock');
+fs.readdirSync(mockDir).forEach(function (file) {
+  var mock = require(path.resolve(mockDir, file));
+  app.use(mock.api, mock.response);
+});
 
 const url = 'http://localhost:' + port
 

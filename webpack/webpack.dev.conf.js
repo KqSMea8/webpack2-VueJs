@@ -27,9 +27,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   },
   plugins: require('./webpack_config/plugins.js').dev,
 });
-console.log(webpackConfig.devtool);
-console.log(webpackConfig.entry);
-console.log(webpackConfig.output);
-console.log(webpackConfig.module.rules);
-console.log(webpackConfig.plugins);
+console.log('entry',webpackConfig.entry);
+console.log('output',webpackConfig.output);
+
 module.exports = webpackConfig;

@@ -7,6 +7,11 @@ module.exports = {
 	  //指定ECMAScript支持的版本
     sourceType: 'module'
   },
+  globals: {
+    // Put things like jQuery, etc
+    jQuery: true,
+    $: true,
+  },
   //环境的全局变量
 	//JavaScript有很多种运行环境，比如常见的有浏览器和Node.js，另外还有很多软件系统使用JavaScript作为其脚本引擎，比如PostgreSQL就支持使用JavaScript来编写存储引擎，而这些运行环境可能并不存在console这个对象。另外在浏览器环境下会有window对象，而Node.js下没有；在Node.js下会有process对象，而浏览器环境下没有。
   env: {
@@ -29,7 +34,34 @@ module.exports = {
     'generator-star-spacing': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-	  'no-console': 'off',
-   
+    "camelcase": 0,
+    "no-extra-boolean-cast": 0,
+    "space-before-function-paren": ["error", "never"],
+    "semi": ["error", "always"],
+    "comma-dangle": [2, "always-multiline"],
+    "no-console": 0, //console 未删除
+    "no-var": 0,
+    "no-new": 0,
+    "import/no-unresolved": 0,
+    "no-underscore-dangle": [0],
+    "prefer-template": 0,
+    "object-shorthand": [0],
+    "prefer-arrow-callback": 0,
+    "prefer-rest-params": 0,
+    "no-param-reassign": 0,
+    "max-len": ["error", {
+      "code": 200,
+      "tabWidth": 2,
+      "comments": 200,
+      "ignoreComments": false,
+      "ignoreTrailingComments": false,
+      "ignoreUrls": true
+    }],
+    "global-require": 0,
+    'no-restricted-syntax': [
+      2,
+      'LabeledStatement',
+      'WithStatement',
+    ]
   }
 }

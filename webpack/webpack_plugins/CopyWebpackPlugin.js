@@ -12,17 +12,6 @@ if (TARGET === 'dev') {
   console.log(TARGET,`: CopyWebpackPlugin正在复制自定义静态资源文件！`);
   var copy = new CopyWebpackPlugin([
     {
-      from  : path.resolve(__dirname, '../../static'),
-      to    : path.resolve(option.dev.assetsRoot, 'development'),
-      ignore: ['.*'],
-      debug : 'debug',
-    },
-    {
-      context: path.resolve(process.cwd(), 'commonDll/production/static/fonts/'),
-      from: '*',
-      to: path.resolve(option.dev.assetsRoot, 'development','fonts'),
-    },
-    {
       context: path.resolve(process.cwd(), 'commonDll/production/static/img/'),
       from: '*',
       to: path.resolve(option.dev.assetsRoot, 'development','img'),

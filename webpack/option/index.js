@@ -48,8 +48,6 @@ module.exports = {
       jqueryManifest: 'jquery-manifest.json',
       fileName0     : 'bootstrap.dllBundle.js',
       manifest0     : 'bootstrap-manifest.json',
-      fileName1     : 'moment.dllBundle.js',
-      manifest1     : 'moment-manifest.json',
       fileName2     : 'vue.dllBundle.js',
       manifest2     : 'vue-manifest.json',
       

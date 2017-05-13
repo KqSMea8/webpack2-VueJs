@@ -8,14 +8,14 @@ var path = require('path')
 var chalk = require('chalk')
 var webpack = require('webpack')
 var webpackConfig = require('./webpack.build.conf')
-var config = require('../config')
+var option = require('./option')
 
 
 var spinner = ora('正在构建上线...')
 
 spinner.start()
 
-rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
+rm(path.join(option.build.assetsRoot, option.build.assetsSubDirectory), err => {
   if (err) throw err
   webpack(webpackConfig, function (err, stats) {
     spinner.stop()

@@ -42,9 +42,6 @@ if (TARGET === 'build') {
       manifest: require(path.resolve(process.cwd(), option.build.dll.directory, option.build.dll.manifest0))
     }),
     new webpack.DllReferencePlugin({
-      manifest: require(path.resolve(process.cwd(), option.build.dll.directory, option.build.dll.manifest1))
-    }),
-    new webpack.DllReferencePlugin({
       manifest: require(path.resolve(process.cwd(), option.build.dll.directory, option.build.dll.manifest2))
     })
   ]

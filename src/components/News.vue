@@ -28,15 +28,23 @@
       //初始化并为news.newsList传入后台数据
       if (this.$store.state.news.newsList.length == 0) {
         // 请求服务器获取数据
-        this.$http.get("./php/news.php").then(function (res) {
+		  /*this.$http.get("./php/news.php").then(function (res) {
+		   this.$store.state.news.newsList = res.body;
+		   //console.log('created news:',this.$store.state.news);
+		   }, function (res) {
+		   // 请求失败处理
+		   })*/
+        // 请求mock出来的假数据
+        // http://www.cnblogs.com/lvdabao/p/webpack-front.html?utm_source=tuicool&utm_medium=referral
+        this.$http.get("./mock/news").then(function(res) {
+          console.log(res);
           this.$store.state.news.newsList = res.body;
           //console.log('created news:',this.$store.state.news);
-        }, function (res) {
+        }, function(res) {
           // 请求失败处理
         })
       }
     }
   }
-	
-  
+
 </script>

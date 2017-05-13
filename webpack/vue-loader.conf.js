@@ -1,12 +1,12 @@
 var utils = require('./utils')
-var config = require('../config')
+var option = require('./option')
 
 var isProduction = process.env.NODE_ENV === 'production'
 
 //参考地址：https://vue-loader.vuejs.org/zh-cn/configurations/pre-processors.html
 module.exports = {
   loaders: utils.vueCssLoaders({
-    sourceMap: isProduction ? config.build.productionSourceMap : config.dev.cssSourceMap,
+    sourceMap: isProduction ? option.build.productionSourceMap : option.dev.cssSourceMap,
     extract: isProduction
   })
   /*
