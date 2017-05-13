@@ -2,49 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="146de59c-b7b3-4127-95a3-740e68ad0c35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mock/news.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.UglifyJsCache/0890bc1d598719d604e6f14772257c0fc57bf6a57e6400ec5d48791953b1d5b3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.UglifyJsCache/31351fa2687a46d0717f41a5bc8bf09bc276364029acdb7b0a0afdf24f17e827.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.UglifyJsCache/5ac53923776c6fa751e06c2d5c0fcef2a32adc0695248d641c8e5681f89e0009.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/moment-manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/moment.dllBundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/moment.dllBundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/dev.env.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/prod.env.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.eslintrc.js" afterPath="$PROJECT_DIR$/.eslintrc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/production/bootstrap-manifest.json" afterPath="$PROJECT_DIR$/commonDll/production/bootstrap-manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/production/bootstrap.dllBundle.js" afterPath="$PROJECT_DIR$/commonDll/production/bootstrap.dllBundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/production/bootstrap.dllBundle.js.map" afterPath="$PROJECT_DIR$/commonDll/production/bootstrap.dllBundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/production/jquery-manifest.json" afterPath="$PROJECT_DIR$/commonDll/production/jquery-manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/production/jquery.dllBundle.js" afterPath="$PROJECT_DIR$/commonDll/production/jquery.dllBundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/production/jquery.dllBundle.js.map" afterPath="$PROJECT_DIR$/commonDll/production/jquery.dllBundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/production/vue-manifest.json" afterPath="$PROJECT_DIR$/commonDll/production/vue-manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/production/vue.dllBundle.js" afterPath="$PROJECT_DIR$/commonDll/production/vue.dllBundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/production/vue.dllBundle.js.map" afterPath="$PROJECT_DIR$/commonDll/production/vue.dllBundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/logger.js" afterPath="$PROJECT_DIR$/src/common/logger.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/util.js" afterPath="$PROJECT_DIR$/src/common/util.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/News.vue" afterPath="$PROJECT_DIR$/src/components/News.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/assetsFileMap/assets-map.json" afterPath="$PROJECT_DIR$/webpack/assetsFileMap/assets-map.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/build.js" afterPath="$PROJECT_DIR$/webpack/build.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/dev-server.js" afterPath="$PROJECT_DIR$/webpack/dev-server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/option/index.js" afterPath="$PROJECT_DIR$/webpack/option/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/vue-loader.conf.js" afterPath="$PROJECT_DIR$/webpack/vue-loader.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack.dev.conf.js" afterPath="$PROJECT_DIR$/webpack/webpack.dev.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/devtool.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/devtool.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/entry.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/entry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/externals.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/externals.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/module.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/output.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/output.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/plugins.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/plugins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/resolve.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/resolve.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/AddAssetHtmlPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/AddAssetHtmlPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/CopyWebpackPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/CopyWebpackPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/DllReferencePlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/DllReferencePlugin.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -530,7 +488,7 @@
       <workItem from="1494556084146" duration="30784000" />
       <workItem from="1494634386690" duration="17828000" />
       <workItem from="1494660312042" duration="3880000" />
-      <workItem from="1494680589187" duration="2654000" />
+      <workItem from="1494680589187" duration="2707000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1494127898433</created>
@@ -588,11 +546,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494654663837</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="init">
+      <created>1494689440082</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1494689440082</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107903000" />
+    <option name="totallyTimeSpent" value="107956000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -604,7 +569,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25804722" sideWeight="0.6099211" order="0" side_tool="false" content_ui="combo" />
@@ -854,6 +819,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
           <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -861,6 +827,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="42" column="7" lean-forward="false" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
