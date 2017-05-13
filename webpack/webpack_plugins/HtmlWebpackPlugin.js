@@ -16,10 +16,10 @@ if (TARGET === 'dev') {
     //template: Webpack require path to the template. Please see the docs for details.
     //渲染源，模版文件
     template: 'index.html',
-    //true: 自动写入依赖文件; false: 不写入依赖，构建多页面非常有用
     inject  : true,
-    chunks: ['manifest', 'vendor', 'app'],
-    chunksSortMode: 'dependency'
+    //跟CommonsChunkPlugin选项的name相挂钩
+    /*chunks: ['manifest', 'vendor', 'app'],
+    chunksSortMode: 'dependency'*/
   })
   module.exports = html
 }
@@ -36,9 +36,9 @@ if (TARGET === 'build') {
     filename      : option.build.index,
     template      : 'index.html',
     /*向template或者templateContent中注入所有静态资源，不同的配置值注入的位置不经相同。
-     1、true或者body：所有JavaScript资源插入到body元素的底部
-     2、head: 所有JavaScript资源插入到head元素中
-     3、false： 所有静态资源css和JavaScript都不会注入到模板文件中
+       1、true或者body：所有JavaScript资源插入到body元素的底部
+       2、head: 所有JavaScript资源插入到head元素中
+       3、false： 所有静态资源css和JavaScript都不会注入到模板文件中
      */
     inject        : true,
     minify        : {
@@ -49,10 +49,10 @@ if (TARGET === 'build') {
       // https://github.com/kangax/html-minifier#options-quick-reference
     },
     //允许插入到模板中的一些chunk，不配置此项默认会将entry中所有的thunk注入到模板中。在配置多个页面时，每个页面注入的thunk应该是不相同的，需要通过该配置为不同页面注入不同的thunk；
-    chunks: ['manifest', 'vendor', 'app'],
+    //chunks: ['manifest', 'vendor', 'app'],
     // necessary to consistently work with multiple chunks via CommonsChunkPlugin
     // Allows to control how chunks should be sorted before they are included to the html.
-    chunksSortMode: 'dependency'
+    //chunksSortMode: 'dependency'
   })
   module.exports = html
 }

@@ -1,29 +1,28 @@
 require( './check-versions' )()
 
-
-
 //NodeJS
-var opn = require( 'opn' )
-var path = require( 'path' )
+const opn = require( 'opn' )
+const path = require( 'path' )
 
 //Express
-var express = require( 'express' )
-var app = express()
+const express = require( 'express' )
+const app = express()
 
 //Webpack
-var webpack = require( 'webpack' )
-var webpackConfig = require( './webpack.dev.conf' )
-var config = require( '../config' )
+const webpack = require( 'webpack' )
+const webpackConfig = require( './webpack.dev.conf' )
+const option = require( './option' )
+
 if( !process.env.NODE_ENV ){
-  process.env.NODE_ENV = JSON.parse( config.dev.env.NODE_ENV )
+  process.env.NODE_ENV = JSON.parse( option.dev.env.NODE_ENV )
 }
-var proxyMiddleware = require( 'http-proxy-middleware' )
+const proxyMiddleware = require( 'http-proxy-middleware' )
 
 
 //调用配置,生成 compiler instance
-var compiler = webpack( webpackConfig )
+const compiler = webpack( webpackConfig )
 //https://webpack.js.org/guides/development/#webpack-dev-middleware
-var devMiddleware = require( 'webpack-dev-middleware' )( compiler,{
+const devMiddleware = require( 'webpack-dev-middleware' )( compiler,{
   // Same as `output.filename` in most cases.
   filename:webpackConfig.output.filename,
   //isProduction ? config.build.assetsPublicPath : config.dev.assetsPublicPath
@@ -43,7 +42,7 @@ var devMiddleware = require( 'webpack-dev-middleware' )( compiler,{
   }
 } )
 
-var hotMiddleware = require( 'webpack-hot-middleware' )( compiler,{
+const hotMiddleware = require( 'webpack-hot-middleware' )( compiler,{
 	log : () =>{},
   noInfo:false,
   quiet:false
@@ -51,15 +50,15 @@ var hotMiddleware = require( 'webpack-hot-middleware' )( compiler,{
 
 // default port where dev server listens for incoming traffic
 // 3000
-var port = process.env.PORT || config.dev.port
+const port = process.env.PORT || option.dev.port
 // automatically open browser, if not set will be false
 // true
-var autoOpenBrowser = !!config.dev.autoOpenBrowser
+const autoOpenBrowser = !!option.dev.autoOpenBrowser
 
 // Define HTTP proxies to your custom API backend
 // https://github.com/chimurai/http-proxy-middleware
 // {}
-var proxyTable = config.dev.proxyTable
+const proxyTable = option.dev.proxyTable
 
 // force page reload when html-webpack-plugin template changes
 // 监听html文件改变事件
@@ -73,11 +72,11 @@ compiler.plugin( 'compilation',function( compilation ){
 
 // proxy api requests
 Object.keys( proxyTable ).forEach( function( context ){
-	var options = proxyTable[ context ]
-	if( typeof options === 'string' ){
-		options = { target : options }
+	var conf = proxyTable[ context ]
+	if( typeof conf === 'string' ){
+		conf = { target : conf }
 	}
-	app.use( proxyMiddleware( options.filter || context,options ) )
+	app.use( proxyMiddleware( conf.filter || context,conf ) )
 } )
 
 // handle fallback for HTML5 history API
@@ -92,15 +91,15 @@ app.use( hotMiddleware )
 
 // serve pure static assets 使用静态资源
 // http://www.expressjs.com.cn/starter/static-files.html
-//  path.posix.join('/','static') = '/static'
-var staticPath = path.posix.join( config.dev.assetsPublicPath,config.dev.assetsSubDirectory )
+//  path.posix.join('/','development') = '/development'
+const staticPath = path.posix.join( option.dev.assetsPublicPath,option.dev.assetsSubDirectory )
 //不可以通过带有 "/static" 前缀的地址来访问 /static 目录下面的文件?
 app.use( staticPath,express.static( 'public' ) )
 
-var url = 'http://localhost:' + port
+const url = 'http://localhost:' + port
 
 var _resolve
-var readyPromise = new Promise( resolve =>{
+const readyPromise = new Promise( resolve =>{
 	_resolve = resolve
 } )
 
@@ -122,9 +121,9 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-var server = app.listen( port , function () {
-  var host = server.address().address;
-  var port = server.address().port;
+const server = app.listen( port , function () {
+  const host = server.address().address;
+  const port = server.address().port;
   console.log('server 监听地址为 http://%s:%s', host, port);
 })
 

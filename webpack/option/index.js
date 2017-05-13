@@ -11,22 +11,25 @@ module.exports = {
       jqueryManifest: 'jquery-manifest.json',
       fileName0     : 'bootstrap.dllBundle.js',
       manifest0     : 'bootstrap-manifest.json',
-      fileName1     : 'moment.dllBundle.js',
-      manifest1     : 'moment-manifest.json',
+      //fileName1     : 'moment.dllBundle.js',
+      //manifest1     : 'moment-manifest.json',
       fileName2     : 'vue.dllBundle.js',
       manifest2     : 'vue-manifest.json',
     
       cssName0    : 'bootstrap.css',
       cssManifest0: 'bootstrap-manifest.json',
     
-      dir       : '/static',
+      dir       : '/development',
       outputPath: 'lib',  // 生成目录
       publicPath: 'lib'   // 注入地址
     },
     env               : require('./dev.env'),
     port              : 3000,
     autoOpenBrowser   : true,
-    assetsSubDirectory: 'static',
+    
+    index             : path.normalize('E:\\wamp64\\www\\VueJs_Demo_Github\\index.html'),
+    assetsRoot        : path.normalize('E:\\wamp64\\www\\VueJs_Demo_Github\\'),
+    assetsSubDirectory: 'development',
     assetsPublicPath  : '/',
     proxyTable        : {},
     // CSS Sourcemaps off by default because relative paths are "buggy"

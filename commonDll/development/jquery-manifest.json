@@ -1,1 +1,1 @@
-{"name":"jquery_library","content":{"./node_modules/.2.5.0@webpack/buildin/global.js":{"id":8,"meta":{}},"./node_modules/jquery/dist/jquery.js":{"id":29,"meta":{}}}}
+{"name":"jquery","content":{"./node_modules/.2.5.0@webpack/buildin/global.js":{"id":7,"meta":{}},"./node_modules/jquery/dist/jquery.js":{"id":28,"meta":{}}}}

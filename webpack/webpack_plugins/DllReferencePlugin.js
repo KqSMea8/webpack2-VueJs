@@ -14,14 +14,15 @@ if (TARGET === 'dev') {
   //dllPlugin的静态资源单独打包
   var jsLib = [
     new webpack.DllReferencePlugin({
-      manifest: require(path.resolve(process.cwd(), option.dev.dll.directory, option.dev.dll.jqueryManifest))
+      context: path.resolve(process.cwd()),
+      manifest: require(path.resolve(option.dev.dll.directory, option.dev.dll.jqueryManifest))
     }),
     new webpack.DllReferencePlugin({
       manifest: require(path.resolve(process.cwd(), option.dev.dll.directory, option.dev.dll.manifest0))
     }),
-    new webpack.DllReferencePlugin({
+    /*new webpack.DllReferencePlugin({
       manifest: require(path.resolve(process.cwd(), option.dev.dll.directory, option.dev.dll.manifest1))
-    }),
+    }),*/
     new webpack.DllReferencePlugin({
       manifest: require(path.resolve(process.cwd(), option.dev.dll.directory, option.dev.dll.manifest2))
     })

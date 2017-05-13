@@ -3,8 +3,8 @@
  */
 
 const os = require('os')
-var HappyPack = require('happypack')
-var happyThreadPool = HappyPack.ThreadPool({size: os.cpus().length})
+const HappyPack = require('happypack')
+const happyThreadPool = HappyPack.ThreadPool({size: os.cpus().length})
 
 const TARGET = process.env.npm_lifecycle_event
 

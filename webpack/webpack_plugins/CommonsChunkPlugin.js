@@ -11,7 +11,8 @@ if (TARGET === 'dev') {
   console.log(TARGET,`: CommonsChunkPlugin正在提取公共JS文件！`)
   var jsCommon = [
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'commonjs',
+      name: 'vendor.commonChunk',
+      filename: 'development/js/[name].js',
       minChunks: function (module, count) {
         // any required modules inside node_modules are extracted to vendor
         return (
@@ -27,8 +28,8 @@ if (TARGET === 'dev') {
       }
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name  : 'manifest',
-
+      name  : 'manifest.commonChunk',
+      filename: 'development/js/[name].js',
     })
   ]
   module.exports = jsCommon

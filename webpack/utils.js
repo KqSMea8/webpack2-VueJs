@@ -1,8 +1,9 @@
 var path = require('path')
-var config = require('../config')
+var option = require('./option')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const isProduction = process.env.NODE_ENV === 'production'
+
 
 exports.rootpath=function (dir) {
   return path.join(__dirname, '..', dir);
@@ -11,7 +12,7 @@ exports.rootpath=function (dir) {
 //生成 E:\wamp64\www\Webpack2Vue_Demo\static\_path 形式的目录
 exports.assetsPath = function (_path) {
   //都是'static'
-  var assetsSubDirectory = isProduction ? config.build.assetsSubDirectory : config.dev.assetsSubDirectory
+  var assetsSubDirectory = isProduction ? option.build.assetsSubDirectory : option.dev.assetsSubDirectory
   //posix线程机制
   return path.posix.join(assetsSubDirectory, _path)
 }

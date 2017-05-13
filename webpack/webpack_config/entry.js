@@ -38,7 +38,6 @@ module.exports.build = {};
 
 const dllEntry = {
   'jquery'   : ['jquery'],
-  'moment'   : ['moment'],
   'vue'      : ['vue', 'vue-resource', 'vue-router', 'vuex'],
   'bootstrap': ['./src/js/vendor/bootstrap/dist/css/bootstrap.min.css', './src/js/vendor/bootstrap/dist/js/bootstrap.min.js',],
 }

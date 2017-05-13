@@ -26,16 +26,21 @@ import NavBar from './components/NavBar.vue';
 // 同步加载：var moment = require('moment'); console.log(moment().format());
 // 生成的异步加载文件0.js
 // 其路径是与index.tml同目录的
-// 给require.ensure传递第三个参数重命名为custom-chunk-name.js
+// 给require.ensure传递第三个参数重命名为custom_momentChunk.js
+// moment.js会被打包成一个单独的chunk文件
+// 未被列在entry中，却又需要被打包出来的文件命名配置。在按需加载（异步）模块的时候，这样的文件是没有被列在entry中的，如使用CommonJS的方式异步加载模块：
+
+//[]不为空 预加载懒执行
+//webpack解惑：require的五种用法 （转）
+//http://www.cnblogs.com/laneyfu/p/6158715.html
 function determineDate() {
   require.ensure([], function (require) {
-    //moment.js会被打包成一个单独的chunk文件
-    var moment = require('moment');
+    var moment = require('moment/moment.js');
     console.log(moment().format());
-  }, function (err) {
-    console.error('We failed to load chunk: ' + err);
-  }, 'custom-chunk-name');
+  },"requireEnsureChunk");
 }
+
+
 
 determineDate();
 

@@ -1,9 +1,12 @@
 const merge = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.conf');
 
+const thisrules=require('./webpack_config/module.js').dev;
+
 const webpackConfig = merge(baseWebpackConfig, {
   devtool: require('./webpack_config/devtool.js').dev,
   entry: require('./webpack_config/entry.js').dev,
+  output:require('./webpack_config/output.js').dev,
   module: {
     /*
      [{
@@ -20,9 +23,13 @@ const webpackConfig = merge(baseWebpackConfig, {
       ]
      }]
      * */
-    rules: require('./webpack_config/module.js').dev,
+    rules:thisrules,
   },
   plugins: require('./webpack_config/plugins.js').dev,
 });
-
+console.log(webpackConfig.devtool);
+console.log(webpackConfig.entry);
+console.log(webpackConfig.output);
+console.log(webpackConfig.module.rules);
+console.log(webpackConfig.plugins);
 module.exports = webpackConfig;

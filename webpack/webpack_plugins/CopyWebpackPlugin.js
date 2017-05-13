@@ -9,11 +9,30 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TARGET = process.env.npm_lifecycle_event;
 
 if (TARGET === 'dev') {
-  console.log(`Running the pretest task!`);
+  console.log(TARGET,`: CopyWebpackPlugin正在复制自定义静态资源文件！`);
+  var copy = new CopyWebpackPlugin([
+    {
+      from  : path.resolve(__dirname, '../../static'),
+      to    : path.resolve(option.dev.assetsRoot, 'development'),
+      ignore: ['.*'],
+      debug : 'debug',
+    },
+    {
+      context: path.resolve(process.cwd(), 'commonDll/production/static/fonts/'),
+      from: '*',
+      to: path.resolve(option.dev.assetsRoot, 'development','fonts'),
+    },
+    {
+      context: path.resolve(process.cwd(), 'commonDll/production/static/img/'),
+      from: '*',
+      to: path.resolve(option.dev.assetsRoot, 'development','img'),
+    },
+  ]);
+  module.exports = copy;
 }
 
 if (TARGET === 'build') {
-  console.log(`CopyWebpackPlugin正在复制自定义静态资源文件！`);
+  console.log(TARGET,`: CopyWebpackPlugin正在复制自定义静态资源文件！`);
   //4.7 复制自定义静态资源
   // https://github.com/kevlened/copy-webpack-plugin
   // 复制 webpack2_Course的static 文件夹下的资源到 to中的地址
