@@ -1,13 +1,13 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
-var path = require('path')
+var path = require('path');
 
 module.exports = {
   //开发环境选项
   dev  : {
-    dll:{
-      basePath: '../commonDll/development',
-      fileName: '../commonDll/development/lib.js',
-      manifest: '../commonDll/development/manifest.json',
+    dll               : {
+      basePath  : '../commonDll/development',
+      fileName  : '../commonDll/development/lib.js',
+      manifest  : '../commonDll/development/manifest.json',
       outputPath: '/static/commonDll/development',  // 生成目录
       publicPath: '/static/commonDll/development'   // 注入地址
     },
@@ -22,30 +22,36 @@ module.exports = {
     // (https://github.com/webpack/css-loader#sourcemaps)
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
-    cssSourceMap      : false
+    cssSourceMap      : false,
   },
   //发布环境选项
   build: {
-    dll:{
-      dllSourceDir: 'commonDll/production',
+    dll                     : {
+      SourceDir: 'commonDll/production',
       
-      fileName2: 'vue.dllBundle.js',
-      manifest2: 'vue-manifest.json',
-      fileName1: 'moment.dllBundle.js',
-      manifest1: 'moment-manifest.json',
-
+      jquery        : 'jquery.dllBundle.js',
+      jqueryManifest: 'jquery-manifest.json',
+      fileName0     : 'bootstrap.dllBundle.js',
+      manifest0     : 'bootstrap-manifest.json',
+      fileName1     : 'moment.dllBundle.js',
+      manifest1     : 'moment-manifest.json',
+      fileName2     : 'vue.dllBundle.js',
+      manifest2     : 'vue-manifest.json',
       
-      dir:"static",
-      outputPath: "lib",  // 生成目录
-      publicPath: "lib"   // 注入地址
+      cssName0    : 'bootstrap.css',
+      cssManifest0: 'bootstrap-manifest.json',
+      
+      dir       : '/static',
+      outputPath: 'lib',  // 生成目录
+      publicPath: 'lib'   // 注入地址
     },
     //也可改为 cross-env 控制NODE_ENV
     env                     : require('./prod.env'),
     //index                    : path.resolve( __dirname,'../dist/index.html' ),
     //assetsRoot               : path.resolve( __dirname,'../dist' ),
     //转移到本地PHP+APACHE+SQL服务器文件夹中
-    index                   : path.normalize('E:\\wamp64\\www\\Webpack2Vue_Demo\\index.html'),
-    assetsRoot              : path.normalize('E:\\wamp64\\www\\Webpack2Vue_Demo'),
+    index                   : path.normalize('E:\\wamp64\\www\\Wamp-Webpack2Vue\\index.html'),
+    assetsRoot              : path.normalize('E:\\wamp64\\www\\Wamp-Webpack2Vue'),
     assetsSubDirectory      : 'static',
     assetsPublicPath        : '/',
     productionSourceMap     : true,
@@ -61,6 +67,6 @@ module.exports = {
     // Set to `true` or `false` to always turn it on or off
     // bundleAnalyzerReport 打包结果分析
     bundleAnalyzerReport    : false,
-    Visualizer:false
-  }
-}
+    Visualizer              : false,
+  },
+};

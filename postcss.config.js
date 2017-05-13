@@ -2,10 +2,10 @@
 // When using a function (postcss.config.js or .postcssrc.js), it is possible to pass context to postcss-load-config, which will be evaluated while loading your config.
 // By default ctx.env (process.env.NODE_ENV) and ctx.cwd (process.cwd()) are available.
 
-
-module.exports = (ctx) => ({
-  //sugarss 解析器
-  map: ctx.env === 'development' ? 'inline' : false,
+//第一个参数为Context (ctx)，它有三个属性 env='development' file=loader.resourcePath	 options={}
+//https://www.npmjs.com/package/postcss-loader
+module.exports = ({  env,file,options }) => ({
+  sourceMap: env === 'development' ? 'inline' : false,
   plugins: [
     //https://www.npmjs.com/package/postcss-svgo
     //Optimise inline SVG with PostCSS.

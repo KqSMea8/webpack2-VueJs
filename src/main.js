@@ -10,8 +10,6 @@ import VueResource from 'vue-resource'
 
 // 导入index.html页面css
 import '@/css/vendor/reset.css';
-import '@/css/vendor/bootstrap.min.css';
-
 import '@/css/page/index.css';
 
 

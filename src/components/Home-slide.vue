@@ -28,9 +28,6 @@
 </template>
 
 <script>
-	/*import $ from 'jq110'*/
-	//	var $=require('jq110')
-	/*	require('expose-loader?$!expose-loader?jQuery!../js/vendor/jquery-1.10.2.min.js');*/
 	var slideModule=require('../js/module/slide.js')
 	/* eslint-disable semi */
     export default {

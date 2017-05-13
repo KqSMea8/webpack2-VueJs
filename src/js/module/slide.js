@@ -1,8 +1,4 @@
 
-/*require('expose-loader?$!../vendor/jquery-1.10.2.min.js');*/
-//默认配置
-console.log($,'this is slidejs');
-
 var defaults = {
   width   : 465,
   delay   : 5000,

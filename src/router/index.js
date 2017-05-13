@@ -21,8 +21,6 @@ const NewsDetail = resolve => {
   resolve(require('../components/NewsDetail.vue')) // 这就是异步加载的方式
 }
 
-
-
 export default [
   {path: '/todo', component: Todo, name: 'Todo'},
   {path: '/home', component: Home, name: 'Home'},
