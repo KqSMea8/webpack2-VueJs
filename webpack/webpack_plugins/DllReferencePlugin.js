@@ -2,7 +2,6 @@
  * Created by LinChuQiang.
  */
 
-
 var option = require('../option')
 var webpack = require('webpack')
 var path = require('path')
@@ -10,8 +9,8 @@ var path = require('path')
 const TARGET = process.env.npm_lifecycle_event
 
 if (TARGET === 'dev') {
-  console.log(TARGET,`: DllReferencePlugin正在为静态资源单独打包！`)
-  //dllPlugin的静态资源单独打包
+  console.log(TARGET, `: DllReferencePlugin正在为静态资源单独打包！`)
+  // dllPlugin的静态资源单独打包
   var jsLib = [
     new webpack.DllReferencePlugin({
       context: path.resolve(process.cwd()),
@@ -20,9 +19,9 @@ if (TARGET === 'dev') {
     new webpack.DllReferencePlugin({
       manifest: require(path.resolve(process.cwd(), option.dev.dll.directory, option.dev.dll.manifest0))
     }),
-    /*new webpack.DllReferencePlugin({
+    /* new webpack.DllReferencePlugin({
       manifest: require(path.resolve(process.cwd(), option.dev.dll.directory, option.dev.dll.manifest1))
-    }),*/
+    }), */
     new webpack.DllReferencePlugin({
       manifest: require(path.resolve(process.cwd(), option.dev.dll.directory, option.dev.dll.manifest2))
     })
@@ -31,11 +30,11 @@ if (TARGET === 'dev') {
 }
 
 if (TARGET === 'build') {
-  console.log(TARGET,`: DllReferencePlugin正在为静态资源单独打包！`)
-  //dllPlugin的静态资源单独打包
+  console.log(TARGET, `: DllReferencePlugin正在为静态资源单独打包！`)
+  // dllPlugin的静态资源单独打包
   var jsLib = [
     new webpack.DllReferencePlugin({
-      //'src/commonDll/production/vue-manifest.json',
+      // 'src/commonDll/production/vue-manifest.json',
       manifest: require(path.resolve(process.cwd(), option.build.dll.directory, option.build.dll.jqueryManifest))
     }),
     new webpack.DllReferencePlugin({
