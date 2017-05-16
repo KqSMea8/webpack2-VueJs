@@ -2,45 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="146de59c-b7b3-4127-95a3-740e68ad0c35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/main/app.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src目录.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/development/fonts/glyphicons-halflings-regular.448c34a.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/development/fonts/glyphicons-halflings-regular.e18bbf6.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/development/fonts/glyphicons-halflings-regular.f4769f9.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/development/fonts/glyphicons-halflings-regular.fa27723.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/development/img/glyphicons-halflings-regular.8988968.svg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReadMe.md" afterPath="$PROJECT_DIR$/ReadMe.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/development/bootstrap.css" afterPath="$PROJECT_DIR$/commonDll/development/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/development/bootstrap.dllBundle.js.map" afterPath="$PROJECT_DIR$/commonDll/development/bootstrap.dllBundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/development/jquery.dllBundle.js.map" afterPath="$PROJECT_DIR$/commonDll/development/jquery.dllBundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/development/vue.dllBundle.js.map" afterPath="$PROJECT_DIR$/commonDll/development/vue.dllBundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/News.vue" afterPath="$PROJECT_DIR$/src/components/News.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/data/app.html" afterPath="$PROJECT_DIR$/src/pages/data/app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/data/app.vue" afterPath="$PROJECT_DIR$/src/pages/data/app.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/dev-client.js" afterPath="$PROJECT_DIR$/webpack/dev-client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/dev-server.js" afterPath="$PROJECT_DIR$/webpack/dev-server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/option/dev.env.js" afterPath="$PROJECT_DIR$/webpack/option/dev.env.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/option/index.js" afterPath="$PROJECT_DIR$/webpack/option/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack.dll.config.js" afterPath="$PROJECT_DIR$/webpack/webpack.dll.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/devtool.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/devtool.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/entry.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/entry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/externals.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/externals.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/module.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/output.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/output.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/resolve.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/resolve.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/AddAssetHtmlPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/AddAssetHtmlPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/CommonsChunkPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/CommonsChunkPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/DllReferencePlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/DllReferencePlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/ExtractTextPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/ExtractTextPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/HappyPackPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/HappyPackPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/HtmlWebpackPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/HtmlWebpackPlugin.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mock/news.js" afterPath="$PROJECT_DIR$/src/mock/news.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/pages/main/app.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -530,7 +492,7 @@
       <workItem from="1494851641526" duration="674000" />
       <workItem from="1494853477560" duration="6818000" />
       <workItem from="1494893867857" duration="1429000" />
-      <workItem from="1494896629699" duration="529000" />
+      <workItem from="1494896629699" duration="625000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1494127898433</created>
@@ -623,11 +585,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494774819341</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="MPA+WEBPACK2+VUE2">
+      <created>1494897161668</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1494897161668</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161164000" />
+    <option name="totallyTimeSpent" value="161260000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
