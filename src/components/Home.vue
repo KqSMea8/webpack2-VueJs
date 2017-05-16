@@ -26,7 +26,7 @@
       },
       methods:{
         index(){
-          window.location.href = 'pages/index/index.html';
+          window.location.href = '../index.html';
         }
       }
     }

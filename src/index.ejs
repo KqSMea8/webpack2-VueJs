@@ -13,15 +13,19 @@
 	<meta name = "format-detection" content = "telephone=no" />
 	<meta name = "screen-orientation" content = "portrait"><!-- uc强制竖屏 -->
 	<meta name = "x5-orientation" content = "portrait"><!-- QQ强制竖屏 -->
-	<title>webpack2_Course</title>
+	<title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
 <div id = "index">
 	<div class="container">
 		<nav class="navbar navbar-default">
-			<nav_component />
+			<nav-bar />
 		</nav>
-		<h1>主页</h1>
+		<ul class="nav nav-tabs">
+			<router-link to = "/vuespa" class="active">ABOUT</router-link>
+			<router-link to = "/vuespa/todo" >TODO</router-link>
+			<router-link to = "/vuespa/news" >NEWS</router-link>
+		</ul>
 		<router-view></router-view>
 	</div>
 </div>

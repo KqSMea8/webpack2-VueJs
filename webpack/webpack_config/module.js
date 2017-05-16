@@ -23,8 +23,8 @@ const baseRules = [
   },
   {
     test: /\.vue$/,
-    // loader  : 'vue-loader',
     use: [{ loader: 'vue-loader', options: vueLoaderConfig }]
+    // loader  : 'vue-loader',
     /* loader  : 'happypack/loader?id=happypackVueJs',
      options : vueLoaderConfig */
   },
@@ -42,27 +42,44 @@ const baseRules = [
       return isNpmModule
     },
     // loader  : 'babel-loader'
-    loader: 'happypack/loader?id=happypackBabelJs'
+    use: [{
+      loader: 'happypack/loader?id=happypackBabelJs'
+    }]
+    // loader: 'happypack/loader?id=happypackBabelJs'
   },
   // 处理资源名称
   {
     test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-    loader: 'url-loader',
+    use: [{
+      loader: 'url-loader',
+      options: {
+        limit: 10000,
+        name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+      }
+    }]
+    /* loader: 'url-loader',
     options: {
       // 大小小于 10kb
       limit: 10000,
       name: utils.assetsPath('img/[name].[hash:7].[ext]')
-    }
+    } */
   },
   {
     test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-    loader: 'url-loader',
+    use: [{
+      loader: 'url-loader',
+      options: {
+        limit: 10000,
+        name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+      }
+    }]
+    /* loader: 'url-loader',
     options: {
       limit: 10000,
       name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
-    }
+    } */
   },
-  {
+  /* {
     test: /\.html$/,
     include: [path.join(process.cwd(), './src')],
     use: [ {
@@ -71,7 +88,13 @@ const baseRules = [
         minimize: false
       }
     }]
+  }, */
+  // https://github.com/okonet/ejs-loader
+  {
+    test: /\.ejs$/,
+    use: [{ loader: 'ejs-loader' }]
   }
+
 ]
 module.exports.base = baseRules
 

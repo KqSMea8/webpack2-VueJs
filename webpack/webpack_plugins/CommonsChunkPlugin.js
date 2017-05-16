@@ -7,7 +7,7 @@ var webpack = require('webpack')
 var option = require('../option')
 
 const TARGET = process.env.npm_lifecycle_event
-const JSDIR = option.dev.assetsJsDir
+const ASSETSJS = option.dev.assetsJsDir
 
 var jsCommon = []
 
@@ -29,7 +29,7 @@ var jsCommon = []
 if (TARGET === 'dev') {
   console.log(`${TARGET}：CommonsChunkPlugin 正在提取公共JS文件！`)
   jsCommon = [
-    new webpack.optimize.CommonsChunkPlugin({
+    /* new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor.commonChunk',
       filename: path.posix.join(JSDIR, '[name].js'),
       chunks: ['pages/data', 'pages/main'],
@@ -45,16 +45,23 @@ if (TARGET === 'dev') {
             ) === 0
         )
       }
+    }), */
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'index.commonChunk',
+      filename: path.posix.join(ASSETSJS, '[name].js'),
+      minChunks: 3,
+      chunks: 'index',
+      excludeChunks: ['pages/data.outputSync']
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'data.commonChunk',
-      filename: path.posix.join(JSDIR, '[name].js'),
+      filename: path.posix.join(ASSETSJS, '[name].js'),
       minChunks: 3,
       chunks: 'pages/data'
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest.commonChunk',
-      filename: path.posix.join(JSDIR, '[name].js')
+      name: ['vendor.commonChunk', 'manifest.commonChunk'],
+      filename: path.posix.join(ASSETSJS, '[name].js')
     })
   ]
   module.exports = jsCommon

@@ -97,7 +97,7 @@ const staticPath = path.posix.join(option.dev.assetsPublicPath, option.dev.asset
 // 不可以通过带有 "/static" 前缀的地址来访问 /static 目录下面的文件?
 app.use(staticPath, express.static('public'))
 
-var mockDir = path.resolve(__dirname, '../mock')
+var mockDir = path.resolve(process.cwd(), 'src/mock')
 fs.readdirSync(mockDir).forEach(function (file) {
   var mock = require(path.resolve(mockDir, file))
   app.use(mock.api, mock.response)

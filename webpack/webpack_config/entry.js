@@ -3,6 +3,7 @@
  */
 
 const path = require('path')
+
 /** ********
  初始环境
  **********/
@@ -19,9 +20,10 @@ module.exports.base = baseEntry
  **********/
 
 const devEntry = {}
-// devEntry.app = './src/main.js'
+// entry节点对象的Key是别名，是与output中filename属性[name]关联的，因此想要生成什么样的路径，应该在entry的key中配置
+devEntry['index'] = './src/index.js'
 devEntry['pages/data'] = path.resolve(process.cwd(), 'src/pages/data/app.js')
-devEntry['pages/main'] = path.resolve(process.cwd(), 'src/pages/main/app.js')
+// devEntry['pages/main'] = path.resolve(process.cwd(), 'src/pages/main/app.js')
 
 // add hot-reload related code to entry chunks
 Object.keys(devEntry).forEach(function (name) {
