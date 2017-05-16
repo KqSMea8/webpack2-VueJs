@@ -7,12 +7,14 @@ const utils = require('../utils')
 // 环境变量 https://doc.webpack-china.org/guides/production-build/
 const isProduction = process.env.NODE_ENV === 'production'
 
+//  assetsJsDir: 'assets/js/',
+const JSDIR = option.dev.assetsJsDir
+
 /** ********
  初始环境
  **********/
 
 module.exports.base = {
-  // filename: '[name].[chunkhash].js'
   //  都是根目录下 '/'
   publicPath: isProduction ? option.build.assetsPublicPath : option.dev.assetsPublicPath
 }
@@ -22,22 +24,19 @@ module.exports.base = {
  **********/
 
 module.exports.dev = {
-  // 需要绝对路径
-  // 存放编译后生成的所有代码、资源（图片、字体等）
-  // path.normalize('E:\\wamp64\\www\\VueJs_Demo_Github\\development')
-  // path      : option.dev.assetsRoot,
-  path: path.resolve(__dirname, '../../', option.dev.assetsSubDirectory, 'js'),
-  // path: path.resolve(__dirname, 'dist/assets'),
+  // path 指定绝对路径，存放编译后生成的所有代码、资源（图片、字体等）
+  path: path.resolve(process.cwd(), 'development'),
   pathinfo: true,
 
-  // filename命名入口文件输出名字
-  filename: 'development/js/[name].outputBundle.js',
+  // filename 命名属于入口文件中的同步JS名称及路径
+  // [name]从entry的key中获得
+  filename: path.posix.join(JSDIR, '[name].outputSync.js'),
 
-  // chunkFilename命名main.js中require.ensure的js
-  // 会单独输出一个包，并不会跟filename中的内容打包到一起，比如有些文件你并不想打包到主文件中，或者减轻首页负担，只在引入的时候才加载。
+  // chunkFilename命名入口文件中require.ensure的异步js
+  // 单独输出一个包，并不会跟filename中的内容打包到一起，比如有些文件你并不想打包到主文件中，或者减轻首页负担，只在引入的时候才加载
   // 怎么理解webpack中的output.filename 和output.chunkFilename ?
   // http://react-china.org/t/webpack-output-filename-output-chunkfilename/2256/2
-  chunkFilename: 'development/js/requireEnsure.bundle.js'
+  chunkFilename: path.posix.join(JSDIR, '[name].outputAsyn.js')
 }
 
 /** ********

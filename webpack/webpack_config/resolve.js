@@ -2,10 +2,10 @@
  * Created by LinChuQiang.
  */
 
-const option = require('../option');
-const utils = require('../utils');
+const option = require('../option')
+const utils = require('../utils')
 
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = process.env.NODE_ENV === 'production'
 
 // 配置模块如何解析
 module.exports.base = {
@@ -15,17 +15,17 @@ module.exports.base = {
   alias: {
     vue$: 'vue/dist/vue.esm.js',
     vuex$: 'vuex/dist/vuex.esm.js',
-    '@': utils.rootpath('src'),
+    '@': utils.rootpath('src')
   },
   modules: [
-    'node_modules',
+    'node_modules'
   ],
-  mainFields: ['browser', 'module', 'main'],
-};
+  mainFields: ['browser', 'module', 'main']
+}
 
-module.exports.dev = {};
+module.exports.dev = {}
 
 module.exports.build = {
   filename: utils.assetsPath('js/[name].[chunkhash].js'),
-  chunkFilename: utils.assetsPath('js/[id].[chunkhash].js'),
-};
+  chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+}

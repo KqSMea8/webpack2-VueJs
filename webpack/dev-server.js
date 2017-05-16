@@ -25,6 +25,7 @@ const compiler = webpack(webpackConfig)
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
   // Same as `output.filename` in most cases.
   filename: webpackConfig.output.filename,
+  // filename: 'gajsfias',
   // isProduction ? config.build.assetsPublicPath : config.dev.assetsPublicPath
   // '/'
   // Same as `output.publicPath` in most cases.

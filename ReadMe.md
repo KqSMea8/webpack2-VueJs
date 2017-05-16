@@ -35,3 +35,26 @@
  http://www.jtthink.com/course/40
  
 7.webpack.dll.config -> DllReferencePlugin -> AddAssetHtmlPlugin -> config index
+
+8.路径解释
+- 连接路径
+- path.join('/foo', 'bar', 'baz/asdf', 'quux', '..')
+- 返回: '/foo/bar/baz/asdf'
+- E:\wamp64\www\VueJs_Demo_Github\node_modules
+- path.join(process.cwd(), 'node_modules')
+- join与reslove的区别，前者组合，后者process.cwd()+参数构成绝对路径
+-       // assets\js\[name].js
+        // console.log(path.join(option.dev.assetsSubDirectory, 'js/[name].js'))
+        // E:\wamp64\www\VueJs_Demo_Github\assets\js\[name].js
+        // console.log(path.resolve(option.dev.assetsSubDirectory, 'js/[name].js'))
+- path.posix 保证路径中的斜杠表现一致
+
+`
+var p1 = path.normalize('E:\\wamp64\\www\\Webpack2Vue_Demo\\static\\lib');
+E:\wamp64\www\Webpack2Vue_Demo\static\lib
+`
+
+ 
+
+
+

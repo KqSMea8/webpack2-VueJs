@@ -3,6 +3,7 @@
  */
 
 const glob = require('glob')
+const path = require('path')
 const option = require('../option')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TARGET = process.env.npm_lifecycle_event
@@ -10,7 +11,52 @@ const TARGET = process.env.npm_lifecycle_event
 var html = []
 if (TARGET === 'dev') {
   console.log(TARGET, `: HtmlWebpackPlugin正在生成HTML！`)
-  html = [new HtmlWebpackPlugin({
+  html = [
+    // main入口文件
+    new HtmlWebpackPlugin({
+      // filename: The file to write the HTML to. Defaults to index.html. You can specify a subdirectory here too (eg: assets/admin.html).
+      // 渲染输出html文件名,路径相对于 output.path 的值
+      filename: 'pages/main/app.html',
+      // 渲染源，模版文件
+      template: path.resolve(process.cwd(), 'src/pages/main/app.html'),
+      inject: true,
+      showErrors: true,
+      minify: false,
+      // 跟CommonsChunkPlugin选项的name相挂钩
+      chunks: ['manifest.commonChunk', 'vendor.commonChunk', 'pages/main']
+      // chunksSortMode: 'dependency'
+    }),
+    // app入口文件
+    new HtmlWebpackPlugin({
+      // filename: The file to write the HTML to. Defaults to index.html. You can specify a subdirectory here too (eg: assets/admin.html).
+      // 渲染输出html文件名,路径相对于 output.path 的值
+      filename: 'pages/data/app.html',
+      // 渲染源，模版文件
+      template: path.resolve(process.cwd(), 'src/pages/data/app.html'),
+      inject: true,
+      showErrors: true,
+      minify: false
+      // 跟CommonsChunkPlugin选项的name相挂钩
+      // chunks: ['manifest.commonChunk', 'vendor.commonChunk', 'app']
+      // chunksSortMode: 'dependency'
+    }),
+    // 主页入口文件
+    new HtmlWebpackPlugin({
+      // filename: The file to write the HTML to. Defaults to index.html. You can specify a subdirectory here too (eg: assets/admin.html).
+      // 渲染输出html文件名,路径相对于 output.path 的值
+      filename: 'index.html',
+      // 渲染源，模版文件
+      template: path.resolve(process.cwd(), 'index.html'),
+      inject: true,
+      showErrors: true,
+      minify: false
+      // 跟CommonsChunkPlugin选项的name相挂钩
+      // chunks: ['manifest.commonChunk', 'vendor.commonChunk', 'app']
+      // chunksSortMode: 'dependency'
+    })
+  ]
+ // 旧入口
+  /* new HtmlWebpackPlugin({
     // filename: The file to write the HTML to. Defaults to index.html. You can specify a subdirectory here too (eg: assets/admin.html).
     // 渲染输出html文件名,路径相对于 output.path 的值
     filename: 'index.html',
@@ -19,9 +65,9 @@ if (TARGET === 'dev') {
     template: 'index.html',
     inject: true,
     // 跟CommonsChunkPlugin选项的name相挂钩
-    chunks: ['manifest.commonChunk', 'vendor.commonChunk', 'app'],
-    chunksSortMode: 'dependency'
-  })]
+    chunks: ['manifest.commonChunk', 'vendor.commonChunk', 'app']
+    // chunksSortMode: 'dependency'
+  }) */
   var htmlConf
   var match = glob.sync('./src/pages/**/*.html')
   console.log('match: ', match)
@@ -36,7 +82,7 @@ if (TARGET === 'dev') {
       hash: process.env.NODE_ENV === 'production',
       chunks: ['manifest.commonChunk', 'vendor.commonChunk', chunk]
     }
-    html.push(new HtmlWebpackPlugin(htmlConf))
+    // html.push(new HtmlWebpackPlugin(htmlConf))
   })
   module.exports = html
 } else if (TARGET === 'build') {

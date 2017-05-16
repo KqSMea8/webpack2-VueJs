@@ -2,8 +2,8 @@
  * Created by LinChuQiang.
  */
 
-const merge = require('webpack-merge');
-const baseWebpackConfig = require('./webpack.base.conf');
+const merge = require('webpack-merge')
+const baseWebpackConfig = require('./webpack.base.conf')
 
 /*
  * 1.dll预编译出来的模块可以作为静态资源链接库可被重复使用
@@ -13,14 +13,14 @@ const baseWebpackConfig = require('./webpack.base.conf');
  * 5. Dynamically Linked Library https://robertknight.github.io/posts/webpack-dll-plugins/
  * */
 
-const webpackConfig = merge(baseWebpackConfig,  {
+const webpackConfig = merge(baseWebpackConfig, {
   devtool: require('./webpack_config/devtool.js').dll,
-  output : require('./webpack_config/output.js').dll,
+  output: require('./webpack_config/output.js').dll,
   module: {
-    rules: require('./webpack_config/module.js').dll,
+    rules: require('./webpack_config/module.js').dll
   },
-  plugins:require('./webpack_config/plugins.js').dll,
+  plugins: require('./webpack_config/plugins.js').dll
 })
-webpackConfig.entry=require('./webpack_config/entry.js').dll
+webpackConfig.entry = require('./webpack_config/entry.js').dll
 
-module.exports = webpackConfig;
+module.exports = webpackConfig

@@ -12,20 +12,18 @@ import '@/css/vendor/reset.css'
 import '@/css/page/index.css'
 
 // 导入路由
-import routes from './router/index'
+import routes from '../../router/index'
 // 导入存储
-import vuexStore from './store/index'
+import vuexStore from '../../store/index'
 // 导入插件
-import validatePlugin from './plugin/validate'
+import validatePlugin from '../../plugin/validate'
 // 导入组件
-import NavBar from './components/NavBar.vue'
+import NavBar from '../../components/NavBar.vue'
 
 // 同步加载：var moment = require('moment'); console.log(moment().format());
-// 生成的异步加载文件0.js
-// 其路径是与index.tml同目录的
-// 给require.ensure传递第三个参数重命名为custom_momentChunk.js
-// moment.js会被打包成一个单独的chunk文件
-// 未被列在entry中，却又需要被打包出来的文件命名配置。在按需加载（异步）模块的时候，这样的文件是没有被列在entry中的，如使用CommonJS的方式异步加载模块：
+// 按需加载（异步）模块，加载中生成异步文件，其路径是与index.tml同目录的
+// 给require.ensure传递第三个参数，可以在output.chunkFilename中的[name]接收
+// moment.js会被打包成一个单独的chunk文件，未被列在entry中，却又需要被打包出来的文件命名配置。
 // []不为空 预加载懒执行
 // webpack解惑：require的五种用法 （转）
 // http://www.cnblogs.com/laneyfu/p/6158715.html
@@ -33,7 +31,7 @@ function determineDate () {
   require.ensure([], function (require) {
     var moment = require('moment/moment.js')
     console.log(moment().format())
-  }, 'requireEnsureChunk')
+  }, 'moment')
 }
 
 determineDate()
@@ -52,4 +50,5 @@ new Vue({
   router: router,
   store: vuexStore
 }).$mount('#index')
+
 
