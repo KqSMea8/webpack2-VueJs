@@ -47,54 +47,47 @@ const baseRules = [
     }]
     // loader: 'happypack/loader?id=happypackBabelJs'
   },
-  // 处理资源名称
+  // 图片加载器，雷同file-loader，更适合图片，可以将较小的图片转成base64，减少http请求
+  // 如下配置，将小于8192byte的图片转成base64码
   {
     test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
     use: [{
       loader: 'url-loader',
       options: {
-        limit: 10000,
-        name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+        limit: 8192,
+        name: utils.assetsPath('img/[name].[hash:7].[ext]')
       }
     }]
-    /* loader: 'url-loader',
-    options: {
-      // 大小小于 10kb
-      limit: 10000,
-      name: utils.assetsPath('img/[name].[hash:7].[ext]')
-    } */
   },
   {
     test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
     use: [{
       loader: 'url-loader',
       options: {
-        limit: 10000,
+        limit: 8192,
         name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
       }
     }]
-    /* loader: 'url-loader',
-    options: {
-      limit: 10000,
-      name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
-    } */
-  },
+  }
+  // 安装了html-webpack-template 之后就不能用html-loader压缩处理了
+  // https://github.com/jaketrent/html-webpack-template
+  // https://github.com/webpack-contrib/html-loader
   /* {
     test: /\.html$/,
-    include: [path.join(process.cwd(), './src')],
-    use: [ {
-      loader: 'html-loader',
+    include: [path.join(process.cwd(), './src/index.html')],
+    use: [{
+      loader: 'html-loader?attrs[]=img:src&attrs[]=img:data-src',
       options: {
-        minimize: false
+        minimize: true
       }
     }]
-  }, */
+  } */
   // https://github.com/okonet/ejs-loader
-  {
+  // https://github.com/jantimon/html-webpack-plugin/blob/master/docs/template-option.md
+  /* {
     test: /\.ejs$/,
     use: [{ loader: 'ejs-loader' }]
-  }
-
+  } */
 ]
 module.exports.base = baseRules
 

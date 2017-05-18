@@ -14,9 +14,6 @@ if (TARGET === 'dev') {
   jsLib = [
     new webpack.DllReferencePlugin({
       // context: path.resolve(process.cwd()),
-      manifest: require(path.resolve(DIR, option.dev.dll.jqueryManifest))
-    }),
-    new webpack.DllReferencePlugin({
       manifest: require(path.resolve(DIR, option.dev.dll.bootstrapManifest))
     }),
     new webpack.DllReferencePlugin({

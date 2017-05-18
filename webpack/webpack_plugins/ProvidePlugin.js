@@ -26,6 +26,7 @@ if (TARGET === 'test') {
 const provideVar = new webpack.ProvidePlugin({
   $: 'jquery',
   jQuery: 'jquery',
+  jquery: 'jquery',
   'window.jQuery': 'jquery',
   'window.$': 'jquery',
   'moment': 'moment'

@@ -3,7 +3,7 @@ var option = require('./option')
 
 var isProduction = process.env.NODE_ENV === 'production'
 
-//参考地址：https://vue-loader.vuejs.org/zh-cn/configurations/pre-processors.html
+// 参考地址：https://vue-loader.vuejs.org/zh-cn/configurations/pre-processors.html
 module.exports = {
   loaders: utils.vueCssLoaders({
     sourceMap: isProduction ? option.build.productionSourceMap : option.dev.cssSourceMap,
@@ -23,7 +23,7 @@ module.exports = {
   */
 }
 
-	/*解析.vue文件内的各种css格式
+	/* 解析.vue文件内的各种css格式
 	loaders:{
 	 css     : [
 		{loader  : 'vue-style-loader',},
@@ -53,4 +53,3 @@ module.exports = {
 	 styl    : generateLoaders( 'stylus' )
 	}
 	* */
-

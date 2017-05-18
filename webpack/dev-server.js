@@ -121,7 +121,6 @@ devMiddleware.waitUntilValid(() => {
   _resolve()
 })
 
-
 const server = app.listen(port, function () {
   const host = server.address().address
   const port = server.address().port

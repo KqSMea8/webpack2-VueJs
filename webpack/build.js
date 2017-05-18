@@ -10,7 +10,6 @@ var webpack = require('webpack')
 var webpackConfig = require('./webpack.build.conf')
 var option = require('./option')
 
-
 var spinner = ora('正在构建上线...')
 
 spinner.start()

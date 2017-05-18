@@ -45,8 +45,7 @@ module.exports.build = {}
  **********/
 
 const dllEntry = {
-  jquery: ['jquery'],
   vue: ['vue', 'vue-resource', 'vue-router', 'vuex'],
-  bootstrap: ['./src/js/vendor/bootstrap/dist/css/bootstrap.min.css', './src/js/vendor/bootstrap/dist/js/bootstrap.min.js']
+  bootstrap: ['./src/js/vendor/bootstrap/dist/css/bootstrap.css', './src/js/vendor/bootstrap/dist/js/bootstrap.js']
 }
 module.exports.dll = dllEntry

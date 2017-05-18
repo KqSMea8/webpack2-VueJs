@@ -1,6 +1,6 @@
 
 
-import createLogger from '../common/logger'
+import createLogger from '../../common/logger'
 
 const STORAGE_KEY = 'todos-vuejs'
 

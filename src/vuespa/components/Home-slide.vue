@@ -4,22 +4,22 @@
 				<ul class="clearfix" node-type="iccAdvisorPicture">
 					<li>
 						<a href="javascript:void(0)">
-							<img src="../img/home_1.jpg"/>
+							<img src="../../img/home_1.jpg"/>
 						</a>
 					</li>
 					<li>
 						<a href="javascript:void(0)">
-							<img src="../img/home_2.jpg"/>
+							<img src="../../img/home_2.jpg"/>
 						</a>
 					</li>
 					<li>
 						<a href="javascript:void(0)">
-							<img src="../img/home_3.jpg"/>
+							<img src="../../img/home_3.jpg"/>
 						</a>
 					</li>
 					<li>
 						<a href="javascript:void(0)">
-							<img src="../img/home_4.jpg"/>
+							<img src="../../img/home_4.jpg"/>
 						</a>
 					</li>
 				</ul>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-	var slideModule=require('../js/module/slide.js')
+	var slideModule=require('../../js/module/slide.js')
 	/* eslint-disable semi */
     export default {
       mounted (){

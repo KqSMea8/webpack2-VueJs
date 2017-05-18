@@ -16,10 +16,12 @@
 	</div>
 </template>
 
+<style scoped>
+	/*@import '../css/vendor/mui.min.css';*/
+</style>
+
 <script>
-  import '@/css/vendor/mui.min.css';
   import '@/css/page/h1h2.scss';
-  
   export default {
     data(){
       return {};

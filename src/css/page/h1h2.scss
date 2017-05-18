@@ -3,11 +3,11 @@
 @import "./_myvariable";
 
 h1:hover{
-	border:2px solid $hoverClr;
+	border:5px solid $hoverClr;
 	color:$hoverClr;
 }
 h2:hover{
-	border:2px solid $todayTopicRight;
+	border:1px solid $todayTopicRight;
 	color:$todayTopicRight;;
 }
 

@@ -26,11 +26,11 @@
 
 <script>
   //import '../css/page/h1h2.scss';
-  import username from "@/components/user/user-name.vue";
-  import userpass from "@/components/user/user-pass.vue";
-  import userarea from "@/components/user/user-area.vue";
-  import userfav from "@/components/user/user-fav.vue";
-  import usersubmit from "@/components/user/user-submit.vue";
+  import username from "@/vuespa/components/user/user-name.vue";
+  import userpass from "@/vuespa/components/user/user-pass.vue";
+  import userarea from "@/vuespa/components/user/user-area.vue";
+  import userfav from "@/vuespa/components/user/user-fav.vue";
+  import usersubmit from "@/vuespa/components/user/user-submit.vue";
   
   export default{
     data() {

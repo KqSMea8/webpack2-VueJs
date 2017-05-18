@@ -13,10 +13,22 @@
 	<meta name = "format-detection" content = "telephone=no" />
 	<meta name = "screen-orientation" content = "portrait"><!-- uc强制竖屏 -->
 	<meta name = "x5-orientation" content = "portrait"><!-- QQ强制竖屏 -->
-	<title>data.html</title>
+	<title><%= htmlWebpackPlugin.options.title || 'Webpack App' %></title>
 </head>
 <body>
-<div id = "el"></div>
+<div class = "container">
+	<div class = "row">
+		<nav class = "navbar navbar-default">
+			<nav-bar></nav-bar>
+		</nav>
+	</div>
+	<div class="row">
+		<app/>
+	</div>
+	<div class="row">
+		<counter></counter>
+	</div>
+</div>
 <!-- built files will be auto injected -->
 </body>
 </html>

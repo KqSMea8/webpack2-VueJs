@@ -32,6 +32,9 @@
           <option name="SPACE_AFTER_PROPERTY_COLON" value="false" />
           <option name="ALIGN_OBJECT_PROPERTIES" value="2" />
         </CoffeeScriptCodeStyleSettings>
+        <EjsCustomCodeStyleSettings>
+          <option name="SPACES_WITHIN_CHAIN" value="false" />
+        </EjsCustomCodeStyleSettings>
         <JSCodeStyleSettings>
           <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false" />
           <option name="FORCE_SEMICOLON_STYLE" value="true" />

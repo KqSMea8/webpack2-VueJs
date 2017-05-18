@@ -4,63 +4,61 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const isProduction = process.env.NODE_ENV === 'production'
 
-
-exports.rootpath=function (dir) {
-  return path.join(__dirname, '..', dir);
+exports.rootpath = function (dir) {
+  return path.join(__dirname, '..', dir)
 }
 
-//生成 E:\wamp64\www\Webpack2Vue_Demo\static\_path 形式的目录
+// 生成 E:\wamp64\www\Webpack2Vue_Demo\static\_path 形式的目录
 exports.assetsPath = function (_path) {
-  //都是'static'
+  // 都是'static'
   var assetsSubDirectory = isProduction ? option.build.assetsSubDirectory : option.dev.assetsSubDirectory
-  //posix线程机制
+  // posix线程机制
   return path.posix.join(assetsSubDirectory, _path)
 }
 
-//解析.vue文件内的各种css格式
+// 解析.vue文件内的各种css格式
 exports.vueCssLoaders = function (options) {
   options = options || {}
-  
+
   var cssLoader = {
-    loader : 'css-loader',
+    loader: 'css-loader',
     options: {
-      modules      : false,
+      modules: false,
       importLoaders: 1,
-      minimize     : isProduction,
-      sourceMap    : options.sourceMap
+      minimize: isProduction,
+      sourceMap: options.sourceMap
     }
   }
-  
+
   function generateLoaders (loader, loaderOptions) {
     var loaders = [cssLoader]
-    
+
     loaders.push({loader: 'postcss-loader'})
-    
+
     if (loader) {
       loaders.push({
-        loader : loader + '-loader',
+        loader: loader + '-loader',
         options: Object.assign({}, loaderOptions, {
           sourceMap: options.sourceMap
         })
       })
     }
-    
+
     if (options.extract) {
       return ExtractTextPlugin.extract({
-        use     : loaders,
+        use: loaders,
         fallback: 'vue-style-loader'
       })
     } else {
       return ['vue-style-loader'].concat(loaders)
     }
-    
   }
-  
+
   return {
-    css : generateLoaders(),
+    css: generateLoaders(),
     scss: generateLoaders('sass')
-    //https://vue-loader.vuejs.org/zh-cn/features/postcss.html
-    /*postcss: {
+    // https://vue-loader.vuejs.org/zh-cn/features/postcss.html
+    /* postcss: {
      options: {
      // use sugarss parser
      parser: 'sugarss',
@@ -74,11 +72,11 @@ exports.vueCssLoaders = function (options) {
      ]
      })
      ]
-     }*/
+     } */
   }
 }
 
-//解析.vue文件外的各种css格式
+// 解析.vue文件外的各种css格式
 exports.cssLoaders = function (options) {
   /*
    *{
@@ -86,29 +84,29 @@ exports.cssLoaders = function (options) {
    * extract: isProduction}
    */
   options = options || {}
-  
+
   var cssLoader = {
-    loader : 'css-loader',
+    loader: 'css-loader',
     options: {
-      modules      : true,
-      importLoaders: 1,
-      minimize     : isProduction,
-      sourceMap    : options.sourceMap
+      modules: false,
+      importLoaders: 0,
+      minimize: isProduction,
+      sourceMap: options.sourceMap
     }
   }
-  
+
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
-    /*对数组进行对象属性的解构
+    /* 对数组进行对象属性的解构
      let arr = [1, 2, 3];
      let {0 : first, [arr.length - 1] : last} = arr;
      first // 1 last // 3
      */
     var loaders = [cssLoader]
-    
+
     loaders.push({
       loader: 'postcss-loader'
-      /*options: {
+      /* options: {
        map:'inline',
        plugins: () => [
          require('autoprefixer')({
@@ -117,9 +115,9 @@ exports.cssLoaders = function (options) {
            ]
          })
        ]
-       }*/
+       } */
     })
-    
+
     /*
      loaders=[{
      loader  : 'css-loader',
@@ -132,7 +130,7 @@ exports.cssLoaders = function (options) {
      * */
     if (loader) {
       loaders.push({
-        loader : loader + '-loader',
+        loader: loader + '-loader',
         options: Object.assign({}, loaderOptions, {
           sourceMap: options.sourceMap
         })
@@ -154,30 +152,29 @@ exports.cssLoaders = function (options) {
      }
      ]
      */
-    
+
     // Extract CSS when that option is specified
     // (which is the case during production build)
-    
+
     if (options.extract) {
       return ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use     : loaders
+        use: loaders
       })
     } else {
       return ['style-loader'].concat(loaders)
     }
-    
   }
-  
+
   // https://vue-loader.vuejs.org/en/configurations/extract-css.html
   return {
-    css    : generateLoaders(),
+    css: generateLoaders(),
     postcss: generateLoaders(),
-    less   : generateLoaders('less'),
-    sass   : generateLoaders('sass', {indentedSyntax: true}),
-    scss   : generateLoaders('sass'),
-    stylus : generateLoaders('stylus'),
-    styl   : generateLoaders('stylus')
+    less: generateLoaders('less'),
+    sass: generateLoaders('sass', {indentedSyntax: true}),
+    scss: generateLoaders('sass'),
+    stylus: generateLoaders('stylus'),
+    styl: generateLoaders('stylus')
   }
 }
 
@@ -204,40 +201,40 @@ use:ExtractTextPlugin.extract({
    'sass-loader'
  ]
 })
- 
+
  */
 
 exports.styleLoaders = function (options) {
   var output = []
-  
+
   var loaders = exports.cssLoaders(options)
-  
+
   for (var extension in loaders) {
     var loader = loaders[extension]
     if (extension === 'css') {
       output.push({
-        //没压缩过的.css压缩
+        // 没压缩过的.css压缩
         test: /^((?!\.min\.css).)*\.css/,
-        use : loader
+        use: loader
       })
     } else {
       output.push({
         test: new RegExp('\\.' + extension + '$'),
-        use : loader
+        use: loader
       })
     }
   }
   output.push({
-    //已压缩过的.min.css不压缩
-    test  : /\.min\.css/,
+    // 已压缩过的.min.css不压缩
+    test: /\.min\.css/,
     use: ExtractTextPlugin.extract({
       fallback: 'style-loader',
-      //resolve-url-loader may be chained before sass-loader if necessary
+      // resolve-url-loader may be chained before sass-loader if necessary
       use: [ {
-        loader : 'css-loader',
+        loader: 'css-loader',
         options: {
-          minimize     : false,
-          sourceMap    : false
+          minimize: false,
+          sourceMap: false
         }
       }]
     })
@@ -252,7 +249,7 @@ exports.styleLoaders = function (options) {
           sourceMap    : false
         }
       }
-    ],*/
+    ], */
   })
   return output
 }

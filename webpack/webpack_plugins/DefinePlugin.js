@@ -2,8 +2,6 @@
  * Created by LinChuQiang.
  */
 
-
-
 var webpack = require('webpack')
 
 const TARGET = process.env.npm_lifecycle_event
@@ -14,10 +12,10 @@ if (TARGET === 'dev') {
 
 if (TARGET === 'build') {
   console.log(`DefinePlugin正在设置 webpack 全局公共变量！`)
-  //4.1 全局公共变量
+  // 4.1 全局公共变量
   // http://vuejs.github.io/vue-loader/en/workflow/production.html
   var globalVar = new webpack.DefinePlugin({
-    //'process.env': config.build.env
+    // 'process.env': config.build.env
   })
   module.exports = globalVar
 }

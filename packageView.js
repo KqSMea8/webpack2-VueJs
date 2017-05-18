@@ -5,19 +5,17 @@
 // 关于process.env，阅读《npm scripts 使用指南》
 // http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html?utm_source=tuicool&utm_medium=referral
 
-console.log(process.env.npm_package_name);
-console.log(process.env.npm_package_version);
-console.log(process.env.npm_config_report);
+console.log(process.env.npm_package_name)
+console.log(process.env.npm_package_version)
+console.log(process.env.npm_config_report)
 console.log(process.env.NODE_ENV)
-console.log(process.env);
+console.log(process.env)
 
-//npm 提供一个npm_lifecycle_event变量，返回当前正在运行的脚本名称，比如pretest、test、posttest等等。所以，可以利用这个变量，在同一个脚本文件里面，为不同的npm scripts命令编写代码。
-var TARGET = process.env.npm_lifecycle_event;
-console.log(TARGET);
+// npm 提供一个npm_lifecycle_event变量，返回当前正在运行的脚本名称，比如pretest、test、posttest等等。所以，可以利用这个变量，在同一个脚本文件里面，为不同的npm scripts命令编写代码。
+var TARGET = process.env.npm_lifecycle_event
+console.log(TARGET)
 
-
-
-/*cmd -> node -> console.log(process.env);
+/* cmd -> node -> console.log(process.env);
  {
  PROMPT: '$P$G',
  USERDOMAIN_ROAMINGPROFILE: 'DESKTOP-I4E28RD',

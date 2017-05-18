@@ -11,24 +11,22 @@
 				<span class = "icon-bar"></span>
 				<span class = "icon-bar"></span>
 			</button>
-			<router-link to = "/todo" class = "navbar-brand">TODO<span class = "sr-only">(current)</span></router-link>
+			<a href="http://localhost:3333/index.html" class="navbar-brand active">VUESPA<span class = "sr-only">(current)</span></a>
+			<!--<router-link to = "/vuespa" class = "navbar-brand">VueSPA<span class = "sr-only">(current)</span></router-link>-->
 			<!--<a class="navbar-brand" href="#">Brand</a>-->
 		</div>
 		
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
 			<ul class = "nav navbar-nav">
-				<li class = "active">
-					<router-link to = "/about">关于<span class = "sr-only">(current)</span>
-					</router-link>
+				<li>
+					<a href="http://localhost:3333/pages/data/app.html">数据<span class = "sr-only">(current)</span></a>
 				</li>
 				<li>
-					<router-link to = "/login">登录<span class = "sr-only">(current)</span>
-					</router-link>
+					<a href="http://localhost:3333/index.html">VUESPA<span class = "sr-only">(current)</span></a>
 				</li>
 				<li>
-					<router-link to = "/home">HOME<span class = "sr-only">(current)</span>
-					</router-link>
+					<a href="http://localhost:3333/index.html">VUESPA<span class = "sr-only">(current)</span></a>
 				</li>
 				<li class = "dropdown">
 					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">Dropdown <span class = "caret"></span>
@@ -62,8 +60,7 @@
 			</form>
 			<ul class = "nav navbar-nav navbar-right">
 				<li>
-					<router-link to = "/news">新闻<span class = "sr-only">(current)</span>
-					</router-link>
+					<a href="http://localhost:3333/index.html">VUESPA<span class = "sr-only">(current)</span></a>
 				</li>
 				<li class = "dropdown">
 					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">Dropdown <span class = "caret"></span>

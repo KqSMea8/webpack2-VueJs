@@ -24,6 +24,7 @@ if (TARGET === 'dev') {
   // includeSourcemap default: true
   // hash default: false
   // typeOfAsset default: js
+  // jquery已经bootstrap自带
   htmlAsset = new AddAssetHtmlPlugin([
     {
       filepath: path.resolve(process.cwd(), FILE_PATH, option.dev.dll.bootstrapCss),
@@ -31,12 +32,6 @@ if (TARGET === 'dev') {
       publicPath: HTML_SRC,
       includeSourcemap: false,
       typeOfAsset: 'css'
-    },
-    {
-      filepath: path.resolve(process.cwd(), FILE_PATH, option.dev.dll.jquery),
-      outputPath: SERVER_PATH,
-      publicPath: HTML_SRC,
-      includeSourcemap: false
     },
     {
       filepath: path.resolve(process.cwd(), FILE_PATH, option.dev.dll.bootstrap),

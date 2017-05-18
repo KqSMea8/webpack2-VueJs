@@ -12,11 +12,11 @@ import '@/css/vendor/reset.css'
 import '@/css/page/index.css'
 
 // 导入路由
-import routes from './router/index'
+import routes from './vuespa/router/index'
 // 导入存储
-import vuexStore from './store/index'
+import vuexStore from './vuespa/store/index'
 // 导入插件
-import validatePlugin from './plugin/validate'
+import validatePlugin from './vuespa/plugin/validate'
 // 导入组件
 import NavBar from './layouts/NavBar.vue'
 
@@ -49,4 +49,4 @@ const router = new VueRouter({
 new Vue({
   router: router,
   store: vuexStore
-}).$mount('#index')
+}).$mount('.container')

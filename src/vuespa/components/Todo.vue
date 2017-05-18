@@ -8,7 +8,6 @@
 			<h1>TODOS</h1>
 			<input type = "text" placeholder = "还有什么需要做的？" autofocus autocomplete = "off" v-on:keyup.enter = "submitTodo">
 			<input type = "button" @click = "csl">
-			<button @click="go">this is to the data page!</button>
 		</header>
 		<section>
 			<input type = "checkbox" v-bind:checked='allChecked' @change="toggleAll({ done: !allChecked })">全选
@@ -76,12 +75,8 @@
       ...mapActions({
         submitTodo: 'rootAct_addTodoItem'
       }),
-      
       csl(){
         console.log(this.$store);
-      },
-      go(){
-        window.location.href = 'http://localhost:3333/pages/data/app.html';
       }
     },
     computed  : {

@@ -53,6 +53,9 @@
 var p1 = path.normalize('E:\\wamp64\\www\\Webpack2Vue_Demo\\static\\lib');
 E:\wamp64\www\Webpack2Vue_Demo\static\lib
 `
+9. webpack2 使用了html-webpack-template 之后 html的内置图片改为require并由url-loader处理
+- If you are using HTML templates in Webpack 2, in addition to use the file-loader you need to change in your HTML:
+`<img src="../images/foo.png" /> to this <img src=<%=require("../images/foo.png")%> /> `
 
  
 

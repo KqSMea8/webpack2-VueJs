@@ -13,5 +13,6 @@
     <orderEntry type="library" name="vue-resource-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="webpack-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="webpack-dev-middleware-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="ejs-DefinitelyTyped" level="application" />
   </component>
 </module>
