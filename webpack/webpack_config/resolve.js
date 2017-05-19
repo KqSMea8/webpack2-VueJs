@@ -10,7 +10,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 // 配置模块如何解析
 module.exports.base = {
   // 自动解析确定的扩展
-  extensions: ['.js', '.vue', '.json', '.css'],
+  extensions: ['.js', '.vue', '.json', '.css', ' '],
   // alias优先从resolve.modules中的node_modules下寻找
   alias: {
     vue$: 'vue/dist/vue.esm.js',

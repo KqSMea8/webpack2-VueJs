@@ -16,13 +16,15 @@ const globalVar = require('../webpack_plugins/DefinePlugin')
 const provideVar = require('../webpack_plugins/ProvidePlugin')
 
 const html = require('../webpack_plugins/HtmlWebpackPlugin')
+// 弃用DLL, 不引入htmlAsset以及JSLib
 const htmlAsset = require('../webpack_plugins/AddAssetHtmlPlugin')
+const jsLib = require('../webpack_plugins/DllReferencePlugin')
 
 const cssExtract = require('../webpack_plugins/ExtractTextPlugin')
 const compressCss = require('../webpack_plugins/OptimizeCssAssetsPlugin')
 
 const jsCommon = require('../webpack_plugins/CommonsChunkPlugin')
-const jsLib = require('../webpack_plugins/DllReferencePlugin')
+
 const compressJs = require('../webpack_plugins/UglifyJsPlugin')
 
 const copy = require('../webpack_plugins/CopyWebpackPlugin')
@@ -65,9 +67,12 @@ const devPlugins = [
 devPlugins.push(cssExtract)
 Array.prototype.push.apply(devPlugins, html)
 Array.prototype.push.apply(devPlugins, jsCommon)
+
+
 Array.prototype.push.apply(devPlugins, jsLib)
 devPlugins.push(htmlAsset)
-devPlugins.push(copy)
+// devPlugins.push(copy)
+
 module.exports.dev = devPlugins
 
 /** ****
@@ -83,12 +88,16 @@ buildPlugins.push(globalVar)
 // Equivalent to vegetables.push('celery', 'beetroot');
 // Array.prototype.push.apply(vegetables, moreVegs);
 Array.prototype.push.apply(buildPlugins, jsCommon)
-Array.prototype.push.apply(buildPlugins, jsLib)
+Array.prototype.push.apply(buildPlugins)
 
 buildPlugins.push(html)
+
+
+// buildPlugins.push(htmlAsset)
+
 buildPlugins.push(cssExtract, compressCss)
 buildPlugins.push(compressJs)
-buildPlugins.push(htmlAsset)
+
 buildPlugins.push(assets)
 
 // Default：false
@@ -118,6 +127,7 @@ module.exports.build = buildPlugins
  DLL环境
  **********/
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
 const dllPlugins = [
   new ExtractTextPlugin('[name].css')
 ]
@@ -126,25 +136,29 @@ const isDev = process.env.NODE_ENV === 'development'
 const outputPath = isDev ? path.resolve(process.cwd(), 'commonDll/development') : path.resolve(process.cwd(), 'commonDll/production')
 
 dllPlugins.push(
-    new webpack.DllPlugin({
-      /**
-       * path
-       * 定义 manifest 文件生成的位置
-       * [name]的部分由entry的名字替换
-       * The path to the manifest file which maps between modules included in a bundle and the internal IDs within that bundle
-       * 本Dll文件中各模块的索引，供DllReferencePlugin读取使用
-       */
-      path: path.join(outputPath, '[name]-manifest.json'),
-      /**
-       * name
-       * dll bundle 输出到那个全局变量上
-       * 必须和 output.library 一样的值
-       * 当前Dll的所有内容都会存放在这个参数指定变量名的一个全局变量下
-       */
-      name: '[name]',
-      // 指定一个路径作为上下文环境，需要与webpack_plugins的DllReferencePlugin的context参数保持一致，建议统一设置为项目根目录
-      context: path.resolve(process.cwd())
-    })
+  new webpack.DllPlugin({
+    /**
+     * path
+     * 定义 manifest 文件生成的位置
+     * [name]的部分由entry的名字替换
+     * The path to the manifest file which maps between modules included in a bundle and the internal IDs within that bundle
+     * 本Dll文件中各模块的索引，供DllReferencePlugin读取使用
+     */
+    path: path.join(outputPath, '[name]-manifest.json'),
+    /**
+     * name
+     * dll bundle 输出到那个全局变量上
+     * 必须和 output.library 一样的值
+     * 当前Dll的所有内容都会存放在这个参数指定变量名的一个全局变量下
+     */
+    name: '[name]',
+    // 指定一个路径作为上下文环境，需要与webpack_plugins的DllReferencePlugin的context参数保持一致，建议统一设置为项目根目录
+    // context: process.cwd()
+  })
+)
+
+dllPlugins.push(
+  new webpack.optimize.OccurrenceOrderPlugin(true)
 )
 
 // 默认不压缩

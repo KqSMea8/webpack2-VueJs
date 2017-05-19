@@ -2,27 +2,27 @@
  * Created by LinChuQiang.
  */
 
-const path = require('path');
-const option = require('../option');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path')
+const option = require('../option')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-const TARGET = process.env.npm_lifecycle_event;
+const TARGET = process.env.npm_lifecycle_event
 
 if (TARGET === 'dev') {
-  console.log(TARGET,`: CopyWebpackPlugin正在复制自定义静态资源文件！`);
+  console.log(TARGET, `: CopyWebpackPlugin正在复制自定义静态资源文件！`)
   var copy = new CopyWebpackPlugin([
     {
-      context: path.resolve(process.cwd(), 'commonDll/production/static/img/'),
+      context: path.resolve(process.cwd(), 'commonDll/development/assets/'),
       from: '*',
-      to: path.resolve(option.dev.assetsRoot, 'development','img'),
-    },
-  ]);
-  module.exports = copy;
+      to: path.resolve(option.dev.assetsRoot, 'assets')
+    }
+  ])
+  module.exports = copy
 }
 
 if (TARGET === 'build') {
-  console.log(TARGET,`: CopyWebpackPlugin正在复制自定义静态资源文件！`);
-  //4.7 复制自定义静态资源
+  console.log(TARGET, `: CopyWebpackPlugin正在复制自定义静态资源文件！`)
+  // 4.7 复制自定义静态资源
   // https://github.com/kevlened/copy-webpack-plugin
   // 复制 webpack2_Course的static 文件夹下的资源到 to中的地址
   var copy = new CopyWebpackPlugin([
@@ -33,27 +33,27 @@ if (TARGET === 'build') {
       // 则返回 '/home/myself/node/wwwroot/static_files/gif/image.gif'
       // webpack2_Course/static
       // 相对于本目录解析地址
-      from  : path.resolve(__dirname, '../../static'),
+      from: path.resolve(__dirname, '../../static'),
       // webpack2_Course/dist/static
-      //to: config.build.assetsSubDirectory,
-      to    : path.resolve(option.build.assetsRoot, 'static'),
+      // to: config.build.assetsSubDirectory,
+      to: path.resolve(option.build.assetsRoot, 'static'),
       ignore: ['.*'],
-      debug : 'debug',
+      debug: 'debug'
     },
     {
       context: path.resolve(process.cwd(), 'commonDll/production/static/fonts/'),
       from: '*',
-      to: path.resolve(option.build.assetsRoot, 'static','fonts'),
+      to: path.resolve(option.build.assetsRoot, 'static', 'fonts')
     },
     {
       context: path.resolve(process.cwd(), 'commonDll/production/static/img/'),
       from: '*',
-      to: path.resolve(option.build.assetsRoot, 'static','img'),
-    },
-  ]);
-  module.exports = copy;
+      to: path.resolve(option.build.assetsRoot, 'static', 'img')
+    }
+  ])
+  module.exports = copy
 }
 
 if (TARGET === 'test') {
-  console.log(`Running the test task!`);
+  console.log(`Running the test task!`)
 }

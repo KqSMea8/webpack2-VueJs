@@ -46,5 +46,4 @@ slideModule.prototype = {
     })
   }
 }
-
 module.exports = slideModule

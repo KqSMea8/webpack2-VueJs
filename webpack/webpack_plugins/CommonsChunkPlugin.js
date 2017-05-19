@@ -19,7 +19,7 @@ var jsCommon = []
 // 设置 minChunks 函数将所有 node_modules 中的模块公共部分提取到一个通用的 chunk 中
 // 参考：https://segmentfault.com/a/1190000007891318?utm_source=tuicool&utm_medium=referral
 
-// 如果没有设置filename选项，最终公共文件的绝对路径是由webpack配置中的output.chunkFilename决定的
+// 如果没有设置filename选项，最终公共文件的绝对路径是由webpack配置中的output.filename决定的
 // 如果设置了filename选项，最终公共文件的绝对路径是根据webpack配置中的ouput.path和CommonsChunkPlugin的filename参数，拼接而成的
 
 // chunks 选项表示需要在哪些 chunk（也可以理解为webpack配置中entry的每一项）里寻找公共代码进行打包。不设置此参数则默认提取范围为所有的chunk。
@@ -29,10 +29,10 @@ var jsCommon = []
 if (TARGET === 'dev') {
   console.log(`${TARGET}：CommonsChunkPlugin 正在提取公共JS文件！`)
   jsCommon = [
-    /* new webpack.optimize.CommonsChunkPlugin({
+     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor.commonChunk',
-      filename: path.posix.join(JSDIR, '[name].js'),
-      chunks: ['pages/data', 'pages/main'],
+      filename: path.posix.join(ASSETSJS, '[name].js'),
+      chunks: ['pages/data', 'index'],
       // children: true,
       // async: true,
       // 如果模块是一个路径，而且在路径中有 ".js" 这个结尾文件出现，并且是 node_modules 目录下的文件，那请将它拆分到一个 chunk vendor.commonChunk.js 中
@@ -45,24 +45,32 @@ if (TARGET === 'dev') {
             ) === 0
         )
       }
-    }), */
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'index.commonChunk',
-      filename: path.posix.join(ASSETSJS, '[name].js'),
-      minChunks: 3,
-      chunks: 'index',
-      excludeChunks: ['pages/data.outputSync']
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'bootstrap.commonChunk',
+      // 随着入口 chunk 越来越多，这个配置保证没有其它的模块会打包进该chunk
+      minChunks: Infinity,
+      filename: path.posix.join(ASSETSJS, '[name].js'),
+      chunks:'bootstrapLib'
+    }),
+    /*new webpack.optimize.CommonsChunkPlugin({
+     name: ['manifest.commonChunk'],
+     filename: path.posix.join(ASSETSJS, '[name].js')
+     }),*/
     new webpack.optimize.CommonsChunkPlugin({
       name: 'data.commonChunk',
       filename: path.posix.join(ASSETSJS, '[name].js'),
-      minChunks: 3,
+      minChunks: Infinity,
       chunks: 'pages/data'
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['vendor.commonChunk', 'manifest.commonChunk'],
-      filename: path.posix.join(ASSETSJS, '[name].js')
+      name: 'index.commonChunk',
+      filename: path.posix.join(ASSETSJS, '[name].js'),
+      minChunks: Infinity,
+      chunks: 'index'
     })
+  
+
   ]
   module.exports = jsCommon
 }

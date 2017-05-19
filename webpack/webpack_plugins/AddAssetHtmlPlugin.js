@@ -16,7 +16,7 @@ const TARGET = process.env.npm_lifecycle_event
 var htmlAsset
 if (TARGET === 'dev') {
   console.log(`${TARGET}: AddAssetHtmlPlugin正在为html-webpack-plugin生成的HTML添加JS或CSS资源路径！`)
-  const FILE_PATH = option.dev.dll.directory
+  const FILE_PATH = option.build.dll.directory
   // '\assets\lib'
   const SERVER_PATH = path.join(option.dev.dll.dir, option.dev.dll.publicPath)
   // '/assets/lib'
@@ -27,23 +27,29 @@ if (TARGET === 'dev') {
   // jquery已经bootstrap自带
   htmlAsset = new AddAssetHtmlPlugin([
     {
-      filepath: path.resolve(process.cwd(), FILE_PATH, option.dev.dll.bootstrapCss),
+      filepath: path.resolve(process.cwd(), FILE_PATH, option.build.dll.bootstrapCss),
       outputPath: SERVER_PATH,
       publicPath: HTML_SRC,
-      includeSourcemap: false,
+      includeSourcemap: true,
       typeOfAsset: 'css'
     },
-    {
-      filepath: path.resolve(process.cwd(), FILE_PATH, option.dev.dll.bootstrap),
+    /*{
+      filepath: path.resolve(process.cwd(), FILE_PATH, option.build.dll.jquery),
       outputPath: SERVER_PATH,
       publicPath: HTML_SRC,
-      includeSourcemap: false
+      includeSourcemap: true
     },
     {
-      filepath: path.resolve(process.cwd(), FILE_PATH, option.dev.dll.vue),
+      filepath: path.resolve(process.cwd(), FILE_PATH, option.build.dll.bootstrap),
       outputPath: SERVER_PATH,
       publicPath: HTML_SRC,
-      includeSourcemap: false
+      includeSourcemap: true
+    },*/
+    {
+      filepath: path.resolve(process.cwd(), FILE_PATH, option.build.dll.vue),
+      outputPath: SERVER_PATH,
+      publicPath: HTML_SRC,
+      includeSourcemap: true
     }
   ])
   module.exports = htmlAsset

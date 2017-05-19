@@ -8,25 +8,18 @@
 		<div class = "col-xs-6 col-md-4">
 			<h2 class = "text-success">{{ msg }}</h2>
 		</div>
-		<button @click="index">indexHTML</button>
 		<SlideImg></SlideImg>
 	</div>
 </template>
 
 <script>
 	import SlideImg from './Home-slide.vue'
-	
 	/* eslint-disable semi */
     export default {
       components:{SlideImg},
       data() {
         return {
           msg: '这是一个webpackVue项目'
-        }
-      },
-      methods:{
-        index(){
-          window.location.href = '../index.html';
         }
       }
     }

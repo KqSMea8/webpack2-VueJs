@@ -57,7 +57,25 @@ E:\wamp64\www\Webpack2Vue_Demo\static\lib
 - If you are using HTML templates in Webpack 2, in addition to use the file-loader you need to change in your HTML:
 `<img src="../images/foo.png" /> to this <img src=<%=require("../images/foo.png")%> /> `
 
- 
+10.DLL生成的BootStrap.js无效的问题 解决不了,弃用BootStrapDLL
 
+11.控制JSCSS顺序
+- HEAD的JS以及CSS加载
+
+<link rel="stylesheet" type="text/css" href="<%=htmlWebpackPlugin.files.css[0] %>">
+<script src="<%=htmlWebpackPlugin.files.chunks['manifest.commonChunk'].entry %>"></script>
+<script src="<%=htmlWebpackPlugin.files.js[0] %>"></script>
+<script src="<%=htmlWebpackPlugin.files.js[1] %>"></script>
+<script src="<%=htmlWebpackPlugin.files.chunks['index'].entry %>"></script>
+
+- 如何读取html-webpack-template的option以及files选项
+
+`
+
+<% for(var key in htmlWebpackPlugin.files) { %>
+<%= key %> : <%= JSON.stringify(htmlWebpackPlugin.files[key]) %>,
+<% } %>
+
+`
 
 

@@ -19,7 +19,7 @@ const baseRules = [
     // 使用内部的 require() 机制来查找模块的位置，但不会加载模块，只返回解析后的文件名。
     test: require.resolve('jquery'),
     // 先把jQuery对象声明成为全局变量`jQuery`，再通过管道进一步又声明成为全局变量`$`
-    use: 'expose-loader?$!expose-loader?jQuery'
+    use: 'expose-loader?$!expose-loader?jQuery!expose-loader?jquery'
   },
   {
     test: /\.vue$/,

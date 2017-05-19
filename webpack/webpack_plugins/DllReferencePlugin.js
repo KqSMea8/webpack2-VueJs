@@ -10,14 +10,22 @@ const TARGET = process.env.npm_lifecycle_event
 var jsLib
 if (TARGET === 'dev') {
   console.log(`${TARGET}: DllReferencePlugin正在为静态资源单独打包！`)
-  const DIR = option.dev.dll.directory
+  const DIR = option.build.dll.directory
   jsLib = [
-    new webpack.DllReferencePlugin({
-      // context: path.resolve(process.cwd()),
-      manifest: require(path.resolve(DIR, option.dev.dll.bootstrapManifest))
+    /*new webpack.DllReferencePlugin({
+      manifest: require(path.resolve(DIR, option.build.dll.jqueryManifest))
     }),
     new webpack.DllReferencePlugin({
-      manifest: require(path.resolve(DIR, option.dev.dll.vueManifest))
+      //context: process.cwd(),
+      // manifest: require('/commonDll/production/bootstrap_dll-manifest.json'),
+      manifest: require(path.resolve(DIR, option.build.dll.bootstrapManifest)),
+      name:'bootstrap_dll'
+    }),*/
+    new webpack.DllReferencePlugin({
+      // context: process.cwd(),
+      // manifest: require('/commonDll/production/vue_dll-manifest.json'),
+      manifest: require(path.resolve(DIR, option.build.dll.vueManifest)),
+      name:'vue_dll'
     })
   ]
   module.exports = jsLib

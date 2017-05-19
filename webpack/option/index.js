@@ -7,14 +7,15 @@ module.exports = {
     dll: {
       // DllReferencePlugin为静态资源单独打包
       directory: 'commonDll/development',
-      jqueryManifest: 'jquery-manifest.json',
-      bootstrapManifest: 'bootstrap-manifest.json',
-      vueManifest: 'vue-manifest.json',
+      jqueryManifest: 'jquery_dll-manifest.json',
+      bootstrapManifest: 'bootstrap_dll-manifest.json',
+      vueManifest: 'vue_dll-manifest.json',
+      
       // AddAssetHtmlPlugin为html-webpack-plugin生成的HTML添加JS或CSS资源路径！
-      jquery: 'jquery.dllBundle.js',
-      bootstrap: 'bootstrap.dllBundle.js',
-      bootstrapCss: 'bootstrap.css',
-      vue: 'vue.dllBundle.js',
+      jquery: 'jquery_dll.dllBundle.js',
+      bootstrap: 'bootstrap_dll.dllBundle.js',
+      bootstrapCss: 'bootstrap_dll.css',
+      vue: 'vue_dll.dllBundle.js',
       dir: '/assets',
       outputPath: 'lib',  // 生成目录
       publicPath: 'lib'   // 注入地址
@@ -41,18 +42,20 @@ module.exports = {
     dll: {
       // DllReferencePlugin为静态资源单独打包
       directory: 'commonDll/production',
-      jqueryManifest: 'jquery-manifest.json',
-      bootstrapManifest: 'bootstrap-manifest.json',
-      vueManifest: 'vue-manifest.json',
+      jqueryManifest: 'jquery_dll-manifest.json',
+      bootstrapManifest: 'bootstrap_dll-manifest.json',
+      vueManifest: 'vue_dll-manifest.json',
+    
       // AddAssetHtmlPlugin为html-webpack-plugin生成的HTML添加JS或CSS资源路径！
-      jquery: 'jquery.dllBundle.js',
-      bootstrap: 'bootstrap.dllBundle.js',
-      bootstrapCss: 'bootstrap.css',
-      vue: 'vue.dllBundle.js',
+      jquery: 'jquery_dll.dllBundle.js',
+      bootstrap: 'bootstrap_dll.dllBundle.js',
+      bootstrapCss: 'bootstrap_dll.css',
+      vue: 'vue_dll.dllBundle.js',
       dir: '/assets',
       outputPath: 'lib',  // 生成目录
       publicPath: 'lib'   // 注入地址
     },
+    
     // 也可改为 cross-env 控制NODE_ENV
     env: require('./prod.env'),
     // index                    : path.resolve( __dirname,'../dist/index.html' ),

@@ -21,6 +21,7 @@ module.exports.base = baseEntry
 
 const devEntry = {}
 // entry节点对象的Key是别名，是与output中filename属性[name]关联的，因此想要生成什么样的路径，应该在entry的key中配置
+devEntry['bootstrapLib'] = ['jquery', './src/js/vendor/bootstrap/dist/js/bootstrap.min.js']
 devEntry['index'] = './src/index.js'
 devEntry['pages/data'] = path.resolve(process.cwd(), 'src/pages/data/app.js')
 // devEntry['pages/main'] = path.resolve(process.cwd(), 'src/pages/main/app.js')
@@ -28,9 +29,11 @@ devEntry['pages/data'] = path.resolve(process.cwd(), 'src/pages/data/app.js')
 // add hot-reload related code to entry chunks
 Object.keys(devEntry).forEach(function (name) {
   //  app : ["./webpack/dev-client", "./src/main.js"]
-  devEntry[name] = ['./webpack/dev-client'].concat(devEntry[name])
+  if(name!=='bootstrapLib'){
+    devEntry[name] = ['./webpack/dev-client'].concat(devEntry[name])
+  }
 })
-console.log(devEntry)
+// console.log(devEntry)
 /* { 'pages/data': 'E:\\wamp64\\www\\VueJs_Demo_Github\\src\\pages\\data\\app' } */
 module.exports.dev = devEntry
 
@@ -45,7 +48,12 @@ module.exports.build = {}
  **********/
 
 const dllEntry = {
-  vue: ['vue', 'vue-resource', 'vue-router', 'vuex'],
-  bootstrap: ['./src/js/vendor/bootstrap/dist/css/bootstrap.css', './src/js/vendor/bootstrap/dist/js/bootstrap.js']
+  /*jquery_dll: ['jquery'],
+  vue_dll: ['vue', 'vue-resource', 'vue-router', 'vuex'],*/
+  // jquery_dll: [path.join(process.cwd(), "dll", "jquery_dll.js")],
+  jquery_dll: ['jquery'],
+  vue_dll: [path.join(process.cwd(), "dll", "vue_dll.js")],
+  // bootstrap_dll: ['./src/js/vendor/bootstrap/dist/js/bootstrap.js', './src/js/vendor/bootstrap/dist/css/bootstrap.css']
+  bootstrap_dll: ['bootstrap/dist/css/bootstrap.min.css']
 }
 module.exports.dll = dllEntry

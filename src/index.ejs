@@ -6,6 +6,7 @@
 	<meta name = "copyright" content = "版权" />
 	<meta name = "description" content = "描述" />
 	<meta name = "keywords" content = "关键字" />
+	<!--是否兼容Mobile-->
 	<% if (htmlWebpackPlugin.options.mobile) { %>
 	<meta name = "viewport" content = "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
@@ -15,10 +16,13 @@
 	<meta name = "screen-orientation" content = "portrait"><!-- uc强制竖屏 -->
 	<meta name = "x5-orientation" content = "portrait"><!-- QQ强制竖屏 -->
 	<% } %>
+	<!--标题-->
 	<title><%= htmlWebpackPlugin.options.title || 'Webpack App' %></title>
+	<!--图标-->
 	<% if (htmlWebpackPlugin.files.favicon) { %>
 	<link rel = "shortcut icon" href = "<%= htmlWebpackPlugin.files.favicon %>">
 	<% } %>
+
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -27,6 +31,7 @@
 	<![endif]-->
 </head>
 <body>
+<!--不支持的浏览器-->
 <% if (htmlWebpackPlugin.options.unsupportedBrowser) { %>
 <style>.unsupported-browser {
 		display: none;
@@ -37,9 +42,10 @@
 	for options.
 </div>
 <% } %>
+
 <% if (htmlWebpackPlugin.options.appMountId) { %>
 <div class = "<%= htmlWebpackPlugin.options.appMountId %>">
-	<% } %>
+<% } %>
 	<div class = "row">
 		<nav class = "navbar navbar-default">
 			<nav-bar />
@@ -96,6 +102,7 @@ window['<%= varName %>'] = <%= JSON.stringify(htmlWebpackPlugin.options.window[v
 <% } %>
 </script>
 <% } %>
+
 
 </body>
 </html>
