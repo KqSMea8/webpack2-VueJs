@@ -57,9 +57,9 @@ E:\wamp64\www\Webpack2Vue_Demo\static\lib
 - If you are using HTML templates in Webpack 2, in addition to use the file-loader you need to change in your HTML:
 `<img src="../images/foo.png" /> to this <img src=<%=require("../images/foo.png")%> /> `
 
-10.DLL生成的BootStrap.js无效的问题 解决不了,弃用BootStrapDLL
+10. DLL生成的BootStrap.js无效的问题 解决不了,弃用BootStrapDLL
 
-11.控制JSCSS顺序
+11. 控制JSCSS顺序
 - HEAD的JS以及CSS加载
 
 <link rel="stylesheet" type="text/css" href="<%=htmlWebpackPlugin.files.css[0] %>">
@@ -77,5 +77,19 @@ E:\wamp64\www\Webpack2Vue_Demo\static\lib
 <% } %>
 
 `
+
+`
+const files = {
+  publicPath: '/',
+  chunks: {
+    'manifest.commonChunk': {'size': 0, 'entry': '/assets/js/manifest.commonChunk.js', 'hash': 'b154c8f7e1f0f6a3bff4', 'css': []},
+    'index': {'size': 230306, 'entry': '/assets/js/index.outputSync.js', 'hash': 'f3d729b546119a0e4cab', 'css': []}
+  },
+  js: ['/assets/lib/bootstrap.dllBundle.js', '/assets/lib/vue.dllBundle.js', '/assets/js/manifest.commonChunk.js', '/assets/js/index.outputSync.js'],
+  css: ['/assets/lib/bootstrap.css']
+}
+`
+
+12. webpack-hot-middleware
 
 

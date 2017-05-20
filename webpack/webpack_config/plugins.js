@@ -73,6 +73,11 @@ Array.prototype.push.apply(devPlugins, jsLib)
 devPlugins.push(htmlAsset)
 // devPlugins.push(copy)
 
+if (option.dev.bundleAnalyzerReport) {
+  var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+  devPlugins.push(new BundleAnalyzerPlugin())
+}
+
 module.exports.dev = devPlugins
 
 /** ****
@@ -158,6 +163,8 @@ dllPlugins.push(
 )
 
 dllPlugins.push(
+  // If you use any hashing ([hash] or [chunkhash]), make sure to have a consistent ordering of modules. Use the OccurrenceOrderPlugin or recordsPath.
+  // https://github.com/webpack/docs/wiki/configuration
   new webpack.optimize.OccurrenceOrderPlugin(true)
 )
 

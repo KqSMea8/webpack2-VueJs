@@ -7,15 +7,17 @@ module.exports = {
     dll: {
       // DllReferencePlugin为静态资源单独打包
       directory: 'commonDll/development',
-      jqueryManifest: 'jquery_dll-manifest.json',
-      bootstrapManifest: 'bootstrap_dll-manifest.json',
+  
+      // jqueryManifest: 'jquery_dll-manifest.json',
+      bootstrapCssManifest: 'bootstrapCss_dll-manifest.json',
       vueManifest: 'vue_dll-manifest.json',
-      
+  
       // AddAssetHtmlPlugin为html-webpack-plugin生成的HTML添加JS或CSS资源路径！
-      jquery: 'jquery_dll.dllBundle.js',
-      bootstrap: 'bootstrap_dll.dllBundle.js',
-      bootstrapCss: 'bootstrap_dll.css',
+      // jquery: 'jquery_dll.dllBundle.js',
+      // bootstrap: 'bootstrap_dll.dllBundle.js',
+      bootstrapCss: 'bootstrapCss_dll.css',
       vue: 'vue_dll.dllBundle.js',
+      
       dir: '/assets',
       outputPath: 'lib',  // 生成目录
       publicPath: 'lib'   // 注入地址
@@ -35,22 +37,25 @@ module.exports = {
     // (https://github.com/webpack/css-loader#sourcemaps)
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
-    cssSourceMap: false
+    cssSourceMap: false,
+    bundleAnalyzerReport: true
   },
   // 发布环境选项
   build: {
     dll: {
       // DllReferencePlugin为静态资源单独打包
       directory: 'commonDll/production',
-      jqueryManifest: 'jquery_dll-manifest.json',
-      bootstrapManifest: 'bootstrap_dll-manifest.json',
+  
+      // jqueryManifest: 'jquery_dll-manifest.json',
+      bootstrapCssManifest: 'bootstrapCss_dll-manifest.json',
       vueManifest: 'vue_dll-manifest.json',
-    
+  
       // AddAssetHtmlPlugin为html-webpack-plugin生成的HTML添加JS或CSS资源路径！
-      jquery: 'jquery_dll.dllBundle.js',
-      bootstrap: 'bootstrap_dll.dllBundle.js',
-      bootstrapCss: 'bootstrap_dll.css',
+      // jquery: 'jquery_dll.dllBundle.js',
+      // bootstrap: 'bootstrap_dll.dllBundle.js',
+      bootstrapCss: 'bootstrapCss_dll.css',
       vue: 'vue_dll.dllBundle.js',
+  
       dir: '/assets',
       outputPath: 'lib',  // 生成目录
       publicPath: 'lib'   // 注入地址

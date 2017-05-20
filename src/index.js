@@ -8,6 +8,7 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 
 // 导入index.html页面css
+import bootstrap from 'bootstrap'
 import '@/css/page/index.css'
 
 // 导入路由
@@ -29,7 +30,6 @@ import NavBar from './layouts/NavBar.vue'
 function determineDate () {
   require.ensure([], function (require) {
     var moment = require('moment/moment.js')
-    $('[data-toggle="tooltip"]').tooltip()
     console.log(moment().format())
   }, 'moment')
 }

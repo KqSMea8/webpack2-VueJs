@@ -8,9 +8,11 @@ const option = require('../option')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TARGET = process.env.npm_lifecycle_event
 
-// 生成HTML
-// see https://github.com/ampedandwired/html-webpack-plugin
+// 插件说明
 /*
+ * 生成HTML
+ * see https://github.com/ampedandwired/html-webpack-plugin
+ *
  * filename: The file to write the HTML to. Defaults to index.html. You can specify a subdirectory here too (eg: assets/admin.html).
  * 渲染输出html文件名，与 output.path 结合生成该HTML的输出位置，绝对路径
  * filename: 'pages/data/app.html'
@@ -30,67 +32,38 @@ const TARGET = process.env.npm_lifecycle_event
  * HTMLminify more options:
  * https://github.com/kangax/html-minifier#options-quick-reference
  *
- * 允许插入到模板中的一些chunk，不配置此项默认会将entry中所有的thunk注入到模板中。在配置多个页面时，每个页面注入的thunk应该是不相同的，需要通过该配置为不同页面注入不同的thunk；跟CommonsChunkPlugin选项的name 以及 entry 入口的key相挂钩
- * chunks: ['manifest', 'vendor', 'app'],
+ * 允许插入到模板中的一些chunk，不配置此项默认会将entry中所有的thunk注入到模板中
+ * 在配置多个页面时，每个页面注入的thunk应该是不相同的，需要通过该配置为不同页面注入不同的thunk
+ * 从CommonsChunkPlugin选项的 name 以及 entry 入口的 key 打包（output）出来的文件（[name].outputSync.js）中选取需要加载的公共模块
+ * chunks: ['entry.commonChunk','bootstrapLib','bootstrap.commonChunk','index']
+ *
  *
  * necessary to consistently work with multiple chunks via CommonsChunkPlugin
  * Allows to control how chunks should be sorted before they are included to the html.
  * chunksSortMode: 'dependency'
+ * 关于公共模块的加载顺序解决方案
+ * 参考 https://github.com/jantimon/html-webpack-plugin/issues/481
+ * chunksSortMode: function (chunk1, chunk2) {
+ // 自定义JS排序
+ var order = ['bootstrapLib','bootstrap.commonChunk','entry.commonChunk','index',];
+ var order1 = order.indexOf(chunk1.names[0]);
+ var order2 = order.indexOf(chunk2.names[0]);
+ // 若 order1 小于 order2，在排序后的数组中 order1 应该出现在 order2 之前
+ return order1 - order2;
+ * },
  */
 
-const files = {
-  publicPath: '/',
-  chunks: {
-    'manifest.commonChunk': {'size': 0, 'entry': '/assets/js/manifest.commonChunk.js', 'hash': 'b154c8f7e1f0f6a3bff4', 'css': []},
-    'index': {'size': 230306, 'entry': '/assets/js/index.outputSync.js', 'hash': 'f3d729b546119a0e4cab', 'css': []}
-  },
-  js: ['/assets/lib/bootstrap.dllBundle.js', '/assets/lib/vue.dllBundle.js', '/assets/js/manifest.commonChunk.js', '/assets/js/index.outputSync.js'],
-  css: ['/assets/lib/bootstrap.css']
-}
 var html = []
 if (TARGET === 'dev') {
   console.log(TARGET, `: HtmlWebpackPlugin正在生成HTML！`)
   html = [
-    new HtmlWebpackPlugin({
-      title: 'app入口文件',
-      filename: 'pages/data/app.html',
-      template: path.resolve(process.cwd(), 'src/pages/data/app.ejs'),
-      inject: true,
-      showErrors: true,
-      minify: false,
-      chunks: ['vendor.commonChunk','bootstrap.commonChunk','data.commonChunk','pages/data'],
-      // cuhnksSortMode:'dependency'
-      chunksSortMode: function (chunk1, chunk2) {
-        var order = ['vendor.commonChunk', 'bootstrap.commonChunk','data.commonChunk','pages/data'];
-        var order1 = order.indexOf(chunk1.names[0]);
-        var order2 = order.indexOf(chunk2.names[0]);
-        // 若 order1 小于 order2，在排序后的数组中 order1 应该出现在 order2 之前
-        return order1 - order2;
-      },
-      excludeChunks:['index.commonChunk','index']
-    }),
     // 生成根目录下的入口HTML
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(process.cwd(), 'src/index.ejs'),
       inject: true,
       minify: false,
-      chunks: ['vendor.commonChunk','bootstrap.commonChunk','index.commonChunk', 'index'],
-      // https://github.com/jantimon/html-webpack-plugin/issues/481
-      /*
-       <script type="text/javascript" src="/assets/js/index.commonChunk.js"></script>
-       <script type="text/javascript" src="/assets/js/bootstrapChunk.js"></script>
-       <script type="text/javascript" src="/assets/js/vendor.commonChunk.js"></script>
-       <script type="text/javascript" src="/assets/js/index.outputSync.js"></script>
-       */
-      chunksSortMode: function (chunk1, chunk2) {
-        var order = ['index.commonChunk', 'bootstrap.commonChunk', 'vendor.commonChunk','index'];
-        var order1 = order.indexOf(chunk1.names[0]);
-        var order2 = order.indexOf(chunk2.names[0]);
-        // 若 order1 小于 order2，在排序后的数组中 order1 应该出现在 order2 之前
-        return order1 - order2;
-      },
-      excludeChunks:['data.commonChunk','pages/data'],
+      excludeChunks:['pages/data'],
       title: '根目录下的入口HTML',
       mobile: true,
       links: [
@@ -119,25 +92,40 @@ if (TARGET === 'dev') {
         }
       }
     })
+    /*new HtmlWebpackPlugin({
+      title: 'app入口文件',
+      filename: 'pages/data/app.html',
+      template: path.resolve(process.cwd(), 'src/pages/data/app.ejs'),
+      inject: true,
+      showErrors: true,
+      minify: false,
+      excludeChunks:['index']
+    })*/
   ]
+  // 自动生成 pages/**/* 的入口路径
   var htmlConf
-  var match = glob.sync('./src/pages/**/*.html')
-  // console.log('match: ', match)
+  var match = glob.sync(path.resolve(process.cwd(), 'src/pages/**/*/app.ejs'))
+  // match:  [ 'E:/wamp64/www/VueJs_Demo_Github/src/pages/data/app.ejs' ]
+  console.log('match: ', match)
   match.forEach(path => {
-    const chunk = path.split('./src/pages/')[1].split('/app.html')[0]
-    console.log(chunk)
-    const filename = chunk + '.html'
+    const chunk = path.split('E:/wamp64/www/VueJs_Demo_Github/src/')[1].split('/app.ejs')[0]
+    const filename = chunk + '/app.html'
+    // pages/data
+    console.log('filename: ', chunk)
     htmlConf = {
+      title:filename,
       filename: filename,
       template: path,
       inject: true,
-      hash: process.env.NODE_ENV === 'production',
-      chunks: ['manifest.commonChunk', 'vendor.commonChunk', chunk]
+      showErrors: true,
+      minify: false,
+      hash: process.env.NODE_ENV === 'production'
     }
-    // html.push(new HtmlWebpackPlugin(htmlConf))
+    html.push(new HtmlWebpackPlugin(htmlConf))
   })
   module.exports = html
-} else if (TARGET === 'build') {
+}
+if (TARGET === 'build') {
   console.log(TARGET, `: HtmlWebpackPlugin正在生成HTML！`)
   html = [
     new HtmlWebpackPlugin({
@@ -156,5 +144,5 @@ if (TARGET === 'dev') {
 }
 
 if (TARGET === 'test') {
-  console.log(`Running the test task!`)
+  console.log(TARGET, `: HtmlWebpackPlugin正在生成HTML！`)
 }

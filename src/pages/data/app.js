@@ -5,8 +5,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import store from './store'
 
+import bootstrap from 'bootstrap'
 import NavBar from '../../layouts/NavBar.vue'
 import Counter from './Counter.vue'
+
 
 store.commit('increment')
 store.commit('increment')

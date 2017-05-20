@@ -25,14 +25,17 @@ module.exports.base = {
 
 module.exports.dev = {
   // path 指定绝对路径，存放编译后生成的所有代码、资源（图片、字体等）
-  // path: path.resolve(process.cwd(), 'development',ASSETSJS),
-  path:  "/development/assets/js",
-  pathinfo: true,
+  path: path.resolve(process.cwd(), 'development'),
+  // path: path.resolve(__dirname, '../../dist/static'),
+  // publicPath: 'static/',
+  // pathinfo: true,
 
-  // filename 命名属于入口文件中的同步JS名称及路径
+  // filename 命名从入口文件打包的名称及路径
   // [name]从entry的key中获得
-  // filename: path.posix.join(ASSETSJS, '[name].outputSync.js'),
-  filename: '[name].outputSync.js',
+  filename: path.posix.join(ASSETSJS, '[name].outputSync.js'),
+  // filename: '[name].[hash].js',
+  // filename: '[name].outputSync.js',
+  // filename: '[name].js',
 
   // chunkFilename命名入口文件中require.ensure的异步js
   // 单独输出一个包，并不会跟filename中的内容打包到一起，比如有些文件你并不想打包到主文件中，或者减轻首页负担，只在引入的时候才加载

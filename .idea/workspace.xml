@@ -2,90 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="146de59c-b7b3-4127-95a3-740e68ad0c35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dll/jquery_dll.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dll/vue_dll.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap-theme.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bootstrap/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jquery-2.1.0.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/plupload/Moxie.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/plupload/moxie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/plupload/moxie.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/plupload/plupload.dev.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/plupload/plupload.full.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/plupload/plupload.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/plupload/qiniu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/plupload/zh_CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/router.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/vue.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.UglifyJsCache/4ca80e405a4704b29467b06cf96099f68cd6dcf4de47021baee44e2d6a7e4ae4.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.UglifyJsCache/6b2af901c905909a8b5632f6804ca07a5181ad32d1d4fdd9a359de892c465bad.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.UglifyJsCache/bcf41f78840e49e940aae8fe25ce1aa4f47143b11c9a421caca9827d7f1a1ad6.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/VueJs_Demo_Github.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/LinChuQiang.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/bootstrap-manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/bootstrap.dllBundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/bootstrap.dllBundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/vue-manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/vue.dllBundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/vue.dllBundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/bootstrap-manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/bootstrap.dllBundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/bootstrap.dllBundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/jquery-manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/jquery.dllBundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/jquery.dllBundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/vue-manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/vue.dllBundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/production/vue.dllBundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/desktop.ini" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.eslintignore" afterPath="$PROJECT_DIR$/.eslintignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/bootstrap_dll-manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/bootstrap_dll.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/bootstrap_dll.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/bootstrap_dll.dllBundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/bootstrap_dll.dllBundle.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/jquery_dll-manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/jquery_dll.dllBundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commonDll/development/jquery_dll.dllBundle.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dll/jquery_dll.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dll/vue_dll.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap-theme.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/js/npm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-2.1.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/plupload/Moxie.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/plupload/moxie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/plupload/moxie.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/plupload/plupload.dev.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/plupload/plupload.full.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/plupload/plupload.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/plupload/qiniu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/plupload/zh_CN.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/router.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/vue.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReadMe.md" afterPath="$PROJECT_DIR$/ReadMe.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.ejs" afterPath="$PROJECT_DIR$/src/index.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/development/vue_dll-manifest.json" afterPath="$PROJECT_DIR$/commonDll/development/vue_dll-manifest.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/development/vue_dll.dllBundle.js" afterPath="$PROJECT_DIR$/commonDll/development/vue_dll.dllBundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commonDll/development/vue_dll.dllBundle.js.map" afterPath="$PROJECT_DIR$/commonDll/development/vue_dll.dllBundle.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/module/slide.js" afterPath="$PROJECT_DIR$/src/js/module/slide.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/data/app.ejs" afterPath="$PROJECT_DIR$/src/pages/data/app.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/components/Home-slide.vue" afterPath="$PROJECT_DIR$/src/vuespa/components/Home-slide.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/components/Home.vue" afterPath="$PROJECT_DIR$/src/vuespa/components/Home.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/data/app.js" afterPath="$PROJECT_DIR$/src/pages/data/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/option/index.js" afterPath="$PROJECT_DIR$/webpack/option/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack.dev.conf.js" afterPath="$PROJECT_DIR$/webpack/webpack.dev.conf.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/entry.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/entry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/module.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/output.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/output.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/plugins.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/plugins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/resolve.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/resolve.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/AddAssetHtmlPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/AddAssetHtmlPlugin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/CommonsChunkPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/CommonsChunkPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/CopyWebpackPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/CopyWebpackPlugin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/DllReferencePlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/DllReferencePlugin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/HtmlWebpackPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/HtmlWebpackPlugin.js" />
     </list>
@@ -104,70 +70,7 @@
     <favorites_list name="VueJs_Demo_Github" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="CommonsChunkPlugin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack/webpack_plugins/CommonsChunkPlugin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="entry.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack/webpack_config/entry.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="output.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack/webpack_config/output.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddAssetHtmlPlugin.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webpack/webpack_plugins/AddAssetHtmlPlugin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HtmlWebpackPlugin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack/webpack_plugins/HtmlWebpackPlugin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="86" column="42" lean-forward="false" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="81" column="21" lean-forward="false" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -182,7 +85,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>prod</find>
       <find>./webpack.prod.conf</find>
       <find>webpackConfig.plugins</find>
       <find>webpackConfig</find>
@@ -212,6 +114,7 @@
       <find>font</find>
       <find>vuex</find>
       <find>match</find>
+      <find>//</find>
     </findStrings>
     <replaceStrings>
       <replace>webpack</replace>
@@ -223,6 +126,7 @@
       <replace>var option = require('../option');</replace>
       <replace>const</replace>
       <replace>dev</replace>
+      <replace />
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -235,14 +139,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/webpack/webpack_plugins/OptimizeCssAssetsPlugin.js" />
         <option value="$PROJECT_DIR$/webpack/webpack_plugins/UglifyJsPlugin.js" />
         <option value="$PROJECT_DIR$/.eslintrc.js" />
         <option value="$PROJECT_DIR$/src/pages/data/App.vue" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/layouts/NavBar.vue" />
         <option value="$PROJECT_DIR$/src/pages/data/router.js" />
-        <option value="$PROJECT_DIR$/src/pages/data/app.js" />
         <option value="$PROJECT_DIR$/src/mock/news.js" />
         <option value="$PROJECT_DIR$/src/components/News.vue" />
         <option value="$PROJECT_DIR$/src/vuespa/components/News.vue" />
@@ -265,27 +167,29 @@
         <option value="$PROJECT_DIR$/commonDll/development/vue_dll-manifest.json" />
         <option value="$PROJECT_DIR$/dll/vue_dll.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/webpack/option/index.js" />
         <option value="$PROJECT_DIR$/commonDll/development/bootstrap_dll-manifest.json" />
         <option value="$PROJECT_DIR$/commonDll/production/bootstrap_dll-manifest.json" />
-        <option value="$PROJECT_DIR$/webpack/webpack_config/plugins.js" />
         <option value="$PROJECT_DIR$/webpack/webpack_config/resolve.js" />
         <option value="$PROJECT_DIR$/webpack/webpack_plugins/ProvidePlugin.js" />
         <option value="$PROJECT_DIR$/webpack/webpack_config/module.js" />
         <option value="$PROJECT_DIR$/webpack/webpack.dev.conf.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/webpack/webpack_plugins/DllReferencePlugin.js" />
-        <option value="$PROJECT_DIR$/webpack/webpack_plugins/AddAssetHtmlPlugin.js" />
-        <option value="$PROJECT_DIR$/webpack/webpack_config/entry.js" />
         <option value="$PROJECT_DIR$/src/js/module/slide.js" />
         <option value="$PROJECT_DIR$/src/vuespa/components/Home-slide.vue" />
         <option value="$PROJECT_DIR$/src/vuespa/components/Home.vue" />
         <option value="$PROJECT_DIR$/src/index.ejs" />
-        <option value="$PROJECT_DIR$/ReadMe.md" />
         <option value="$PROJECT_DIR$/src/pages/data/app.ejs" />
-        <option value="$PROJECT_DIR$/webpack/webpack_plugins/CommonsChunkPlugin.js" />
+        <option value="$PROJECT_DIR$/webpack/webpack_config/devtool.js" />
+        <option value="$PROJECT_DIR$/webpack/webpack_config/plugins.js" />
+        <option value="$PROJECT_DIR$/src/pages/data/app.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/ReadMe.md" />
         <option value="$PROJECT_DIR$/webpack/webpack_plugins/HtmlWebpackPlugin.js" />
+        <option value="$PROJECT_DIR$/webpack/webpack_plugins/CommonsChunkPlugin.js" />
         <option value="$PROJECT_DIR$/webpack/webpack_config/output.js" />
+        <option value="$PROJECT_DIR$/webpack/webpack_config/entry.js" />
+        <option value="$PROJECT_DIR$/webpack/webpack_plugins/DllReferencePlugin.js" />
+        <option value="$PROJECT_DIR$/webpack/webpack_plugins/AddAssetHtmlPlugin.js" />
+        <option value="$PROJECT_DIR$/webpack/option/index.js" />
       </list>
     </option>
   </component>
@@ -361,92 +265,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webpack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webpack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webpack_plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webpack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webpack_config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -642,10 +460,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="npm.dev" />
-        <item index="1" class="java.lang.String" itemvalue="npm.predev" />
-        <item index="2" class="java.lang.String" itemvalue="npm.dll:production" />
-        <item index="3" class="java.lang.String" itemvalue="npm.dll:development" />
-        <item index="4" class="java.lang.String" itemvalue="npm.postdev" />
+        <item index="1" class="java.lang.String" itemvalue="npm.dll:development" />
+        <item index="2" class="java.lang.String" itemvalue="npm.predev" />
+        <item index="3" class="java.lang.String" itemvalue="npm.postdev" />
+        <item index="4" class="java.lang.String" itemvalue="npm.dll:production" />
       </list>
     </recent_temporary>
   </component>
@@ -689,7 +507,9 @@
       <workItem from="1495091505536" duration="2411000" />
       <workItem from="1495107355821" duration="10163000" />
       <workItem from="1495153035306" duration="10488000" />
-      <workItem from="1495203470999" duration="5135000" />
+      <workItem from="1495203470999" duration="5198000" />
+      <workItem from="1495243878490" duration="20713000" />
+      <workItem from="1495283570580" duration="4311000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1494127898433</created>
@@ -810,11 +630,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495065835946</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="MPA+WEBPACK2+VUE2">
+      <created>1495208787182</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1495208787182</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251711000" />
+    <option name="totallyTimeSpent" value="276798000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -829,13 +656,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19688842" sideWeight="0.6495536" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2607296" sideWeight="0.63839287" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29799107" sideWeight="0.5058442" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4408482" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.69196427" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JsonViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19688842" sideWeight="0.35044643" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5558036" sideWeight="0.49415585" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2607296" sideWeight="0.36160713" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66629463" sideWeight="0.49415585" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.640625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22961374" sideWeight="0.41517857" order="2" side_tool="true" content_ui="tabs" />
@@ -887,7 +714,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -904,34 +731,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.UglifyJsCache/bcf41f78840e49e940aae8fe25ce1aa4f47143b11c9a421caca9827d7f1a1ad6.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="0" column="2837" lean-forward="true" selection-start-line="0" selection-start-column="2837" selection-end-line="0" selection-end-column="2837" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commonDll/development/jquery.dllBundle.js" />
-    <entry file="file://$PROJECT_DIR$/commonDll/development/jquery-manifest.json" />
-    <entry file="file://$PROJECT_DIR$/commonDll/development/vue.dllBundle.js.map" />
-    <entry file="file://$PROJECT_DIR$/commonDll/development/bootstrap-manifest.json" />
-    <entry file="file://$PROJECT_DIR$/commonDll/development/vue-manifest.json" />
-    <entry file="file://$PROJECT_DIR$/src/js/vendor/bootstrap/dist/js/npm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commonDll/development/bootstrap.dllBundle.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/jquery/dist/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -967,24 +766,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commonDll/development/vue_dll-manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="0" column="400" lean-forward="false" selection-start-line="0" selection-start-column="396" selection-end-line="0" selection-end-column="400" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commonDll/development/jquery_dll-manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="0" column="223" lean-forward="false" selection-start-line="0" selection-start-column="223" selection-end-line="0" selection-end-column="223" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vuespa/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1017,20 +802,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commonDll/production/jquery_dll.dllBundle.js.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dll/vue_dll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commonDll/development/bootstrap_dll.dllBundle.js">
@@ -1047,13 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commonDll/production/jquery_dll-manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commonDll/production/bootstrap_dll-manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -1065,13 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack/webpack_config/resolve.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1103,10 +867,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack/webpack.dev.conf.js">
+    <entry file="file://$PROJECT_DIR$/src/js/module/slide.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        <state relative-caret-position="-72">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vuespa/components/Home-slide.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1300">
+          <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vuespa/components/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/data/app.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1944">
+          <caret line="81" column="21" lean-forward="false" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commonDll/production/jquery_dll-manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commonDll/production/vue_dll-manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1117,134 +923,223 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
+    <entry file="file://$PROJECT_DIR$/webpack/webpack.dev.conf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+        <state relative-caret-position="600">
+          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack/webpack_plugins/DllReferencePlugin.js">
+    <entry file="file://$PROJECT_DIR$/webpack/dev-client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="48">
+          <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/dev-server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/E:/wamp64/www/VueJs_Demo_Github/src/index.js">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/index.js</OriginalElement>
+          <nodes>
+            <node x="" y="">$PROJECT_DIR$/src/layouts/NavBar.vue</node>
+            <node x="" y="">$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_types_vue-resource_index.d.ts</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/vue-router/types/index.d.ts</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/vue/types/index.d.ts</node>
+            <node x="" y="">$PROJECT_DIR$/src/index.js#@/css/page/index.css#206;E:/wamp64/www/VueJs_Demo_Github/src/index.js#NavBar#418;E:/wamp64/www/VueJs_Demo_Github/src/index.js#Vue#95;E:/wamp64/www/VueJs_Demo_Github/src/index.js#VueResource#152;E:/wamp64/www/VueJs_Demo_Github/src/index.js#VueRouter#117;E:/wamp64/www/VueJs_Demo_Github/src/index.js#moment#861;E:/wamp64/www/VueJs_Demo_Github/src/index.js#routes#252;E:/wamp64/www/VueJs_Demo_Github/src/index.js#validatePlugin#356;E:/wamp64/www/VueJs_Demo_Github/src/index.js#vuexStore#303;</node>
+            <node x="" y="">$PROJECT_DIR$/src/vuespa/router/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/src/vuespa/store/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/.2.18.1@moment/moment.js</node>
+            <node x="" y="">$PROJECT_DIR$/src/vuespa/plugin/validate.js</node>
+            <node x="" y="">@/css/page/index.css</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.894878706199461" x="627.0" y="261.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack/webpack_config/plugins.js">
+    <entry file="file://$PROJECT_DIR$/src/vuespa/store/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="73" column="24" lean-forward="false" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="96">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/module/slide.js">
+    <entry file="file://$PROJECT_DIR$/src/vuespa/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vuespa/components/Home-slide.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vuespa/components/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ReadMe.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="593">
-            <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <first_editor relative-caret-position="617">
+            <caret line="90" column="1" lean-forward="true" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/webpack/webpack_plugins/CommonsChunkPlugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="63" column="26" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="337">
+          <caret line="36" column="55" lean-forward="true" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#34#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/data/app.ejs">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="456">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#88#109#0" expanded="false" />
+            <element signature="e#206#239#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.ejs">
+    <entry file="file://$PROJECT_DIR$/src/pages/data/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="81" column="21" lean-forward="false" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+        <state relative-caret-position="264">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#35#56#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/webpack_config/devtool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack/webpack_plugins/HtmlWebpackPlugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="86" column="42" lean-forward="false" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack/webpack_plugins/CommonsChunkPlugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+        <state relative-caret-position="480">
+          <caret line="64" column="20" lean-forward="true" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#243#1943#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack/webpack_config/entry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack/webpack_config/output.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="121">
+          <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack/option/index.js">
+    <entry file="file://$PROJECT_DIR$/webpack/webpack_config/resolve.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        <state relative-caret-position="360">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commonDll/development/bootstrapCss_dll-manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commonDll/development/bootstrapCss_dll.dllBundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1343">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commonDll/development/vue_dll-manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="0" column="400" lean-forward="false" selection-start-line="0" selection-start-column="396" selection-end-line="0" selection-end-column="400" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/webpack_plugins/DllReferencePlugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack/webpack_plugins/AddAssetHtmlPlugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        <state relative-caret-position="384">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dll/vue_dll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/webpack_config/plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="77" column="30" lean-forward="false" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/option/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1464">
+          <caret line="61" column="6" lean-forward="false" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/webpack_config/entry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="793">
+          <caret line="60" column="15" lean-forward="false" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
           <folding />
         </state>
       </provider>

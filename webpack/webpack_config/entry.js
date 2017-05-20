@@ -21,7 +21,7 @@ module.exports.base = baseEntry
 
 const devEntry = {}
 // entry节点对象的Key是别名，是与output中filename属性[name]关联的，因此想要生成什么样的路径，应该在entry的key中配置
-devEntry['bootstrapLib'] = ['jquery', './src/js/vendor/bootstrap/dist/js/bootstrap.min.js']
+// devEntry['bootstrapLib'] = ['jquery', './src/js/vendor/bootstrap/dist/js/bootstrap.min.js']
 devEntry['index'] = './src/index.js'
 devEntry['pages/data'] = path.resolve(process.cwd(), 'src/pages/data/app.js')
 // devEntry['pages/main'] = path.resolve(process.cwd(), 'src/pages/main/app.js')
@@ -29,9 +29,8 @@ devEntry['pages/data'] = path.resolve(process.cwd(), 'src/pages/data/app.js')
 // add hot-reload related code to entry chunks
 Object.keys(devEntry).forEach(function (name) {
   //  app : ["./webpack/dev-client", "./src/main.js"]
-  if(name!=='bootstrapLib'){
-    devEntry[name] = ['./webpack/dev-client'].concat(devEntry[name])
-  }
+  devEntry[name] = ['./webpack/dev-client'].concat(devEntry[name])
+
 })
 // console.log(devEntry)
 /* { 'pages/data': 'E:\\wamp64\\www\\VueJs_Demo_Github\\src\\pages\\data\\app' } */
@@ -48,12 +47,18 @@ module.exports.build = {}
  **********/
 
 const dllEntry = {
-  /*jquery_dll: ['jquery'],
-  vue_dll: ['vue', 'vue-resource', 'vue-router', 'vuex'],*/
-  // jquery_dll: [path.join(process.cwd(), "dll", "jquery_dll.js")],
-  jquery_dll: ['jquery'],
-  vue_dll: [path.join(process.cwd(), "dll", "vue_dll.js")],
+  //1.通过dll/vue_dll.js中的import/from来读取指定插件
+  /*
+   import Vue from 'vue/dist/vue.esm.js'
+   import VueRouter from 'vue-router'
+   import VueResource from 'vue-resource'
+   import Vuex from 'vuex/dist/vuex.esm.js';
+   */
+  // vue_dll: [path.join(process.cwd(), "dll", "vue_dll.js")],
+  //2.注意config中的reslove已经指定vue以及vuex特定版本
+  vue_dll: ['vue', 'vue-resource', 'vue-router', 'vuex'],
   // bootstrap_dll: ['./src/js/vendor/bootstrap/dist/js/bootstrap.js', './src/js/vendor/bootstrap/dist/css/bootstrap.css']
-  bootstrap_dll: ['bootstrap/dist/css/bootstrap.min.css']
+  bootstrapCss_dll: ['bootstrap/dist/css/bootstrap.min.css']
+  // jquery_dll: ['jquery'],
 }
 module.exports.dll = dllEntry
