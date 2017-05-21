@@ -50,8 +50,9 @@ module.exports.dev = {
 
 module.exports.build = {
   path: option.build.assetsRoot,
-  filename: utils.assetsPath('js/[name].[chunkhash].js'),
-  chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+  filename: utils.assetsPath('js/[name].outputSync.js'),
+  chunkFilename: utils.assetsPath('js/[name].outputAsyn.js')
+  // chunkFilename: utils.assetsPath('js/[name].outputAsyn.[chunkhash].js')
 }
 
 /** ********

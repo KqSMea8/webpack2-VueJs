@@ -33,13 +33,12 @@ if (TARGET === 'build') {
   const DIR = option.build.dll.directory
   jsLib = [
     new webpack.DllReferencePlugin({
-      manifest: require(path.resolve(DIR, option.build.dll.jqueryManifest))
+      manifest: require(path.resolve(DIR, option.build.dll.bootstrapCssManifest)),
+      name:'bootstrapCss_dll'
     }),
     new webpack.DllReferencePlugin({
-      manifest: require(path.resolve(DIR, option.build.dll.bootstrapManifest))
-    }),
-    new webpack.DllReferencePlugin({
-      manifest: require(path.resolve(DIR, option.build.dll.vueManifest))
+      manifest: require(path.resolve(DIR, option.build.dll.vueManifest)),
+      name:'vue_dll'
     })
   ]
   module.exports = jsLib

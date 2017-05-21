@@ -7,11 +7,11 @@ var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const TARGET = process.env.npm_lifecycle_event
 
 if (TARGET === 'dev') {
-  console.log(`Running the pretest task!`)
+  console.log(TARGET, `: OptimizeCssAssetsPlugin正在压缩分离的CSS文件！`)
 }
 
 if (TARGET === 'build') {
-  console.log(`OptimizeCssAssetsPlugin正在压缩分离的CSS文件！`)
+  console.log(TARGET, `: OptimizeCssAssetsPlugin正在压缩分离的CSS文件！`)
   // 4.4 压缩分离的css
   // https://www.npmjs.com/package/optimize-css-assets-webpack-plugin
   // Compress extracted CSS. We are using this plugin so that possible duplicated CSS from different components can be deduped.
@@ -31,5 +31,5 @@ if (TARGET === 'build') {
 }
 
 if (TARGET === 'test') {
-  console.log(`Running the test task!`)
+  console.log(TARGET, `: OptimizeCssAssetsPlugin正在压缩分离的CSS文件！`)
 }

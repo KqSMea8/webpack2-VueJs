@@ -56,7 +56,7 @@ module.exports = {
       bootstrapCss: 'bootstrapCss_dll.css',
       vue: 'vue_dll.dllBundle.js',
   
-      dir: '/assets',
+      dir: '/static',
       outputPath: 'lib',  // 生成目录
       publicPath: 'lib'   // 注入地址
     },
@@ -70,9 +70,10 @@ module.exports = {
     index: path.normalize('E:\\wamp64\\www\\Wamp-Webpack2Vue\\index.html'),
     assetsRoot: path.normalize('E:\\wamp64\\www\\Wamp-Webpack2Vue'),
     assetsSubDirectory: 'static',
+    assetsJsDir: 'static/js/',
     assetsPublicPath: '/',
 
-    productionSourceMap: true,
+    productionSourceMap: false,
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
@@ -85,6 +86,6 @@ module.exports = {
     // Set to `true` or `false` to always turn it on or off
     // bundleAnalyzerReport 打包结果分析
     bundleAnalyzerReport: false,
-    Visualizer: false
+    Visualizer: true
   }
 }

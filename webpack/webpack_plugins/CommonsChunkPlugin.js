@@ -7,7 +7,8 @@ var webpack = require('webpack')
 var option = require('../option')
 
 const TARGET = process.env.npm_lifecycle_event
-const ASSETSJS = option.dev.assetsJsDir
+const DEVJSDIR = option.dev.assetsJsDir
+const BUILDJSDIR = option.build.assetsJsDir
 
 var jsCommon = []
 
@@ -34,7 +35,7 @@ if (TARGET === 'dev') {
     // 所有 node_modules中的js 公共模块
     new webpack.optimize.CommonsChunkPlugin({
       name: 'node_modules.commonChunk',
-      filename: path.posix.join(ASSETSJS, '[name].js'),
+      filename: path.posix.join(DEVJSDIR, '[name].js'),
       // 如果模块是一个路径，而且在路径中有 ".js" 这个结尾文件出现，并且是 node_modules 目录下的文件，那请将它拆分到一个 node_modules.commonChunk.js 中
       minChunks: function (module, count) {
         return (
@@ -49,7 +50,7 @@ if (TARGET === 'dev') {
     // 所有 入口主页的 公共模块
     new webpack.optimize.CommonsChunkPlugin({
       name: 'entry.commonChunk',
-      filename: path.posix.join(ASSETSJS, '[name].js'),
+      filename: path.posix.join(DEVJSDIR, '[name].js'),
       minChunks: 2
     })
   ]
@@ -59,21 +60,24 @@ if (TARGET === 'dev') {
 if (TARGET === 'build') {
   console.log(`${TARGET}：CommonsChunkPlugin 正在提取公共JS文件！`)
   jsCommon = [
+
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'commonjs',
+      name: 'node_modules.commonChunk',
+      filename: path.posix.join(BUILDJSDIR, '[name].js'),
       minChunks: function (module, count) {
-        // any required modules inside node_modules are extracted to vendor
         return (
           module.resource &&
           /\.js$/.test(module.resource) &&
           module.resource.indexOf(
-            path.join(__dirname, '../node_modules')
+            path.join(process.cwd(), 'node_modules')
           ) === 0
         )
       }
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest'
+      name: 'entry.commonChunk',
+      filename: path.posix.join(BUILDJSDIR, '[name].js'),
+      minChunks: 2
     })
   ]
   module.exports = jsCommon

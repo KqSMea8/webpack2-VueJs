@@ -92,4 +92,7 @@ const files = {
 
 12. webpack-hot-middleware
 
+13. Stuck up on ‘loader is used without the corresponding plugin’ 
+- 这个BUG是让vue-loader里面的option的extract改为false
+- vue-loader有一个extractcss，vue文件外又有个extractcss，所以是个多入口分离css配置
 

@@ -64,11 +64,9 @@ const devPlugins = [
   new FriendlyErrorsPlugin()
 ]
 
-devPlugins.push(cssExtract)
+Array.prototype.push.apply(devPlugins, cssExtract)
 Array.prototype.push.apply(devPlugins, html)
 Array.prototype.push.apply(devPlugins, jsCommon)
-
-
 Array.prototype.push.apply(devPlugins, jsLib)
 devPlugins.push(htmlAsset)
 // devPlugins.push(copy)
@@ -86,41 +84,40 @@ module.exports.dev = devPlugins
 
 const buildPlugins = []
 // 注意顺序
-buildPlugins.push(globalVar)
+// buildPlugins.push(globalVar)
 // buildPlugins.push(provideVar)
-
+// devPlugins.push(cssExtract)
 // 数组中添加第二个数组中的元素
 // Equivalent to vegetables.push('celery', 'beetroot');
 // Array.prototype.push.apply(vegetables, moreVegs);
+Array.prototype.push.apply(buildPlugins, cssExtract)
+Array.prototype.push.apply(buildPlugins, html)
 Array.prototype.push.apply(buildPlugins, jsCommon)
-Array.prototype.push.apply(buildPlugins)
+Array.prototype.push.apply(buildPlugins, jsLib)
+buildPlugins.push(htmlAsset)
+buildPlugins.push(copy)
 
-buildPlugins.push(html)
-
-
-// buildPlugins.push(htmlAsset)
-
-buildPlugins.push(cssExtract, compressCss)
-buildPlugins.push(compressJs)
+// buildPlugins.push(compressCss)
+// buildPlugins.push(compressJs)
 
 buildPlugins.push(assets)
 
 // Default：false
 if (option.build.productionGzip) {
   var GzipCompress = require('../webpack_plugins/CompressionWebpackPlugin')
-  buildPlugins.plugins.push(GzipCompress)
+  buildPlugins.push(GzipCompress)
 }
 
 // 使用 webpack-bundle-analyzer 来分析 Webpack 生成的包体组成并且以可视化的方式反馈给开发者
 if (option.build.bundleAnalyzerReport) {
   var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-  buildPlugins.plugins.push(new BundleAnalyzerPlugin())
+  buildPlugins.push(new BundleAnalyzerPlugin())
 }
 
 if (option.build.Visualizer) {
   // https://github.com/chrisbateman/webpack-visualizer#plugin-usage
   var Visualizer = require('webpack-visualizer-plugin')
-  buildPlugins.plugins.push(new Visualizer({
+  buildPlugins.push(new Visualizer({
     // 在E:\wamp64\www\Webpack2Vue_Demo 目录下生成
     filename: path.posix.join('Visualizer.html')
   }))
@@ -162,11 +159,11 @@ dllPlugins.push(
   })
 )
 
-dllPlugins.push(
-  // If you use any hashing ([hash] or [chunkhash]), make sure to have a consistent ordering of modules. Use the OccurrenceOrderPlugin or recordsPath.
-  // https://github.com/webpack/docs/wiki/configuration
+// If you use any hashing ([hash] or [chunkhash]), make sure to have a consistent ordering of modules. Use the OccurrenceOrderPlugin or recordsPath.
+// https://github.com/webpack/docs/wiki/configuration
+/*dllPlugins.push(
   new webpack.optimize.OccurrenceOrderPlugin(true)
-)
+)*/
 
 // 默认不压缩
 const isuglify = false

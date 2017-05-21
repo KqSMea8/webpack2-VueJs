@@ -7,6 +7,7 @@ var isProduction = process.env.NODE_ENV === 'production'
 module.exports = {
   loaders: utils.vueCssLoaders({
     sourceMap: isProduction ? option.build.productionSourceMap : option.dev.cssSourceMap,
+    // extract: isProduction
     extract: isProduction
   })
   /*

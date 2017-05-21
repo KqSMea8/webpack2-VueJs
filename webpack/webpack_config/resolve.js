@@ -25,7 +25,4 @@ module.exports.base = {
 
 module.exports.dev = {}
 
-module.exports.build = {
-  filename: utils.assetsPath('js/[name].[chunkhash].js'),
-  chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
-}
+module.exports.build = {}

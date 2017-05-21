@@ -24,9 +24,6 @@ const baseRules = [
   {
     test: /\.vue$/,
     use: [{ loader: 'vue-loader', options: vueLoaderConfig }]
-    // loader  : 'vue-loader',
-    /* loader  : 'happypack/loader?id=happypackVueJs',
-     options : vueLoaderConfig */
   },
   {
     test: /\.js$/,
@@ -106,7 +103,7 @@ const buildRules = utils.styleLoaders({
   // 默认：true
   sourceMap: option.build.productionSourceMap,
   // 是否分离css
-  extract: true
+  extract: false
 })
 module.exports.build = buildRules
 

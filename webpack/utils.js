@@ -1,13 +1,20 @@
 var path = require('path')
 var option = require('./option')
+/*
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const extractVueCSS = new ExtractTextPlugin();
+const extractStyleCSS = new ExtractTextPlugin();
+*/
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const extractVueCSS = new ExtractTextPlugin({});
+const extractStyleCSS = new ExtractTextPlugin({});
 
 const isProduction = process.env.NODE_ENV === 'production'
 
 exports.rootpath = function (dir) {
   return path.join(__dirname, '..', dir)
 }
-
+// see https://github.com/vuejs-templates/webpack/blob/master/template/build/utils.js
 // 生成 E:\wamp64\www\Webpack2Vue_Demo\static\_path 形式的目录
 exports.assetsPath = function (_path) {
   // 都是'static'
@@ -24,7 +31,6 @@ exports.vueCssLoaders = function (options) {
     loader: 'css-loader',
     options: {
       modules: false,
-      importLoaders: 1,
       minimize: isProduction,
       sourceMap: options.sourceMap
     }
@@ -45,9 +51,9 @@ exports.vueCssLoaders = function (options) {
     }
 
     if (options.extract) {
-      return ExtractTextPlugin.extract({
-        use: loaders,
-        fallback: 'vue-style-loader'
+      return extractVueCSS.extract({
+        fallback: 'vue-style-loader',
+        use: loaders
       })
     } else {
       return ['vue-style-loader'].concat(loaders)
@@ -89,7 +95,6 @@ exports.cssLoaders = function (options) {
     loader: 'css-loader',
     options: {
       modules: false,
-      importLoaders: 0,
       minimize: isProduction,
       sourceMap: options.sourceMap
     }
@@ -157,7 +162,7 @@ exports.cssLoaders = function (options) {
     // (which is the case during production build)
 
     if (options.extract) {
-      return ExtractTextPlugin.extract({
+      return extractStyleCSS.extract({
         fallback: 'style-loader',
         use: loaders
       })
@@ -181,6 +186,7 @@ exports.cssLoaders = function (options) {
 // Generate loaders for standalone style files (outside of .vue)
 // options={ sourceMap:config.dev.cssSourceMap }={ sourceMap:false }
 // 生成标准cssWebpack格式
+
 /*
 //无分离
 {
@@ -227,7 +233,7 @@ exports.styleLoaders = function (options) {
   output.push({
     // 已压缩过的.min.css不压缩
     test: /\.min\.css/,
-    use: ExtractTextPlugin.extract({
+    use: extractStyleCSS.extract({
       fallback: 'style-loader',
       // resolve-url-loader may be chained before sass-loader if necessary
       use: [ {
@@ -238,7 +244,7 @@ exports.styleLoaders = function (options) {
         }
       }]
     })
-   /* use     : [
+    /*use     : [
       {
         loader : 'style-loader',
       },
@@ -249,7 +255,7 @@ exports.styleLoaders = function (options) {
           sourceMap    : false
         }
       }
-    ], */
+    ]*/
   })
   return output
 }

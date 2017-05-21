@@ -40,7 +40,11 @@ module.exports.dev = devEntry
  生产环境
  **********/
 
-module.exports.build = {}
+const buildEntry = {}
+buildEntry['index'] = './src/index.js'
+buildEntry['pages/data'] = path.resolve(process.cwd(), 'src/pages/data/app.js')
+
+module.exports.build = buildEntry
 
 /** ********
  DLL环境

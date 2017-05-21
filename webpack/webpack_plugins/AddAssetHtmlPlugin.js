@@ -66,29 +66,15 @@ if (TARGET === 'build') {
     {
       filepath: path.resolve(process.cwd(), FILE_PATH, option.build.dll.bootstrapCss),
       includeSourcemap: false,
-      hash: true,
+      hash: false,
       outputPath: SERVER_PATH,
       publicPath: HTML_SRC,
       typeOfAsset: 'css'
     },
     {
-      filepath: path.resolve(process.cwd(), FILE_PATH, option.build.dll.jquery),
-      includeSourcemap: false,
-      hash: true,
-      outputPath: SERVER_PATH,
-      publicPath: HTML_SRC
-    },
-    {
-      filepath: path.resolve(process.cwd(), FILE_PATH, option.build.dll.bootstrap),
-      includeSourcemap: false,
-      hash: true,
-      outputPath: SERVER_PATH,
-      publicPath: HTML_SRC
-    },
-    {
       filepath: path.resolve(process.cwd(), FILE_PATH, option.build.dll.vue),
       includeSourcemap: false,
-      hash: true,
+      hash: false,
       outputPath: SERVER_PATH,
       publicPath: HTML_SRC
     }

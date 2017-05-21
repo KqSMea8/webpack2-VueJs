@@ -8,18 +8,11 @@ const UglifyJsParallelPlugin = require('webpack-parallel-uglify-plugin')
 const TARGET = process.env.npm_lifecycle_event
 
 if (TARGET === 'dev') {
-  console.log(`Running the pretest task!`)
+  console.log(TARGET, `: UglifyJsParallelPlugin正在压缩JS文件！`)
 }
 
 if (TARGET === 'build') {
-  console.log(`UglifyJsParallelPlugin正在压缩JS文件！`)
-  // 4.2 压缩JS
-  /* var compressJs = new webpack.optimize.UglifyJsPlugin({
-    compress : {
-      warnings: false
-    },
-    sourceMap: true
-  }) */
+  console.log(TARGET, `: UglifyJsParallelPlugin正在压缩JS文件！`)
   var compressJs = new UglifyJsParallelPlugin({
     cacheDir: '.UglifyJsCache/',
     uglifyJS: {
@@ -35,5 +28,5 @@ if (TARGET === 'build') {
 }
 
 if (TARGET === 'test') {
-  console.log(`Running the test task!`)
+  console.log(TARGET, `: UglifyJsParallelPlugin正在压缩JS文件！`)
 }

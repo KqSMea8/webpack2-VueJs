@@ -128,18 +128,59 @@ if (TARGET === 'dev') {
 if (TARGET === 'build') {
   console.log(TARGET, `: HtmlWebpackPlugin正在生成HTML！`)
   html = [
+    // 生成根目录下的入口HTML
     new HtmlWebpackPlugin({
-      // E:\\wamp64\\www\\Webpack2Vue_Demo\\index.html
-      filename: option.build.index,
-      template: 'index.html',
+      filename: 'index.html',
+      template: path.resolve(process.cwd(), 'src/index.ejs'),
       inject: true,
-      minify: {
-        removeComments: false,
-        collapseWhitespace: false,
-        removeAttributeQuotes: false
+      minify: false,
+      excludeChunks:['pages/data'],
+      title: '根目录下的入口HTML',
+      mobile: true,
+      links: [
+        'https://fonts.googleapis.com/css?family=Roboto',
+        {
+          href: '/apple-touch-icon.png',
+          rel: 'apple-touch-icon',
+          sizes: '180x180'
+        },
+        {
+          href: '/favicon-32x32.png',
+          rel: 'icon',
+          sizes: '32x32',
+          type: 'image/png'
+        }
+      ],
+      googleAnalytics: {
+        trackingId: 'UA-XXXX-XX',
+        pageViewOnLoad: true
+      },
+      devServer: 3000,
+      appMountId: 'container',
+      window: {
+        env: {
+          apiHost: 'http://myapi.com/api/v1'
+        }
       }
     })
   ]
+  // 自动生成 pages/**/* 的入口路径
+  var htmlConf
+  var match = glob.sync(path.resolve(process.cwd(), 'src/pages/**/*/app.ejs'))
+  match.forEach(path => {
+    const chunk = path.split('E:/wamp64/www/VueJs_Demo_Github/src/')[1].split('/app.ejs')[0]
+    const filename = chunk + '/app.html'
+    htmlConf = {
+      title:filename,
+      filename: filename,
+      template: path,
+      inject: true,
+      showErrors: true,
+      minify: false,
+      hash: process.env.NODE_ENV === 'production'
+    }
+    html.push(new HtmlWebpackPlugin(htmlConf))
+  })
   module.exports = html
 }
 
