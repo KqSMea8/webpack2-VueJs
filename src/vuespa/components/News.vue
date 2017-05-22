@@ -17,12 +17,13 @@
 </template>
 
 <style scoped>
-	/*@import '../css/vendor/mui.min.css';*/
+	@import '../../css/vendor/mui.min.css';
 </style>
 
 <script>
-  import '@/css/page/h1h2.scss';
+  // import '@/css/page/h1h2.scss';
   export default {
+    name:'newsC',
     data(){
       return {};
     },

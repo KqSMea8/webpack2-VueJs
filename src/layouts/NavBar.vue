@@ -11,7 +11,7 @@
 				<span class = "icon-bar"></span>
 				<span class = "icon-bar"></span>
 			</button>
-			<a href="http://localhost:3333/index.html" class="navbar-brand active">VUESPA<span class = "sr-only">(current)</span></a>
+			<a href="/index.html" class="navbar-brand active">VUESPA<span class = "sr-only">(current)</span></a>
 			<!--<router-link to = "/vuespa" class = "navbar-brand">VueSPA<span class = "sr-only">(current)</span></router-link>-->
 			<!--<a class="navbar-brand" href="#">Brand</a>-->
 		</div>
@@ -20,10 +20,10 @@
 		<div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
 			<ul class = "nav navbar-nav">
 				<li>
-					<a href="http://localhost:3333/pages/data/app.html">数据<span class = "sr-only">(current)</span></a>
+					<a href="/pages/data/app.html">数据<span class = "sr-only">(current)</span></a>
 				</li>
 				<li>
-					<a href="http://localhost:3333/index.html">VUESPA<span class = "sr-only">(current)</span></a>
+					<a href="/index.html">VUESPA<span class = "sr-only">(current)</span></a>
 				</li>
 				<li>
 					<a href="http://localhost:3333/index.html">VUESPA<span class = "sr-only">(current)</span></a>
@@ -86,5 +86,7 @@
 	</div><!-- /.container-fluid -->
 </template>
 <script>
-  export default{}
+  export default {
+    name:'navBarC',
+  }
 </script>

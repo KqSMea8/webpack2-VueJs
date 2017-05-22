@@ -3,13 +3,15 @@
     "js": "/static/js/moment.outputAsyn.js"
   },
   "index": {
-    "js": "/static/js/index.outputSync.js"
+    "js": "/static/js/index.outputSync.js",
+    "css": "/static/css/index.css"
   },
   "node_modules.commonChunk": {
     "js": "/static/js/node_modules.commonChunk.js"
   },
   "pages/data": {
-    "js": "/static/js/pages/data.outputSync.js"
+    "js": "/static/js/pages/data.outputSync.js",
+    "css": "/static/css/pages/data.css"
   },
   "entry.commonChunk": {
     "js": "/static/js/entry.commonChunk.js"

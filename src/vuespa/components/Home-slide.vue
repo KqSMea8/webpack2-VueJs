@@ -38,7 +38,7 @@
       }
     }
 </script>
-<style rel="stylesheet/scss" lang="scss">
+<style rel="stylesheet/css" scoped>
 	.pictureShowWrapper{
 		-webkit-box-sizing: content-box;
 		-moz-box-sizing: content-box;
@@ -55,9 +55,9 @@
 		overflow: hidden;
 		padding: 10px 10px 0 10px;
 		width: 475px;
-		a{
-			border:none;
-		}
+	}
+	.pictureShow a{
+		border:none;
 	}
 	.pictureShow ul {
 		width: 3000px;

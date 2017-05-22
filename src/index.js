@@ -9,7 +9,8 @@ import VueResource from 'vue-resource'
 
 // 导入index.html页面css
 import bootstrap from 'bootstrap'
-import '@/css/page/index.css'
+require ('@/css/page/index.css')
+
 
 // 导入路由
 import routes from './vuespa/router/index'
@@ -45,15 +46,19 @@ function myrequire () {
 
 myrequire()
 
+Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.use(VueResource)
 // Vue 插件 https://cn.vuejs.org/v2/guide/plugins.html
 Vue.use(validatePlugin)
+
 Vue.component('nav-bar', NavBar)
 
 const router = new VueRouter({
   routes
 })
+
+
 
 new Vue({
   router: router,

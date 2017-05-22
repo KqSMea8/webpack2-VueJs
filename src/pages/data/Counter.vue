@@ -41,6 +41,7 @@
   } from 'vuex'
   
   export default {
+    name:'counterC',
     data(){
       return {localCount: 5};
     },

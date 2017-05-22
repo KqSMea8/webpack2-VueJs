@@ -12,4 +12,5 @@ const webpackConfig = merge(baseWebpackConfig, {
 })
 
 console.log(webpackConfig.plugins);
+console.log(webpackConfig.module.rules);
 module.exports = webpackConfig

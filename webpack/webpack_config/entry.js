@@ -61,6 +61,7 @@ const dllEntry = {
   // vue_dll: [path.join(process.cwd(), "dll", "vue_dll.js")],
   //2.注意config中的reslove已经指定vue以及vuex特定版本
   vue_dll: ['vue', 'vue-resource', 'vue-router', 'vuex'],
+  // vue_dll: ['vue/dist/vue.runtime.esm.js', 'vue-resource', 'vue-router', 'vuex'],
   // bootstrap_dll: ['./src/js/vendor/bootstrap/dist/js/bootstrap.js', './src/js/vendor/bootstrap/dist/css/bootstrap.css']
   bootstrapCss_dll: ['bootstrap/dist/css/bootstrap.min.css']
   // jquery_dll: ['jquery'],

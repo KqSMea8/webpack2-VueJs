@@ -23,4 +23,6 @@ const webpackConfig = merge(baseWebpackConfig, {
 })
 webpackConfig.entry = require('./webpack_config/entry.js').dll
 
+console.log(webpackConfig.module.rules);
+console.log(webpackConfig.plugins);
 module.exports = webpackConfig

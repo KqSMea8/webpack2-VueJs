@@ -128,10 +128,31 @@ module.exports.build = buildPlugins
 /** ********
  DLL环境
  **********/
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+const extractVueCSS = new ExtractTextPlugin({
+  filename:'[name].css',
+  allChunks: false
+});
+const extractVueSCSS = new ExtractTextPlugin({
+  filename:'[name].css',
+  allChunks: false
+});
+const extractStyleCSS = new ExtractTextPlugin({
+  filename:'[name].css',
+  allChunks: false
+});
+const extractStyleSCSS = new ExtractTextPlugin({
+  filename:'[name].css',
+  allChunks: false
+});
 
 const dllPlugins = [
-  new ExtractTextPlugin('[name].css')
+  extractVueCSS,
+  extractVueSCSS,
+  extractStyleCSS,
+  extractStyleSCSS
 ]
 
 const isDev = process.env.NODE_ENV === 'development'

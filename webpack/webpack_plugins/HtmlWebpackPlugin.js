@@ -177,6 +177,7 @@ if (TARGET === 'build') {
       inject: true,
       showErrors: true,
       minify: false,
+      excludeChunks:['index'],
       hash: process.env.NODE_ENV === 'production'
     }
     html.push(new HtmlWebpackPlugin(htmlConf))

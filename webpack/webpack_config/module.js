@@ -7,6 +7,12 @@ const path = require('path')
 
 const vueLoaderConfig = require('../vue-loader.conf')
 
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const extractVueCSS = new ExtractTextPlugin({});
+const extractVueSCSS = new ExtractTextPlugin({});
+const extractStyleCSS = new ExtractTextPlugin({});
+const extractStyleSCSS = new ExtractTextPlugin({});
+
 /** ********
  初始环境
  **********/
@@ -21,27 +27,102 @@ const baseRules = [
     // 先把jQuery对象声明成为全局变量`jQuery`，再通过管道进一步又声明成为全局变量`$`
     use: 'expose-loader?$!expose-loader?jQuery!expose-loader?jquery'
   },
+  // vue加载器
+  // see https://vue-loader.vuejs.org/zh-cn/configurations/extract-css.html
   {
     test: /\.vue$/,
-    use: [{ loader: 'vue-loader', options: vueLoaderConfig }]
+    use: [{
+      loader: 'vue-loader',
+      /*options:{
+        extractCSS: true
+      }*/
+      options:{
+        loaders: {
+          css: ExtractTextPlugin.extract({
+            fallback: 'vue-style-loader',
+            use: {
+              loader: 'css-loader',
+              options: {
+                modules: false,
+                minimize: false,
+                sourceMap: false
+              }
+            }
+          }),
+          scss:ExtractTextPlugin.extract({
+            fallback: 'vue-style-loader',
+            use:[
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: false,
+                  minimize: false,
+                  importLoaders:1,
+                  sourceMap: false
+                }
+              },
+              {
+                loader: 'sass-loader',
+                options:{
+                  sourceMap: false
+                }
+              }
+            ]
+          }),
+        }
+      }
+    }]
   },
+  // CSS加载器
+  {
+    test: /\.css$/,
+    include: [
+      path.join(process.cwd(), './src')
+    ],
+    loaders: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
+  },
+  // SCSS加载器
+  {
+    test: /\.scss$/,
+    include: [
+      path.join(process.cwd(), './src')
+    ],
+    use: ExtractTextPlugin.extract({
+      use: [
+        {
+          loader: 'css-loader',
+          options: {
+            modules: false,
+            minimize: false,
+            importLoaders:1,
+            sourceMap: false
+          }
+        },
+        {
+          loader: 'sass-loader',
+          options:{
+            sourceMap: false
+          }
+        }
+      ],
+      fallback: 'style-loader'
+    })
+  },
+  // JS加载器
   {
     test: /\.js$/,
     include: [
-      // 只去解析运行目录下的 src 和 demo 文件夹
       path.join(process.cwd(), './src')
-      // resolve( 'src' )
-      // path.join(process.cwd(), './demo')
     ],
     exclude: function (paths) {
       // 路径中含有 node_modules 的就不去解析。
       var isNpmModule = !!paths.match(/node_modules/)
       return isNpmModule
     },
-    // loader  : 'babel-loader'
     use: [{
       loader: 'happypack/loader?id=happypackBabelJs'
     }]
+    // loader  : 'babel-loader'
     // loader: 'happypack/loader?id=happypackBabelJs'
   },
   // 图片加载器，雷同file-loader，更适合图片，可以将较小的图片转成base64，减少http请求
@@ -66,7 +147,7 @@ const baseRules = [
       }
     }]
   }
-  // 安装了html-webpack-template 之后就不能用html-loader压缩处理了
+  // 安装了 html-webpack-template 之后就不能用 html-loader 压缩处理了
   // https://github.com/jaketrent/html-webpack-template
   // https://github.com/webpack-contrib/html-loader
   /* {
@@ -85,6 +166,26 @@ const baseRules = [
     test: /\.ejs$/,
     use: [{ loader: 'ejs-loader' }]
   } */
+  // mincss
+  /*{
+   test: /^((?!\.min\.css).)*\.css$/,
+   include: [
+   path.join(process.cwd(), './src/css')
+   ],
+   use: extractStyleCSS.extract({
+   use: {
+   loader: 'css-loader',
+   options: {
+   modules: false,
+   minimize: false,
+   importLoaders:1,
+   sourceMap: false
+   
+   }
+   },
+   fallback: 'style-loader'
+   })
+   },*/
 ]
 module.exports.base = baseRules
 
@@ -92,19 +193,15 @@ module.exports.base = baseRules
  开发环境
  **********/
 
-const devRules = utils.styleLoaders({ sourceMap: option.dev.cssSourceMap })
+// const devRules = utils.styleLoaders({ sourceMap: option.dev.cssSourceMap })
+const devRules =[]
 module.exports.dev = devRules
 
 /** ********
  生产环境
  **********/
 
-const buildRules = utils.styleLoaders({
-  // 默认：true
-  sourceMap: option.build.productionSourceMap,
-  // 是否分离css
-  extract: false
-})
+const buildRules = []
 module.exports.build = buildRules
 
 /** ********

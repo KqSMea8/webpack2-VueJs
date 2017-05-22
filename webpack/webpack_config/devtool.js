@@ -23,7 +23,8 @@ module.exports.dev = devSourceMap
  **********/
 
 // cheap-module-eval-source-map is faster for development
-const buildSourceMap = option.build.productionSourceMap ? '#cheap-source-map' : false
+// const buildSourceMap = option.build.productionSourceMap ? '#cheap-source-map' : false
+const buildSourceMap = '#inline-source-map'
 module.exports.build = buildSourceMap
 
 /** ********

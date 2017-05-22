@@ -15,27 +15,50 @@ const TARGET = process.env.npm_lifecycle_event
 
 if (TARGET === 'dev') {
   console.log(`${TARGET}: ExtractTextPlugin正在分离CSS文件！`)
-
-  var cssExtract = new ExtractTextPlugin({
-    // href="/static/css/app.css"
-    // [name]对应的是各个entry的key
-    filename: utils.assetsPath('css/[name].css')
-  })
+  const extractVueCSS = new ExtractTextPlugin({
+    filename: utils.assetsPath('assets', 'css/[name].VueCSS.css'),
+    allChunks: true
+  });
+  const extractVueSCSS = new ExtractTextPlugin({
+    filename: utils.assetsPath('assets', 'css/[name].VueSCSS.css'),
+    allChunks: false
+  });
+  const extractStyleCSS = new ExtractTextPlugin({
+    filename:path.posix.join('assets', 'css/[name].StyleCSS.css'),
+    allChunks: false
+  });
+  const extractStyleSCSS = new ExtractTextPlugin({
+    filename:path.posix.join('assets', 'css/[name].StyleSCSS.css'),
+    allChunks: false
+  });
+  var cssExtract = [
+    new ExtractTextPlugin("css/style.css")
+  ]
   module.exports = cssExtract
 }
 
 if (TARGET === 'build') {
   console.log(`${TARGET}: ExtractTextPlugin正在分离CSS文件！`)
+  
   const extractVueCSS = new ExtractTextPlugin({
-    filename: utils.assetsPath('css/[name].vue.css'),
+    filename: utils.assetsPath('assets', 'css/[name].VueCSS.css'),
     allChunks: true
   });
-  const extractStyleCSS = new ExtractTextPlugin({
-    filename:path.posix.join('static', 'css/[name].style.css')
+  const extractVueSCSS = new ExtractTextPlugin({
+    filename: utils.assetsPath('assets', 'css/[name].VueSCSS.css'),
+    allChunks: false
   });
+  const extractStyleCSS = new ExtractTextPlugin({
+    filename:path.posix.join('assets', 'css/[name].StyleCSS.css'),
+    allChunks: false
+  });
+  const extractStyleSCSS = new ExtractTextPlugin({
+    filename:path.posix.join('assets', 'css/[name].StyleSCSS.css'),
+    allChunks: false
+  });
+  
   var cssExtract = [
-    extractVueCSS,
-    extractStyleCSS
+    new ExtractTextPlugin("static/css/[name].css")
   ]
   module.exports = cssExtract
 }

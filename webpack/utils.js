@@ -162,7 +162,7 @@ exports.cssLoaders = function (options) {
     // (which is the case during production build)
 
     if (options.extract) {
-      return extractStyleCSS.extract({
+      return ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: loaders
       })
@@ -233,7 +233,7 @@ exports.styleLoaders = function (options) {
   output.push({
     // 已压缩过的.min.css不压缩
     test: /\.min\.css/,
-    use: extractStyleCSS.extract({
+    use: ExtractTextPlugin.extract({
       fallback: 'style-loader',
       // resolve-url-loader may be chained before sass-loader if necessary
       use: [ {

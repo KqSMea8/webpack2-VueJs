@@ -31,7 +31,7 @@
 	</div>
 </template>
 
-<style lang = "scss" rel = "stylesheet/scss">
+<!--<style lang = "scss" rel = "stylesheet/scss">
 	#todoList {
 		h1 {
 			color: red;
@@ -49,7 +49,7 @@
 			}
 		}
 	}
-</style>
+</style>-->
 
 <script>
   import TodoList from './TodoList.vue'
