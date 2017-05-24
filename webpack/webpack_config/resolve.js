@@ -25,10 +25,5 @@ module.exports.base = {
 
 module.exports.dev = {}
 
-module.exports.build = {
-  alias: {
-    vue$: 'vue/dist/vue.esm.js',
-    vuex$: 'vuex/dist/vuex.esm.js',
-    '@': utils.rootpath('src')
-  },
-}
+module.exports.build = {}
+

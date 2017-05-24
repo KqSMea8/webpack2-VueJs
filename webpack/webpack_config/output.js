@@ -52,7 +52,6 @@ module.exports.build = {
   path: option.build.assetsRoot,
   filename: utils.assetsPath('js/[name].outputSync.js'),
   chunkFilename: utils.assetsPath('js/[name].outputAsyn.js')
-  // chunkFilename: utils.assetsPath('js/[name].outputAsyn.[chunkhash].js')
 }
 
 /** ********
@@ -60,10 +59,11 @@ module.exports.build = {
  **********/
 
 const isDev = process.env.NODE_ENV === 'development'
-const outputPath = isDev ? path.resolve(process.cwd(), 'commonDll/development') : path.resolve(process.cwd(), 'commonDll/production')
+const outputPath = isProduction ? path.resolve(process.cwd(), 'commonDll/production') : path.resolve(process.cwd(), 'commonDll/development')
+
 module.exports.dll = {
   path: outputPath,
-  filename: '[name].dllBundle.js',
+  filename: '[name].js',
     /*
      * output.library
      * [name]_[hash]将会定义为 window.moment_1ab8e7beaa7091def553

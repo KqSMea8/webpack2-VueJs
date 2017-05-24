@@ -16,7 +16,7 @@ module.exports = {
       // jquery: 'jquery_dll.dllBundle.js',
       // bootstrap: 'bootstrap_dll.dllBundle.js',
       bootstrapCss: 'bootstrapCss_dll.css',
-      vue: 'vue_dll.dllBundle.js',
+      vue: 'vue_dll.js',
       
       dir: '/assets',
       outputPath: 'lib',  // 生成目录
@@ -54,7 +54,7 @@ module.exports = {
       // jquery: 'jquery_dll.dllBundle.js',
       // bootstrap: 'bootstrap_dll.dllBundle.js',
       bootstrapCss: 'bootstrapCss_dll.css',
-      vue: 'vue_dll.dllBundle.js',
+      vue: 'vue_dll.js',
   
       dir: '/static',
       outputPath: 'lib',  // 生成目录
@@ -63,29 +63,37 @@ module.exports = {
     
     // 也可改为 cross-env 控制NODE_ENV
     env: require('./prod.env'),
-    // index                    : path.resolve( __dirname,'../dist/index.html' ),
-    // assetsRoot               : path.resolve( __dirname,'../dist' ),
-
+    
     // 转移到本地PHP+APACHE+SQL服务器文件夹中
     index: path.normalize('E:\\wamp64\\www\\Wamp-Webpack2Vue\\index.html'),
     assetsRoot: path.normalize('E:\\wamp64\\www\\Wamp-Webpack2Vue'),
     assetsSubDirectory: 'static',
     assetsJsDir: 'static/js/',
     assetsPublicPath: '/',
-
+    
+    // devtool.js
     productionSourceMap: false,
+    
+    // 压缩
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
     // npm install --save-dev compression-webpack-plugin
     productionGzip: false,
     productionGzipExtensions: ['js', 'css'],
-    // Run the build command with an extra argument to
-    // View the bundle analyzer report after build finishes:
-    // `npm run build --report`
-    // Set to `true` or `false` to always turn it on or off
-    // bundleAnalyzerReport 打包结果分析
+    compressCss:false,
+    compressJs:false,
+    
+    // 打包结果分析
     bundleAnalyzerReport: false,
     Visualizer: true
+    
+  },
+  // DLL环境选项
+  dlld:{
+    compressJs:false,
+  },
+  dllp:{
+    compressJs:false,
   }
 }

@@ -27,6 +27,34 @@ if (TARGET === 'build') {
   module.exports = compressJs
 }
 
-if (TARGET === 'test') {
+if (TARGET === 'dlld') {
   console.log(TARGET, `: UglifyJsParallelPlugin正在压缩JS文件！`)
+  var compressJs = new UglifyJsParallelPlugin({
+    cacheDir: '.UglifyJsCache/',
+    uglifyJS: {
+      output: {
+        comments: false
+      },
+      compress: {
+        warnings: false
+      }
+    }
+  })
+  module.exports = compressJs
+}
+
+if (TARGET === 'dllp') {
+  console.log(TARGET, `: UglifyJsParallelPlugin正在压缩JS文件！`)
+  var compressJs = new UglifyJsParallelPlugin({
+    cacheDir: '.UglifyJsCache/',
+    uglifyJS: {
+      output: {
+        comments: false
+      },
+      compress: {
+        warnings: false
+      }
+    }
+  })
+  module.exports = compressJs
 }

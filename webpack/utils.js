@@ -23,6 +23,7 @@ exports.assetsPath = function (_path) {
   return path.posix.join(assetsSubDirectory, _path)
 }
 
+
 // 解析.vue文件内的各种css格式
 exports.vueCssLoaders = function (options) {
   options = options || {}

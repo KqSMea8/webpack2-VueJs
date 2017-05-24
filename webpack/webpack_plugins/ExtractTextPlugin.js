@@ -32,7 +32,7 @@ if (TARGET === 'dev') {
     allChunks: false
   });
   var cssExtract = [
-    new ExtractTextPlugin("css/style.css")
+    new ExtractTextPlugin("assets/css/[name].css")
   ]
   module.exports = cssExtract
 }
@@ -40,29 +40,26 @@ if (TARGET === 'dev') {
 if (TARGET === 'build') {
   console.log(`${TARGET}: ExtractTextPlugin正在分离CSS文件！`)
   
-  const extractVueCSS = new ExtractTextPlugin({
-    filename: utils.assetsPath('assets', 'css/[name].VueCSS.css'),
-    allChunks: true
-  });
-  const extractVueSCSS = new ExtractTextPlugin({
-    filename: utils.assetsPath('assets', 'css/[name].VueSCSS.css'),
-    allChunks: false
-  });
-  const extractStyleCSS = new ExtractTextPlugin({
-    filename:path.posix.join('assets', 'css/[name].StyleCSS.css'),
-    allChunks: false
-  });
-  const extractStyleSCSS = new ExtractTextPlugin({
-    filename:path.posix.join('assets', 'css/[name].StyleSCSS.css'),
-    allChunks: false
-  });
-  
   var cssExtract = [
     new ExtractTextPlugin("static/css/[name].css")
   ]
   module.exports = cssExtract
 }
 
-if (TARGET === 'test') {
+if (TARGET === 'dlld') {
   console.log(`${TARGET}: ExtractTextPlugin正在分离CSS文件！`)
+  var cssExtract = [
+    new ExtractTextPlugin("[name].css")
+  ]
+  module.exports = cssExtract
+}
+
+
+if (TARGET === 'dllp') {
+  console.log(`${TARGET}: ExtractTextPlugin正在分离CSS文件！`)
+  
+  var cssExtract = [
+    new ExtractTextPlugin("[name].css")
+  ]
+  module.exports = cssExtract
 }

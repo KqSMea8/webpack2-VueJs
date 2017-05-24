@@ -75,7 +75,8 @@ const baseRules = [
   },
   // CSS加载器
   {
-    test: /\.css$/,
+    // test: /\.css$/,
+    test: /^((?!\.min\.css).)*\.css/,
     include: [
       path.join(process.cwd(), './src')
     ],
@@ -208,9 +209,25 @@ module.exports.build = buildRules
  DLL环境
  **********/
 
-const dllRules = utils.styleLoaders({
+/*const dllRules = utils.styleLoaders({
   sourceMap: false,
   extract: true
+})*/
+const dllRules = baseRules
+dllRules.push({
+  // 已压缩过的.min.css不压缩
+  test: /\.min\.css/,
+  use : ExtractTextPlugin.extract({
+    fallback: 'style-loader',
+    // resolve-url-loader may be chained before sass-loader if necessary
+    use     : [
+      {
+        loader : 'css-loader',
+        options: {
+          minimize : false,
+          sourceMap: false
+        }
+      }]
+  })
 })
-
 module.exports.dll = dllRules

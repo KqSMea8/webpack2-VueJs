@@ -15,10 +15,10 @@
     "view": "cross-env NODE_ENV=production node packageView.js",
     "cleandllprod": "rimraf E:/wamp64/www/VueJs_Demo_Github/commonDll/production",
     "cleandlldev": "rimraf E:/wamp64/www/VueJs_Demo_Github/commonDll/development",
-    "predll:production": "echo I run before the build script && npm run cleandllprod",
-    "dll:production": "cross-env NODE_ENV=production webpack --config webpack/webpack.dll.config.js --progress",
-    "predll:development": "echo I run before the build script && npm run cleandlldev",
-    "dll:development": "cross-env NODE_ENV=development webpack --config webpack/webpack.dll.config.js --progress"
+    "predllp": "echo I run before the build script && npm run cleandllprod",
+    "dllp": "cross-env NODE_ENV=production webpack --config webpack/webpack.dll.config.js --progress",
+    "predlld": "echo I run before the build script && npm run cleandlldev",
+    "dlld": "cross-env NODE_ENV=development webpack --config webpack/webpack.dll.config.js --progress"
   },
   "keywords": [],
   "author": "",

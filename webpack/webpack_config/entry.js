@@ -9,7 +9,8 @@ const path = require('path')
  **********/
 
 const baseEntry = {}
-// 单页面SPA应用
+
+// Todo:整合entry入口
 // app: ['webpack-hot-middleware/client?noInfo=true&reload=true','./src/main.js')]
 // baseEntry.app = './src/main.js'
 

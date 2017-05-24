@@ -10,29 +10,34 @@ const webpack = require('webpack')
 
 // 插件列表
 
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-
+// base
 const globalVar = require('../webpack_plugins/DefinePlugin')
 const provideVar = require('../webpack_plugins/ProvidePlugin')
 
+// 多线程处理 babel-js
+const happyPack = require('../webpack_plugins/HappyPackPlugin')
+
 const html = require('../webpack_plugins/HtmlWebpackPlugin')
-// 弃用DLL, 不引入htmlAsset以及JSLib
+const jsCommon = require('../webpack_plugins/CommonsChunkPlugin')
+const cssExtract = require('../webpack_plugins/ExtractTextPlugin')
+
+// DLL相关, htmlAsset插入script以及JSLib
 const htmlAsset = require('../webpack_plugins/AddAssetHtmlPlugin')
 const jsLib = require('../webpack_plugins/DllReferencePlugin')
 
-const cssExtract = require('../webpack_plugins/ExtractTextPlugin')
+// dev
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+
+// build
 const compressCss = require('../webpack_plugins/OptimizeCssAssetsPlugin')
-
-const jsCommon = require('../webpack_plugins/CommonsChunkPlugin')
-
 const compressJs = require('../webpack_plugins/UglifyJsPlugin')
-
 const copy = require('../webpack_plugins/CopyWebpackPlugin')
-
 const assets = require('../webpack_plugins/AssetsPlugin')
 
-// 多线程处理插件
-const happyPack = require('../webpack_plugins/HappyPackPlugin')
+// dll
+const dllPlugin = require('../webpack_plugins/DllPlugin')
+
+
 
 /** ********
  初始环境
@@ -45,8 +50,29 @@ const basePlugins = [
     // 'process.env': config.dev.env
   })
 ]
+
+// 注意顺序
+// buildPlugins.push(globalVar)
+// buildPlugins.push(provideVar)
+// devPlugins.push(cssExtract)
+
 basePlugins.push(provideVar)
+
+
+// 数组中添加第二个数组中的元素
+// Equivalent to vegetables.push('celery', 'beetroot');
+// Array.prototype.push.apply(vegetables, moreVegs);
+
 Array.prototype.push.apply(basePlugins, happyPack)
+
+Array.prototype.push.apply(basePlugins, html)
+Array.prototype.push.apply(basePlugins, jsCommon)
+Array.prototype.push.apply(basePlugins, cssExtract)
+
+basePlugins.push(htmlAsset)
+Array.prototype.push.apply(basePlugins, jsLib)
+
+
 module.exports.base = basePlugins
 
 /** ****
@@ -64,13 +90,6 @@ const devPlugins = [
   new FriendlyErrorsPlugin()
 ]
 
-Array.prototype.push.apply(devPlugins, cssExtract)
-Array.prototype.push.apply(devPlugins, html)
-Array.prototype.push.apply(devPlugins, jsCommon)
-Array.prototype.push.apply(devPlugins, jsLib)
-devPlugins.push(htmlAsset)
-// devPlugins.push(copy)
-
 if (option.dev.bundleAnalyzerReport) {
   var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
   devPlugins.push(new BundleAnalyzerPlugin())
@@ -83,26 +102,17 @@ module.exports.dev = devPlugins
 ******/
 
 const buildPlugins = []
-// 注意顺序
-// buildPlugins.push(globalVar)
-// buildPlugins.push(provideVar)
-// devPlugins.push(cssExtract)
-// 数组中添加第二个数组中的元素
-// Equivalent to vegetables.push('celery', 'beetroot');
-// Array.prototype.push.apply(vegetables, moreVegs);
-Array.prototype.push.apply(buildPlugins, cssExtract)
-Array.prototype.push.apply(buildPlugins, html)
-Array.prototype.push.apply(buildPlugins, jsCommon)
-Array.prototype.push.apply(buildPlugins, jsLib)
-buildPlugins.push(htmlAsset)
+
 buildPlugins.push(copy)
-
-// buildPlugins.push(compressCss)
-// buildPlugins.push(compressJs)
-
 buildPlugins.push(assets)
 
-// Default：false
+// 压缩 Default：false
+if (option.build.compressCss) {
+  buildPlugins.push(compressCss)
+}
+if (option.build.compressJs) {
+  buildPlugins.push(compressJs)
+}
 if (option.build.productionGzip) {
   var GzipCompress = require('../webpack_plugins/CompressionWebpackPlugin')
   buildPlugins.push(GzipCompress)
@@ -129,81 +139,21 @@ module.exports.build = buildPlugins
  DLL环境
  **********/
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const dllPlugins = []
 
-const extractVueCSS = new ExtractTextPlugin({
-  filename:'[name].css',
-  allChunks: false
-});
-const extractVueSCSS = new ExtractTextPlugin({
-  filename:'[name].css',
-  allChunks: false
-});
-const extractStyleCSS = new ExtractTextPlugin({
-  filename:'[name].css',
-  allChunks: false
-});
-const extractStyleSCSS = new ExtractTextPlugin({
-  filename:'[name].css',
-  allChunks: false
-});
 
-const dllPlugins = [
-  extractVueCSS,
-  extractVueSCSS,
-  extractStyleCSS,
-  extractStyleSCSS
-]
-
-const isDev = process.env.NODE_ENV === 'development'
-const outputPath = isDev ? path.resolve(process.cwd(), 'commonDll/development') : path.resolve(process.cwd(), 'commonDll/production')
-
-dllPlugins.push(
-  new webpack.DllPlugin({
-    /**
-     * path
-     * 定义 manifest 文件生成的位置
-     * [name]的部分由entry的名字替换
-     * The path to the manifest file which maps between modules included in a bundle and the internal IDs within that bundle
-     * 本Dll文件中各模块的索引，供DllReferencePlugin读取使用
-     */
-    path: path.join(outputPath, '[name]-manifest.json'),
-    /**
-     * name
-     * dll bundle 输出到那个全局变量上
-     * 必须和 output.library 一样的值
-     * 当前Dll的所有内容都会存放在这个参数指定变量名的一个全局变量下
-     */
-    name: '[name]',
-    // 指定一个路径作为上下文环境，需要与webpack_plugins的DllReferencePlugin的context参数保持一致，建议统一设置为项目根目录
-    // context: process.cwd()
-  })
-)
-
-// If you use any hashing ([hash] or [chunkhash]), make sure to have a consistent ordering of modules. Use the OccurrenceOrderPlugin or recordsPath.
-// https://github.com/webpack/docs/wiki/configuration
-/*dllPlugins.push(
-  new webpack.optimize.OccurrenceOrderPlugin(true)
-)*/
+Array.prototype.push.apply(dllPlugins, dllPlugin)
+Array.prototype.push.apply(dllPlugins, cssExtract)
 
 // 默认不压缩
-const isuglify = false
-const UglifyJsParallelPlugin = require('webpack-uglify-parallel')
-
-if (isuglify) {
-  dllPlugins.push(
-      new UglifyJsParallelPlugin({
-        cacheDir: '.UglifyJsCache/',
-        uglifyJS: {
-          exclude: /\.min\.js$/,
-          output: {
-            comments: false
-          },
-          compress: {
-            warnings: false
-          }
-        }
-      })
-  )
+if(isProduction){
+  if (option.dllp.compressJs) {
+    dllPlugins.push(compressJs)
+  }
+}else{
+  if (option.dlld.compressJs) {
+    dllPlugins.push(compressJs)
+  }
 }
+
 module.exports.dll = dllPlugins
