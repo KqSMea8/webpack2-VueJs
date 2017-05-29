@@ -2,54 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="146de59c-b7b3-4127-95a3-740e68ad0c35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/assets/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/aee.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/aef.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/aei.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/banner-item-load.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/banner1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/banner2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/banner3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/banner4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/cd_wrapper.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/default_cover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/list.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/list_hover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/next_hover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/pause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/pause_hover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/placeholder_disk_play_program.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/placeholder_disk_play_song.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/play.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/play_hover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/playbar_btn_next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/playbar_btn_pause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/playbar_btn_play.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/playbar_btn_playlist.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/player-bar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/prev.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/prev_hover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/rage_loading.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/seq.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/seq_hover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/stick_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/user-default.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/api/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/assets/theme.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/views/hotSinger.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/views/index.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/views/leaderBoard.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/views/playListDetail.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/views/playerDetail.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/views/rage.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/views/songList.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/static/.gitkeep" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/NavBar.vue" afterPath="$PROJECT_DIR$/src/layouts/NavBar.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/module.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/module.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -833,7 +786,7 @@
       <workItem from="1495927354180" duration="5429000" />
       <workItem from="1495975799703" duration="3827000" />
       <workItem from="1496015975328" duration="26601000" />
-      <workItem from="1496069834756" duration="2625000" />
+      <workItem from="1496069834756" duration="2644000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1494127898433</created>
@@ -996,11 +949,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496057414851</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="MPA+WEBPACK2+VUE2">
+      <created>1496072465592</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1496072465592</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="431465000" />
+    <option name="totallyTimeSpent" value="431484000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
