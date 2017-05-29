@@ -69,6 +69,26 @@ const baseRules = [
               }
             ]
           }),
+          less:ExtractTextPlugin.extract({
+            fallback: 'vue-style-loader',
+            use:[
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: false,
+                  minimize: false,
+                  importLoaders:1,
+                  sourceMap: false
+                }
+              },
+              {
+                loader: 'less-loader',
+                options:{
+                  sourceMap: false
+                }
+              }
+            ]
+          }),
         }
       }
     }]
@@ -77,9 +97,6 @@ const baseRules = [
   {
     // test: /\.css$/,
     test: /^((?!\.min\.css).)*\.css/,
-    include: [
-      path.join(process.cwd(), './src')
-    ],
     loaders: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
   },
   // SCSS加载器
@@ -101,6 +118,30 @@ const baseRules = [
         },
         {
           loader: 'sass-loader',
+          options:{
+            sourceMap: false
+          }
+        }
+      ],
+      fallback: 'style-loader'
+    })
+  },
+  // LESS加载器
+  {
+    test: /\.less$/,
+    use: ExtractTextPlugin.extract({
+      use: [
+        {
+          loader: 'css-loader',
+          options: {
+            modules: false,
+            minimize: false,
+            importLoaders:1,
+            sourceMap: false
+          }
+        },
+        {
+          loader: 'less-loader',
           options:{
             sourceMap: false
           }
