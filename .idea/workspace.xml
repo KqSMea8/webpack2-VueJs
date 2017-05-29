@@ -2,195 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="146de59c-b7b3-4127-95a3-740e68ad0c35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/blog.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/images/components/go_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/images/components/go_next_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/images/components/login_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/images/components/nav_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/images/components/user.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/images/index.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/images/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/css/vendor/normalize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/app.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/app.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/app.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/assist/utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/components/footer/footer.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/components/header/header.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/components/menu/menu.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/components/notice/notice.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/components/posts/posts.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/css/code.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/css/content.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/css/images.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/css/nav.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/archives/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/categories/0/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/categories/0/2.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/colors.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/config.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/page/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/page/2.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/pages/217459107.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/posts/126817142.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/posts/196350551.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/posts/205319771.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/posts/210285498.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/posts/71329290.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/posts/71470122.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/tags/175174882/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/tags/175183154/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/tags/531938099/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/tags/531938577/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/tags/531939314/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/tags/534950261/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/tags/534950402/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/tags/534950544/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/tags/548037602/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/tags/548037617/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/tags/548037646/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/tags/548066947/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/json/tags/548067165/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/archives/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/categories/0/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/categories/0/2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/colors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/page/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/page/2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/pages/217459107.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/posts/126817142.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/posts/196350551.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/posts/205319771.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/posts/210285498.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/posts/71329290.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/posts/71470122.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/tags/175174882/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/tags/175183154/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/tags/531938099/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/tags/531938577/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/tags/531939314/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/tags/534950261/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/tags/534950402/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/tags/534950544/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/tags/548037602/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/tags/548037617/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/tags/548037646/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/tags/548066947/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/mock/tags/548067165/1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/plugin/api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/plugin/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/router.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/router/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/store.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/store/actions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/store/getters.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/store/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/store/modules/footer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/store/modules/header.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/store/modules/menu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/store/modules/notice.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/store/mutations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/store/mutationsTypes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/store/plugins.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/store/state.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/views/archives.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/views/categories.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/views/category.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/views/home.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/views/page.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/views/post.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/views/tag.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/blog/views/tags.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/app.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/app.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/app.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/assist/utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/components/backtotop.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/components/header.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/components/loading.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/components/menu.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/components/nvAlert.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/components/reply.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/components/user-info.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/css/CV.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/css/about.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/css/common/common.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/css/common/reset.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/css/detail.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/css/github-markdown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/css/header.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/css/iconfont/iconfont.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/css/index.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/css/topic.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/css/user.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/json/config.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/mock/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/mock/topics.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/plugin/api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/plugin/filters.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/plugin/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/router.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/router/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/store.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/store/actions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/store/getters.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/store/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/store/modules/cnode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/store/mutations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/store/mutationsTypes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/store/plugins.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/store/state.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/views/about.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/views/index.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/views/list.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/views/login.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/views/message.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/views/new.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/views/topic.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/cnode/views/user.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/api/productsData.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/app.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/components/cart.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/components/myshoppingcart.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/components/products.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/filter/currency.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/global.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/store/actions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/store/getters.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/store/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/store/modules/cart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/store/modules/productList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/store/mutations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/shoppingcart/store/mutationsTypes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/VueJs_Demo_Github.iml" afterPath="$PROJECT_DIR$/.idea/VueJs_Demo_Github.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReadMe.md" afterPath="$PROJECT_DIR$/ReadMe.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/postcss.config.js" afterPath="$PROJECT_DIR$/postcss.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/NavBar.vue" afterPath="$PROJECT_DIR$/src/layouts/NavBar.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/components/Home.vue" afterPath="$PROJECT_DIR$/src/vuespa/components/Home.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/components/News.vue" afterPath="$PROJECT_DIR$/src/vuespa/components/News.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/components/TodoList.vue" afterPath="$PROJECT_DIR$/src/vuespa/components/TodoList.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src目录.txt" afterPath="$PROJECT_DIR$/src目录.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/assetsFileMap/assets-map.json" afterPath="$PROJECT_DIR$/webpack/assetsFileMap/assets-map.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/dev-server.js" afterPath="$PROJECT_DIR$/webpack/dev-server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack.base.conf.js" afterPath="$PROJECT_DIR$/webpack/webpack.base.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/entry.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/entry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/module.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/plugins.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/plugins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/AddAssetHtmlPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/AddAssetHtmlPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/CommonsChunkPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/CommonsChunkPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/CopyWebpackPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/CopyWebpackPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/HtmlWebpackPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/HtmlWebpackPlugin.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -747,7 +559,7 @@
       <workItem from="1495850660962" duration="10987000" />
       <workItem from="1495927354180" duration="5429000" />
       <workItem from="1495975799703" duration="3827000" />
-      <workItem from="1496015975328" duration="25416000" />
+      <workItem from="1496015975328" duration="25995000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1494127898433</created>
@@ -896,11 +708,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495495904218</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="MPA+WEBPACK2+VUE2">
+      <created>1496053970199</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1496053970199</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427655000" />
+    <option name="totallyTimeSpent" value="428234000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
