@@ -10,6 +10,7 @@ const express = require('express')
 const app = express()
 
 // Webpack
+const glob = require('glob')
 const webpack = require('webpack')
 const webpackConfig = require('./webpack.dev.conf')
 const option = require('./option')
@@ -97,11 +98,30 @@ const staticPath = path.posix.join(option.dev.assetsPublicPath, option.dev.asset
 // 不可以通过带有 "/static" 前缀的地址来访问 /static 目录下面的文件?
 app.use(staticPath, express.static('public'))
 
+// vuespa - components - News.vue
 var mockDir = path.resolve(process.cwd(), 'src/mock')
 fs.readdirSync(mockDir).forEach(function (file) {
-  var mock = require(path.resolve(mockDir, file))
+  let mock = require(path.resolve(mockDir, file))
   app.use(mock.api, mock.response)
 })
+
+// blog->store->state 读取config配置
+var mockBlogJson = glob.sync(path.resolve(process.cwd(), 'src/pages/blog/mock/**/*/*.js'))
+//console.log(mockBlogJson);
+mockBlogJson.forEach(function (file) {
+  //console.log(file);
+  let mock = require(file)
+  //app.use(mock.api, mock.response)
+  app.use(mock.api, function(req, res, next) {
+    // GET 'http://www.example.com/admin/new'
+    console.log(req.originalUrl); // '/admin/new'
+    console.log(req.baseUrl); // '/admin'
+    console.log(req.path); // '/new'
+    next();
+  })
+})
+
+
 
 const url = 'http://localhost:' + port
 

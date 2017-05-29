@@ -16,7 +16,7 @@ E:\WAMP64\WWW\VUEJS_DEMO_GITHUB\SRC
 ©¦  ©¦  NavBar.vue
 ©¦  ©¦  News.vue
 ©¦  ©¦  NewsDetail.vue
-©¦  ©¦  Todo.vue
+©¦  ©¦  odo.vue
 ©¦  ©¦  TodoList.vue
 ©¦  ©¦  UserLogin.vue
 ©¦  ©¦  

@@ -109,6 +109,10 @@ const baseRules = [
       fallback: 'style-loader'
     })
   },
+  {
+    test: /\.json$/,
+    use: 'json-loader'
+  },
   // JS加载器
   {
     test: /\.js$/,

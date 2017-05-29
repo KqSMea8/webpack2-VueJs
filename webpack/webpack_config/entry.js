@@ -3,6 +3,21 @@
  */
 
 const path = require('path')
+const glob = require('glob')
+
+var match = glob.sync(path.resolve(process.cwd(), 'src/pages/**/*/app.js'))
+// console.log(match);
+var chunks = []
+match.forEach(path => {
+  var chunk = path.split('E:/wamp64/www/VueJs_Demo_Github/src/')[1].split('/app.js')[0]
+  chunks.push(chunk)
+})
+var entry=[]
+chunks.forEach((chunk,index) =>{
+  'use strict'
+  entry[chunk]=match[index]
+})
+// console.log(entry);
 
 /** ********
  初始环境
@@ -23,9 +38,21 @@ module.exports.base = baseEntry
 const devEntry = {}
 // entry节点对象的Key是别名，是与output中filename属性[name]关联的，因此想要生成什么样的路径，应该在entry的key中配置
 // devEntry['bootstrapLib'] = ['jquery', './src/js/vendor/bootstrap/dist/js/bootstrap.min.js']
+
 devEntry['index'] = './src/index.js'
+
+chunks.forEach((chunk,index) =>{
+  'use strict'
+  devEntry[chunk]=path.resolve(process.cwd(), 'src',chunk,'app.js')
+})
+
+
+/*
 devEntry['pages/data'] = path.resolve(process.cwd(), 'src/pages/data/app.js')
-// devEntry['pages/main'] = path.resolve(process.cwd(), 'src/pages/main/app.js')
+devEntry['pages/blog'] = path.resolve(process.cwd(), 'src/pages/blog/app.js')
+devEntry['pages/cnode'] = path.resolve(process.cwd(), 'src/pages/cnode/app.js')
+*/
+
 
 // add hot-reload related code to entry chunks
 Object.keys(devEntry).forEach(function (name) {
@@ -33,6 +60,7 @@ Object.keys(devEntry).forEach(function (name) {
   devEntry[name] = ['./webpack/dev-client'].concat(devEntry[name])
 
 })
+
 // console.log(devEntry)
 /* { 'pages/data': 'E:\\wamp64\\www\\VueJs_Demo_Github\\src\\pages\\data\\app' } */
 module.exports.dev = devEntry
@@ -43,7 +71,11 @@ module.exports.dev = devEntry
 
 const buildEntry = {}
 buildEntry['index'] = './src/index.js'
-buildEntry['pages/data'] = path.resolve(process.cwd(), 'src/pages/data/app.js')
+
+chunks.forEach((chunk,index) =>{
+  'use strict'
+  buildEntry[chunk]=path.resolve(process.cwd(), 'src',chunk,'app.js')
+})
 
 module.exports.build = buildEntry
 

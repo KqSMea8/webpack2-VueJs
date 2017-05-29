@@ -37,16 +37,3 @@
 		transform: rotateX(60deg);
 	}
 </style>
-<!--
-<style rel="stylesheet/css" >
-	.text-success {
-		padding: 15px;
-		color: #0d519c;
-		background-color: white;
-		text-shadow: grey 2px 2px;
-		transition: all .1s;
-		border:2px solid red;
-		border-radius: 5px;
-		transform: rotateX(60deg);
-	}
-</style>-->

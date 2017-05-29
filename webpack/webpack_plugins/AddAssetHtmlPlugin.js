@@ -6,7 +6,7 @@ const TARGET = process.env.npm_lifecycle_event
 
 /*
   为html-webpack-plugin生成的HTML添加JS或CSS资源路径
-  官方关于此插件的说明：https: github.com/SimenB/add-asset-html-webpack-plugin
+  官方关于此插件的说明：https://www.npmjs.com/package/add-asset-html-webpack-plugin
 
   filepath :The absolute path of the file you want to add to the compilation, and resulting HTML file.
   includeSourcemap :If true, will add filepath + '.map' to the compilation as well.
@@ -30,6 +30,9 @@ if (TARGET === 'dev') {
   htmlAsset = new AddAssetHtmlPlugin([
     {
       filepath: path.resolve(process.cwd(), FILE_PATH, option.dev.dll.bootstrapCss),
+      // Todo:filter 多个入口的 bootstrapCss_dll.css 失败
+      // 看源码解决，filter 的选项应该替换为 files
+      files:['index.html','pages/data/app.html'],
       outputPath: SERVER_PATH,
       publicPath: HTML_SRC,
       includeSourcemap: false,

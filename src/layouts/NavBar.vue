@@ -23,10 +23,10 @@
 					<a href="/pages/data/app.html">数据<span class = "sr-only">(current)</span></a>
 				</li>
 				<li>
-					<a href="/index.html">VUESPA<span class = "sr-only">(current)</span></a>
+					<a href="/pages/blog/app.html">博客<span class = "sr-only">(current)</span></a>
 				</li>
 				<li>
-					<a href="http://localhost:3333/index.html">VUESPA<span class = "sr-only">(current)</span></a>
+					<a href="/pages/cnode/app.html">CNODE<span class = "sr-only">(current)</span></a>
 				</li>
 				<li class = "dropdown">
 					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">Dropdown <span class = "caret"></span>
@@ -60,7 +60,7 @@
 			</form>
 			<ul class = "nav navbar-nav navbar-right">
 				<li>
-					<a href="http://localhost:3333/index.html">VUESPA<span class = "sr-only">(current)</span></a>
+					<a href="/pages/shoppingcart/app.html">ShoppingCart<span class = "sr-only">(current)</span></a>
 				</li>
 				<li class = "dropdown">
 					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">Dropdown <span class = "caret"></span>

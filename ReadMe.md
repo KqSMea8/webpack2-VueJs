@@ -96,3 +96,4 @@ const files = {
 - 这个BUG是让vue-loader里面的option的extract改为false
 - vue-loader有一个extractcss，vue文件外又有个extractcss，所以是个多入口分离css配置
 
+14. 新建一个入口Page时》entry》CommonsChunkPlugin minChunks》HtmlWebpackPlugin》navbar.vue

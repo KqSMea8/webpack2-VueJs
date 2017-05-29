@@ -90,6 +90,9 @@ const devPlugins = [
   new FriendlyErrorsPlugin()
 ]
 
+// Todo:找不到开发环境的写入目录
+// devPlugins.push(copy)
+
 if (option.dev.bundleAnalyzerReport) {
   var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
   devPlugins.push(new BundleAnalyzerPlugin())

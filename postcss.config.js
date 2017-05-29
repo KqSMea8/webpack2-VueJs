@@ -26,11 +26,13 @@ module.exports = ({ env, file, options }) => ({
       }]
     }),
     // https://www.npmjs.com/package/autoprefixer
-    require('autoprefixer')({
+    /*require('autoprefixer')({
       'browserslist': [
         'not ie <= 8'
       ]
-    })
+    }),*/
+    require('postcss-import')(),
+    require('postcss-cssnext')()
 
   ]
 })

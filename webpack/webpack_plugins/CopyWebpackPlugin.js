@@ -23,11 +23,13 @@ const TARGET = process.env.npm_lifecycle_event
 if (TARGET === 'dev') {
   console.log(TARGET, `: CopyWebpackPlugin正在复制自定义静态资源文件！`)
   var copy = new CopyWebpackPlugin([
-    {
+    /*{
       context: path.resolve(process.cwd(), 'commonDll/development/assets/'),
       from: '*',
       to: path.resolve(option.dev.assetsRoot, 'assets')
-    }
+    },*/
+    { from: 'node_modules/bootstrap/dist/css', to: 'http://localhost:3333/development/assets/css/'},
+    { from: 'node_modules/bootstrap/dist/fonts', to: 'http://localhost:3333/development/assets/fonts/'}
   ])
   module.exports = copy
 }
@@ -44,7 +46,7 @@ if (TARGET === 'build') {
       debug: 'debug'
     },
     {
-      //TODO:static哪里定义的？
+      // static哪里定义的？option:assetsSubDirectory
       context: path.resolve(process.cwd(), 'commonDll/production/static/fonts/'),
       from: '*',
       to: path.resolve(option.build.assetsRoot, 'static', 'fonts')

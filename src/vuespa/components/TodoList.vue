@@ -30,9 +30,9 @@
       doneEdit(e){
         const newvalue = e.target.value.trim()
         console.log('doneEdit->this: ',this);
-        //{todo:value,done:false}
+        //{to do:value,done:false}
         console.log('doneEdit->this: ',this.todo);
-        //解构赋值变量 todo=this.todo
+        //解构赋值变量 to do=this.to do
         const { todo } = this
         if (!newvalue) {
           this.deleteTodoitem({

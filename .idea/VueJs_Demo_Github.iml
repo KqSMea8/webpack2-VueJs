@@ -14,5 +14,11 @@
     <orderEntry type="library" name="webpack-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="webpack-dev-middleware-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="ejs-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="zepto-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="javascript-bignum-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="lodash-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="node-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="jquery-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="babel-core-DefinitelyTyped" level="application" />
   </component>
 </module>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{ejs-DefinitelyTyped, requirejs-DefinitelyTyped, requirejs-domready-DefinitelyTyped, vue-resource-DefinitelyTyped, webpack-DefinitelyTyped, webpack-dev-middleware-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/src/pages/cnode/plugin/index.js" libraries="{babel-core-DefinitelyTyped, javascript-bignum-DefinitelyTyped, jquery-DefinitelyTyped, lodash-DefinitelyTyped, node-DefinitelyTyped}" />
+    <file url="PROJECT" libraries="{ejs-DefinitelyTyped, requirejs-DefinitelyTyped, requirejs-domready-DefinitelyTyped, vue-resource-DefinitelyTyped, webpack-DefinitelyTyped, webpack-dev-middleware-DefinitelyTyped, zepto-DefinitelyTyped}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

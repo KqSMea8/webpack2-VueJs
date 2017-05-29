@@ -8,5 +8,16 @@ module.exports = {
   module: {
     rules: require('./webpack_config/module.js').base
   },
-  plugins: require('./webpack_config/plugins.js').base
+  plugins: require('./webpack_config/plugins.js').base,
+  // https://doc.webpack-china.org/configuration/node/
+  node: {
+    console: false,
+    global: true,
+    process: true,
+    __filename: "mock",
+    __dirname: "mock",
+    Buffer: true,
+    setImmediate: true,
+    fs:"empty"
+  }
 }

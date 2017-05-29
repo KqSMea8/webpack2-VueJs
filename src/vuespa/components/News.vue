@@ -39,7 +39,7 @@
 		   })*/
         // 请求mock出来的假数据
         // http://www.cnblogs.com/lvdabao/p/webpack-front.html?utm_source=tuicool&utm_medium=referral
-        this.$http.get("../../mock/news").then(function(res) {
+        this.$http.get("/mock/news").then(function(res) {
           console.log(res);
           this.$store.state.news.newsList = res.body;
           //console.log('created news:',this.$store.state.news);
