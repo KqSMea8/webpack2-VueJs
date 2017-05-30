@@ -17,7 +17,7 @@
 					<img :src = "coverImgUrl + '?param=300y300'" alt = "">
 				</div>
 				<div class = "info-title">
-					<p class = "titile">{{name}}</p>
+					<p class = "titile" style = "margin: 6px 0 0 0;">{{name}}</p>
 					<p class = "author">
 						<mu-avatar slot = "left" :src = "creator.avatarUrl + '?param=50y50'" :size = "30" :iconSize = "20" />
 						<span>{{creator.nickname}}</span>
@@ -45,7 +45,6 @@
 			</div>
 		</div>
 	</div>
-
 </template>
 <script>
   import api from '../api'
@@ -53,14 +52,15 @@
   export default {
     data () {
       return {
-        coverImgUrl: '../../static/default_cover.png',
+        // Todo: 初始图片失败
+        coverImgUrl: '../../../static/default_cover.png',
         name       : '歌单标题',
         id         : 0,
         fname      : '歌单',
         playCount  : 0,
         description: '描述描述',
         creator    : {
-          'avatarUrl': '../../static/user-default.png',
+          'avatarUrl': '../../../static/user-default.png',
           'nickname' : '昵称'
         },
         list       : [],
@@ -71,6 +71,7 @@
     },
     // 解除keep-alive的缓存
     beforeRouteEnter: (to, from, next) => {
+      // 通过 `vm` 访问组件实例
       next(vm => {
         // 根据传过来的ID是否一样，判断加载
         if (parseInt(to.params.id) !== parseInt(vm.id)) {
@@ -163,6 +164,10 @@
   }
 </script>
 
+<!--Todo:热更新的样式无响应-->
+<!--开发环境下的 webpack 配置中不要使用 extract-text-webpack-plugin 就行了-->
+<!--<style src="../less/playListDetail.less" lang="less"></style>-->
+
 <style lang = "less" scoped>
 	.fixed-title {
 		position: fixed;
@@ -200,7 +205,7 @@
 	.playlist-info {
 		position: relative;
 		padding: 60px .5rem 0;
-		height: 10rem;
+		height: 12rem;
 	}
 	
 	.info-wrapper {
@@ -232,13 +237,14 @@
 		
 		.info-title {
 			float: left;
-			width: 7.5rem;
-			margin-left: 1rem;
+			width: 22.5rem;
+			margin-left: 1.5rem;
 			.title {
 				font-size: 16px;
-				word-wrap: wrapper;
+				margin: 10px 0 0 0;
 			}
 			.author {
+				margin: 10px 0 0 0;
 				span {
 					overflow: hidden;
 					display: inline-block;

@@ -8,10 +8,6 @@ const path = require('path')
 const vueLoaderConfig = require('../vue-loader.conf')
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-const extractVueCSS = new ExtractTextPlugin({});
-const extractVueSCSS = new ExtractTextPlugin({});
-const extractStyleCSS = new ExtractTextPlugin({});
-const extractStyleSCSS = new ExtractTextPlugin({});
 
 /** ********
  初始环境
@@ -25,149 +21,27 @@ const baseRules = [
     // 使用内部的 require() 机制来查找模块的位置，但不会加载模块，只返回解析后的文件名。
     test: require.resolve('jquery'),
     // 先把jQuery对象声明成为全局变量`jQuery`，再通过管道进一步又声明成为全局变量`$`
-    use: 'expose-loader?$!expose-loader?jQuery!expose-loader?jquery'
-  },
-  // vue加载器
-  // see https://vue-loader.vuejs.org/zh-cn/configurations/extract-css.html
-  {
-    test: /\.vue$/,
-    use: [{
-      loader: 'vue-loader',
-      /*options:{
-        extractCSS: true
-      }*/
-      options:{
-        loaders: {
-          css: ExtractTextPlugin.extract({
-            fallback: 'vue-style-loader',
-            use: {
-              loader: 'css-loader',
-              options: {
-                modules: false,
-                minimize: false,
-                sourceMap: false
-              }
-            }
-          }),
-          scss:ExtractTextPlugin.extract({
-            fallback: 'vue-style-loader',
-            use:[
-              {
-                loader: 'css-loader',
-                options: {
-                  modules: false,
-                  minimize: false,
-                  importLoaders:1,
-                  sourceMap: false
-                }
-              },
-              {
-                loader: 'sass-loader',
-                options:{
-                  sourceMap: false
-                }
-              }
-            ]
-          }),
-          less:ExtractTextPlugin.extract({
-            fallback: 'vue-style-loader',
-            use:[
-              {
-                loader: 'css-loader',
-                options: {
-                  modules: false,
-                  minimize: false,
-                  importLoaders:1,
-                  sourceMap: false
-                }
-              },
-              {
-                loader: 'less-loader',
-                options:{
-                  sourceMap: false
-                }
-              }
-            ]
-          }),
-        }
-      }
-    }]
-  },
-  // CSS加载器
-  {
-    // test: /\.css$/,
-    test: /^((?!\.min\.css).)*\.css/,
-    loaders: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
-  },
-  // SCSS加载器
-  {
-    test: /\.scss$/,
-    include: [
-      path.join(process.cwd(), './src')
-    ],
-    use: ExtractTextPlugin.extract({
-      use: [
-        {
-          loader: 'css-loader',
-          options: {
-            modules: false,
-            minimize: false,
-            importLoaders:1,
-            sourceMap: false
-          }
-        },
-        {
-          loader: 'sass-loader',
-          options:{
-            sourceMap: false
-          }
-        }
-      ],
-      fallback: 'style-loader'
-    })
-  },
-  // LESS加载器
-  {
-    test: /\.less$/,
-    use: ExtractTextPlugin.extract({
-      use: [
-        {
-          loader: 'css-loader',
-          options: {
-            modules: false,
-            minimize: false,
-            importLoaders:1,
-            sourceMap: false
-          }
-        },
-        {
-          loader: 'less-loader',
-          options:{
-            sourceMap: false
-          }
-        }
-      ],
-      fallback: 'style-loader'
-    })
+    use : 'expose-loader?$!expose-loader?jQuery!expose-loader?jquery',
   },
   {
     test: /\.json$/,
-    use: 'json-loader'
+    use : 'json-loader',
   },
   // JS加载器
   {
-    test: /\.js$/,
+    test   : /\.js$/,
     include: [
-      path.join(process.cwd(), './src')
+      path.join(process.cwd(), './src'),
     ],
     exclude: function (paths) {
       // 路径中含有 node_modules 的就不去解析。
       var isNpmModule = !!paths.match(/node_modules/)
       return isNpmModule
     },
-    use: [{
-      loader: 'happypack/loader?id=happypackBabelJs'
-    }]
+    use    : [
+      {
+        loader: 'happypack/loader?id=happypackBabelJs',
+      }],
     // loader  : 'babel-loader'
     // loader: 'happypack/loader?id=happypackBabelJs'
   },
@@ -175,43 +49,46 @@ const baseRules = [
   // 如下配置，将小于8192byte的图片转成base64码
   {
     test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-    use: [{
-      loader: 'url-loader',
-      options: {
-        limit: 8192,
-        name: utils.assetsPath('img/[name].[hash:7].[ext]')
-      }
-    }]
+    use : [
+      {
+        loader : 'url-loader',
+        options: {
+          limit: 8192,
+          name : utils.assetsPath('img/[name].[hash:7].[ext]'),
+        },
+      }],
   },
   {
     test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-    use: [{
-      loader: 'url-loader',
-      options: {
-        limit: 8192,
-        name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
-      }
-    }]
-  }
+    use : [
+      {
+        loader : 'url-loader',
+        options: {
+          limit: 8192,
+          name : utils.assetsPath('fonts/[name].[hash:7].[ext]'),
+        },
+      },
+    ],
+  },
   // 安装了 html-webpack-template 之后就不能用 html-loader 压缩处理了
   // https://github.com/jaketrent/html-webpack-template
   // https://github.com/webpack-contrib/html-loader
   /* {
-    test: /\.html$/,
-    include: [path.join(process.cwd(), './src/index.html')],
-    use: [{
-      loader: 'html-loader?attrs[]=img:src&attrs[]=img:data-src',
-      options: {
-        minimize: true
-      }
-    }]
-  } */
+   test: /\.html$/,
+   include: [path.join(process.cwd(), './src/index.html')],
+   use: [{
+   loader: 'html-loader?attrs[]=img:src&attrs[]=img:data-src',
+   options: {
+   minimize: true
+   }
+   }]
+   } */
   // https://github.com/okonet/ejs-loader
   // https://github.com/jantimon/html-webpack-plugin/blob/master/docs/template-option.md
   /* {
-    test: /\.ejs$/,
-    use: [{ loader: 'ejs-loader' }]
-  } */
+   test: /\.ejs$/,
+   use: [{ loader: 'ejs-loader' }]
+   } */
   // mincss
   /*{
    test: /^((?!\.min\.css).)*\.css$/,
@@ -240,7 +117,129 @@ module.exports.base = baseRules
  **********/
 
 // const devRules = utils.styleLoaders({ sourceMap: option.dev.cssSourceMap })
-const devRules =[]
+
+const devRules = []
+devRules.push(
+  // vue加载器
+  // see https://vue-loader.vuejs.org/zh-cn/configurations/extract-css.html
+  {
+    test: /\.vue$/,
+    use : [
+      {
+        loader : 'vue-loader',
+        options: {
+          loaders: {
+            css : [
+              'vue-style-loader',
+              {
+                loader : 'css-loader',
+                options: {
+                  modules  : false,
+                  minimize : false,
+                  sourceMap: false,
+                },
+              },
+            ],
+            scss: [
+              'vue-style-loader',
+              {
+                loader : 'css-loader',
+                options: {
+                  modules      : false,
+                  minimize     : false,
+                  importLoaders: 1,
+                  sourceMap    : false,
+                },
+              },
+              {
+                loader : 'sass-loader',
+                options: {
+                  sourceMap: false,
+                },
+              },
+            ],
+            less: [
+              'vue-style-loader',
+              {
+                loader : 'css-loader',
+                options: {
+                  modules      : false,
+                  minimize     : false,
+                  importLoaders: 1,
+                  sourceMap    : false,
+                },
+              },
+              {
+                loader : 'less-loader',
+                options: {
+                  sourceMap: false,
+                },
+              },
+            ],
+          },
+        },
+      }],
+  },
+  // CSS加载器
+  {
+    // test: /\.css$/,
+    test: /^((?!\.min\.css).)*\.css/,
+    use : ['style-loader', 'css-loader'],
+  },
+  // SCSS加载器
+  {
+    test   : /\.scss$/,
+    include: [
+      path.join(process.cwd(), './src'),
+    ],
+    use    : [
+      'style-loader',
+      {
+        loader : 'css-loader',
+        options: {
+          modules      : false,
+          minimize     : false,
+          importLoaders: 1,
+          sourceMap    : false,
+        },
+      },
+      {
+        loader : 'sass-loader',
+        options: {
+          sourceMap: false,
+        },
+      },
+    ],
+  },
+  // LESS加载器
+  {
+    test: /\.less$/,
+    use : [
+      'style-loader',
+      {
+        loader : 'css-loader',
+        options: {
+          modules      : false,
+          minimize     : false,
+          importLoaders: 1,
+          sourceMap    : false,
+        },
+      },
+      {
+        loader : 'less-loader',
+        options: {
+          sourceMap: false,
+        },
+      },
+    ],
+  },
+  // 已压缩过的.min.css不压缩
+  {
+    test: /\.min\.css/,
+    use : ['style-loader', 'css-loader'],
+  }
+)
+
 module.exports.dev = devRules
 
 /** ********
@@ -248,6 +247,145 @@ module.exports.dev = devRules
  **********/
 
 const buildRules = []
+buildRules.concat(
+  // vue加载器
+  // see https://vue-loader.vuejs.org/zh-cn/configurations/extract-css.html
+  {
+    test: /\.vue$/,
+    use : [
+      {
+        loader : 'vue-loader',
+        options: {
+          loaders: {
+            css : ExtractTextPlugin.extract({
+              fallback: 'vue-style-loader',
+              use     : {
+                loader : 'css-loader',
+                options: {
+                  modules  : false,
+                  minimize : false,
+                  sourceMap: false,
+                },
+              },
+            }),
+            scss: ExtractTextPlugin.extract({
+              fallback: 'vue-style-loader',
+              use     : [
+                {
+                  loader : 'css-loader',
+                  options: {
+                    modules      : false,
+                    minimize     : false,
+                    importLoaders: 1,
+                    sourceMap    : false,
+                  },
+                },
+                {
+                  loader : 'sass-loader',
+                  options: {
+                    sourceMap: false,
+                  },
+                },
+              ],
+            }),
+            less: ExtractTextPlugin.extract({
+              fallback: 'vue-style-loader',
+              use     : [
+                {
+                  loader : 'css-loader',
+                  options: {
+                    modules      : false,
+                    minimize     : false,
+                    importLoaders: 1,
+                    sourceMap    : false,
+                  },
+                },
+                {
+                  loader : 'less-loader',
+                  options: {
+                    sourceMap: false,
+                  },
+                },
+              ],
+            }),
+          },
+        },
+      }],
+  },
+  // CSS加载器
+  {
+    // test: /\.css$/,
+    test: /^((?!\.min\.css).)*\.css/,
+    use : ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader'}),
+  },
+  // SCSS加载器
+  {
+    test   : /\.scss$/,
+    include: [
+      path.join(process.cwd(), './src'),
+    ],
+    use    : ExtractTextPlugin.extract({
+      use     : [
+        {
+          loader : 'css-loader',
+          options: {
+            modules      : false,
+            minimize     : false,
+            importLoaders: 1,
+            sourceMap    : false,
+          },
+        },
+        {
+          loader : 'sass-loader',
+          options: {
+            sourceMap: false,
+          },
+        },
+      ],
+      fallback: 'style-loader',
+    }),
+  },
+  // LESS加载器
+  {
+    test: /\.less$/,
+    use : ExtractTextPlugin.extract({
+      use     : [
+        {
+          loader : 'css-loader',
+          options: {
+            modules      : false,
+            minimize     : false,
+            importLoaders: 1,
+            sourceMap    : false,
+          },
+        },
+        {
+          loader : 'less-loader',
+          options: {
+            sourceMap: false,
+          },
+        },
+      ],
+      fallback: 'style-loader',
+    }),
+  },
+  // 已压缩过的.min.css不压缩
+  {
+    test: /\.min\.css/,
+    use : ExtractTextPlugin.extract({
+      fallback: 'style-loader',
+      // resolve-url-loader may be chained before sass-loader if necessary
+      use     : [
+        {
+          loader : 'css-loader',
+          options: {
+            minimize : false,
+            sourceMap: false,
+          },
+        }],
+    }),
+  }
+)
 module.exports.build = buildRules
 
 /** ********
@@ -255,24 +393,147 @@ module.exports.build = buildRules
  **********/
 
 /*const dllRules = utils.styleLoaders({
-  sourceMap: false,
-  extract: true
-})*/
-const dllRules = baseRules
-dllRules.push({
-  // 已压缩过的.min.css不压缩
-  test: /\.min\.css/,
-  use : ExtractTextPlugin.extract({
-    fallback: 'style-loader',
-    // resolve-url-loader may be chained before sass-loader if necessary
-    use     : [
+ sourceMap: false,
+ extract: true
+ })*/
+const dllRules = []
+dllRules.push(
+  // vue加载器
+  // see https://vue-loader.vuejs.org/zh-cn/configurations/extract-css.html
+  {
+    test: /\.vue$/,
+    use : [
       {
-        loader : 'css-loader',
+        loader : 'vue-loader',
         options: {
-          minimize : false,
-          sourceMap: false
-        }
-      }]
-  })
-})
+          loaders: {
+            css : ExtractTextPlugin.extract({
+              fallback: 'vue-style-loader',
+              use     : {
+                loader : 'css-loader',
+                options: {
+                  modules  : false,
+                  minimize : false,
+                  sourceMap: false,
+                },
+              },
+            }),
+            scss: ExtractTextPlugin.extract({
+              fallback: 'vue-style-loader',
+              use     : [
+                {
+                  loader : 'css-loader',
+                  options: {
+                    modules      : false,
+                    minimize     : false,
+                    importLoaders: 1,
+                    sourceMap    : false,
+                  },
+                },
+                {
+                  loader : 'sass-loader',
+                  options: {
+                    sourceMap: false,
+                  },
+                },
+              ],
+            }),
+            less: ExtractTextPlugin.extract({
+              fallback: 'vue-style-loader',
+              use     : [
+                {
+                  loader : 'css-loader',
+                  options: {
+                    modules      : false,
+                    minimize     : false,
+                    importLoaders: 1,
+                    sourceMap    : false,
+                  },
+                },
+                {
+                  loader : 'less-loader',
+                  options: {
+                    sourceMap: false,
+                  },
+                },
+              ],
+            }),
+          },
+        },
+      }],
+  },
+  // CSS加载器
+  {
+    // test: /\.css$/,
+    test   : /^((?!\.min\.css).)*\.css/,
+    loaders: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader'}),
+  },
+  // SCSS加载器
+  {
+    test   : /\.scss$/,
+    include: [
+      path.join(process.cwd(), './src'),
+    ],
+    use    : ExtractTextPlugin.extract({
+      use     : [
+        {
+          loader : 'css-loader',
+          options: {
+            modules      : false,
+            minimize     : false,
+            importLoaders: 1,
+            sourceMap    : false,
+          },
+        },
+        {
+          loader : 'sass-loader',
+          options: {
+            sourceMap: false,
+          },
+        },
+      ],
+      fallback: 'style-loader',
+    }),
+  },
+  // LESS加载器
+  {
+    test: /\.less$/,
+    use : ExtractTextPlugin.extract({
+      use     : [
+        {
+          loader : 'css-loader',
+          options: {
+            modules      : false,
+            minimize     : false,
+            importLoaders: 1,
+            sourceMap    : false,
+          },
+        },
+        {
+          loader : 'less-loader',
+          options: {
+            sourceMap: false,
+          },
+        },
+      ],
+      fallback: 'style-loader',
+    }),
+  },
+  // 已压缩过的.min.css不压缩
+  {
+    test: /\.min\.css/,
+    use : ExtractTextPlugin.extract({
+      fallback: 'style-loader',
+      // resolve-url-loader may be chained before sass-loader if necessary
+      use     : [
+        {
+          loader : 'css-loader',
+          options: {
+            minimize : false,
+            sourceMap: false,
+          },
+        }],
+    }),
+  }
+)
 module.exports.dll = dllRules

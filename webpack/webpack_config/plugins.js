@@ -19,7 +19,7 @@ const happyPack = require('../webpack_plugins/HappyPackPlugin')
 
 const html = require('../webpack_plugins/HtmlWebpackPlugin')
 const jsCommon = require('../webpack_plugins/CommonsChunkPlugin')
-const cssExtract = require('../webpack_plugins/ExtractTextPlugin')
+
 
 // DLL相关, htmlAsset插入script以及JSLib
 const htmlAsset = require('../webpack_plugins/AddAssetHtmlPlugin')
@@ -33,6 +33,7 @@ const compressCss = require('../webpack_plugins/OptimizeCssAssetsPlugin')
 const compressJs = require('../webpack_plugins/UglifyJsPlugin')
 const copy = require('../webpack_plugins/CopyWebpackPlugin')
 const assets = require('../webpack_plugins/AssetsPlugin')
+const cssExtract = require('../webpack_plugins/ExtractTextPlugin')
 
 // dll
 const dllPlugin = require('../webpack_plugins/DllPlugin')
@@ -67,7 +68,7 @@ Array.prototype.push.apply(basePlugins, happyPack)
 
 Array.prototype.push.apply(basePlugins, html)
 Array.prototype.push.apply(basePlugins, jsCommon)
-Array.prototype.push.apply(basePlugins, cssExtract)
+
 
 basePlugins.push(htmlAsset)
 Array.prototype.push.apply(basePlugins, jsLib)
@@ -100,6 +101,7 @@ if (option.dev.bundleAnalyzerReport) {
 
 module.exports.dev = devPlugins
 
+
 /** ****
 生产环境
 ******/
@@ -108,6 +110,8 @@ const buildPlugins = []
 
 buildPlugins.push(copy)
 buildPlugins.push(assets)
+
+Array.prototype.push.apply(buildPlugins, cssExtract)
 
 // 压缩 Default：false
 if (option.build.compressCss) {
