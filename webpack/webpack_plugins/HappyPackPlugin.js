@@ -24,7 +24,7 @@ var happyPack = [
     threads: 4,
     threadPool: happyThreadPool,
     debug: true,
-    cache: false,
+    cache: true,
     verbose: true
   })
 ]

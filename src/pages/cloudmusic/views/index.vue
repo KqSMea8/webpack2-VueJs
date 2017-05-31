@@ -19,6 +19,50 @@
 		</div>
 	</div>
 </template>
+<script>
+  import { mapGetters } from 'vuex'
+  export default {
+    data () {
+      return {
+        activeTab: 'rage'
+      }
+    },
+    created () {
+      // 当created函数时监测路由信息,防止页面刷新tab高亮错误
+      var tmpArr = this.$route.path.split('/')
+      console.log('tmpArr',tmpArr)
+      // tmpArr = ["", "index", "rage"]
+      if (tmpArr[1] === 'index') {
+        this.handleTabChange(tmpArr[2])
+      }
+    },
+    // watch函数监测路由的变化,保持tab面板的高亮位置正确
+    watch   : {
+      '$route' (to, from) {
+        const path = to.path
+        var tmpArr = path.split('/')
+        console.log('index$route',tmpArr)
+        // index$route = ["", "index", "songList"]
+        if (tmpArr[1] === 'index') {
+          this.handleTabChange(tmpArr[2])
+        }
+      }
+    },
+    methods : {
+      // 根据路由path参数来决定tab面板以及切换路由
+      handleTabChange (val) {
+        this.activeTab = val
+        this.$router.push({path: '/index/' + val})
+      }
+    },
+    computed: {
+      ...mapGetters([
+        'songList'
+      ])
+    }
+  }
+</script>
+
 <style lang = "less" scoped rel = "stylesheet/less">
 	@import "../assets/theme.less";
 	
@@ -56,43 +100,3 @@
 		margin-bottom: 2.3rem;
 	}
 </style>
-<script>
-  import { mapGetters } from 'vuex'
-  export default {
-    data () {
-      return {
-        activeTab: 'rage'
-      }
-    },
-    created () {
-      // 当created函数时监测路由信息,防止页面刷新tab高亮错误
-      var tmpArr = this.$route.path.split('/')
-      console.log('tmpArr',tmpArr)
-      if (tmpArr[1] === 'index') {
-        this.handleTabChange(tmpArr[2])
-      }
-    },
-    // watch函数监测路由的变化,保持tab面板的高亮位置正确
-    watch   : {
-      '$route' (to, from) {
-        const path = to.path
-        var tmpArr = path.split('/')
-        console.log('tmpArr',tmpArr)
-        if (tmpArr[1] === 'index') {
-          this.handleTabChange(tmpArr[2])
-        }
-      }
-    },
-    methods : {
-      handleTabChange (val) {
-        this.activeTab = val
-        this.$router.push({path: '/index/' + val})
-      }
-    },
-    computed: {
-      ...mapGetters([
-        'songList'
-      ])
-    }
-  }
-</script>

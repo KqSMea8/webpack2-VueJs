@@ -1,10 +1,13 @@
 <template>
 	<div>
+		<!--初始加载时的加载提示-->
 		<div class = "loading-wrapper" v-if = "isloading">
 			<div class = "loading"></div>
 			<div class = "loading-txt">正在加载中</div>
 		</div>
+		<!--初始加载成功-->
 		<div class = "container" v-show = "!isloading">
+			<!--轮播图开始-->
 			<div id = "slider">
 				<swiper :options = "swiperOption">
 					<swiper-slide>
@@ -22,6 +25,7 @@
 					<div class = "swiper-pagination" slot = "pagination"></div>
 				</swiper>
 			</div>
+			<!--轮播图结束-->
 			<div class = "wrapper">
 				<div class = "g-title song-list">推荐歌单
 					<router-link :to = "{path: '/index/songList'}">更多></router-link>
@@ -35,6 +39,7 @@
 						</router-link>
 					</mu-flexbox-item>
 				</mu-flexbox>
+				
 				<div class = "g-title mv">推荐MV
 					<router-link :to = "{}">更多></router-link>
 				</div>
@@ -64,17 +69,66 @@
 		</div>
 	</div>
 </template>
+
+<script>
+  // 轮播器
+  import { swiper, swiperSlide } from 'vue-awesome-swiper'
+  import api from '../api'
+  export default {
+    components: {
+      swiper,
+      swiperSlide
+    },
+    data () {
+      return {
+        swiperOption: {
+          autoplay           : 3000,
+          setWrapperSize     : true,
+          pagination         : '.swiper-pagination',
+          paginationClickable: true,
+          mousewheelControl  : true,
+          observeParents     : true
+        },
+        isloading   : true,
+        playList    : [],
+        mvList      : []
+      }
+    },
+    created () {
+      this.get()
+    },
+    methods   : {
+      get () {
+        this.$http.get(api.getPlayListByWhere('全部', 'hot', 0, true, 6)).then((res) => {
+          this.isloading = false
+          this.playList = res.data.playlists
+        })
+      }
+    },
+    filters   : {
+      formatCount (v) {
+        if (v < 9999) {
+          return v
+        } else {
+          return (v / 10000).toFixed(0) + '万'
+        }
+      }
+    }
+  }
+</script>
+
 <style lang = "less" scoped>
 	.img-response {
 		max-width: 100%;
 		height: auto;
 	}
 	
+	/*外层包裹样式*/
 	.wrapper {
 		padding: 0 5px;
 	}
 	
-	// 通用的标题样式
+	/*推荐标题的样式*/
 	.g-title {
 		padding-left: 25px;
 		color: #333;
@@ -88,20 +142,11 @@
 		}
 	}
 	
-	// banner样式
-	.banner-item {
-		width: 100%;
-		height: 7.4rem;
-		background: url('../../../static/banner-item-load.png') no-repeat;
-		background-size: cover;
-	}
-	
-	// 推荐歌单
+	/*推荐歌单标题样式*/
 	.song-list {
 		background: url("../../../static/aei.png") no-repeat left center;
 		background-size: 20px 20px;
 	}
-	
 	.item {
 		position: relative;
 		margin: 0 5px 5px 10px;
@@ -141,6 +186,7 @@
 		}
 	}
 	
+	/*推荐MV标题样式*/
 	.mv {
 		background: url("../../../static/aee.png") no-repeat left center;
 		background-size: 20px 20px;
@@ -161,6 +207,17 @@
 		}
 	}
 	
+	
+	
+
+	/*轮播器图片样式*/
+	.banner-item {
+		width: 100%;
+		height: 15rem;
+		background: url('../../../static/banner-item-load.png') no-repeat;
+		background-size: cover;
+	}
+	/*初始加载时的加载提示*/
 	.loading {
 		position: absolute;
 		top: 0;
@@ -175,7 +232,7 @@
 		-webkit-animation: rotating 5s linear infinite;
 		animation: rotating 5s linear infinite;
 	}
-	
+	/*正在加载中*/
 	.loading-txt {
 		position: absolute;
 		top: 0;
@@ -194,44 +251,3 @@
 		}
 	}
 </style>
-<script>
-  import { swiper, swiperSlide } from 'vue-awesome-swiper'
-  import api from '../api'
-  export default {
-    components: {
-      swiper,
-      swiperSlide
-    },
-    data () {
-      return {
-        swiperOption: {
-          pagination         : '.swiper-pagination',
-          paginationClickable: true
-        },
-        isloading   : true,
-        playList    : [],
-        mvList      : []
-      }
-    },
-    created () {
-      this.get()
-    },
-    methods   : {
-      get () {
-        this.$http.get(api.getPlayListByWhere('全部', 'hot', 0, true, 6)).then((res) => {
-          this.isloading = false
-          this.playList = res.data.playlists
-        })
-      }
-    },
-    filters   : {
-      formatCount (v) {
-        if (v < 9999) {
-          return v
-        } else {
-          return (v / 10000).toFixed(0) + '万'
-        }
-      }
-    }
-  }
-</script>

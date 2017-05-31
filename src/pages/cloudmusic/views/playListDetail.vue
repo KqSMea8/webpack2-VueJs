@@ -1,7 +1,9 @@
 <template>
 	<div class = "playList" :class = "{view: songList.length > 0}">
+		<!--歌单标题开始-->
 		<div class = "fixed-title" :style = "{'background': 'rgba(206, 61, 62, '+ opacity +')'}" style = "transition: opacity .1s;">
 			<mu-appbar>
+				<!--返回导航-->
 				<mu-icon-button icon = 'arrow_back' @click = "back" slot = "left" />
 				<div class = "play-title">
 					<div class = "play-name">
@@ -10,6 +12,9 @@
 				</div>
 			</mu-appbar>
 		</div>
+		<!--歌单标题结束-->
+		
+		<!--歌单封面简介作者-->
 		<div class = "playlist-info">
 			<div class = "info-wrapper">
 				<div class = "info-gallery">
@@ -27,6 +32,8 @@
 			<div class = "bg-mask"></div>
 			<div class = "bg-player" id = "backImg" :style = "{'background-image':'url(' + coverImgUrl + '?param=300y300)'}"></div>
 		</div>
+		
+		<!--歌单歌曲列表以及点播-->
 		<div class = "playlist-holder">
 			<div class = "add-all">
 				<mu-flat-button label = "播放全部" class = "demo-flat-button" icon = "add_circle_outline" @click = "playAll" />
@@ -74,6 +81,8 @@
       // 通过 `vm` 访问组件实例
       next(vm => {
         // 根据传过来的ID是否一样，判断加载
+        console.log(to.params.id);// 740069350
+        console.log(vm.id);// 0
         if (parseInt(to.params.id) !== parseInt(vm.id)) {
           vm.get()
         }
@@ -87,6 +96,7 @@
           vm.creator = vm.$route.params.creator
           vm.id = vm.$route.params.id
         }
+		// 下拉显示歌单简介
         window.onscroll = () => {
           var opa = window.pageYOffset / 150
           if (opa > 0.5) {
@@ -107,6 +117,7 @@
       back () {
         this.$router.go(-1)
       },
+      // 加载歌单歌曲列表
       get () {
         this.isloading = true
         this.$http.get(api.getPlayListDetail(this.$route.params.id)).then((res) => {
@@ -119,6 +130,7 @@
       change (val) {
         this.value = val
       },
+      // 点播歌曲
       playAudio (song) {
         document.getElementById('audioPlay').pause()
         this.$store.commit('pause')
@@ -128,8 +140,10 @@
         audio.singer = song.ar[0].name // 演唱者
         audio.albumPic = song.al.picUrl
         audio.name = song.name
-        // 通过Vuex改变状态
+  
+        // 添加到播放列表
         this.$store.commit('addToList', audio)
+        // 下载该歌曲
         this.$store.dispatch('getSong', audio.id)
       },
       // 播放全部

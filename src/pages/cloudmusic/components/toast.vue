@@ -1,4 +1,5 @@
 <template>
+	<!--横向滚动条-->
     <transition name="toast-fade">
         <div class="toast-wrap" v-show="showing">{{text}}</div>
     </transition>

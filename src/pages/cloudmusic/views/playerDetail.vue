@@ -2,6 +2,7 @@
 	<div class = "content">
 		<div class = "player-wrapper">
 			<div class = "player-inner">
+				<!--后退分享歌曲标题-->
 				<mu-appbar>
 					<mu-icon-button icon = 'arrow_back' @click = "back" slot = "left" />
 					<div class = "play-title">
@@ -16,20 +17,24 @@
 				<mu-flexbox orient = "vertical" class = "main">
 					<mu-flexbox-item order = "0">
 						<div class = "cd-holder" :class = "{'cd-play': playing}">
+							<!--播放指示器-->
 							<div class = "stick"></div>
+							<!--播放旋转封面-->
 							<div class = "cd-wrapper" :class = "{'cd-rotate': playing}">
-								<div class = "cd-mask">
-								</div>
+								<div class = "cd-mask"></div>
 								<img class = "cd-img" :src = "audio.albumPic + '?param=500y500'" />
 							</div>
 						</div>
 					</mu-flexbox-item>
+					
 					<mu-flexbox-item order = "2" class = "bottom-wrapper">
+						<!--歌词-->
 						<div class = "lyric-holder">
-							<div class = "lrc-inner" style = "transition: -webkit-transform 0.3s ease-out; transform-origin: 0px 0px 0px;" :style = "{'transform':' translate3d(0px,'+ lrcOffset +'px, 0px)'}">
+							<div class = "lrc-inner" style = "transition: -webkit-transform 0.3s ease-out; transform-origin: 0 0 0;" :style = "{'transform':' translate3d(0px,'+ lrcOffset +'px, 0px)'}">
 								<p v-for = "(item, index) in afterLrc" :id = "'line-'+index" :key = "index">{{item.txt}}</p>
 							</div>
 						</div>
+						<!--进度条-->
 						<div class = "process-bar">
 							<div class = "pro">
 								<div class = "pro-wrap">
@@ -41,6 +46,7 @@
 								</div>
 							</div>
 						</div>
+						<!--控制条-->
 						<div class = "control-bar ">
 							<mu-icon-button class = "btn d-mode" />
 							<mu-icon-button class = "btn d-prev" @click = "playPrev" />
@@ -73,6 +79,9 @@
         lrcIndex: 0
       }
     },
+    created(){
+      this.loadLrc(this.audio.id)
+    },
     components      : {
       Toast,
       BottomSheet
@@ -87,11 +96,20 @@
       })
     },
     watch           : {
+      // Todo:watch 的方法名根据什么来的
+      // 切换歌曲时，会触发该方法
       audio (val) {
         this.loadLrc(val.id)
       }
     },
     methods         : {
+      // 后退
+      back () {
+        this.$router.go(-1)
+        this.$store.commit('toggleDetail')
+      },
+      
+      // 播放暂停控制
       togglePlay () {
         if (this.playing) {
           this.$store.commit('pause')
@@ -101,14 +119,15 @@
           document.getElementById('audioPlay').play()
         }
       },
-      back () {
-        this.$router.go(-1)
-        this.$store.commit('toggleDetail')
-      },
-      changeTime (value) { // 改变播放时间事件
+      // 改变播放时间事件
+      changeTime (value) {
         var time = (value * this.durationTime) / 100
         this.$store.commit('changeTime', time)
         this.$store.commit('setChange', true)
+      },
+      // 显示歌单列表
+      showList () {
+        this.$refs.bottomSheet.show()
       },
       loadLrc (id) {
         var self = this
@@ -133,38 +152,42 @@
           self.afterLrc = [{'txt': '(⊙０⊙) 暂无歌词'}]
         })
       },
+      // 得到LRC数组，每个元素对象，包含秒数和歌词
       getLrc () {
         if (this.lyric) {
           var lyrics = this.lyric.split('\n')
+          // console.log(lyrics);
           var lrcObj = []
 			/*eslint-disable */
           var timeReg = /\[\d*:\d*((\.|\:)\d*)*\]/g
+         
 			/*eslint-enable */
           // 思路：1、把歌词进行处理以时间和歌词组成一个对象，放入afterLrc数组中
           // 2、在computed方法中根据当前的时间进行匹配歌词，然后查找在数据中的位置计算offset值
           for (var i = 0; i < lyrics.length; i++) {
+            // 提取时间
             var timeRegExpArr = lyrics[i].match(timeReg)
             if (!timeRegExpArr) continue
+            // 提取歌词
             var txt = lyrics[i].replace(timeReg, '')
+            // console.log(txt);
             // 处理时间
             for (var k = 0; k < timeRegExpArr.length; k++) {
-              var array = {}
+              var obj = {}
               var t = timeRegExpArr[k]
 				/*eslint-disable */
               var min = Number(String(t.match(/\[\d*/i)).slice(1))
               var sec = Number(String(t.match(/\:\d*/i)).slice(1))
 				/*eslint-enable */
+				// 转换成秒数
               var time = min * 60 + sec
-              array.time = time
-              array.txt = txt
-              lrcObj.push(array)
+              obj.time = time
+              obj.txt = txt
+              lrcObj.push(obj)
             }
           }
           this.afterLrc = lrcObj
         }
-      },
-      showList () {
-        this.$refs.bottomSheet.show()
       },
       ...mapMutations([
         'playNext',
@@ -180,6 +203,7 @@
         'audio',
         'playing'
       ]),
+      // 歌词偏移量
       lrcOffset () {
         if (this.afterLrc) {
           // 1、根据时间获得歌词
@@ -374,18 +398,21 @@
 	}
 	
 	.pro-wrap {
-		margin: 0 3rem;
+		margin: 0 3.5rem;
 		padding: 1rem 0 0;
 		position: relative;
 	}
 	
+	/*当前播放时间和歌曲总时间*/
 	.time {
 		color: #fff;
-		font-size: 12px;
+		font-size: 14px;
+		font-weight: 600;
 		time {
 			position: absolute;
-			top: 54%;
+			top: 40%;
 			opacity: .5;
+			
 		}
 		#cur {
 			left: 0;
@@ -403,8 +430,8 @@
 	.control-bar {
 		text-align: center;
 		.btn {
-			width: 2.6rem;
-			height: 2.6rem;
+			width: 5rem;
+			height: 5rem;
 		}
 		.d-mode {
 			background: url("../../../static/seq.png") no-repeat;
