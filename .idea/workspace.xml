@@ -2,228 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27f112a7-7eff-475a-87e9-5e7eddde3df5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vuespa/views/About-myage.vue" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/LinChuQiang.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/css/page/other.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/index/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/img/index/工作室3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/grunt/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/grunt/bs-commonjs-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/grunt/bs-glyphicons-data-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/grunt/bs-lessdoc-parser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/grunt/bs-raw-files-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/grunt/change-version.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/grunt/configBridge.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/grunt/npm-shrinkwrap.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/grunt/sauce_browsers.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/js/affix.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/js/alert.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/js/button.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/js/carousel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/js/collapse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/js/dropdown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/js/modal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/js/popover.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/js/scrollspy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/js/tab.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/js/tooltip.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/js/transition.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/alerts.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/badges.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/bootstrap.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/breadcrumbs.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/button-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/carousel.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/close.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/code.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/component-animations.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/dropdowns.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/glyphicons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/input-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/jumbotron.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/labels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/list-group.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/media.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/alerts.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/background-variant.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/border-radius.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/center-block.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/clearfix.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/gradients.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/grid-framework.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/hide-text.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/image.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/labels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/list-group.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/nav-divider.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/nav-vertical-align.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/opacity.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/panels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/progress-bar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/reset-filter.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/reset-text.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/resize.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/responsive-visibility.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/size.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/tab-focus.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/table-row.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/text-emphasis.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/text-overflow.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/mixins/vendor-prefixes.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/modals.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/navbar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/navs.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/normalize.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/pager.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/panels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/popovers.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/print.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/progress-bars.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/responsive-embed.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/responsive-utilities.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/scaffolding.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/tables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/theme.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/thumbnails.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/tooltip.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/type.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/utilities.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/less/wells.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/js/vendor/bootstrap/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/vuespa/components/About-myage.vue" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.eslintrc.js" afterPath="$PROJECT_DIR$/.eslintrc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/VueJs_Demo_Github.iml" afterPath="$PROJECT_DIR$/.idea/VueJs_Demo_Github.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/PSP模拟器控制 .jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReadMe.md" afterPath="$PROJECT_DIR$/ReadMe.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.ejs" afterPath="$PROJECT_DIR$/src/index.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/blog/app.vue" afterPath="$PROJECT_DIR$/src/pages/blog/app.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/blog/store/actions.js" afterPath="$PROJECT_DIR$/src/pages/blog/store/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/blog/store/getters.js" afterPath="$PROJECT_DIR$/src/pages/blog/store/getters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/blog/store/index.js" afterPath="$PROJECT_DIR$/src/pages/blog/store/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cloudmusic/app.js" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cloudmusic/components/playerBar.vue" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/components/playerBar.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cloudmusic/router/router.js" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/router/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cloudmusic/views/index.vue" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/views/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cloudmusic/views/playerDetail.vue" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/views/playerDetail.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cloudmusic/views/rage.vue" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/views/rage.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cloudmusic/views/songList.vue" afterPath="$PROJECT_DIR$/src/pages/cloudmusic/views/songList.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnode/store/index.js" afterPath="$PROJECT_DIR$/src/pages/cnode/store/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnode/store/mutations.js" afterPath="$PROJECT_DIR$/src/pages/cnode/store/mutations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/data/App.vue" afterPath="$PROJECT_DIR$/src/pages/data/App.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/data/Counter.vue" afterPath="$PROJECT_DIR$/src/pages/data/Counter.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/data/app.js" afterPath="$PROJECT_DIR$/src/pages/data/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/router/index.js" afterPath="$PROJECT_DIR$/src/vuespa/router/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/store/actions.js" afterPath="$PROJECT_DIR$/src/vuespa/store/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/store/getters.js" afterPath="$PROJECT_DIR$/src/vuespa/store/getters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/store/index.js" afterPath="$PROJECT_DIR$/src/vuespa/store/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/store/modules/NewsModules.js" afterPath="$PROJECT_DIR$/src/vuespa/store/modules/NewsModules.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/store/modules/TodoList.js" afterPath="$PROJECT_DIR$/src/vuespa/store/modules/TodoList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/store/modules/UserModules.js" afterPath="$PROJECT_DIR$/src/vuespa/store/modules/UserModules.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/store/mutations.js" afterPath="$PROJECT_DIR$/src/vuespa/store/mutations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/store/mutationsTypes.js" afterPath="$PROJECT_DIR$/src/vuespa/store/mutationsTypes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vuespa/store/plugins.js" afterPath="$PROJECT_DIR$/src/vuespa/store/plugins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack.dev.conf.js" afterPath="$PROJECT_DIR$/webpack/webpack.dev.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/entry.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/entry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_config/module.js" afterPath="$PROJECT_DIR$/webpack/webpack_config/module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/HappyPackPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/HappyPackPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/webpack_plugins/HtmlWebpackPlugin.js" afterPath="$PROJECT_DIR$/webpack/webpack_plugins/HtmlWebpackPlugin.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/common/logger.js" afterPath="$PROJECT_DIR$/src/vuespa/plugin/logger.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/common/util.js" afterPath="$PROJECT_DIR$/src/vuespa/plugin/util.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/css/page/_myvariable.scss" afterPath="$PROJECT_DIR$/src/vuespa/css/_myvariable.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/css/page/h1h2.scss" afterPath="$PROJECT_DIR$/src/vuespa/css/UserLogin.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/css/page/index.css" afterPath="$PROJECT_DIR$/src/vuespa/css/index.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/css/vendor/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/static/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/css/vendor/mui.min.css" afterPath="$PROJECT_DIR$/src/static/css/mui.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/css/vendor/normalize.css" afterPath="$PROJECT_DIR$/src/static/css/normalize.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/css/vendor/reset.css" afterPath="$PROJECT_DIR$/src/static/css/reset.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/fonts/mui.ttf" afterPath="$PROJECT_DIR$/src/static/fonts/mui.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/img/VUEX.png" afterPath="$PROJECT_DIR$/src/static/img/data/VUEX.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/img/home_1.jpg" afterPath="$PROJECT_DIR$/src/static/img/vuespa/homeSlide/home_1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/img/home_2.jpg" afterPath="$PROJECT_DIR$/src/static/img/vuespa/homeSlide/home_2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/img/home_3.jpg" afterPath="$PROJECT_DIR$/src/static/img/vuespa/homeSlide/home_3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/img/home_4.jpg" afterPath="$PROJECT_DIR$/src/static/img/vuespa/homeSlide/home_4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/img/index/beier.jpg" afterPath="$PROJECT_DIR$/src/static/img/vuespa/bear.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/img/index/沉舟.jpg" afterPath="$PROJECT_DIR$/src/static/img/vuespa/沉舟.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/js/module/slide.js" afterPath="$PROJECT_DIR$/src/static/js/vuespa/slide.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/.gitkeep" afterPath="$PROJECT_DIR$/文档说明.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/aee.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/aee.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/aef.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/aef.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/aei.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/aei.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/banner-item-load.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/banner-item-load.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/banner1.jpg" afterPath="$PROJECT_DIR$/src/static/cloudmusic/banner1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/banner2.jpg" afterPath="$PROJECT_DIR$/src/static/cloudmusic/banner2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/banner3.jpg" afterPath="$PROJECT_DIR$/src/static/cloudmusic/banner3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/banner4.jpg" afterPath="$PROJECT_DIR$/src/static/cloudmusic/banner4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/cd_wrapper.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/cd_wrapper.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/default_cover.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/default_cover.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/list.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/list.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/list_hover.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/list_hover.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/logo.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/logo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/next.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/next.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/next_hover.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/next_hover.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/pause.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/pause.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/pause_hover.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/pause_hover.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/placeholder_disk_play_program.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/placeholder_disk_play_program.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/placeholder_disk_play_song.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/placeholder_disk_play_song.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/play.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/play.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/play_hover.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/play_hover.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/playbar_btn_next.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/playbar_btn_next.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/playbar_btn_pause.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/playbar_btn_pause.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/playbar_btn_play.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/playbar_btn_play.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/playbar_btn_playlist.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/playbar_btn_playlist.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/player-bar.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/player-bar.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/prev.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/prev.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/prev_hover.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/prev_hover.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/rage_loading.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/rage_loading.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/seq.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/seq.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/seq_hover.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/seq_hover.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/stick_bg.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/stick_bg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/static/user-default.png" afterPath="$PROJECT_DIR$/src/static/cloudmusic/user-default.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/About-myname.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/About-myname.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/About.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/About.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/Home-slide.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/Home-slide.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/Home.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/Home.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/News.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/News.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/NewsDetail.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/NewsDetail.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/Todo.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/Todo.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/TodoList.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/TodoList.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/UserLogin.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/UserLogin.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/user/user-area.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/user/user-area.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/user/user-fav.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/user/user-fav.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/user/user-name.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/user/user-name.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/user/user-pass.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/user/user-pass.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/components/user/user-submit.vue" afterPath="$PROJECT_DIR$/src/vuespa/views/user/user-submit.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vuespa/plugin/validate.js" afterPath="$PROJECT_DIR$/src/vuespa/plugin/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -237,20 +18,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/cloudmusic/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -273,7 +41,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/pages/cloudmusic/app.js" />
         <option value="$PROJECT_DIR$/src/pages/cloudmusic/router/router.js" />
         <option value="$PROJECT_DIR$/webpack/webpack_plugins/HtmlWebpackPlugin.js" />
         <option value="$PROJECT_DIR$/src/vuespa/components/About-myage.vue" />
@@ -324,6 +91,7 @@
         <option value="$PROJECT_DIR$/src/vuespa/views/UserLogin.vue" />
         <option value="$PROJECT_DIR$/src/pages/blog/app.vue" />
         <option value="$PROJECT_DIR$/src/pages/cloudmusic/views/playerDetail.vue" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -389,75 +157,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webpack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webpack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webpack_plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webpack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webpack_config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -616,12 +316,20 @@
       <workItem from="1496277678259" duration="57000" />
       <workItem from="1496277819931" duration="23000" />
       <workItem from="1496277852853" duration="20801000" />
-      <workItem from="1496320835929" duration="6062000" />
+      <workItem from="1496320835929" duration="6595000" />
     </task>
+    <task id="LOCAL-00001" summary="MPA+WEBPACK2+VUE2">
+      <created>1496327526043</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1496327526043</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26943000" />
+    <option name="totallyTimeSpent" value="27476000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1924" height="1047" extended-state="0" />
@@ -652,6 +360,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="MPA+WEBPACK2+VUE2" />
+    <option name="LAST_COMMIT_MESSAGE" value="MPA+WEBPACK2+VUE2" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="2" />
@@ -659,17 +371,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pages/blog/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/blog/store/actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#34#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -677,6 +385,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -753,17 +462,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="569">
             <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/文档说明.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="665">
-            <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1086,13 +784,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/cloudmusic/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        <state relative-caret-position="552">
+          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/文档说明.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1728">
+            <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

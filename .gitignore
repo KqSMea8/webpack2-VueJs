@@ -5,4 +5,5 @@ dist/
 .happypack/
 /.UglifyJsCache/
 /.idea/
-
+/newVuePage/
+/development/
