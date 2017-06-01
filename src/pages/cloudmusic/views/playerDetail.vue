@@ -282,7 +282,7 @@
 				width: 4rem;
 				height: 6rem;
 				right: 30%;
-				background: url("../../../static/stick_bg.png") no-repeat left -.4rem;
+				background: url("../../../static/cloudmusic/stick_bg.png") no-repeat left -.4rem;
 				background-size: cover;
 				z-index: 8;
 				-webkit-transition: all 300ms ease-in;
@@ -306,7 +306,7 @@
 					height: 100%;
 					top: 0;
 					left: 0;
-					background: url('../../../static/cd_wrapper.png') no-repeat center center;
+					background: url('../../../static/cloudmusic/cd_wrapper.png') no-repeat center center;
 					background-size: contain;
 				}
 				img {
@@ -434,27 +434,27 @@
 			height: 5rem;
 		}
 		.d-mode {
-			background: url("../../../static/seq.png") no-repeat;
+			background: url("../../../static/cloudmusic/seq.png") no-repeat;
 			background-size: cover;
 		}
 		.d-prev {
-			background: url("../../../static/prev.png") no-repeat;
+			background: url("../../../static/cloudmusic/prev.png") no-repeat;
 			background-size: cover;
 		}
 		.d-play {
-			background: url("../../../static/play.png") no-repeat;
+			background: url("../../../static/cloudmusic/play.png") no-repeat;
 			background-size: cover;
 		}
 		.d-pause {
-			background: url("../../../static/pause.png") no-repeat;
+			background: url("../../../static/cloudmusic/pause.png") no-repeat;
 			background-size: cover;
 		}
 		.d-next {
-			background: url("../../../static/next.png") no-repeat;
+			background: url("../../../static/cloudmusic/next.png") no-repeat;
 			background-size: cover;
 		}
 		.d-list {
-			background: url("../../../static/list.png") no-repeat;
+			background: url("../../../static/cloudmusic/list.png") no-repeat;
 			background-size: cover;
 		}
 	}

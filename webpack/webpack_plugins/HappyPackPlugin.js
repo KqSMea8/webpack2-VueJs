@@ -8,7 +8,7 @@ const happyThreadPool = HappyPack.ThreadPool({size: os.cpus().length})
 
 const TARGET = process.env.npm_lifecycle_event
 
-// .babelrc http://babeljs.io/docs/plugins/#pluginpresets-options
+// .babelrc http://babeljs.io/docs/plugins/#pluginprese ts-options
 // HappyPack https://zach.codes/three-webpack-2-speed-improvements/
 var happyPack = [
   new HappyPack({

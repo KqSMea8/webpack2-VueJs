@@ -7,9 +7,9 @@ const path = require('path')
 const option = require('../option')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 // https://www.npmjs.com/package/html-webpack-exclude-assets-plugin
-const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
+const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin')
 // https://www.npmjs.com/package/html-webpack-include-assets-plugin
-const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
+const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin')
 const TARGET = process.env.npm_lifecycle_event
 
 // 插件说明
@@ -75,40 +75,40 @@ if (TARGET === 'dev') {
   html = [
     // 生成根目录下的入口HTML
     new HtmlWebpackPlugin({
-      filename       : 'index.html',
-      template       : path.resolve(process.cwd(), 'src/index.ejs'),
-      inject         : true,
-      minify         : false,
-      excludeChunks  : chunks,
-      title          : '根目录下的入口HTML',
-      mobile         : true,
-      links          : [
+      filename: 'index.html',
+      template: path.resolve(process.cwd(), 'src/index.ejs'),
+      inject: true,
+      minify: false,
+      excludeChunks: chunks,
+      title: '根目录下的入口HTML',
+      mobile: true,
+      links: [
         'https://fonts.googleapis.com/css?family=Roboto',
         {
-          href : '/apple-touch-icon.png',
-          rel  : 'apple-touch-icon',
-          sizes: '180x180',
+          href: '/apple-touch-icon.png',
+          rel: 'apple-touch-icon',
+          sizes: '180x180'
         },
         {
-          href : '/favicon-32x32.png',
-          rel  : 'icon',
+          href: '/favicon-32x32.png',
+          rel: 'icon',
           sizes: '32x32',
-          type : 'image/png',
-        },
+          type: 'image/png'
+        }
       ],
       googleAnalytics: {
-        trackingId    : 'UA-XXXX-XX',
-        pageViewOnLoad: true,
+        trackingId: 'UA-XXXX-XX',
+        pageViewOnLoad: true
       },
-      devServer      : 3000,
-      appMountId     : 'container',
-      window         : {
+      devServer: 3000,
+      appMountId: 'container',
+      window: {
         env: {
-          apiHost: 'http://myapi.com/api/v1',
-        },
-      },
-    }),
-    /*new HtmlWebpackPlugin({
+          apiHost: 'http://myapi.com/api/v1'
+        }
+      }
+    })
+    /* new HtmlWebpackPlugin({
      title: 'app入口文件',
      filename: 'pages/data/app.html',
      template: path.resolve(process.cwd(), 'src/pages/data/app.ejs'),
@@ -116,9 +116,9 @@ if (TARGET === 'dev') {
      showErrors: true,
      minify: false,
      excludeChunks:['index']
-     })*/
+     }) */
   ]
-  
+
   chunks.forEach(chunk => {
     const filename = chunk + '/app.html'
     // pages/data
@@ -128,14 +128,14 @@ if (TARGET === 'dev') {
     const excludechunks = excludeIndex.concat(ck)
     // console.log(excludechunks);
     htmlConf = {
-      title        : filename,
-      filename     : filename,
-      template     : path.resolve(process.cwd(), 'src', chunk, 'app.ejs'),
-      inject       : true,
-      showErrors   : true,
-      minify       : false,
+      title: filename,
+      filename: filename,
+      template: path.resolve(process.cwd(), 'src', chunk, 'app.ejs'),
+      inject: true,
+      showErrors: true,
+      minify: false,
       excludeChunks: excludechunks,
-      hash         : process.env.NODE_ENV === 'production',
+      hash: process.env.NODE_ENV === 'production'
       // Todo:excludeAssets 无效
       // excludeAssets: [/bootstrapCss_dll.css/]
       // excludeAssets: ['/assets/lib/bootstrapCss_dll.css']
@@ -144,11 +144,11 @@ if (TARGET === 'dev') {
   })
   // html.push(new HtmlWebpackExcludeAssetsPlugin())
   // Todo:includeAssets 无效
-  /*html.push( new HtmlWebpackIncludeAssetsPlugin({
+  /* html.push( new HtmlWebpackIncludeAssetsPlugin({
     files: [path.resolve(process.cwd(), 'src/index.html')],
     assets: ['/assets/lib/bootstrapCss_dll.css'],
     append: true
-  }))*/
+  })) */
   module.exports = html
 }
 if (TARGET === 'build') {
@@ -156,39 +156,39 @@ if (TARGET === 'build') {
   html = [
     // 生成根目录下的入口HTML
     new HtmlWebpackPlugin({
-      filename       : 'index.html',
-      template       : path.resolve(process.cwd(), 'src/index.ejs'),
-      inject         : true,
-      minify         : false,
-      excludeChunks  : chunks,
-      title          : '根目录下的入口HTML',
-      mobile         : true,
-      links          : [
+      filename: 'index.html',
+      template: path.resolve(process.cwd(), 'src/index.ejs'),
+      inject: true,
+      minify: false,
+      excludeChunks: chunks,
+      title: '根目录下的入口HTML',
+      mobile: true,
+      links: [
         'https://fonts.googleapis.com/css?family=Roboto',
         {
-          href : '/apple-touch-icon.png',
-          rel  : 'apple-touch-icon',
-          sizes: '180x180',
+          href: '/apple-touch-icon.png',
+          rel: 'apple-touch-icon',
+          sizes: '180x180'
         },
         {
-          href : '/favicon-32x32.png',
-          rel  : 'icon',
+          href: '/favicon-32x32.png',
+          rel: 'icon',
           sizes: '32x32',
-          type : 'image/png',
-        },
+          type: 'image/png'
+        }
       ],
       googleAnalytics: {
-        trackingId    : 'UA-XXXX-XX',
-        pageViewOnLoad: true,
+        trackingId: 'UA-XXXX-XX',
+        pageViewOnLoad: true
       },
-      devServer      : 3000,
-      appMountId     : 'container',
-      window         : {
+      devServer: 3000,
+      appMountId: 'container',
+      window: {
         env: {
-          apiHost: 'http://myapi.com/api/v1',
-        },
-      },
-    }),
+          apiHost: 'http://myapi.com/api/v1'
+        }
+      }
+    })
   ]
   chunks.forEach(chunk => {
     const filename = chunk + '/app.html'
@@ -199,14 +199,14 @@ if (TARGET === 'build') {
     const excludechunks = excludeIndex.concat(ck)
     // console.log(excludechunks);
     htmlConf = {
-      title        : filename,
-      filename     : filename,
-      template     : path.resolve(process.cwd(), 'src', chunk, 'app.ejs'),
-      inject       : true,
-      showErrors   : true,
-      minify       : false,
+      title: filename,
+      filename: filename,
+      template: path.resolve(process.cwd(), 'src', chunk, 'app.ejs'),
+      inject: true,
+      showErrors: true,
+      minify: false,
       excludeChunks: excludechunks,
-      hash         : process.env.NODE_ENV === 'production'
+      hash: process.env.NODE_ENV === 'production'
     }
     html.push(new HtmlWebpackPlugin(htmlConf))
   })

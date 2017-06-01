@@ -1,35 +1,31 @@
 // 导入组件
 
-import Todo from '../components/Todo.vue'
+import About from '../views/About.vue'
+import Todo from '../views/Todo.vue'
+import News from '../views/News.vue'
+import Home from '../views/Home.vue'
 
-import Home from '../components/Home.vue'
-
-import About from '../components/About.vue'
-
-import News from '../components/News.vue'
-
-// import userLogin from "./../components/user-login.vue";
+// import userLogin from "./../views/user-login.vue";
+// 异步加载的方式
 const UserLogin = resolve => {
   // 成功之后的回调
-  resolve(require('../components/UserLogin.vue')) // 这就是异步加载的方式
+  resolve(require('../views/UserLogin.vue'))
 }
 
-// import newsDetail from "../components/news-detail.vue";
+// import newsDetail from "../views/news-detail.vue";
 const NewsDetail = resolve => {
-  // 成功之后的回调
-  resolve(require('../components/NewsDetail.vue')) // 这就是异步加载的方式
+  resolve(require('../views/NewsDetail.vue'))
 }
-
-
 
 const Blank = {
   template: `
-    <router-view></router-view>
+    <keep-alive>
+       <router-view></router-view>
+    </keep-alive>
   `,
   watch: {
     '$route' (to, from) {
-      console.log(to)
-      console.log(from)
+      console.log(`网址从 ${from.fullPath} 路径到 ${to.fullPath} 路径！`)
     }
   }
 }
@@ -39,7 +35,7 @@ export default [
     path: '/vuespa',
     component: Blank,
     children: [
-      {path: '', component: About},
+      {path: 'about', component: About},
       {path: 'todo', component: Todo},
       {path: 'news', component: News},
       {path: 'login', component: UserLogin},

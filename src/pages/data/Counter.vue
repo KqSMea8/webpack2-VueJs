@@ -29,6 +29,10 @@
 	a:hover {
 		color: #4fc08d;
 	}
+	
+	#app{
+		text-align: center;
+	}
 
 </style>
 

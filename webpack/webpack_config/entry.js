@@ -12,10 +12,10 @@ match.forEach(path => {
   var chunk = path.split('E:/wamp64/www/VueJs_Demo_Github/src/')[1].split('/app.js')[0]
   chunks.push(chunk)
 })
-var entry=[]
-chunks.forEach((chunk,index) =>{
+var entry = []
+chunks.forEach((chunk, index) => {
   'use strict'
-  entry[chunk]=match[index]
+  entry[chunk] = match[index]
 })
 // console.log(entry);
 
@@ -41,11 +41,10 @@ const devEntry = {}
 
 devEntry['index'] = './src/index.js'
 
-chunks.forEach((chunk,index) =>{
+chunks.forEach((chunk, index) => {
   'use strict'
-  devEntry[chunk]=path.resolve(process.cwd(), 'src',chunk,'app.js')
+  devEntry[chunk] = path.resolve(process.cwd(), 'src', chunk, 'app.js')
 })
-
 
 /*
 devEntry['pages/data'] = path.resolve(process.cwd(), 'src/pages/data/app.js')
@@ -53,12 +52,10 @@ devEntry['pages/blog'] = path.resolve(process.cwd(), 'src/pages/blog/app.js')
 devEntry['pages/cnode'] = path.resolve(process.cwd(), 'src/pages/cnode/app.js')
 */
 
-
 // add hot-reload related code to entry chunks
 Object.keys(devEntry).forEach(function (name) {
   //  app : ["./webpack/dev-client", "./src/main.js"]
   devEntry[name] = ['./webpack/dev-client'].concat(devEntry[name])
-
 })
 
 // console.log(devEntry)
@@ -72,9 +69,9 @@ module.exports.dev = devEntry
 const buildEntry = {}
 buildEntry['index'] = './src/index.js'
 
-chunks.forEach((chunk,index) =>{
+chunks.forEach((chunk, index) => {
   'use strict'
-  buildEntry[chunk]=path.resolve(process.cwd(), 'src',chunk,'app.js')
+  buildEntry[chunk] = path.resolve(process.cwd(), 'src', chunk, 'app.js')
 })
 
 module.exports.build = buildEntry
@@ -84,7 +81,7 @@ module.exports.build = buildEntry
  **********/
 
 const dllEntry = {
-  //1.通过dll/vue_dll.js中的import/from来读取指定插件
+  // 1.通过dll/vue_dll.js中的import/from来读取指定插件
   /*
    import Vue from 'vue/dist/vue.esm.js'
    import VueRouter from 'vue-router'
@@ -92,7 +89,7 @@ const dllEntry = {
    import Vuex from 'vuex/dist/vuex.esm.js';
    */
   // vue_dll: [path.join(process.cwd(), "dll", "vue_dll.js")],
-  //2.注意config中的reslove已经指定vue以及vuex特定版本
+  // 2.注意config中的reslove已经指定vue以及vuex特定版本
   vue_dll: ['vue', 'vue-resource', 'vue-router', 'vuex'],
   // vue_dll: ['vue/dist/vue.runtime.esm.js', 'vue-resource', 'vue-router', 'vuex'],
   // bootstrap_dll: ['./src/js/vendor/bootstrap/dist/js/bootstrap.js', './src/js/vendor/bootstrap/dist/css/bootstrap.css']

@@ -2,11 +2,11 @@
  * Created by LinChuQiang.
  */
 
-//UserModules
+// UserModules
 export const showPassword = 'showPassword'
-//NewsModules
+// NewsModules
 export const setAgree = 'setAgree'
-//TodoList
+// TodoList
 export const addTodoList = 'addTodoList'
 export const ischooseTodo = 'ischooseTodo'
 export const editTodo = 'editTodo'

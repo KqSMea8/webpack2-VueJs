@@ -51,7 +51,7 @@
 </script>
 
 <style>
-	@import "../../css/vendor/normalize.css";
+	@import "../../static/css/normalize.css";
 	
 	html, body {
 		background: #fff;

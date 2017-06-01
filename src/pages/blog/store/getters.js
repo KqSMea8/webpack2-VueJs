@@ -1,7 +1,7 @@
 
 import * as type from './mutationsTypes'
 
-/*export const config = (state) => {
+/* export const config = (state) => {
   return state.config
 }
 export const archives = (state) => {
@@ -30,37 +30,37 @@ export const menu = (state) => {
 }
 export const message = (state) => {
   return state.message
-}*/
+} */
 
 export default {
-  posts(state) {
+  posts (state) {
     return state.posts
   },
-  archives(state) {
+  archives (state) {
     return state.archives
   },
-  categories(state) {
+  categories (state) {
     return state.categories
   },
-  tags(state) {
+  tags (state) {
     return state.tags
   },
-  post(state) {
+  post (state) {
     return state.post
   },
-  page(state) {
+  page (state) {
     return state.page
   },
-  config(state) {
+  config (state) {
     return state.config
   },
-  message(state) {
+  message (state) {
     return state.message
   },
-  menu(state) {
+  menu (state) {
     return state.menu
   },
-  loading(state) {
+  loading (state) {
     return state.loading
   }
 }

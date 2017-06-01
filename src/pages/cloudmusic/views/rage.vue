@@ -11,16 +11,16 @@
 			<div id = "slider">
 				<swiper :options = "swiperOption">
 					<swiper-slide>
-						<img src = "../../../static/banner1.jpg" class = "banner-item" alt = "">
+						<img src = "../../../static/cloudmusic/banner1.jpg" class = "banner-item" alt = "">
 					</swiper-slide>
 					<swiper-slide>
-						<img src = "../../../static/banner2.jpg" class = "banner-item" alt = "">
+						<img src = "../../../static/cloudmusic/banner2.jpg" class = "banner-item" alt = "">
 					</swiper-slide>
 					<swiper-slide>
-						<img src = "../../../static/banner3.jpg" class = "banner-item" alt = "">
+						<img src = "../../../static/cloudmusic/banner3.jpg" class = "banner-item" alt = "">
 					</swiper-slide>
 					<swiper-slide>
-						<img src = "../../../static/banner4.jpg" class = "banner-item" alt = "">
+						<img src = "../../../static/cloudmusic/banner4.jpg" class = "banner-item" alt = "">
 					</swiper-slide>
 					<div class = "swiper-pagination" slot = "pagination"></div>
 				</swiper>
@@ -144,7 +144,7 @@
 	
 	/*推荐歌单标题样式*/
 	.song-list {
-		background: url("../../../static/aei.png") no-repeat left center;
+		background: url("../../../static/cloudmusic/aei.png") no-repeat left center;
 		background-size: 20px 20px;
 	}
 	.item {
@@ -171,7 +171,7 @@
 		}
 		
 		&-img[lazy=loading] {
-			background: url('../../../static/default_cover.png') no-repeat;
+			background: url('../../../static/cloudmusic/default_cover.png') no-repeat;
 			background-size: cover;
 		}
 		
@@ -188,7 +188,7 @@
 	
 	/*推荐MV标题样式*/
 	.mv {
-		background: url("../../../static/aee.png") no-repeat left center;
+		background: url("../../../static/cloudmusic/aee.png") no-repeat left center;
 		background-size: 20px 20px;
 		&-name {
 			overflow: hidden;
@@ -214,7 +214,7 @@
 	.banner-item {
 		width: 100%;
 		height: 15rem;
-		background: url('../../../static/banner-item-load.png') no-repeat;
+		background: url('../../../static/cloudmusic/banner-item-load.png') no-repeat;
 		background-size: cover;
 	}
 	/*初始加载时的加载提示*/
@@ -227,7 +227,7 @@
 		height: 2.5rem;
 		margin-top: 70%;
 		margin-left: -1.25rem;
-		background: url('../../../static/rage_loading.png') no-repeat;
+		background: url('../../../static/cloudmusic/rage_loading.png') no-repeat;
 		background-size: cover;
 		-webkit-animation: rotating 5s linear infinite;
 		animation: rotating 5s linear infinite;

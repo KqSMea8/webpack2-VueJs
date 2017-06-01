@@ -2,8 +2,8 @@
  * Created by LinChuQiang.
  */
 
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from 'vue'
+import Vuex from 'vuex'
 
 // 导入Store
 
@@ -15,22 +15,22 @@ import * as actions from './actions'
 // import Cnode from './modules/cnode'
 
 // unknown getter config 已解决，注意引入方式，引入的应该是对象
-/*console.log(state);
+/* console.log(state);
 console.log(getters);
 console.log(mutations);
-console.log(actions);*/
+console.log(actions); */
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 const cnodeStore = new Vuex.Store({
   state,
   getters,
   mutations,
   actions,
-  /*modules: {
+  /* modules: {
     Cnode
-  },*/
-  strict:false
-});
+  }, */
+  strict: false
+})
 
 export default cnodeStore

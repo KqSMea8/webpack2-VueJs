@@ -97,3 +97,5 @@ const files = {
 - vue-loader有一个extractcss，vue文件外又有个extractcss，所以是个多入口分离css配置
 
 14. 新建一个入口Page时》entry》CommonsChunkPlugin minChunks》HtmlWebpackPlugin》navbar.vue
+
+15. 参考news.vue can't not reslove xxx.tff 的原因是，style里面的@import 的 url 路径是相对于news.vue的，而不是css文件

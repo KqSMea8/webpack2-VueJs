@@ -105,7 +105,7 @@
 			height: 8rem;
 		}
 		&-img[lazy=loading] {
-			background: url('../../../static/default_cover.png') no-repeat;
+			background: url('../../../static/cloudmusic/default_cover.png') no-repeat;
 			background-size: cover;
 		}
 		

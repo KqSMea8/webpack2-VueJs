@@ -69,7 +69,7 @@
 	.logo {
 		width: 150px;
 		height: 48px;
-		background: url("../../../static/logo.png") no-repeat left center;
+		background: url("../../../static/cloudmusic/logo.png") no-repeat left center;
 		background-size: cover;
 	}
 	

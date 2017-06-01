@@ -21,5 +21,5 @@ new Vue({
   store,
   components: {
     App
-  },
+  }
 }).$mount('#app')

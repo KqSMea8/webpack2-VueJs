@@ -12,7 +12,7 @@ import App from './App.vue'
 import Counter from './Counter.vue'
 
 // require ('@/css/page/index.css')
-require ('@/css/page/h1h2.scss')
+// require ('@/css/page/h1h2.scss')
 
 store.commit('increment')
 store.commit('increment')
@@ -31,9 +31,9 @@ Vue.component('my-counter', App)
 // 注意区分render el $mount
 new Vue({
   store,
-  components:{
-    'my-counter':Counter,
-    'my-app':App,
+  components: {
+    'my-counter': Counter,
+    'my-app': App
   }
 }).$mount('.container')
 

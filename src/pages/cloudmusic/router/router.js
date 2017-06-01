@@ -44,56 +44,56 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   routes: [
     {
-      path     : '/index',
+      path: '/index',
       component: Index,
-      meta     : {keepAlive: true},
-      children : [
+      meta: {keepAlive: true},
+      children: [
         // 时下流行 进入 playListDetail 迷你列表
         {
-          path     : 'rage',
+          path: 'rage',
           component: Rage,
-          meta     : {keepAlive: true},
+          meta: {keepAlive: true}
         },
         // 歌单
         {
-          path     : 'songList',
+          path: 'songList',
           component: SongList,
-          meta     : {keepAlive: true},
+          meta: {keepAlive: true}
         },
         // 排行榜
         {
-          path     : 'leaderBoard',
+          path: 'leaderBoard',
           component: LeaderBoard,
-          meta     : {keepAlive: true},
+          meta: {keepAlive: true}
         },
         // 热门歌手
         {
-          path     : 'hotSinger',
+          path: 'hotSinger',
           component: HotSinger,
-          meta     : {keepAlive: true},
-        },
-      ],
+          meta: {keepAlive: true}
+        }
+      ]
     },
     // 进入详细播放器
     {
-      name     : 'playerDetail',
-      path     : '/playerDetail/:id',
+      name: 'playerDetail',
+      path: '/playerDetail/:id',
       component: PlayerDetail,
-      meta     : {keepAlive: true},
+      meta: {keepAlive: true}
     },
-  
+
     // 从推荐歌单 进入歌单详情列表
     {
-      path     : '/playListDetail/:id',
-      name     : 'playListDetail',
+      path: '/playListDetail/:id',
+      name: 'playListDetail',
       component: PlayListDetail,
-      meta     : {keepAlive: true},
+      meta: {keepAlive: true}
     },
-    
+
     {
-      path: '*', redirect: '/index/rage',
-    },
-  ],
+      path: '*', redirect: '/index/rage'
+    }
+  ]
 })
 
 export default router

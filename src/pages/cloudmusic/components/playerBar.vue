@@ -240,22 +240,22 @@
 	
 	/*列表按钮*/
 	.player-list {
-		background: url("../../../static/playbar_btn_playlist.png") no-repeat !important;
+		background: url("../../../static/cloudmusic/playbar_btn_playlist.png") no-repeat !important;
 		background-size: cover !important;
 	}
 	
 	.player {
-		background: url("../../../static/playbar_btn_play.png") no-repeat !important;
+		background: url("../../../static/cloudmusic/playbar_btn_play.png") no-repeat !important;
 		background-size: cover !important;
 	}
 	
 	.pause {
-		background: url("../../../static/playbar_btn_pause.png") no-repeat !important;
+		background: url("../../../static/cloudmusic/playbar_btn_pause.png") no-repeat !important;
 		background-size: cover !important;
 	}
 	
 	.next {
-		background: url("../../../static/playbar_btn_next.png") no-repeat !important;
+		background: url("../../../static/cloudmusic/playbar_btn_next.png") no-repeat !important;
 		background-size: cover !important;
 	}
 	

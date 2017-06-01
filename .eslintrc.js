@@ -8,9 +8,7 @@ module.exports = {
   parser: 'babel-eslint',
   parserOptions: {
   	//指定ECMAScript支持的版本
-	  ecmaVersion:5,
-	  //指定ECMAScript支持的版本
-    sourceType: 'module'
+	  ecmaVersion:6
   },
   globals: {
     // Put things like jQuery, etc
