@@ -28,7 +28,7 @@
 <script>
   
   import { mapActions, mapGetters } from 'vuex'
-  import Posts from '../components/posts/posts'
+  import Posts from '../components/posts/posts.vue'
   import { clone } from '../assist/utils'
   import axios from 'axios'
   
@@ -47,6 +47,12 @@
     },
     
     created() {
+      /*
+       * posts:{}
+       * page:1
+       * total:2
+       * title: 'Recordum'
+       */
       const {
               posts,
               page,
@@ -60,7 +66,9 @@
         return this.$router.replace('/')
       }
       
+      // _posts={}
       const _posts = clone(posts)
+      console.log('_posts', _posts);
       
       if (posts[page]) {
         return
@@ -75,13 +83,23 @@
     computed: {
       // 获得数据
       ...mapGetters(['posts', 'config']),
-      ...mapGetters(['config']),
       // 当前页码
       page() {
         return +this.$route.params.page || 1
       },
       // 总页码
       total() {
+        /*
+        * 'posts': [
+         210285498,
+         205319771,
+         196350551,
+         126817142,
+         71470122,
+         71329290
+         ],
+        * 'per_page': 5,
+        */
         const {
                 posts,
                 per_page
@@ -90,6 +108,7 @@
         if (per_page === 0 || posts.length === 0) {
           return 1
         }
+        // 2
         return Math.ceil(posts.length / per_page)
       },
       // Posts组件的posts参数
@@ -99,7 +118,7 @@
                 page,
                 config: {per_page}
               } = this
-        
+        // 210285498
         return posts[page] || []
       },
       

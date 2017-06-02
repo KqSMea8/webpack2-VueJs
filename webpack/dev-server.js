@@ -105,23 +105,15 @@ fs.readdirSync(mockDir).forEach(function (file) {
   app.use(mock.api, mock.response)
 })
 
-// blog->store->state 读取config配置
+// src/pages/blog/plugin/api.js
+// see http://www.expressjs.com.cn/4x/api.html#app.use
 var mockBlogJson = glob.sync(path.resolve(process.cwd(), 'src/pages/blog/mock/**/*/*.js'))
-//console.log(mockBlogJson);
+// console.log(mockBlogJson);
 mockBlogJson.forEach(function (file) {
-  //console.log(file);
+  // console.log(file);
   let mock = require(file)
-  //app.use(mock.api, mock.response)
-  app.use(mock.api, function(req, res, next) {
-    // GET 'http://www.example.com/admin/new'
-    console.log(req.originalUrl); // '/admin/new'
-    console.log(req.baseUrl); // '/admin'
-    console.log(req.path); // '/new'
-    next();
-  })
+  app.use(mock.api, mock.response)
 })
-
-
 
 const url = 'http://localhost:' + port
 

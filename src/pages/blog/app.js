@@ -22,6 +22,6 @@ Vue.use(plugin)
 
 new Vue({
   router,
-  store:vuexStore,
+  store: vuexStore,
   render: h => h(app)
 }).$mount('#app')

@@ -14,8 +14,9 @@
 		</div>
 		<div class = "default-view" :class = "{view: songList.length > 0}">
 			<keep-alive>
-				<router-view></router-view>
+				<router-view v-if="$route.meta.keepAlive"></router-view>
 			</keep-alive>
+			<router-view v-if="!$route.meta.keepAlive"></router-view>
 		</div>
 	</div>
 </template>
@@ -30,7 +31,7 @@
     created () {
       // 当created函数时监测路由信息,防止页面刷新tab高亮错误
       var tmpArr = this.$route.path.split('/')
-      console.log('tmpArr',tmpArr)
+      // console.log('tmpArr',tmpArr)
       // tmpArr = ["", "index", "rage"]
       if (tmpArr[1] === 'index') {
         this.handleTabChange(tmpArr[2])
@@ -41,7 +42,7 @@
       '$route' (to, from) {
         const path = to.path
         var tmpArr = path.split('/')
-        console.log('index$route',tmpArr)
+        // console.log('index$route',tmpArr)
         // index$route = ["", "index", "songList"]
         if (tmpArr[1] === 'index') {
           this.handleTabChange(tmpArr[2])

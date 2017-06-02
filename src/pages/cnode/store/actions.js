@@ -3,6 +3,8 @@
  */
 import * as type from './mutationsTypes'
 
-export const setUserInfo = ({commit}, user) => {
-  commit('setUserInfo', user)
+export default {
+  settingUserInfo ({commit}, user) {
+    commit(type.SET_USER_INFO, user)
+  }
 }

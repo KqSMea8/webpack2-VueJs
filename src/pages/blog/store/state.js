@@ -15,7 +15,7 @@ import axios from 'axios'
  if (err) throw err;
  console.log(data);
  configJson = data;
- })*/
+ }) */
 
 /*
  2.axios异步加载
@@ -26,8 +26,7 @@ import axios from 'axios'
   console.log(error)
   return undefined
  })
- console.log(config)*/
-
+ console.log(config) */
 
 /*
  3.promise
@@ -38,7 +37,7 @@ import axios from 'axios'
     }).catch(function (error) {
      reject(error)
     })
- });*/
+ }); */
 
 /*
  4.async
@@ -49,11 +48,11 @@ import axios from 'axios'
     console.log(error)
     return undefined
   })
- }*/
+ } */
 
 // 直接读取
- import configJson from '../json/config.json'
- import colorsJson from '../json/colors.json'
+import configJson from '../json/config.json'
+import colorsJson from '../json/colors.json'
 
 /*
 以下导入方式不可取

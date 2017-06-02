@@ -3,6 +3,8 @@
  */
 import * as type from './mutationsTypes'
 
-export const setUserInfo = (state, userInfo) => {
-  state.userInfo = userInfo
+export default {
+  [type.SET_USER_INFO] (state, userInfo) {
+    state.userInfo = userInfo
+  }
 }

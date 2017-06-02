@@ -46,7 +46,7 @@
               token     : this.token
             };
             window.window.sessionStorage.user = JSON.stringify(user);
-            this.$store.dispatch('setUserInfo', user);
+            this.$store.dispatch('settingUserInfo', user);
             let redirect = decodeURIComponent(this.$route.query.redirect || '/');
             this.$router.push({
               path: redirect

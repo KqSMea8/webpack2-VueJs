@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
 import Zepto from 'webpack-zepto'
 import FastClick from 'fastclick'
 
@@ -13,16 +12,16 @@ import plugin from './plugin/index'
 import * as filters from './plugin/filters'
 
 // 导入组件
-console.log(vuexStore);
 
 // 导入样式
 // require('./app.css')
 
+// console.log(vuexStore)
 const isDevelopment = process.env.NODE_ENV === 'development'
-
 Vue.config.devtools = isDevelopment
 Vue.config.productionTip = false
 Vue.use(plugin)
+
 // 实例化Vue的filter
 Object.keys(filters).forEach(k => Vue.filter(k, filters[k]))
 
@@ -34,17 +33,18 @@ if (window.sessionStorage.user) {
   vuexStore.dispatch('setUserInfo', JSON.parse(window.sessionStorage.user))
 }
 
-// 登录中间验证，页面需要登录而没有登录的情况直接跳转登录
+// 页面需要登录而没有登录的情况直接跳转登录
 router.beforeEach((to, from, next) => {
   // 处理左侧滚动不影响右边
   Zepto('html, body, #page').removeClass('scroll-hide')
+  // console.table(to.matched)
   if (to.matched.some(record => record.meta.requiresAuth)) {
     if (vuexStore.state.userInfo.userId) {
       next()
     } else {
       next({
-        path : '/login',
-        query: {redirect: to.fullPath},
+        path: '/login',
+        query: {redirect: to.fullPath}
       })
     }
   } else {
@@ -54,6 +54,6 @@ router.beforeEach((to, from, next) => {
 
 const cnodeVue = new Vue({
   router,
-  store: vuexStore,
+  store: vuexStore
 })
 cnodeVue.$mount('#app')

@@ -20,11 +20,11 @@ const store = new Vuex.Store({
     playing: false, // 是否正在播放
     loading: false, // 是否正在加载中
     showDetail: false,
-    songList: [],// 播放列表
+    songList: [], // 播放列表
     currentTime: 0, // 当目前的播放位置已更改时
     tmpCurrentTime: 0, // 设置音频的当前播放位置
-    durationTime: 0,// 歌曲总时间，秒计算
-    bufferedTime: 0,// 已缓冲部分
+    durationTime: 0, // 歌曲总时间，秒计算
+    bufferedTime: 0, // 已缓冲部分
     change: false   // 判断是更改的时间还是播放的时间
   },
   getters: {
@@ -51,12 +51,12 @@ const store = new Vuex.Store({
     toggleDetail (state) {
       state.showDetail = !state.showDetail
     },
-    
-    //播放
+
+    // 播放
     play (state) {
       state.playing = true
     },
-    //暂停
+    // 暂停
     pause (state) {
       state.playing = false
     },
@@ -94,7 +94,7 @@ const store = new Vuex.Store({
         state.playing = false
       }
     },
-    
+
     setChange (state, flag) {
       state.change = flag
     },
@@ -113,11 +113,11 @@ const store = new Vuex.Store({
     changeTime (state, time) {
       state.tmpCurrentTime = time
     },
-    //显示加载条
+    // 显示加载条
     openLoading (state) {
       state.loading = true
     },
-    //关闭加载条
+    // 关闭加载条
     closeLoading (state) {
       state.loading = false
     },
@@ -143,7 +143,7 @@ const store = new Vuex.Store({
     // 添加到播放列表
     addToList (state, songs) {
       var items = Array.prototype.concat.call(songs)
-      console.log(items);
+      console.log(items)
       /*
       * [
       *  {id,name.location,...}
@@ -172,9 +172,8 @@ const store = new Vuex.Store({
   },
   // 异步的数据操作
   actions: {
-    
+
     getSong ({commit, state}, id) {
-      
       commit('openLoading')
       Axios.get(api.getSong(id)).then(res => {
         // 统一数据模型，方便后台接口的改变

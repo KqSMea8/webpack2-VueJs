@@ -2,5 +2,5 @@
  * Created by LinChuQiang.
  */
 
-//Root
-export const something = 'something'
+// Root
+export const SET_USER_INFO = 'SET_USER_INFO'

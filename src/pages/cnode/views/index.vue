@@ -3,11 +3,11 @@
         <img class="index" src="../images/index.png">
     </div>
 </template>
+
 <script>
     require('../css/CV.scss');
     require('../css/iconfont/iconfont.css');
     require('../css/github-markdown.css');
-
     export default {
         mounted() {
             setTimeout(() => {

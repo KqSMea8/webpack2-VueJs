@@ -4,7 +4,7 @@ import _ from 'lodash'
 import Timeago from 'timeago.js'
 
 const getCheck = {
-  checkEmail(val) {
+  checkEmail (val) {
     var filter = /^([a-zA-Z0-9_\\.\\-])+\\@(([a-zA-Z0-9\\-])+\.)+([a-zA-Z0-9]{2,4})+$/
     if (filter.test(val)) {
       return true
@@ -12,15 +12,15 @@ const getCheck = {
       return false
     }
   },
-  checkPhone(val) {
+  checkPhone (val) {
     var filter = /^1\d{10}$/
-    
+
     if (filter.test(val)) {
       return true
     } else {
       return false
     }
-  },
+  }
 }
 
 /**
@@ -32,7 +32,7 @@ const fetchUsers = (text) => {
   if (!text) {
     return []
   }
-  
+
   var ignoreRegexs = [
     /```.+?```/g, // 去除单行的 ```
     /^```[\s\S]+?^```/gm, // ``` 里面的是 pre 标签内容
@@ -41,11 +41,11 @@ const fetchUsers = (text) => {
     /\b\S*?@[^\s]*?\..+?\b/g, // somebody@gmail.com 会被去除
     /\[@.+?\\]\(\/.+?\)/g // 已经被 link 的 username
   ]
-  
+
   ignoreRegexs.forEach((ignoreRegex) => {
     text = text.replace(ignoreRegex, '')
   })
-  
+
   var results = text.match(/@[a-z0-9\-_]+\b/igm)
   var names = []
   if (results) {
@@ -90,7 +90,7 @@ const fmtDate = (date, fmt) => { // author: meizz
     'm+': date.getMinutes(), // 分
     's+': date.getSeconds(), // 秒
     'q+': Math.floor((date.getMonth() + 3) / 3), // 季度
-    'S' : date.getMilliseconds() // 毫秒
+    'S': date.getMilliseconds() // 毫秒
   }
   if (/(y+)/.test(fmt)) {
     fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length))
@@ -182,7 +182,7 @@ export function throttle (fn, wait, mustRun) {
     let context = this
     let args = arguments
     let curTime = new Date()
-    
+
     clearTimeout(timeout)
     // 如果达到了规定的触发时间间隔，触发 handler
     if (curTime - startTime >= mustRun) {

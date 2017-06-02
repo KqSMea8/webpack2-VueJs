@@ -3,4 +3,6 @@
  */
 import * as type from './mutationsTypes'
 
-export const userInfo={}
+export default {
+  userInfo: {}
+}

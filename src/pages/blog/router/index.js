@@ -11,14 +11,12 @@ import Categories from '../views/categories.vue'
 import Tags from '../views/tags.vue'
 import Page from '../views/page.vue'
 
-
 const routes = [
   { path: '/', component: Home, name: 'home' },
   { path: '/page/:page', component: Home, name: 'homePage' },
-  
-  
+
   { path: '/posts/:id', component: Post, name: 'post' },
-  
+
   {
     path: '/categories/:id',
     component: Category,
@@ -27,7 +25,7 @@ const routes = [
       { path: ':page', component: Category }
     ]
   },
-  
+
   {
     path: '/tags/:id',
     component: Tag,
@@ -36,15 +34,14 @@ const routes = [
       { path: ':page', component: Tag }
     ]
   },
-  
-  
+
   // 主页面导航 menu.vue
   { path: '/archives', component: Archives, name: 'archives' },
   { path: '/archives/:page', component: Archives, name: 'archivesPage' },
   { path: '/categories', component: Categories, name: 'categories' },
   { path: '/tags', component: Tags, name: 'tags' },
   { path: '/pages/:name', component: Page, name: 'page' },
-  
+
   { path: '*', redirect: '/' }
 ]
 
