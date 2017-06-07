@@ -192,8 +192,6 @@ if (TARGET === 'build') {
   ]
   chunks.forEach(chunk => {
     const filename = chunk + '/app.html'
-    // pages/data
-    // console.log('filename: ', chunk)
     const excludeIndex = ['index']
     const ck = chunks.filter(x => x !== chunk)
     const excludechunks = excludeIndex.concat(ck)

@@ -32,18 +32,24 @@
     },
     mounted() {
       if (this.replyTo) {
-        this.content = `@Zepto{this.replyTo} `;
+        let a =Zepto(this.replyTo)
+        // console.log(a);
+        this.content =`<a href="#">@${a['selector']}</a>`
       }
     },
     methods : {
+      // post /topic/:topic_id/replies 新建评论
       addReply() {
         if (!this.content) {
           this.hasErr = true;
         } else {
           let time = new Date();
           let linkUsers = utils.linkUsers(this.content);
+          // console.log(linkUsers)
           let htmlText = markdown.toHTML(linkUsers) + this.author_txt;
+          // console.log(htmlText)
           let replyContent = Zepto('<div class="markdown-text"></div>').append(htmlText)[0].outerHTML;
+          // console.log(replyContent)
           let postData = {
             accesstoken: this.userInfo.token,
             content    : this.content + this.author_txt
@@ -52,6 +58,7 @@
           if (this.replyId) {
             postData.reply_id = this.replyId;
           }
+          // Todo:评论真的有用吗
           Zepto.ajax({
             type    : 'POST',
             url     : `https://cnodejs.org/api/v1/topic/Zepto{this.topicId}/replies`,

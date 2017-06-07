@@ -11,6 +11,7 @@
 			<!-- 首页列表 -->
 			<ul class = "posts-list">
 				<li v-for = "item in topics" :key = "item.id">
+					<!--/topic/:id 主题详情-->
 					<router-link :to = "{name:'topic',params:{id:item.id}}">
 						<h3 v-text = "item.title"
 						    :class = "getTabInfo(item.tab, item.good, item.top, true)"
@@ -53,8 +54,8 @@
     },
     data() {
       return {
-        scroll       : true,
-        topics       : [],
+        scroll: true,
+        topics: [],
         index        : {},
         searchKey    : {
           page    : 1,
@@ -66,6 +67,7 @@
       };
     },
     mounted() {
+      // 主题分类
       // 例如，对于路径 /foo?user=1，则有 $route.query.user == 1
       if (this.$route.query && this.$route.query.tab) {
         this.searchKey.tab = this.$route.query.tab;
@@ -80,7 +82,7 @@
       } else {
         this.getTopics();
       }
-      // 滚动加载
+      // 注册滚动加载事件
       Zepto(window).on('scroll', utils.throttle(this.getScrollData, 300, 1000));
     },
     
@@ -113,7 +115,7 @@
       next();
     },
     methods: {
-      // 获取title文字
+      //  获取当前主题分类标题
       getTitleStr(tab) {
         let str = '';
         switch (tab) {
@@ -135,11 +137,11 @@
         }
         return str;
       },
-      // 获取不同tab的样式或者标题
+      // 获取不同主题分类的样式
       getTabInfo(tab, good, top, isClass) {
         return utils.getTabInfo(tab, good, top, isClass);
       },
-      // 获取主题数据
+      // 获取主题列表数据
       getTopics() {
         // http://www.css88.com/doc/zeptojs_api/#$.param
         // params=page=1&limit=20&tab=all&mdrender=true
@@ -154,17 +156,19 @@
           }
         });
       },
+      // 20条主题数据的顺序存入index，内容存入topics，通过顺序读取内容
       // topic.id=58d0fb3517f61387400b7e15
       mergeTopics(topic) {
         if (typeof this.index[topic.id] === 'number') {
           const topicsIndex = this.index[topic.id];
           this.topics[topicsIndex] = topic;
         } else {
+          
           this.index[topic.id] = this.topics.length;
           this.topics.push(topic);
         }
       },
-      // 滚动加载数据
+      // 无限滚动加载数据
       getScrollData() {
         if (this.scroll) {
           let totalheight = parseInt(Zepto(window).height(), 20) + parseInt(Zepto(window).scrollTop(), 20);
@@ -177,7 +181,7 @@
       }
     },
     watch  : {
-      // 切换页面
+      // 切换路由时
       '$route' (to, from) {
         // 如果是当前页面切换分类的情况
         if (to.query && to.query.tab) {

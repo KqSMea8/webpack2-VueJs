@@ -6,8 +6,8 @@ const extractVueCSS = new ExtractTextPlugin();
 const extractStyleCSS = new ExtractTextPlugin();
 */
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-const extractVueCSS = new ExtractTextPlugin({});
-const extractStyleCSS = new ExtractTextPlugin({});
+const extractVueCSS = new ExtractTextPlugin({})
+const extractStyleCSS = new ExtractTextPlugin({})
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -22,7 +22,6 @@ exports.assetsPath = function (_path) {
   // posix线程机制
   return path.posix.join(assetsSubDirectory, _path)
 }
-
 
 // 解析.vue文件内的各种css格式
 exports.vueCssLoaders = function (options) {
@@ -245,7 +244,7 @@ exports.styleLoaders = function (options) {
         }
       }]
     })
-    /*use     : [
+    /* use     : [
       {
         loader : 'style-loader',
       },
@@ -256,7 +255,7 @@ exports.styleLoaders = function (options) {
           sourceMap    : false
         }
       }
-    ]*/
+    ] */
   })
   return output
 }

@@ -3,14 +3,14 @@ template.js/**
  */
 import * as type from '../mutationsTypes'
 
-const state={
+const state = {
 
 }
-const getters={}
-const actions={
+const getters = {}
+const actions = {
 
 }
-const mutations={
+const mutations = {
 
 }
 

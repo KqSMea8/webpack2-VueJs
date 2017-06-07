@@ -26,19 +26,19 @@ if (TARGET === 'dev') {
   const SERVER_PATH = path.join(option.dev.dll.dir, option.dev.dll.publicPath)
   // '/assets/lib'
   const HTML_SRC = path.posix.join(option.dev.dll.dir, option.dev.dll.publicPath)
-  
+
   htmlAsset = new AddAssetHtmlPlugin([
     {
       filepath: path.resolve(process.cwd(), FILE_PATH, option.dev.dll.bootstrapCss),
-      // Todo:filter 多个入口的 bootstrapCss_dll.css 失败
+      // Todo: 用 filter 选项来指定多个入口的 bootstrapCss_dll.css 失败
       // 看源码解决，filter 的选项应该替换为 files
-      files:['index.html','pages/data/app.html'],
+      files: ['index.html', 'pages/data/app.html'],
       outputPath: SERVER_PATH,
       publicPath: HTML_SRC,
       includeSourcemap: false,
       typeOfAsset: 'css'
     },
-    /*{
+    /* {
       filepath: path.resolve(process.cwd(), FILE_PATH, option.build.dll.jquery),
       outputPath: SERVER_PATH,
       publicPath: HTML_SRC,
@@ -49,7 +49,7 @@ if (TARGET === 'dev') {
       outputPath: SERVER_PATH,
       publicPath: HTML_SRC,
       includeSourcemap: true
-    },*/
+    }, */
     {
       filepath: path.resolve(process.cwd(), FILE_PATH, option.dev.dll.vue),
       outputPath: SERVER_PATH,
@@ -68,6 +68,7 @@ if (TARGET === 'build') {
   htmlAsset = new AddAssetHtmlPlugin([
     {
       filepath: path.resolve(process.cwd(), FILE_PATH, option.build.dll.bootstrapCss),
+      files: ['index.html', 'pages/data/app.html'],
       includeSourcemap: false,
       hash: false,
       outputPath: SERVER_PATH,

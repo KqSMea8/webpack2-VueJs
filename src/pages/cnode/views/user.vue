@@ -10,6 +10,7 @@
 				<span class = "u-score">积分：{{user.score}}</span>
 			</div>
 		</section>
+		
 		<section class = "topics">
 			<ul class = "user-tabs">
 				<li class = "item br" :class = '{"selected":selectItem === 1}' @click = "changeItem(1)">最近回复</li>
@@ -37,12 +38,19 @@
 		</section>
 	</div>
 </template>
+<style scoped>
+	.topics{
+		background-color: white;
+	}
+</style>
 <script>
   import Zepto from 'webpack-zepto';
   import * as utils from '../assist/utils.js';
   // var utils =  require('../assist/utils.js')
   import nvHead from '../components/header.vue';
   
+  // Todo：loading标识符总是有
+  // background-color:white
   export default {
     components: {
       nvHead

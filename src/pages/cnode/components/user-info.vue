@@ -22,15 +22,13 @@
   
   export default {
     replace : true,
-    created(){
-      // console.log(this.$store);
-    },
     computed: {
       ...mapGetters({
         userInfo: 'getUserInfo'
       })
     },
     methods : {
+      /*登录框*/
       goEnter() {
         this.$router.push({
           name : 'login',
@@ -41,6 +39,7 @@
           }
         });
       },
+      /*用户信息*/
       goUser() {
         this.$router.push({
           name  : 'user',

@@ -9,7 +9,7 @@ import Zepto from 'webpack-zepto'
  * 全局注册
  */
 export default {
-  install(Vue, options) {
+  install (Vue, options) {
     let timer = null
     Vue.prototype.$alert = (msg) => {
       Zepto('#alertWeek').remove()
@@ -22,5 +22,5 @@ export default {
         $alert.remove()
       }, 2000)
     }
-  },
+  }
 }

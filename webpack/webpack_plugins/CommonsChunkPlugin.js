@@ -13,7 +13,8 @@ const BUILDJSDIR = option.build.assetsJsDir
 
 var jsCommon = []
 var match = glob.sync(path.resolve(process.cwd(), 'src/pages/**/*/app.ejs'))
-console.log(match.length)
+// console.log(match.length)
+
 /*
   提取公共JS模块
   官方关于此插件的说明：https: doc.webpack-china.org/plugins/commons-chunk-plugin/
@@ -34,12 +35,12 @@ console.log(match.length)
 if (TARGET === 'dev') {
   console.log(`${TARGET}：CommonsChunkPlugin 正在提取公共JS文件！`)
   jsCommon = [
-    // Todo: cnode的异步公共模块打包问题
-    /*new webpack.optimize.CommonsChunkPlugin({
+    // Todo: pages/cnode 的异步公共模块打包问题
+    /* new webpack.optimize.CommonsChunkPlugin({
       async: 'cnode-in-lazy',
       children: true,
       // chunks:['pages/cnode']
-    }),*/
+    }), */
     // 所有 node_modules中的js 公共模块
     new webpack.optimize.CommonsChunkPlugin({
       name: 'node_modules.commonChunk',
@@ -59,7 +60,7 @@ if (TARGET === 'dev') {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'entry.commonChunk',
       filename: path.posix.join(DEVJSDIR, '[name].js'),
-      minChunks: match.length+1
+      minChunks: match.length + 1
     })
   ]
   module.exports = jsCommon
@@ -85,7 +86,7 @@ if (TARGET === 'build') {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'entry.commonChunk',
       filename: path.posix.join(BUILDJSDIR, '[name].js'),
-      minChunks: 2
+      minChunks: match.length + 1
     })
   ]
   module.exports = jsCommon

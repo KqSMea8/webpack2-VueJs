@@ -2,8 +2,6 @@
  * Created by LinChuQiang.
  */
 
-var webpack = require('webpack')
-const os = require('os')
 const UglifyJsParallelPlugin = require('webpack-parallel-uglify-plugin')
 const TARGET = process.env.npm_lifecycle_event
 
@@ -29,7 +27,7 @@ if (TARGET === 'build') {
 
 if (TARGET === 'dlld') {
   console.log(TARGET, `: UglifyJsParallelPlugin正在压缩JS文件！`)
-  var compressJs = new UglifyJsParallelPlugin({
+  let compressJs = new UglifyJsParallelPlugin({
     cacheDir: '.UglifyJsCache/',
     uglifyJS: {
       output: {
@@ -45,7 +43,7 @@ if (TARGET === 'dlld') {
 
 if (TARGET === 'dllp') {
   console.log(TARGET, `: UglifyJsParallelPlugin正在压缩JS文件！`)
-  var compressJs = new UglifyJsParallelPlugin({
+  let compressJs = new UglifyJsParallelPlugin({
     cacheDir: '.UglifyJsCache/',
     uglifyJS: {
       output: {

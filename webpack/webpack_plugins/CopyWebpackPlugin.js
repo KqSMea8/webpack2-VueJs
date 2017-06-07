@@ -18,18 +18,19 @@ const TARGET = process.env.npm_lifecycle_event
 * 则返回 '/home/myself/node/wwwroot/static_files/gif/image.gif'
 * webpack2_Course/static
 * 相对于本目录解析地址
-* 
+*
 * */
+
 if (TARGET === 'dev') {
   console.log(TARGET, `: CopyWebpackPlugin正在复制自定义静态资源文件！`)
-  var copy = new CopyWebpackPlugin([
-    /*{
+  let copy = new CopyWebpackPlugin([
+    /* {
       context: path.resolve(process.cwd(), 'commonDll/development/assets/'),
       from: '*',
       to: path.resolve(option.dev.assetsRoot, 'assets')
-    },*/
-    { from: 'node_modules/bootstrap/dist/css', to: 'http://localhost:3333/development/assets/css/'},
-    { from: 'node_modules/bootstrap/dist/fonts', to: 'http://localhost:3333/development/assets/fonts/'}
+    }, */
+    {from: 'node_modules/bootstrap/dist/css', to: 'http://localhost:3333/development/assets/css/'},
+    {from: 'node_modules/bootstrap/dist/fonts', to: 'http://localhost:3333/development/assets/fonts/'}
   ])
   module.exports = copy
 }
@@ -37,13 +38,12 @@ if (TARGET === 'dev') {
 if (TARGET === 'build') {
   console.log(TARGET, `: CopyWebpackPlugin正在复制自定义静态资源文件！`)
   // 复制 webpack2_Course的 static 文件夹下的资源到 to中的地址
-  var copy = new CopyWebpackPlugin([
+  let copy = new CopyWebpackPlugin([
     {
-      from: path.resolve(__dirname, '../../static'),
+      context: path.resolve(process.cwd(), 'src/static'),
+      from: '**/*',
       // to: E:\\wamp64\\www\\Wamp-Webpack2Vue\\static
-      to: path.resolve(option.build.assetsRoot, 'static'),
-      ignore: ['.*'],
-      debug: 'debug'
+      to: path.resolve(option.build.assetsRoot, 'static')
     },
     {
       // static哪里定义的？option:assetsSubDirectory

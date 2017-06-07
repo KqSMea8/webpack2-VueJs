@@ -247,9 +247,8 @@ module.exports.dev = devRules
  **********/
 
 const buildRules = []
-buildRules.concat(
+buildRules.push(
   // vue加载器
-  // see https://vue-loader.vuejs.org/zh-cn/configurations/extract-css.html
   {
     test: /\.vue$/,
     use: [
@@ -374,7 +373,6 @@ buildRules.concat(
     test: /\.min\.css/,
     use: ExtractTextPlugin.extract({
       fallback: 'style-loader',
-      // resolve-url-loader may be chained before sass-loader if necessary
       use: [
         {
           loader: 'css-loader',
@@ -386,6 +384,7 @@ buildRules.concat(
     })
   }
 )
+
 module.exports.build = buildRules
 
 /** ********

@@ -7,7 +7,7 @@ export default {
   getLrc (id) {
     return _baseUrl2 + '?type=lyric&id=' + id
   },
-  
+
   getSong (id) {
     return _baseUrl + '?type=url&id=' + id
   },

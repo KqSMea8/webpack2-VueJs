@@ -14,12 +14,13 @@ const List = resolve => {
 }
 
 const routes = [
+  // 中转站
   {
     path: '/',
     component: Home,
     name: 'home'
   },
-
+  // 主题列表
   {path: '/list', component: List, name: 'list'},
 
   // menu.vue
@@ -41,7 +42,7 @@ const routes = [
       }, 'cnode_user')
     }
   },
-
+  // 主题详情
   {
     path: '/topic/:id',
     name: 'topic',
@@ -52,7 +53,7 @@ const routes = [
     }
   },
 
-  // header.vue -> /add
+  // header.vue -> /add 新建
   {
     path: '/add',
     name: 'add',

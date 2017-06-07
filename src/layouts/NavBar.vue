@@ -36,7 +36,7 @@
 							<a href = "/pages/cloudmusic/app.html">cloudmusic</a>
 						</li>
 						<li>
-							<a href = "#">Another action</a>
+							<a href = "/pages/cnodeMobile/app.html">cnodeMobile</a>
 						</li>
 						<li>
 							<a href = "#">Something else here</a>

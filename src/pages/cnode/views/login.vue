@@ -6,7 +6,7 @@
 				<input class = "txt" type = "text" placeholder = "Access Token" v-model = "token" maxlength = "36">
 			</div>
 			<div class = "label">
-				<a class = "button" @click = "logon">登录</a>
+				<a class = "button" @click = "login">登录</a>
 			</div>
 		</section>
 	</div>
@@ -26,11 +26,12 @@
       };
     },
     methods   : {
-      logon() {
+      login() {
         if (this.token === '') {
           this.$alert('令牌格式错误,应为36位UUID字符串');
           return false;
         }
+        // post /accesstoken 验证 accessToken 的正确性
         Zepto.ajax({
           type    : 'POST',
           url     : 'https://cnodejs.org/api/v1/accesstoken',
@@ -47,6 +48,7 @@
             };
             window.window.sessionStorage.user = JSON.stringify(user);
             this.$store.dispatch('settingUserInfo', user);
+            /*跳转到 /list */
             let redirect = decodeURIComponent(this.$route.query.redirect || '/');
             this.$router.push({
               path: redirect

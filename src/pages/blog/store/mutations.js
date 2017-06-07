@@ -33,37 +33,37 @@ export const MENU = (state, menu) => {
 }
 export const MESSAGE = (state, message) => {
   state.message = message
-}*/
+} */
 
 export default {
-  POSTS(state, posts) {
+  POSTS (state, posts) {
     state.posts = posts
   },
-  ARCHIVES(state, archives) {
+  ARCHIVES (state, archives) {
     state.archives = archives
   },
-  CATEGORIES(state, categories) {
+  CATEGORIES (state, categories) {
     state.categories = categories
   },
-  TAGS(state, tags) {
+  TAGS (state, tags) {
     state.tags = tags
   },
-  POST(state, post) {
+  POST (state, post) {
     state.post = post
   },
-  PAGE(state, page) {
+  PAGE (state, page) {
     state.page = page
   },
-  CONFIG(state, config) {
+  CONFIG (state, config) {
     state.config = config
   },
-  MENU(state, mode) {
+  MENU (state, mode) {
     state.menu = mode
   },
-  MESSAGE(state, message) {
+  MESSAGE (state, message) {
     state.message = message
   },
-  LOADING(state, mode) {
+  LOADING (state, mode) {
     state.loading = mode
   }
 }

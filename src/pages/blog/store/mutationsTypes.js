@@ -2,5 +2,5 @@
  * Created by LinChuQiang.
  */
 
-//Root
+// Root
 export const something = 'something'

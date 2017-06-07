@@ -10,7 +10,7 @@ const webpack = require('webpack')
 
 // 插件列表
 
-// base
+// 初始环境
 const globalVar = require('../webpack_plugins/DefinePlugin')
 const provideVar = require('../webpack_plugins/ProvidePlugin')
 
@@ -20,27 +20,24 @@ const happyPack = require('../webpack_plugins/HappyPackPlugin')
 const html = require('../webpack_plugins/HtmlWebpackPlugin')
 const jsCommon = require('../webpack_plugins/CommonsChunkPlugin')
 
-
 // DLL相关, htmlAsset插入script以及JSLib
 const htmlAsset = require('../webpack_plugins/AddAssetHtmlPlugin')
 const jsLib = require('../webpack_plugins/DllReferencePlugin')
 
-// dev
+// 开发环境
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
-// build
+// 生产环境
 const compressCss = require('../webpack_plugins/OptimizeCssAssetsPlugin')
 const compressJs = require('../webpack_plugins/UglifyJsPlugin')
 const copy = require('../webpack_plugins/CopyWebpackPlugin')
 const assets = require('../webpack_plugins/AssetsPlugin')
 const cssExtract = require('../webpack_plugins/ExtractTextPlugin')
 
-// dll
+// DLL环境
 const dllPlugin = require('../webpack_plugins/DllPlugin')
 
-
-
-/** ********
+/**********
  初始环境
  **********/
 
@@ -59,7 +56,6 @@ const basePlugins = [
 
 basePlugins.push(provideVar)
 
-
 // 数组中添加第二个数组中的元素
 // Equivalent to vegetables.push('celery', 'beetroot');
 // Array.prototype.push.apply(vegetables, moreVegs);
@@ -69,14 +65,12 @@ Array.prototype.push.apply(basePlugins, happyPack)
 Array.prototype.push.apply(basePlugins, html)
 Array.prototype.push.apply(basePlugins, jsCommon)
 
-
 basePlugins.push(htmlAsset)
 Array.prototype.push.apply(basePlugins, jsLib)
 
-
 module.exports.base = basePlugins
 
-/** ****
+/******
  开发环境
  ******/
 
@@ -95,14 +89,13 @@ const devPlugins = [
 // devPlugins.push(copy)
 
 if (option.dev.bundleAnalyzerReport) {
-  var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+  let BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
   devPlugins.push(new BundleAnalyzerPlugin())
 }
 
 module.exports.dev = devPlugins
 
-
-/** ****
+/******
 生产环境
 ******/
 
@@ -127,13 +120,13 @@ if (option.build.productionGzip) {
 
 // 使用 webpack-bundle-analyzer 来分析 Webpack 生成的包体组成并且以可视化的方式反馈给开发者
 if (option.build.bundleAnalyzerReport) {
-  var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+  let BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
   buildPlugins.push(new BundleAnalyzerPlugin())
 }
 
 if (option.build.Visualizer) {
   // https://github.com/chrisbateman/webpack-visualizer#plugin-usage
-  var Visualizer = require('webpack-visualizer-plugin')
+  let Visualizer = require('webpack-visualizer-plugin')
   buildPlugins.push(new Visualizer({
     // 在E:\wamp64\www\Webpack2Vue_Demo 目录下生成
     filename: path.posix.join('Visualizer.html')
@@ -142,22 +135,21 @@ if (option.build.Visualizer) {
 
 module.exports.build = buildPlugins
 
-/** ********
+/**********
  DLL环境
  **********/
 
 const dllPlugins = []
 
-
 Array.prototype.push.apply(dllPlugins, dllPlugin)
 Array.prototype.push.apply(dllPlugins, cssExtract)
 
 // 默认不压缩
-if(isProduction){
+if (isProduction) {
   if (option.dllp.compressJs) {
     dllPlugins.push(compressJs)
   }
-}else{
+} else {
   if (option.dlld.compressJs) {
     dllPlugins.push(compressJs)
   }

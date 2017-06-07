@@ -146,6 +146,7 @@
       hideItemReply() {
         this.curReplyId = '';
       },
+      // 为评论点赞
       upReply(item) {
         if (!this.userInfo.userId) {
           this.$router.push({

@@ -15,51 +15,50 @@ const TARGET = process.env.npm_lifecycle_event
 
 if (TARGET === 'dev') {
   console.log(`${TARGET}: ExtractTextPlugin正在分离CSS文件！`)
-  const extractVueCSS = new ExtractTextPlugin({
+  let extractVueCSS = new ExtractTextPlugin({
     filename: utils.assetsPath('assets', 'css/[name].VueCSS.css'),
     allChunks: true
-  });
-  const extractVueSCSS = new ExtractTextPlugin({
+  })
+  let extractVueSCSS = new ExtractTextPlugin({
     filename: utils.assetsPath('assets', 'css/[name].VueSCSS.css'),
     allChunks: false
-  });
-  const extractStyleCSS = new ExtractTextPlugin({
-    filename:path.posix.join('assets', 'css/[name].StyleCSS.css'),
+  })
+  let extractStyleCSS = new ExtractTextPlugin({
+    filename: path.posix.join('assets', 'css/[name].StyleCSS.css'),
     allChunks: false
-  });
-  const extractStyleSCSS = new ExtractTextPlugin({
-    filename:path.posix.join('assets', 'css/[name].StyleSCSS.css'),
+  })
+  let extractStyleSCSS = new ExtractTextPlugin({
+    filename: path.posix.join('assets', 'css/[name].StyleSCSS.css'),
     allChunks: false
-  });
+  })
   var cssExtract = [
-    new ExtractTextPlugin("assets/css/[name].css")
+    new ExtractTextPlugin('assets/css/[name].css')
   ]
   module.exports = cssExtract
 }
 
 if (TARGET === 'build') {
   console.log(`${TARGET}: ExtractTextPlugin正在分离CSS文件！`)
-  
-  var cssExtract = [
-    new ExtractTextPlugin("static/css/[name].css")
+
+  let cssExtract = [
+    new ExtractTextPlugin('static/css/[name].css')
   ]
   module.exports = cssExtract
 }
 
 if (TARGET === 'dlld') {
   console.log(`${TARGET}: ExtractTextPlugin正在分离CSS文件！`)
-  var cssExtract = [
-    new ExtractTextPlugin("[name].css")
+  let cssExtract = [
+    new ExtractTextPlugin('[name].css')
   ]
   module.exports = cssExtract
 }
 
-
 if (TARGET === 'dllp') {
   console.log(`${TARGET}: ExtractTextPlugin正在分离CSS文件！`)
-  
-  var cssExtract = [
-    new ExtractTextPlugin("[name].css")
+
+  let cssExtract = [
+    new ExtractTextPlugin('[name].css')
   ]
   module.exports = cssExtract
 }

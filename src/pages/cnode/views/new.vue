@@ -52,7 +52,7 @@
     },
     methods   : {
       addTopic() {
-        console.log(this.userInfo);
+        // console.log(this.userInfo);
         let title = Zepto.trim(this.topic.title);
         let contents = Zepto.trim(this.topic.content);
         

@@ -21,10 +21,10 @@ const webpackConfig = {
 
 webpackConfig.entry = require('./webpack_config/entry.js').dll
 
-console.log('devtool: ',webpackConfig.devtool)
+console.log('devtool: ', webpackConfig.devtool)
 console.log('entry: ', webpackConfig.entry)
-console.log('output: ',webpackConfig.output)
-console.log('rules: ',webpackConfig.module.rules)
+console.log('output: ', webpackConfig.output)
+console.log('rules: ', webpackConfig.module.rules)
 console.log('plugins: ', webpackConfig.plugins)
 
 module.exports = webpackConfig
