@@ -1,0 +1,35 @@
+.postModal {
+  width: 500px;
+
+  .modal-footer {
+    padding-top: 0;
+    text-align: right;
+    border: 0 none;
+  }
+
+  .post__label {
+    padding: 5px 0;
+    font-size: 14px;
+    line-height: 1;
+    color: #6e6e6e;
+  }
+
+  .post__types {
+    display: inline-block;
+    > span {
+      display: inline-block;
+      padding: 2px 10px;
+      margin-right: 10px;
+      color: #8f8f8f;
+      border: 1px solid #dedede;
+      border-radius: 20px;
+      transition: all 0.2s;
+      cursor: pointer;
+      &.active,
+      &:hover {
+        border-color: $brand-primary;
+        color: $brand-primary;
+      }
+    }
+  }
+}

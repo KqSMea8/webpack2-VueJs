@@ -1,0 +1,11 @@
+@mixin ribbon($color) {
+  background-color: $color;
+
+  &::before {
+    border-color: $color transparent $color $color;
+  }
+
+  &::after {
+    border-color: darken($color, 30%) transparent transparent darken($color, 30%);
+  }
+}

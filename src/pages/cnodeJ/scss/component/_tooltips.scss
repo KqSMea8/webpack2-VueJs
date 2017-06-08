@@ -1,0 +1,39 @@
+.tooltips {
+  position: relative;
+  display: block;
+
+  &::before {
+    position: absolute;
+    background: rgb(70,70,70);
+    border-radius: 2px;
+    color: #ececec;
+    content: attr(aria-label);
+    padding: 0.3rem 0.4rem;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    border-width: 6px;
+    border-style: solid;
+  }
+
+  &--left {
+    @include tooltips(left);
+  }
+
+  &--top {
+    @include tooltips(top);
+  }
+
+  &--bottom {
+    @include tooltips(bottom);
+  }
+
+  &--right {
+    @include tooltips(right);
+  }
+}

@@ -1,0 +1,96 @@
+.cell-move {
+  transition: transform .8s;
+}
+
+.comments {
+  &-container {
+    position: relative;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__num {
+    position: relative;
+    font-size: .8rem;
+    line-height: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 11px;
+      height: 1px;
+      background: #f0f0f0;
+    }
+
+    > span {
+      position: relative;
+      z-index: 1;
+      padding-right: .8rem;
+      background: #fff;
+    }
+  }
+
+  &__sort {
+    position: absolute;
+    left: 50%;
+    top: -3px;
+    transform: translateX(-50%);
+    .btn {
+      padding: 5px 16px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-top: 1rem;
+    &:hover {
+      .comments__ope-btn {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__left {
+    float: left;
+    height: 2rem;
+  }
+
+  &__right {
+    margin-left: 3rem;
+  }
+
+  &__author {
+    font-size: .8rem;
+    font-weight: 700;
+    color: #333;
+    outline: none;
+  }
+
+  &__cont {
+    margin: .4rem 0;
+  }
+
+  &__meta {
+    font-size: .7rem;
+    color: #808080;
+  }
+
+  &__ope-btn {
+    color: #808080;
+    margin-left: 12px;
+    visibility: hidden;
+    &:hover {
+      color: #000;
+      text-decoration: none;
+    }
+
+    &:visited,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

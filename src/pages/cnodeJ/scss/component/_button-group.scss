@@ -1,0 +1,26 @@
+.button-group {
+  > .btn {
+    background: linear-gradient(to bottom, #fff, #eee);
+    border-radius: 0;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-right: 0 none;
+    float: left;
+    &:hover {
+      background: #fff;
+    }
+    &.is-active {
+      background: #fff;
+      box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, .1);
+      cursor: default;
+    }
+    &:first-child {
+      border-radius: 2px 0 0 2px;
+    }
+
+    &:last-child {
+      border-right: 1px solid #ccc;
+      border-radius: 0 2px 2px 0;
+    }
+  }
+}

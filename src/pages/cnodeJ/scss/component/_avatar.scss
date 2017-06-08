@@ -1,0 +1,19 @@
+.avatar {
+  border-radius: 50%;
+  background-color: #eee;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+              0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  &--s {
+    width: 36px;
+    height: 36px;
+  }
+  &--m {
+    width: 60px;
+    height: 60px;
+  }
+
+  &--lg {
+    width: 100px;
+    height: 100px;
+  }
+}

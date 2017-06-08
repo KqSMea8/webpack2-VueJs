@@ -1,0 +1,75 @@
+$defaultSpace: 10px;
+$defaultArrowWidth: 6px;
+$color: rgb(70,70,70);
+
+@mixin tooltips($dir, $space: $defaultSpace, $arrowWidth: $defaultArrowWidth) {
+  $arrowSpace: $arrowWidth * 2 - $space;
+
+  @if $dir == top {
+    &::before ,
+    &::after {
+      left: 50%;
+      transform: translate3d(-50%,-100%,0);
+    }
+
+    &::before {
+      top: -$space;
+    }
+
+    &::after {
+      border-color: $color transparent transparent transparent;
+      top: $arrowSpace;
+    }
+  }
+
+  @if $dir == bottom {
+    &::before ,
+    &::after {
+      left: 50%;
+      transform: translate3d(-50%,100%,0);
+    }
+
+    &::before {
+      bottom: -$space;
+    }
+
+    &::after {
+      border-color: transparent $color transparent transparent;
+      bottom: $arrowSpace;
+    }
+  }
+
+  @if $dir == left {
+    &::before ,
+    &::after {
+      top: 50%;
+      transform: translate3d(-100%,-50%,0);
+    }
+
+    &::before {
+      left: -$space;
+    }
+
+    &::after {
+      border-color: transparent transparent transparent $color;
+      left: $arrowSpace;
+    }
+  }
+
+  @if $dir == right {
+    &::before ,
+    &::after {
+      top: 50%;
+      transform: translate3d(100%,-50%,0);
+    }
+
+    &::before {
+      right: -$space;
+    }
+
+    &::after {
+      border-color: transparent $color transparent transparent;
+      right: $arrowSpace;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.page {
+  height: 100%;
+  margin-bottom: 1rem;
+
+  &__main {
+    position: relative;
+    padding-top: 4.5rem;
+  }
+
+  &__feedback {
+    font-size: 2rem;
+    color: rgba(0,0,0,.6);
+    text-align: center;
+    text-shadow: rgba(0,0,0,.2) 2px 6px 5px,
+                 rgba(255,255,255,.4) 0 -4px 30px;
+    padding-top: 2rem;
+  }
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.CodeMirror,
+.CodeMirror-scroll {
+  min-height: 100px;
+}
+.CodeMirror-focused {
+  border-color: #428bca;
+}
+
+.markdown-text {
+  img {
+    max-width: 100%;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .15s linear;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+  transform: translate3d(0, -10px, 0)
+}
+
+
+

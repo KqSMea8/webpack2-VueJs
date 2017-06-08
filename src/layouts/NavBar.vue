@@ -39,7 +39,7 @@
 							<a href = "/pages/cnodeMobile/app.html">cnodeMobile</a>
 						</li>
 						<li>
-							<a href = "/pages/cnodeJ/app.html">Something else here</a>
+							<a href = "/pages/cnodeJ/app.html">cnodeJ</a>
 						</li>
 						<li role = "separator" class = "divider"></li>
 						<li>

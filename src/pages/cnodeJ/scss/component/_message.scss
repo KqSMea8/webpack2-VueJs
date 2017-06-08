@@ -1,0 +1,93 @@
+.message {
+  position: fixed;
+  bottom: 1rem;
+  right: 0.5rem;
+  color: #ffffff;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  padding: 0.6rem 0.75rem;
+  width: 400px;
+
+  &--success {
+    background-color: #DCF3D7;
+    border-color: #B7D5B0;
+    color: #5C7859;
+  }
+  &--info {
+    background-color: #CAE8F4;
+    border-color: #74BCDE;
+    color: #3E7CA6;
+  }
+  &--error {
+    background-color: #F0C8C5;
+    border-color: #EFC7C4;
+    color: #CA4143;
+  }
+  &--warning {
+    background-color: #F9F4D7;
+    border-color: #E5DFB4;
+    color: #BDA478;
+  }
+
+  &__closeBtn {
+    margin-top: 4px;
+  }
+
+  &__group {
+    > p {
+      font-size: 18px;
+      margin-bottom: 0;
+      padding-left: 30px;
+    }
+  }
+
+  &__icon {
+    float: left;
+    width: 40px;
+  }
+
+}
+
+@-webkit-keyframes slideOutDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    visibility: hidden;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideOutDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    visibility: hidden;
+    transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes slideOutUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    visibility: hidden;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideOutUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    visibility: hidden;
+    transform: translateY(-100%);
+  }
+}
