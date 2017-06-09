@@ -26,14 +26,14 @@
 					<a href="/pages/blog/app.html">博客<span class = "sr-only">(current)</span></a>
 				</li>
 				<li>
-					<a href="/pages/cnode/app.html">CNODE<span class = "sr-only">(current)</span></a>
+					<a href="/pages/cloudmusic/app.html">云音乐<span class = "sr-only">(current)</span></a>
 				</li>
 				<li class = "dropdown">
-					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">Dropdown <span class = "caret"></span>
+					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">CNODE<span class = "caret"></span>
 					</a>
 					<ul class = "dropdown-menu">
 						<li>
-							<a href = "/pages/cloudmusic/app.html">cloudmusic</a>
+							<a href = "/pages/cnode/app.html">cnode</a>
 						</li>
 						<li>
 							<a href = "/pages/cnodeMobile/app.html">cnodeMobile</a>
@@ -43,11 +43,11 @@
 						</li>
 						<li role = "separator" class = "divider"></li>
 						<li>
-							<a href = "#">Separated link</a>
+							<a href = "/pages/cnodeB/app.html">cnodeB</a>
 						</li>
 						<li role = "separator" class = "divider"></li>
 						<li>
-							<a href = "#">One more separated link</a>
+							<a href = "/pages/cnodeV/app.html">cnodeV</a>
 						</li>
 					</ul>
 				</li>

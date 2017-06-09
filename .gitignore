@@ -4,6 +4,6 @@ dist/
 /desktop.ini
 .happypack/
 /.UglifyJsCache/
-/.idea/
+/.idea/**/*
 /newVuePage/
 /development/
