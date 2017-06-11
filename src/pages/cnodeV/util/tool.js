@@ -2,7 +2,7 @@ export default {
     /**
      * 消息消失框
      */
-    toast(msg = '', time = 1500) {
+    toast (msg = '', time = 1500) {
         var toast = document.createElement('div')
         toast.className = 'common-toast common-toast-show'
         toast.innerHTML = msg

@@ -14,7 +14,6 @@ import User from '../pages/User'
 import Login from '../pages/Login'
 import NotFound from '../pages/NotFound'
 
-
 /**
  * 路由懒加载 https://router.vuejs.org/zh-cn/advanced/lazy-loading.html
  * 结合 Vue 的 异步组件 和 Webpack 的 code splitting feature, 轻松实现路由组件的懒加载。
@@ -27,8 +26,7 @@ import NotFound from '../pages/NotFound'
  */
 // const About = r => require.ensure([], () => r(require('../pages/About.vue')), 'about')
 
-
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [{
         path: '/',
@@ -70,7 +68,7 @@ const routes = [{
     {
         path: '/user/:loginname',
         name: 'user',
-        component: User,
+        component: User
     },
     {
         path: '*',
@@ -79,18 +77,16 @@ const routes = [{
     }
 ]
 
-
 const router = new VueRouter({
-    linkActiveClass: 'app-active', //如果有底部导航栏，这个属性可以为被选中的路由增加相应的选中状态class
+    linkActiveClass: 'app-active', // 如果有底部导航栏，这个属性可以为被选中的路由增加相应的选中状态class
     history: true,
     base: __dirname,
     routes
 })
 
-
 router.beforeEach((to, from, next) => {
     var { auth = false } = to.meta
-    var isLogin = Boolean(localStorage.getItem("loginStatus")) //true用户已登录， false用户未登录
+    var isLogin = Boolean(localStorage.getItem('loginStatus')) // true用户已登录， false用户未登录
 
     to.name == 'login' ? router.app.headerShow = false : router.app.headerShow = true
     to.name == 'detail' ? router.app.iconType = false : router.app.iconType = true
@@ -103,8 +99,4 @@ router.beforeEach((to, from, next) => {
 })
 
 
-// router.afterEach((to, from, next) => {
-// })
-
-
-export default router;
+export default router

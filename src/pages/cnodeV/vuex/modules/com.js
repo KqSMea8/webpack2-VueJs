@@ -14,14 +14,14 @@ const state = {
     ],
     loading: 0,
     leftNavStatus: false,
-    topHeaderStatus: true,
+    topHeaderStatus: true
 }
 
 const actions = {
-    setNavState({ commit }, status) {
+    setNavState ({ commit }, status) {
         commit(types.COM_NAV_STATUS, status)
     },
-    setHeaderState({ commit }, status) {
+    setHeaderState ({ commit }, status) {
         commit(types.COM_HEADER_STATUS, status)
     }
 
@@ -34,27 +34,25 @@ const getters = {
 
 }
 
-
 const mutations = {
-    [types.COM_LOADING_STATUS](state, status) {
+    [types.COM_LOADING_STATUS] (state, status) {
         if (state.loading == 0 && !status) {
-            return;
+            return
         }
-        state.loading = status ? ++state.loading : --state.loading;
+        state.loading = status ? ++state.loading : --state.loading
     },
-    [types.COM_INIT_INDEX](state, index) {
+    [types.COM_INIT_INDEX] (state, index) {
         state.initIndex = index
     },
 
-    [types.COM_NAV_STATUS](state, status) {
+    [types.COM_NAV_STATUS] (state, status) {
         state.leftNavStatus = status
     },
 
-    [types.COM_HEADER_STATUS](state, status) {
+    [types.COM_HEADER_STATUS] (state, status) {
         state.leftNavStatus = status
     }
 }
-
 
 export default {
     state,

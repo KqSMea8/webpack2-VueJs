@@ -1,7 +1,6 @@
 import api from '../../fetch/api'
 import * as types from '../types'
 
-
 const state = {
     post: {}
 }
@@ -12,7 +11,7 @@ const actions = {
      * @param {any} {commit}
      * @param {any} accesstoken
      */
-    getMessageInfo({ commit, rootState }) {
+    getMessageInfo ({ commit, rootState }) {
         commit(types.COM_LOADING_STATUS, true)
         let accesstoken = rootState.user.userInfo.accesstoken
         api.Messages(accesstoken)
@@ -28,7 +27,7 @@ const getters = {
 }
 
 const mutations = {
-    [types.GET_MESSAGE_LIST](state, res) {
+    [types.GET_MESSAGE_LIST] (state, res) {
         state.post = res
     }
 }

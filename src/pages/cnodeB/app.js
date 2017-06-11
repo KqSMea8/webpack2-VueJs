@@ -17,7 +17,7 @@ import App from './app.vue'
 import './less/reset.less'
 
 /* eslint-disable no-new */
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 const routes = [
 	{
 		path: '/',
@@ -51,7 +51,7 @@ const routes = [
 		path: '/search_pass',
 		component: forgetPassword
 	}
-];
+]
 
 const router = new VueRouter({
 	routes

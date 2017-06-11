@@ -1,7 +1,6 @@
 import api from '../../fetch/api'
 import * as types from '../types'
 
-
 const state = {
     // 用户登录状态
     loginStatus: JSON.parse(localStorage.getItem('loginStatus')) || false,
@@ -17,7 +16,7 @@ const actions = {
      * @param {any} {commit}
      * @param {any} accesstoken
      */
-    setUserInfo({ commit }, res) {
+    setUserInfo ({ commit }, res) {
         localStorage.setItem('userInfo', JSON.stringify(res))
         localStorage.setItem('loginStatus', true)
         commit(types.SET_USER_INFO, res)
@@ -28,7 +27,7 @@ const actions = {
      * 退出登录
      * @param {any} {commit}
      */
-    setSignOut({ commit }) {
+    setSignOut ({ commit }) {
         localStorage.removeItem('loginStatus')
         localStorage.removeItem('userInfo')
         commit(types.SET_LOGIN_STATUS, false)
@@ -40,7 +39,7 @@ const actions = {
      * @param {any} {commit}
      * @param {any} name
      */
-    getUserData({ commit }, name) {
+    getUserData ({ commit }, name) {
         commit(types.COM_LOADING_STATUS, true)
         api.UserInfo(name)
             .then(res => {
@@ -55,13 +54,13 @@ const getters = {
 }
 
 const mutations = {
-    [types.SET_USER_INFO](state, res) {
+    [types.SET_USER_INFO] (state, res) {
         state.userInfo = res
     },
-    [types.SET_LOGIN_STATUS](state, status) {
+    [types.SET_LOGIN_STATUS] (state, status) {
         state.loginStatus = status
     },
-    [types.GET_USER_DATA](state, res) {
+    [types.GET_USER_DATA] (state, res) {
         state.userData = res
     }
 }

@@ -3,7 +3,7 @@ import axios from 'axios'
 // api 路径
 const HOST = 'https://cnodejs.org/api/v1'
 
-export function fetch(url, method = 'GET') {
+export function fetch (url, method = 'GET') {
     return new Promise((resolve, reject) => {
         // axios.get(HOST + url)
         //     .then(response => {
@@ -14,8 +14,8 @@ export function fetch(url, method = 'GET') {
         //     })
         axios({
                 method: method,
-                url: HOST + url,
-                //params:params
+                url: HOST + url
+                // params:params
             })
             .then((response) => {
                 resolve(response.data)
@@ -30,10 +30,10 @@ export default {
 
     /**
      * 用户登陆
-     * @param {any} accesstoken 
+     * @param {any} accesstoken
      * @returns
      */
-    Login(accesstoken) {
+    Login (accesstoken) {
         return fetch(`/accesstoken?accesstoken=${accesstoken}`, 'post')
     },
 
@@ -42,7 +42,7 @@ export default {
      * @param {any} params
      * @returns
      */
-    TopicsList(params) {
+    TopicsList (params) {
         return fetch(`/topics/${params}`)
     },
 
@@ -51,7 +51,7 @@ export default {
      * @param {any} id 参数id
      * @returns
      */
-    TopicsDetail(id) {
+    TopicsDetail (id) {
         return fetch(`/topic/${id}`)
     },
 
@@ -60,26 +60,25 @@ export default {
      * @param {any} name 用户名
      * @returns
      */
-    UserInfo(name) {
+    UserInfo (name) {
         return fetch(`/user/${name}`)
     },
 
-    /**topics 
+    /** topics
      * 获取已读和未读消息
-     * @param {any} accesstoken 
+     * @param {any} accesstoken
      * @returns
      */
-    Messages(accesstoken) {
+    Messages (accesstoken) {
         return fetch(`/messages?mdrender=true&accesstoken=${accesstoken}`)
     },
-
 
     /**
      * 新建主题
      * @param {any} form
      * @returns
      */
-    Post(form) {
+    Post (form) {
         return fetch(`/topics?${form}`, 'post')
     }
 

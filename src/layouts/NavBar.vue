@@ -22,14 +22,32 @@
 				<li>
 					<a href="/pages/data/app.html">数据<span class = "sr-only">(current)</span></a>
 				</li>
-				<li>
-					<a href="/pages/blog/app.html">博客<span class = "sr-only">(current)</span></a>
+				<li class = "dropdown">
+					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">博客<span class = "caret"></span>
+					</a>
+					<ul class = "dropdown-menu">
+						<li>
+							<a href = "/pages/blog/app.html">博客</a>
+						</li>
+						<li>
+							<a href = "/pages/blogE/app.html">blogE</a>
+						</li>
+						<li>
+							<a href = "/pages/cnodeJ/app.html">cnodeJ</a>
+						</li>
+						<li>
+							<a href = "/pages/cnodeB/app.html">cnodeB</a>
+						</li>
+						<li>
+							<a href = "/pages/cnodeV/app.html">cnodeV</a>
+						</li>
+					</ul>
 				</li>
 				<li>
 					<a href="/pages/cloudmusic/app.html">云音乐<span class = "sr-only">(current)</span></a>
 				</li>
 				<li class = "dropdown">
-					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">CNODE<span class = "caret"></span>
+					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">社区<span class = "caret"></span>
 					</a>
 					<ul class = "dropdown-menu">
 						<li>
@@ -41,11 +59,10 @@
 						<li>
 							<a href = "/pages/cnodeJ/app.html">cnodeJ</a>
 						</li>
-						<li role = "separator" class = "divider"></li>
+						<!--<li role = "separator" class = "divider"></li>-->
 						<li>
 							<a href = "/pages/cnodeB/app.html">cnodeB</a>
 						</li>
-						<li role = "separator" class = "divider"></li>
 						<li>
 							<a href = "/pages/cnodeV/app.html">cnodeV</a>
 						</li>
@@ -63,14 +80,14 @@
 					<a href="/pages/shoppingcart/app.html">ShoppingCart<span class = "sr-only">(current)</span></a>
 				</li>
 				<li class = "dropdown">
-					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">Dropdown <span class = "caret"></span>
+					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">知乎<span class = "caret"></span>
 					</a>
 					<ul class = "dropdown-menu">
 						<li>
-							<a href = "#">Action</a>
+							<a href = "/pages/zhihuDaily/app.html">zhihuDaily</a>
 						</li>
 						<li>
-							<a href = "#">Another action</a>
+							<a href = "/pages/zhihuD/app.html">zhihuD</a>
 						</li>
 						<li>
 							<a href = "#">Something else here</a>
