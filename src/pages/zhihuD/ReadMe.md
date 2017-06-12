@@ -4,7 +4,7 @@
 ###亮点
 1. 漂亮灵活设置的jquery通知提示插件toastr库
 2. materialize UI 库
-3. localStorage.setItem 本地localStorage收藏功能
+3. localStorage.setItem 本地收藏功能
 
 
 ###需求

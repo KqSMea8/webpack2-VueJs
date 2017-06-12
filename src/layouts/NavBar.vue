@@ -92,9 +92,8 @@
 						<li>
 							<a href = "/pages/zhihuL/app.html">zhihuL</a>
 						</li>
-						<li role = "separator" class = "divider"></li>
 						<li>
-							<a href = "#">Separated link</a>
+							<a href = "/pages/zhihuC/app.html">zhihuC</a>
 						</li>
 					</ul>
 				</li>

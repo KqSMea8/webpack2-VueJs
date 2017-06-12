@@ -27,6 +27,7 @@ this.$nextTick(() => {
 ```
 5. 加入track-by属性：数据修改时，不变数据所在的dom不被重新渲染，已改变的数据所在dom才被重新渲染
 6. 通过Vuex.plugin store.subscribe 监听并写入localStorange
+
 ###需求
 1.
 
