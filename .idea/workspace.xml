@@ -1,35 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27f112a7-7eff-475a-87e9-5e7eddde3df5" name="Default" comment="MPA+WEBPACK2+VUE2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/assets/brand.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/assets/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/screenshot/screenshot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuL/screenshot/zhihuL.xmind" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/ReadMe.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/app.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/app.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/assets/carousel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/assets/zhihu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/components/Carousel-item.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/components/Carousel.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/filters/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/router/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/store/api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/store/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/views/Detail.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/zhihuC/views/List.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/VueJs_Demo_Github.iml" afterPath="$PROJECT_DIR$/.idea/VueJs_Demo_Github.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+    <list default="true" id="27f112a7-7eff-475a-87e9-5e7eddde3df5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/NavBar.vue" afterPath="$PROJECT_DIR$/src/layouts/NavBar.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/zhihuD/ReadMe.md" afterPath="$PROJECT_DIR$/src/pages/zhihuD/ReadMe.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/zhihuL/ReadMe.md" afterPath="$PROJECT_DIR$/src/pages/zhihuL/ReadMe.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -499,7 +472,7 @@
       <workItem from="1497098562417" duration="7434000" />
       <workItem from="1497135729635" duration="36891000" />
       <workItem from="1497225660256" duration="20684000" />
-      <workItem from="1497260043259" duration="10472000" />
+      <workItem from="1497260043259" duration="10485000" />
     </task>
     <task id="LOCAL-00001" summary="MPA+WEBPACK2+VUE2">
       <created>1496327526043</created>
@@ -564,11 +537,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497256296516</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="MPA+WEBPACK2+VUE2">
+      <created>1497277464035</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1497277464035</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261711000" />
+    <option name="totallyTimeSpent" value="261724000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -587,8 +567,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SvgViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24087983" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5321308" sideWeight="0.5024289" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32356256" sideWeight="0.49725273" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20053764" sideWeight="0.37429538" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32356256" sideWeight="0.49725273" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20053764" sideWeight="0.37429538" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.680947" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45772266" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
