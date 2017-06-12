@@ -90,7 +90,7 @@
 							<a href = "/pages/zhihuD/app.html">zhihuD</a>
 						</li>
 						<li>
-							<a href = "#">Something else here</a>
+							<a href = "/pages/zhihuL/app.html">zhihuL</a>
 						</li>
 						<li role = "separator" class = "divider"></li>
 						<li>
