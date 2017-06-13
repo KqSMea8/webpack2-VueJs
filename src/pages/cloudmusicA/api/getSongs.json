@@ -1,0 +1,21 @@
+{
+    "data": [
+        {
+            "id": 33166666,
+            "url": "https://m8.music.126.net/20170613185753/dc6d16a4b5ecbfd76865b58a31db7bb5/ymusic/9bc8/0bb8/3c73/8d5b09b71bd4d5a7ccdcda3e9c8a989f.mp3",
+            "br": 128000,
+            "size": 3361270,
+            "md5": "8d5b09b71bd4d5a7ccdcda3e9c8a989f",
+            "code": 200,
+            "expi": 1200,
+            "type": "mp3",
+            "gain": -4.02,
+            "fee": 0,
+            "uf": null,
+            "payed": 0,
+            "flag": 0,
+            "canExtend": false
+        }
+    ],
+    "code": 200
+}

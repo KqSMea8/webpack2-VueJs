@@ -43,8 +43,27 @@
 						</li>
 					</ul>
 				</li>
-				<li>
-					<a href="/pages/cloudmusic/app.html">云音乐<span class = "sr-only">(current)</span></a>
+				<li class = "dropdown">
+					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">云音乐<span class = "caret"></span>
+					</a>
+					<ul class = "dropdown-menu">
+						<li>
+							<a href="/pages/cloudmusic/app.html">云音乐<span class = "sr-only">(current)</span></a>
+						</li>
+						<li>
+							<a href = "/pages/cloudmusicA/app.html">cloudmusicA</a>
+						</li>
+						<li>
+							<a href = "/pages/cnodeJ/app.html">cnodeJ</a>
+						</li>
+						<!--<li role = "separator" class = "divider"></li>-->
+						<li>
+							<a href = "/pages/cnodeB/app.html">cnodeB</a>
+						</li>
+						<li>
+							<a href = "/pages/cnodeV/app.html">cnodeV</a>
+						</li>
+					</ul>
 				</li>
 				<li class = "dropdown">
 					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">社区<span class = "caret"></span>
@@ -94,6 +113,9 @@
 						</li>
 						<li>
 							<a href = "/pages/zhihuC/app.html">zhihuC</a>
+						</li>
+						<li>
+							<a href = "/pages/zhihuP/app.html">zhihuP</a>
 						</li>
 					</ul>
 				</li>
