@@ -54,11 +54,11 @@
 							<a href = "/pages/cloudmusicA/app.html">cloudmusicA</a>
 						</li>
 						<li>
-							<a href = "/pages/cnodeJ/app.html">cnodeJ</a>
+							<a href = "/pages/kugou/app.html">kugou</a>
 						</li>
 						<!--<li role = "separator" class = "divider"></li>-->
 						<li>
-							<a href = "/pages/cnodeB/app.html">cnodeB</a>
+							<a href = "/pages/cloudmusicS/app.html">cloudmusicS</a>
 						</li>
 						<li>
 							<a href = "/pages/cnodeV/app.html">cnodeV</a>
