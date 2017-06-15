@@ -13,7 +13,8 @@ export default {
     index: 0,
 	  // 当前播放的歌曲
     song: {
-      name: def.DEFAULT_SONG_NAME
+      name: def.DEFAULT_SONG_NAME,
+	    id:101369814
     },
     playList: []
   },
@@ -104,12 +105,10 @@ export default {
     }
   },
   getters: {
-    currentTime: state =>
-    parseInt(state.currentTime / 60) + ':' + (Array(2).join(0) + (state.currentTime % 60)).slice(-2),
-    duration: state =>
-    parseInt(state.duration / 60) + ':' + (Array(2).join(0) + (state.duration % 60)).slice(-2),
+    currentTime: state => parseInt(state.currentTime / 60) + ':' + (Array(2).join(0) + (state.currentTime % 60)).slice(-2),
+    duration: state => parseInt(state.duration / 60) + ':' + (Array(2).join(0) + (state.duration % 60)).slice(-2),
     coverImgUrl:state => {
-      if (typeof state.song.albummid === 'undefined') { return def.DEFAULT_IMG } else { return 'https://y.gtimg.cn/music/photo_new/T002R500x500M000' + state.song.albummid + '.jpg' }
+ if (typeof state.song.albummid === 'undefined') { return def.DEFAULT_IMG } else { return 'https://y.gtimg.cn/music/photo_new/T002R500x500M000' + state.song.albummid + '.jpg' }
     }
   }
 }

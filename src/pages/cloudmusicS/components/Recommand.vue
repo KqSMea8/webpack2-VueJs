@@ -123,7 +123,7 @@
 			this.$store.dispatch('getRecommands').then((response) => {
 				this.loading = false
 				this.slider = response.data.data.focus
-			    console.log(this.slider)
+			    // console.log(this.slider)
 				this.songList = response.data.data.hotdiss.list
 				this.mvList = response.data.data.shoubomv.all
 			}, (responce) => {

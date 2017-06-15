@@ -125,6 +125,7 @@
 				'coverImgUrl'
 			]),
 			...mapState({
+			    // 歌曲地址
 				dataUrl (state) {
 					return 'http://ws.stream.qqmusic.qq.com/' + state.PlayService.song.id + '.m4a?fromtag=46'
 				},
@@ -140,8 +141,10 @@
 					document.getElementById('music').pause()
 				}
 			},
+		    // 根据歌曲名称读取歌曲信息 TODO：URL无效
 			song(song) {
 				if (this.$store.state.PlayService.playList.length > 0 && typeof song.albummid === 'undefined') {
+				    console.log(song)
 					this.$http.jsonp('http://120.27.93.97/weappserver/get_music_info.php', {
 						params: {
 							mid: song.mid

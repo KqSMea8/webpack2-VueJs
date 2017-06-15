@@ -22,6 +22,9 @@
 				<li>
 					<a href="/pages/data/app.html">数据<span class = "sr-only">(current)</span></a>
 				</li>
+				<li>
+					<a href="/pages/github/app.html">github</a>
+				</li>
 				<li class = "dropdown">
 					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">博客<span class = "caret"></span>
 					</a>
