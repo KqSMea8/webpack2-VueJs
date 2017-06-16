@@ -3,7 +3,7 @@
         <div :class="['header', isUserPage ? 'transparent' : '']" ref="header">
             <hamburger-icon
                 :back="shouldShowBackBtn()"
-                @click.native="handleClick"
+                @click.native.stop="handleClick"
             ></hamburger-icon>
             <a id="brand-logo" href="#"></a>
             <div id="notification-icon"></div>
@@ -19,7 +19,7 @@
 <script>
 import HamburgerIcon from './HamburgerIcon';
 import LoadingBlock from './LoadingBlock';
-import { mapGetters, mapActions } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
 export default {
     data() {
         return {
@@ -54,31 +54,42 @@ export default {
     methods: {
         ...mapActions(['toggleNavMenu']),
         shouldShowBackBtn() {
+	        var flag
             switch (this.$route.name) {
                 case 'USER_DETAIL':
-                    return false;
+	                flag = false;
+	                break;
                 case 'USER_REPO_LIST':
+	                flag = true;
+	                break;
                 case 'REPO_DETAIL':
-                    return true;
+	                flag = true;
+	                break;
                 default:
-                    return false;
+	                flag = false;
             }
+	        // 为什么会触发两次shouldShowBackBtn()
+            // 因为:back 每次路由变化时，都会触发一次重新获取值
+	        // console.log(this.$route.name)
+            // console.log(`flag: ${flag}`);
+            return flag;
         },
         // 根据路由名称加载搜索去向
         handleClick() {
             const isBack = this.shouldShowBackBtn();
             if (isBack) {
                 this.$router.push({
-                    name: this.$route.name === 'REPO_DETAIL'
-                        ? 'USER_REPO_LIST' : 'USER_DETAIL'
+                    name: this.$route.name === 'REPO_DETAIL'? 'USER_REPO_LIST' : 'USER_DETAIL'
                 });
             } else {
+            	// 	用户搜索框开关
                 this.toggleNavMenu();
             }
         }
     },
     mounted() {
         this.$nextTick(() => {
+        	// scroll-section就是MainContent中的滚动正文
             this.scrollSection = document.getElementById('scroll-section');
             this.scrollSection.addEventListener('scroll', () => {
                 let lastScrollTop = this.scrollSection.scrollTop;

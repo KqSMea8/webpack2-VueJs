@@ -4,7 +4,7 @@
 		<menu-fullstatehandler />
 		<div id="menu-overlay"
 		     @click="closeNavMenu"
-		></div>
+		>遮罩层</div>
 		<nav-menu />
 		<main-content />
 	</div>
@@ -90,7 +90,8 @@
 		left: 84%;
 		bottom: 0;
 		z-index: 3;
-		transform: translate3d(1000px, 0, 0);
+		transform: translate3d(-1000px, 0, 0);
+		border:1px solid rebeccapurple;
 	}
 	.list-appear, .list-enter {
 		opacity: 0.01;

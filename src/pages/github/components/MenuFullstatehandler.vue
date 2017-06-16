@@ -1,5 +1,5 @@
 <template lang="html">
-    <input type="checkbox" id="nav-menu-full-checkbox" :checked="full" />
+    <input type="checkbox" id="nav-menu-full-checkbox"  value="全屏" :checked="full" />
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default {
 
 <style lang="less">
 input#nav-menu-full-checkbox {
-    display: none;
+    display: block;
 }
 
 input#nav-menu-full-checkbox:checked ~ #menu-overlay {

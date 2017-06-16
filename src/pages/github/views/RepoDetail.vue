@@ -189,7 +189,7 @@
 				return api(`https://api.github.com/repos/${username}/${reponame}/readme`).then(data => data.content || '').then(readme => {
 					// 解码Readme内容
 					this.readme = Base64.decode(readme);
-					console.log(this.readme);
+					// console.log(this.readme);
 				});
 			},
 		    // 仓库文件和目录

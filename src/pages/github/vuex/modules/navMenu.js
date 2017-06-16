@@ -3,6 +3,7 @@ import * as types from '../mutation-types'
 
 const state = {
     full: false,
+		// 是否打开用户搜索侧栏
     open: false
 }
 
@@ -20,6 +21,7 @@ const actions = {
     openNavMenu ({ commit }) {
         commit('OPEN_NAV_MENU')
     },
+	  // 关闭用户搜索框
     closeNavMenu ({ commit }) {
         commit('CLOSE_NAV_MENU')
     },

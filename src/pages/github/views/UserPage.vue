@@ -48,7 +48,6 @@ export default {
             'requestFailed'
         ]),
         fetchData() {
-        	console.log(this.router)
             const {username} = this.$route.params;
             if (username !== this.profile.login) {
                 this.loadUser(username);

@@ -14,12 +14,18 @@
 9. filesize
 10. showLoading: false,doneLoading: false,loadFailed: false 控制显示页面进度加载情况
 11. Element.getBoundingClientRect()方法返回元素的大小及其相对于视口的位置。see:https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect
-12. 监听滚动条动画 requestAnimationFrame RepoDetail.vue
+12. 注册scroll事件获取元素高度的变化，相应地requestAnimationFrame 执行css切换，transition形成动画效果  参考HeaderBar.vue的下拉导航条颜色加深特效
 13. RepoList.vue 中的根据搜索框显示仓库列表以及搜索框下拉浮雕特效显示
 14. font-awesome
 15. vue2-animate
-16. 用户搜索框是通过z-index以及transfrom来隐藏的
+16. 用户搜索框已经存在于页面，只不过是通过z-index以及transfrom来隐藏的
 17. LoadingBlock.vue 滚动加载条
+18. transition和transform来组成动画效果
+19. 通过keyframes spin做了一个圆形加载进度条 NavMenu.vue
+20. HamburgerIcon.vue 通过state以及组件传参来切换css的class样式，达到根据路由地址的变化来决定ICON的导航、关闭、后退的图标变化
+21. $router 与 $route 别搞错了！TODO：路由中定义的name获取都是undefiend
+22. app.vue中的menu-overlay是遮罩栏，点击隐藏侧边用户搜索栏；隐藏的MenuOpenstatehandler以及MenuFullstatehandler控制DOM中的样式再添加；
+
 ###需求
 1.
 

@@ -1,25 +1,37 @@
 <template lang="html">
-    <div id="hamberger-menu" class="nav-icon"
-        :class="{
-            'back': back
-            }"
-    >
+    <div id="hamberger-menu"
+        :class="[
+             back? 'back' : ' ',
+             open? 'open' : ' ',
+            'nav-icon'
+            ]"
+     >
         <div class="nav-icon-bars">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
     </div>
 
 </template>
 
 <script>
-export default {
-    props: {
-        back: Boolean
-    }
-}
+	import { mapState, mapGetters, mapActions } from 'vuex';
+	export default {
+		props   : {
+			back: Boolean
+		},
+		computed: {
+			...mapState({
+				open: state => state.navMenu.open,
+			}),
+		},
+		watch   : {
+			open(){
+				// console.log(this.open);
+			}
+		}
+	}
 </script>
 
 <style lang="less">

@@ -1,5 +1,5 @@
 <template lang="html">
-    <input type="checkbox" id="nav-menu-open-checkbox" :checked="open" />
+    <input type="checkbox" id="nav-menu-open-checkbox" value="打开" :checked="open" />
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default {
 
 <style lang="less">
 input#nav-menu-open-checkbox {
-    display: none;
+    display: block;
 }
 
 input#nav-menu-open-checkbox:checked ~ #menu-overlay {
