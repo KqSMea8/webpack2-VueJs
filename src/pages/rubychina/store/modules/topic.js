@@ -10,11 +10,11 @@ const initialState = {
 }
 const state = {
   lists: {
-    default: initialState,
-    popular: initialState,
-    recent: initialState,
-    no_reply: initialState,
-    excellent: initialState
+    default: initialState, // 默认
+    popular: initialState, // 流行
+    recent: initialState, // 最近
+    no_reply: initialState, // 无人问津
+    excellent: initialState // 精华优质
   },
   detail: {
     isFetching: false,

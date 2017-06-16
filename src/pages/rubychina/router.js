@@ -26,4 +26,6 @@ const route = new Router({
   ],
 });
 
+route.push({ path: '/'})
+
 export default route;

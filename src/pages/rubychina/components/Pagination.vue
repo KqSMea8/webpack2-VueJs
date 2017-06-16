@@ -20,6 +20,7 @@ export default {
     route() {
       return this.$route;
     },
+    // TODO：从路由参数获取页码
     page() {
       return this.$route.query.page === undefined ? 1 : Number(this.$route.query.page);
     },

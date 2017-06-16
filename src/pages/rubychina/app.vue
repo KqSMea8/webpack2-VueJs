@@ -8,8 +8,8 @@
 <script>
 	import $ from 'jquery';
 	import { mapState } from 'vuex';
-	import HeaderComponent from '../components/Header';
-	import FooterComponent from '../components/Footer';
+	import HeaderComponent from './components/Header';
+	import FooterComponent from './components/Footer';
 	export default {
 		name      : 'app',
 		components: {
@@ -43,6 +43,6 @@
 	};
 </script>
 <style lang = "scss">
-	@import "../assets/stylesheets/app.css";
+	@import "./assets/stylesheets/app.css";
 
 </style>

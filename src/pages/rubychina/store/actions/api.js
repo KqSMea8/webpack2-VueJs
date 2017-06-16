@@ -56,7 +56,7 @@ const fetchExcellentTopics = (options = '') => {
   return fetchGet(`/topics?type=excellent&${options}`);
 };
 
-// 社区精华帖获取
+// 社区帖子获取
 export const fetchTopicsList = (tab, options) => {
   const newOptions = translateOptions(options);
   switch (tab) {
@@ -74,15 +74,17 @@ export const fetchTopicsList = (tab, options) => {
       return fetchDefaultTopics(newOptions);
   }
 };
+// 社区帖子详情获取
+export const fetchTopic = (topic_id) => {
+	return fetchGet('/topics/' + topic_id);
+};
+
 // 获取讨论节点分类
 export const fetchNodesList = () => {
   return fetchGet('/nodes');
 };
 
-export const fetchTopic = (topic_id) => {
-  return fetchGet('/topics/' + topic_id);
-};
-
+// 获取帖子详情中的回复数据
 export const fetchRepliesList = (topic_id, options) => {
   const newOptions = translateOptions(options);
   return fetchGet(`/topics/${topic_id}/replies?${newOptions}`)

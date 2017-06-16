@@ -32,7 +32,7 @@ if (TARGET === 'dev') {
       filepath: path.resolve(process.cwd(), FILE_PATH, option.dev.dll.bootstrapCss),
       // Todo: 用 filter 选项来指定多个入口的 bootstrapCss_dll.css 失败
       // 看源码解决，filter 的选项应该替换为 files
-      files: ['index.html', 'pages/data/app.html'],
+      files: ['index.html', 'pages/data/app.html', 'pages/rubychina/app.html'],
       outputPath: SERVER_PATH,
       publicPath: HTML_SRC,
       includeSourcemap: false,

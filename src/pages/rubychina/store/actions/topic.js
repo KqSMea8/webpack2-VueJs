@@ -1,16 +1,26 @@
 import { fetchTopicsList, fetchTopic } from './api'
 import types from '../mutation-types'
 
-// 社区精华帖获取
+// 社区帖子获取
 export const refreshTopics = ({ commit }, { tab }) => {
 	commit(types.REFRESH_TOPICS, {
 		tab
 	})
 }
-export const fetchTopicsIfNeeded = ({ dispatch, state }, { tab, options }) => {
-  if (shouldFetchTopics(state, tab)) {
-    dispatch('fetchTopics', { tab, options })
-  }
+
+export const receiveTopics = ({ commit }, { tab, response: json }) => {
+	commit(types.RECEIVE_TOPICS_SUCCESS, {
+		tab,
+		topics: json.topics
+	})
+}
+export const fetchTopics = ({ commit, dispatch }, { tab, options }) => {
+	commit(types.REQUEST_TOPICS, { tab })
+	fetchTopicsList(tab, options).then((response) => {
+		dispatch('receiveTopics', { tab, response })
+	}).catch((error) => {
+		commit(types.RECEIVE_TOPICS_FAILURE, { tab, error })
+	})
 }
 const shouldFetchTopics = (state, tab) => {
 	const lists = state.lists[tab]
@@ -22,35 +32,26 @@ const shouldFetchTopics = (state, tab) => {
 	}
 	return lists.didInvalidate
 }
-export const fetchTopics = ({ commit, dispatch }, { tab, options }) => {
-	commit(types.REQUEST_TOPICS, { tab })
-	fetchTopicsList(tab, options).then((response) => {
-		dispatch('receiveTopics', { tab, response })
-	}).catch((error) => {
-		commit(types.RECEIVE_TOPICS_FAILURE, { tab, error })
-	})
+export const fetchTopicsIfNeeded = ({ dispatch, state }, { tab, options }) => {
+	if (shouldFetchTopics(state, tab)) {
+		dispatch('fetchTopics', { tab, options })
+	}
 }
-export const receiveTopics = ({ commit }, { tab, response: json }) => {
-	commit(types.RECEIVE_TOPICS_SUCCESS, {
-		tab,
-		topics: json.topics
-	})
-}
+// 社区帖子详情获取
 
-/* topic detail */
 export const receiveTopicDetail = ({ commit }, { response: json }) => {
-  commit(types.RECEIVE_TOPIC_SUCCESS, {
-    topic: json.topic
-  })
+	commit(types.RECEIVE_TOPIC_SUCCESS, {
+		topic: json.topic
+	})
 }
 export const fetchTopicDetail = ({ commit, dispatch }, { topic_id }) => {
-  commit(types.REQUEST_TOPIC)
-  fetchTopic(topic_id).then((response) => {
-    dispatch('receiveTopicDetail', { response })
-  }).catch((error) => {
-    commit(types.RECEIVE_TOPIC_FAILURE, { error })
-  })
+	commit(types.REQUEST_TOPIC)
+	fetchTopic(topic_id).then((response) => {
+		dispatch('receiveTopicDetail', { response })
+	}).catch((error) => {
+		commit(types.RECEIVE_TOPIC_FAILURE, { error })
+	})
 }
 export const fetchTopicIfNeeded = ({ dispatch, state }, { topic_id }) => {
-  dispatch('fetchTopicDetail', { topic_id })
+	dispatch('fetchTopicDetail', { topic_id })
 }
