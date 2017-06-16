@@ -19,11 +19,26 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
 			<ul class = "nav navbar-nav">
-				<li>
-					<a href="/pages/data/app.html">数据<span class = "sr-only">(current)</span></a>
-				</li>
-				<li>
-					<a href="/pages/github/app.html">github</a>
+				<li class = "dropdown">
+					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">其它<span class = "caret"></span>
+					</a>
+					<ul class = "dropdown-menu">
+						<li>
+							<a href="/pages/github/app.html">github</a>
+						</li>
+						<li>
+							<a href="/pages/data/app.html">数据</a>
+						</li>
+						<li>
+							<a href = "/pages/rubychina/app.html">rubychina</a>
+						</li>
+						<li>
+							<a href = "/pages/cnodeB/app.html">cnodeB</a>
+						</li>
+						<li>
+							<a href = "/pages/cnodeV/app.html">cnodeV</a>
+						</li>
+					</ul>
 				</li>
 				<li class = "dropdown">
 					<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" role = "button" aria-haspopup = "true" aria-expanded = "false">博客<span class = "caret"></span>
