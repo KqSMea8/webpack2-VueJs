@@ -1,4 +1,5 @@
 const merge = require('webpack-merge')
+const path = require('path')
 const baseWebpackConfig = require('./webpack.base.conf')
 
 const thisrules = require('./webpack_config/module.js').dev
@@ -25,7 +26,12 @@ const webpackConfig = merge(baseWebpackConfig, {
      * */
     rules: thisrules
   },
-  plugins: require('./webpack_config/plugins.js').dev
+  plugins: require('./webpack_config/plugins.js').dev,
+	/* 额外选项 https://webpack.js.org/configuration/other-options/#cache */
+	bail: true,
+	cache: true,
+	recordsInputPath: path.join(__dirname, 'recordsInputPath.json'),
+	recordsOutputPath: path.join(__dirname, 'recordsOutputPath.json')
 })
 console.log('devtool: ', webpackConfig.devtool)
 console.log('entry: ', webpackConfig.entry)

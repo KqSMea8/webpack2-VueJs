@@ -18,6 +18,9 @@ module.exports = {
     __dirname: 'mock',
     Buffer: true,
     setImmediate: true,
-    fs: 'empty'
+    fs: 'empty',
+	  net:'empty',
+	  tls: 'empty',
+	  dns: 'empty'
   }
 }

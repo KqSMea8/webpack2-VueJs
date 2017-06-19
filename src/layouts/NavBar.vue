@@ -33,10 +33,22 @@
 							<a href = "/pages/rubychina/app.html">rubychina</a>
 						</li>
 						<li>
-							<a href = "/pages/cnodeB/app.html">cnodeB</a>
+							<a href = "/pages/note/app.html">note</a>
 						</li>
 						<li>
-							<a href = "/pages/cnodeV/app.html">cnodeV</a>
+							<a href = "/pages/maizuo/app.html">maizuo</a>
+						</li>
+						<li>
+							<a href = "/pages/maizuo/app.html">maizuo2</a>
+						</li>
+						<li>
+							<a href = "/pages/eleme/app.html">eleme</a>
+						</li>
+						<li>
+							<a href = "/pages/photoshare/app.html">photoshare</a>
+						</li>
+						<li>
+							<a href = "/pages/todoKoa/app.html">todoKoa</a>
 						</li>
 					</ul>
 				</li>

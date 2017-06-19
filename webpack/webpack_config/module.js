@@ -71,7 +71,7 @@ const baseRules = [
 		test: /\.txt$/,
 		use : 'raw-loader'
 	}
-	
+
 	// 安装了 html-webpack-template 之后就不能用 html-loader 压缩处理了
 	// https://github.com/jaketrent/html-webpack-template
 	// https://github.com/webpack-contrib/html-loader
@@ -158,6 +158,61 @@ devRules.push(
 							}
 						}
 					],
+					sass: [
+						'vue-style-loader',
+						{
+							loader : 'css-loader',
+							options: {
+								modules      : false,
+								minimize     : false,
+								importLoaders: 1,
+								sourceMap    : false
+							}
+						},
+						{
+							loader : 'sass-loader',
+							options: {
+								sourceMap: false,
+								indentedSyntax: true
+							}
+						}
+					],
+					stylus: [
+						'vue-style-loader',
+						{
+							loader : 'css-loader',
+							options: {
+								modules      : false,
+								minimize     : false,
+								importLoaders: 1,
+								sourceMap    : false
+							}
+						},
+						{
+							loader : 'stylus-loader',
+							options: {
+								sourceMap: false
+							}
+						}
+					],
+					styl: [
+						'vue-style-loader',
+						{
+							loader : 'css-loader',
+							options: {
+								modules      : false,
+								minimize     : false,
+								importLoaders: 1,
+								sourceMap    : false
+							}
+						},
+						{
+							loader : 'stylus-loader',
+							options: {
+								sourceMap: false
+							}
+						}
+					],
 					less: [
 						'vue-style-loader',
 						{
@@ -211,6 +266,32 @@ devRules.push(
 		}
 	]
 },
+// SASS加载器
+{
+	test   : /\.sass/,
+	include: [
+		path.join(process.cwd(), './src')
+	],
+	use    : [
+		'style-loader',
+		{
+			loader : 'css-loader',
+			options: {
+				modules      : false,
+				minimize     : false,
+				importLoaders: 1,
+				sourceMap    : false
+			}
+		},
+		{
+			loader : 'sass-loader',
+			options: {
+				sourceMap: false,
+				indentedSyntax: true
+			}
+		}
+	]
+},
 // LESS加载器
 {
 	test: /\.less$/,
@@ -233,6 +314,50 @@ devRules.push(
 		}
 	]
 },
+// stylus加载器
+{
+	test: /\.(stylus|styl)$/,
+	use : [
+		'style-loader',
+		{
+			loader : 'css-loader',
+			options: {
+				modules      : false,
+				minimize     : false,
+				importLoaders: 1,
+				sourceMap    : false
+			}
+		},
+		{
+			loader : 'stylus-loader',
+			options: {
+				sourceMap: false
+			}
+		}
+	]
+},
+/* // stylus加载器
+{
+	test: /\.styl$/,
+	use : [
+		'style-loader',
+		{
+			loader : 'css-loader',
+			options: {
+				modules      : false,
+				minimize     : false,
+				importLoaders: 1,
+				sourceMap    : false
+			}
+		},
+		{
+			loader : 'stylus-loader',
+			options: {
+				sourceMap: false
+			}
+		}
+	]
+}, */
 // 已压缩过的.min.css不压缩
 {
 	test: /\.min\.css/,
