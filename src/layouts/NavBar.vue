@@ -39,10 +39,16 @@
 							<a href = "/pages/maizuo/app.html">maizuo</a>
 						</li>
 						<li>
-							<a href = "/pages/maizuo/app.html">maizuo2</a>
+							<a href = "/pages/maizuo2/app.html">maizuo2</a>
 						</li>
 						<li>
 							<a href = "/pages/eleme/app.html">eleme</a>
+						</li>
+						<li>
+							<a href = "/pages/eleme2/app.html">eleme2</a>
+						</li>
+						<li>
+							<a href = "/pages/meizi/app.html">meizi</a>
 						</li>
 						<li>
 							<a href = "/pages/photoshare/app.html">photoshare</a>

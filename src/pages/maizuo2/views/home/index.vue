@@ -1,7 +1,7 @@
 <template>
 	<section class = "content">
 		<swiper class = "my-swipe" :options = "swiperOption">
-			<swiper-slide class = "silde" v-for = "billboard in billboards" :key="billboard.id">
+			<swiper-slide class = "silde" v-for = "billboard in billboards" :key = "billboard.id">
 				<a v-bind:href = "billboard.url">
 					<image-placeholder :src = 'billboard.imageUrl' placeholder = "http://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png"></image-placeholder>
 				</a>
@@ -38,11 +38,15 @@
 	import { swiper, swiperSlide } from 'vue-awesome-swiper'
 	import { mapGetters } from 'vuex'
 	export default{
+		data(){
+			return {
+				swiperOption: {
+					autoplay  : 3000,
+					autoHeight: true
+				}
+			};
+		},
 		computed  : {
-			swiperOption: {
-				autoplay  : 3000,
-				autoHeight: true
-			},
 			...mapGetters({
 				comingSoonFilms: 'getComingSoonFilms',
 				nowPlayingFilms: 'getNowPlayingFilms',
@@ -52,9 +56,9 @@
 		created () {
 			// 获取即将开始电影列表
 			this.$store.dispatch('fetchComingSoonLists', 1, 5)
-		    // 获取正在热映电影列表
+			// 获取正在热映电影列表
 			this.$store.dispatch('fetchNowPlayingLists', 1, 5)
-		    // 获取广告
+			// 获取广告
 			this.$store.dispatch('fetchBillboards')
 		},
 		components: {
