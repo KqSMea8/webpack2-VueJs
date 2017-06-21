@@ -54,6 +54,9 @@
 							<a href = "/pages/photoshare/app.html">photoshare</a>
 						</li>
 						<li>
+							<a href = "/pages/todoMvc/app.html">todoMvc</a>
+						</li>
+						<li>
 							<a href = "/pages/todoKoa/app.html">todoKoa</a>
 						</li>
 					</ul>
