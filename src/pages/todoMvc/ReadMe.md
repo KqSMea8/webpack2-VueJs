@@ -1,6 +1,7 @@
 ##TodoMvc
 - Source：https://github.com/liangxiaojuan/vue-todos
 - Blog: http://yangyi1024.com/categories/web%E5%89%8D%E7%AB%AF/
+- view: http://yangyi1024.com/todo/#/list/1f80CD7e-1EE5-49fe-3b14-7EE28543D2cA
 ###亮点
 1. 
 

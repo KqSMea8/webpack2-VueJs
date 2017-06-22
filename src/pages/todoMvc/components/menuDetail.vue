@@ -16,7 +16,7 @@
 				<span class = "title-wrapper">{{group.title}}</span>
 				<!-- 数目-->
 				<span class = "count-list">{{group.count}}</span>
-				<span>{{group.id}}</span>
+				<span v-if = "false">{{group.id}}</span>
 			</h1>
 			<!-- 右边的删除，锁定图标容器-->
 			<div class = "nav-group right">
@@ -26,7 +26,7 @@
 						<span class = "icon-lock" v-if = "group.isLock"></span>
 						<span class = "icon-unlock" v-else></span>
 					</a>
-					<a class = " nav-item">
+					<a class = " nav-item" @click = "delGroup">
 						<!-- 删除图标-->
 						<span class = "icon-trash"></span>
 					</a>
@@ -41,8 +41,8 @@
 		<!--容器下半部分-->
 		<div class = "content-scrollable list-items">
 			<!-- 这里`v-for`会循环我们在 `data`函数 事先定义好的 ’items‘模拟数据，循环后拿到单个对象，在通过prop把数据传输给子组件 item -->
-			<div v-for = "(item,index) in group.items">
-				<item :item = "item" :isLock = "group.isLock" @delItem = "delItem(item,index)" ></item>
+			<div v-for = "group.items && (item,index) in group.items">
+				<item :item = "item" :isLock = "group.isLock" @delItem = "delItem(item,index)" @chkItem = "chkItem(item,index)"></item>
 			</div>
 		</div>
 	</div>
@@ -65,15 +65,28 @@
 			item
 		},
 		methods   : {
-			...mapMutations(['setGroupItemDel']),
-			...mapActions(['asyncGroupsLock','asyncGroupItems']),
-			onAdd(){},
+			...mapMutations(['setGroupItemDel', 'setGroupCount']),
+			...mapActions(['asyncGroupsLock', 'asyncUpdateItems', 'asyncAddItem', 'asyncDelGroup']),
+			onAdd(){
+				this.asyncAddItem({text: this.text}).then(() => {
+					this.text = ''
+				})
+			},
 			onLock(){
 				this.asyncGroupsLock(this.group.id);
 			},
-			delItem(item,index){
+			delItem(item, index){
 				this.setGroupItemDel(index)
-				this.asyncGroupItems({item,index})
+				this.asyncUpdateItems({item, index})
+			},
+			chkItem(item, index){
+				// console.log(item);
+				// console.log(index);
+				this.setGroupCount(item.isChked)
+				this.asyncUpdateItems({item, index})
+			},
+			delGroup(){
+				this.asyncDelGroup(this.group.id)
 			}
 		}
 	};
