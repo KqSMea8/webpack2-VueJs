@@ -36,7 +36,7 @@
 			}
 		},
 		beforeDestory(){
-			console.log('beforeDestory');
+			// console.log('beforeDestory');
 		}
 	};
 </script>

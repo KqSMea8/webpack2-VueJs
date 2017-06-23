@@ -124,8 +124,8 @@ data : []
 ###组件分析
 - app.vue 最外层根组件
 - layouts.vue 布局组件
-- groups.vue 左侧集合列表
-- groupDetail.vue 右侧集合详情
+- menus.vue 左侧集合列表
+- menuDetail.vue 右侧集合详情
 - item.vue 待办单项
 
 
@@ -139,5 +139,6 @@ data : []
 
 
 ###遗憾
-1. 
+1. vue的生命周期
+2. 响应式浏览
 

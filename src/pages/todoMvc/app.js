@@ -6,6 +6,7 @@ import App from './app.vue'
 import Mock from './mock'
 
 Mock.start() // 并且执行初始化函数
+
 Vue.config.productionTip = false
 
 new Vue({

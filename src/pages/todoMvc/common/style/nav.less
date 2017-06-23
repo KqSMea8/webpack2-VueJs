@@ -3,24 +3,31 @@
 // Generic nav positioning and styles
 nav {
   .position(absolute, 0, 0, auto, 0);
-  transform: translate3d(0,0,0);
-  transition: all 200ms ease-out;
+
   z-index: 10;
 
+  transform: translate3d(0,0,0);
+  transition: all 200ms ease-out;
+
+  //图标容器
   .nav-item {
-    .font-m1;
-    color: @color-ancillary;
     display: inline-block;
-    height: 3rem;
-    text-align: center;
+
     width: 3rem;
+    height: 3rem;
+
+    color: @color-ancillary;
+    text-align: center;
+    .font-m1;
 
     &:active { opacity: .5; }
 
     [class^="icon-"],
     [class*=" icon-"] {
+
       line-height: 3rem;
       vertical-align: middle;
+
     }
 
     [class="icon-lock"]{
@@ -30,13 +37,15 @@ nav {
       color:green;
     }
   }
+
+  //图标容器
   .nav-group {
     .position(absolute, 0, auto, auto, 0);
     z-index: 1;
 
     &.right {
       left: auto;
-      right: 0;
+      right: 50%;
     }
   }
 }

@@ -38,5 +38,3 @@ export const addItem = params => {
 export const updateItem = params => {
 	return axios.post(`/todo/updateItem`, params).then(res => res.data)
 }
-
-
