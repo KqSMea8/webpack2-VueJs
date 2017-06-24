@@ -66,7 +66,7 @@
 					</a>
 					<ul class = "dropdown-menu">
 						<li>
-							<a href = "/pages/blog/app.html">博客</a>
+							<a href = "/pages/blog/app.html">blog</a>
 						</li>
 						<li>
 							<a href = "/pages/blogE/app.html">blogE</a>

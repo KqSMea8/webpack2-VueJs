@@ -1,6 +1,6 @@
 <template>
 	<div>
-		
+		<!--所有类别-->
 		<div class = "top">
 			<p>{{ config.categories.length }} categories in total</p>
 			<h1>All Categories</h1>
@@ -24,23 +24,18 @@
 </template>
 
 <script>
-  
-  import { mapGetters } from 'vuex'
-  
-  export default {
-    name: 'categories',
-    
-    computed: {
-      ...mapGetters(['config'])
-    },
-    
-    created() {
-      document.title = `All Categories - ${this.config.title}`
-    }
-  }
-
+	import { mapGetters } from 'vuex'
+	export default {
+		name    : 'categories',
+		created() {
+			document.title = `All Categories - ${this.config.title}`
+		},
+		computed: {
+			...mapGetters(['config'])
+		}
+	}
 </script>
 
-<style lang = "postcss">
-	@import "../css/images.css";
+<style>
+	@import "../css/images.scss";
 </style>

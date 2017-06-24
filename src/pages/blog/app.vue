@@ -1,9 +1,11 @@
 <template>
 	<div class = "container">
+		<!--菜单栏-->
 		<AMenu></AMenu>
 		<div class = "main">
+			<!--控制菜单显示以及回到首页-->
 			<Aheader></Aheader>
-			<transition v-if = "config.title" name = "slide-fade" mode = "out-in">
+			<transition name = "slide-fade" mode = "out-in">
 				<router-view class = "view"></router-view>
 			</transition>
 			<Afooter></Afooter>
@@ -13,66 +15,51 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
-  
-  import AMenu from './components/menu/menu.vue'
-  import Aheader from './components/header/header.vue'
-  import Afooter from './components/footer/footer.vue'
-  import Notice from './components/notice/notice.vue'
-  
-  export default {
-    name      : 'app',
-    components: {
-      Aheader,
-      AMenu,
-      Afooter,
-      Notice
-    },
-    data() {
-      return {
-        ttl: this.$store.getters.config.title
-      }
-    },
-    computed  : {
-      ...mapGetters(['config'])
-    },
-    // https://cn.vuejs.org/v2/api/#watch
-    watch     : {
-      config() {
-        if (this.config.title) {
-          setTimeout(() => {
-            document.documentElement.classList.remove('loading')
-          }, 1500)
-        }
-      }
-    }
-  }
+	import { mapGetters } from 'vuex'
+	// 菜单栏
+	import AMenu from './components/menu/menu.vue'
+	// 控制菜单显示以及回到首页
+	import Aheader from './components/header/header.vue'
+	// 页脚
+	import Afooter from './components/footer/footer.vue'
+	// 警告信息
+	import Notice from './components/notice/notice.vue'
+	export default {
+		name      : 'app',
+		components: {
+			Aheader,
+			AMenu,
+			Afooter,
+			Notice
+		},
+		data() {
+			return {
+				//  todo-vue：this.config.title -> Cannot read property 'title' of undefined
+				//  解决：将this.config.title 改为 this.$store.getters.config.title
+				//  ttl:this.$store.getters.config.title
+			}
+		},
+		watch     : {
+			// todo-vue：config()会在create在之前被触发，但并不会执行config函数体内的内容
+			/*config() {
+				console.log(`app.vue->this.config.title`);
+				console.log(this.config.title)
+				if (this.config.title) {
+					setTimeout(() => {
+						document.documentElement.classList.remove('loading')
+					}, 1500)
+				}
+			}*/
+		},
+		computed  : {
+			// ...mapGetters(['config'])
+		}
+	}
 
 </script>
 
 <style>
-	@import "../../static/css/normalize.css";
-	
-	html, body {
-		background: #fff;
-	}
-	
-	body {
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
-	
-	.slide-fade-enter-active,
-	.slide-fade-leave-active {
-		transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-	}
-	
-	.slide-fade-enter,
-	.slide-fade-leave-active {
-		transform: translateX(10px);
-		opacity: 0;
-	}
+	@import './css/common.css';
 	
 	.container {
 		position: relative;
@@ -84,27 +71,10 @@
 		transition: padding .3s ease;
 	}
 	
-	.view {
-		min-height: 600px;
-	}
-	
 	.content {
 		width: 96%;
 		max-width: 800px;
 		margin: 50px auto 0;
-	}
-	
-	h1, h2, h3, h4, h5, p {
-		margin: 0;
-		font-weight: normal;
-	}
-	
-	a {
-		text-decoration: none;
-	}
-	
-	ul {
-		list-style: none;
 	}
 	
 	@media screen and (max-width: 600px) {
@@ -115,6 +85,21 @@
 		.content {
 			margin-top: 20px;
 		}
+	}
+	
+	.view {
+		min-height: 600px;
+	}
+	
+	.slide-fade-enter-active,
+	.slide-fade-leave-active {
+		transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+	}
+	
+	.slide-fade-enter,
+	.slide-fade-leave-active {
+		transform: translateX(10px);
+		opacity: 0;
 	}
 
 </style>

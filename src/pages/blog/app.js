@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import axios from 'axios'
 
 // 导入路由
 import router from './router/index'
@@ -14,9 +13,7 @@ import app from './app.vue'
 // 导入样式
 require('./app.css')
 
-const isDevelopment = process.env.NODE_ENV === 'development'
-
-Vue.config.devtools = isDevelopment
+Vue.config.devtools = true
 Vue.config.productionTip = false
 Vue.use(plugin)
 

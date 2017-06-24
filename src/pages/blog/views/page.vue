@@ -1,6 +1,6 @@
 <template>
 	<div>
-		
+		<!--关于页面-->
 		<div class = "top">
 			<p>{{ post.title }}</p>
 			<h1>{{ post.name }}</h1>

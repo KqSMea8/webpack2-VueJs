@@ -1,22 +1,22 @@
 <template>
-	
+	<!--所有文章列表页/5条-->
 	<ul class = "posts">
 		<li v-for = "post in posts">
+			<!--文章标题-->
 			<router-link :to = "`/posts/${post.id}`">{{ post.title }}</router-link>
+			<!--文章简介-->
 			<div class = "summary" v-html = "post.summary"></div>
+			<!--文章时间-->
 			<p>{{ post.updated | timeFormat }}</p>
 		</li>
 	</ul>
-
 </template>
 
 <script>
-  
-  export default {
-    name : 'posts',
-    props: ['posts']
-  }
-
+	export default {
+		name : 'posts',
+		props: ['posts']
+	}
 </script>
 
 <style rel = "stylesheet/scss" lang = "scss">

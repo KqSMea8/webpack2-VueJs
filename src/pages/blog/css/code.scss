@@ -43,13 +43,11 @@
   color: #718c00;
 }
 
-/* Tomorrow Blue */
 .hljs-title,
 .hljs-section {
   color: #4271ae;
 }
 
-/* Tomorrow Purple */
 .hljs-keyword,
 .hljs-selector-tag {
   color: #8959a8;
@@ -66,22 +64,21 @@
   line-height: 1.6;
   margin-bottom: 16px;
 
-  & table {
+  table {
     margin-bottom: 0;
   }
 
-  & td,
-  & tr {
-    padding: 0!important;
-    border: none!important;
-    background: transparent!important;
+  td, tr {
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
   }
 
-  & .mark {
+  .mark {
     display: none;
   }
 
-  & pre {
+  pre {
     margin: 0;
     padding: 0;
     white-space: pre;
@@ -90,17 +87,18 @@
     background: transparent;
   }
 
-  & .line {
+  .line {
     text-align: right;
     padding: 0;
-    padding-right: 10px!important;
+    padding-right: 10px !important;
     border: none;
     color: #a7a7a7;
   }
 
-  & .code {
-    padding-left: 10px!important;
+  .code {
+    padding-left: 10px !important;
   }
+
 }
 
 .hljs-emphasis {

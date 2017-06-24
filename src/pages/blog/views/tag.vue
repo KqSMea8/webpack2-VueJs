@@ -1,6 +1,6 @@
 <template>
 	<div>
-		
+		<!--单标签页面-->
 		<div class = "top">
 			<p>{{ sum }} posts in total</p>
 			<h1>{{ tag.name }}</h1>
@@ -28,148 +28,122 @@
 </template>
 
 <script>
-  
-  import { mapActions, mapGetters } from 'vuex'
-  import Posts from '../components/posts/posts.vue'
-  import { clone } from '../assist/utils'
-  
-  export default {
-    name: 'tag',
-    
-    components: {
-      Posts
-    },
-    
-    data() {
-      return {
-        isdisabled: false,
-        sum     : ''
-      }
-    },
-    
-    created() {
-      const {
-              config: {
-                title,
-                tags
-              },
-              id,
-              page,
-              total
-            } = this
-      
-      const {name, count} = tags.find(tag => tag.id == id)
-      document.title = `${name} - ${title}`
-      
-      if (page > total) {
-        return this.$router.replace(`/tags/${id}`)
-      }
-      
-      this.sum = count
-      this.getPosts()
-    },
-    
-    watch: {
-      page() {
-        this.getPosts()
-      }
-    },
-    
-    computed: {
-      tag() {
-        const {
-                id,
-                tags
-              } = this
-        
-        return tags[id] || {}
-      },
-      
-      id() {
-        return this.$route.params.id
-      },
-      
-      page() {
-        return +this.$route.params.page || 1
-      },
-      
-      posts() {
-        const {
-                tag,
-                page,
-                config: {per_page}
-              } = this
-        
-        if (!tag.posts) {
-          return []
-        }
-        return tag.posts[page] || []
-      },
-      
-      total() {
-        const {
-                config: {
-                  tags,
-                  per_page,
-                },
-                id,
-              } = this
-        
-        if (per_page === 0) {
-          return 1
-        }
-        
-        const {count} = tags.filter(tag => tag.id == id)[0]
-        return Math.ceil(count / per_page)
-      },
-      
-      ...mapGetters(['config', 'tags'])
-    },
-    
-    methods: {
-      getPosts() {
-        const {
-                id,
-                config: {per_page},
-                tags,
-                page
-              } = this
-        
-        const _tags = clone(tags)
-        
-        if (!tags[id]) {
-          return this.loadPosts().then((res) => {
-            const {name, posts} = res
-            _tags[id] = {id, name, posts: {}}
-            _tags[id].posts[page] = posts
-            this.setTags(_tags)
-          })
-        }
-        
-        if (!tags[id].posts[page]) {
-          this.loadPosts().then((res) => {
-            _tags[id].posts[page] = res.posts
-            this.setTags(_tags)
-          })
-        }
-      },
-      
-      loadPosts() {
-        const {
-                id,
-                page
-              } = this
-        
-        this.isdisabled = true
-        return this.$load(`tags/${id}/${page}`).then((res) => {
-          this.isdisabled = false
-          return res
-        })
-      },
-      
-      ...mapActions(['setTags'])
-    }
-  }
+	import { mapActions, mapGetters } from 'vuex'
+	import Posts from '../components/posts/posts.vue'
+	import { clone } from '../assist/utils'
+	export default {
+		name: 'tag',
+		components: {
+			Posts
+		},
+		data() {
+			return {
+				isdisabled: false,
+				sum       : ''
+			}
+		},
+		created() {
+			const {
+				      config: {
+					      title,
+					      tags
+				      },
+				      id,
+				      page,
+				      total
+			      } = this
+			const {name, count} = tags.find(tag => tag.id == id)
+			document.title = `${name} - ${title}`
+			if (page > total) {
+				return this.$router.replace(`/tags/${id}`)
+			}
+			this.sum = count
+			this.getPosts()
+		},
+		watch: {
+			page() {
+				this.getPosts()
+			}
+		},
+		computed: {
+			...mapGetters(['config', 'tags']),
+			tag() {
+				const {
+					      id,
+					      tags
+				      } = this
+				return tags[id] || {}
+			},
+			id() {
+				return this.$route.params.id
+			},
+			page() {
+				return +this.$route.params.page || 1
+			},
+			posts() {
+				const {
+					      tag,
+					      page,
+					      config: {per_page}
+				      } = this
+				if (!tag.posts) {
+					return []
+				}
+				return tag.posts[page] || []
+			},
+			total() {
+				const {
+					      config: {
+						      tags,
+						      per_page,
+					      },
+					      id,
+				      } = this
+				if (per_page === 0) {
+					return 1
+				}
+				const {count} = tags.filter(tag => tag.id == id)[0]
+				return Math.ceil(count / per_page)
+			}
+		},
+		methods: {
+			getPosts() {
+				const {
+					      id,
+					      config: {per_page},
+					      tags,
+					      page
+				      } = this
+				const _tags = clone(tags)
+				if (!tags[id]) {
+					return this.loadPosts().then((res) => {
+						const {name, posts} = res
+						_tags[id] = {id, name, posts: {}}
+						_tags[id].posts[page] = posts
+						this.setTags(_tags)
+					})
+				}
+				if (!tags[id].posts[page]) {
+					this.loadPosts().then((res) => {
+						_tags[id].posts[page] = res.posts
+						this.setTags(_tags)
+					})
+				}
+			},
+			loadPosts() {
+				const {
+					      id,
+					      page
+				      } = this
+				this.isdisabled = true
+				return this.$load(`tags/${id}/${page}`).then((res) => {
+					this.isdisabled = false
+					return res
+				})
+			},
+			...mapActions(['setTags'])
+		}
+	}
 
 </script>
 

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		
+		<!--所有文章页面/30条-->
 		<div class = "top">
 			<p>{{ config.posts.length }} posts in total</p>
 			<h1>Archives</h1>
@@ -33,106 +33,85 @@
 </template>
 
 <script>
-  
-  import { mapActions, mapGetters } from 'vuex'
-  import { clone } from '../assist/utils'
-  
-  export default {
-    name: 'archives',
-    
-    data() {
-      return {
-        disabled: false
-      }
-    },
-    
-    created() {
-      const {
-              page,
-              archives,
-              total,
-              config: {title}
-            } = this
-      
-      document.title = `Archives - ${title}`
-      
-      if (page > total) {
-        return this.$router.replace('/archives')
-      }
-      
-      const _archives = clone(archives)
-      
-      if (archives[page]) {
-        return
-      }
-      
-      this.$load(`archives/${page}`).then((res) => {
-        _archives[page] = res
-        this.setArchives(_archives)
-      })
-    },
-    
-    computed: {
-      total() {
-        const {
-                posts,
-                archives_per_page
-              } = this.config
-        
-        if (archives_per_page === 0 || posts.length === 0) {
-          return 1
-        }
-        return Math.ceil(posts.length / archives_per_page)
-      },
-      
-      page() {
-        return +this.$route.params.page || 1
-      },
-      
-      items() {
-        const {
-                archives,
-                page,
-                config: {archives_per_page}
-              } = this
-        
-        return archives[page] || []
-      },
-      
-      ...mapGetters(['config', 'archives'])
-    },
-    
-    watch: {
-      page() {
-        this.getArchives()
-      }
-    },
-    
-    methods: {
-      getArchives() {
-        const {
-                config: {archives_per_page},
-                page,
-                archives
-              } = this
-        
-        const _archives = clone(archives)
-        
-        if (archives[page]) {
-          return
-        }
-        
-        this.disabled = true
-        this.$load(`archives/${page}`).then((res) => {
-          this.disabled = false
-          _archives[page] = res
-          this.setArchives(_archives)
-        })
-      },
-      
-      ...mapActions(['setArchives'])
-    }
-  }
+	import { mapActions, mapGetters } from 'vuex'
+	import { clone } from '../assist/utils'
+	export default {
+		name    : 'archives',
+		data() {
+			return {
+				disabled: false
+			}
+		},
+		created() {
+			const {
+				      page,
+				      archives,
+				      total,
+				      config: {title}
+			      } = this
+			document.title = `Archives - ${title}`
+			if (page > total) {
+				return this.$router.replace('/archives')
+			}
+			const _archives = clone(archives)
+			if (archives[page]) {
+				return
+			}
+			this.$load(`archives/${page}`).then((res) => {
+				_archives[page] = res
+				this.setArchives(_archives)
+			})
+		},
+		computed: {
+			total() {
+				const {
+					      posts,
+					      archives_per_page
+				      } = this.config
+				if (archives_per_page === 0 || posts.length === 0) {
+					return 1
+				}
+				return Math.ceil(posts.length / archives_per_page)
+			},
+			page() {
+				return +this.$route.params.page || 1
+			},
+			items() {
+				const {
+					      archives,
+					      page,
+					      config: {archives_per_page}
+				      } = this
+				return archives[page] || []
+			},
+			...mapGetters(['config', 'archives'])
+		},
+		watch   : {
+			page() {
+				this.getArchives()
+			}
+		},
+		methods : {
+			getArchives() {
+				const {
+					      config: {archives_per_page},
+					      page,
+					      archives
+				      } = this
+				const _archives = clone(archives)
+				if (archives[page]) {
+					return
+				}
+				this.disabled = true
+				this.$load(`archives/${page}`).then((res) => {
+					this.disabled = false
+					_archives[page] = res
+					this.setArchives(_archives)
+				})
+			},
+			...mapActions(['setArchives'])
+		}
+	}
 
 </script>
 

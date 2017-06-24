@@ -1,11 +1,10 @@
 <template>
 	<div>
-		
+		<!--所有标签页面-->
 		<div class = "top">
 			<p>{{ config.tags.length }} tags in total</p>
 			<h1>All Tags</h1>
 		</div>
-		
 		<div class = "tags">
 			<div class = "content images" v-if = "config.tags">
 				<router-link
@@ -19,28 +18,23 @@
 				</router-link>
 			</div>
 		</div>
-	
 	</div>
 </template>
 
 <script>
-  
-  import { mapGetters } from 'vuex'
-  
-  export default {
-    name: 'tags',
-    
-    computed: {
-      ...mapGetters(['config'])
-    },
-    
-    created() {
-      document.title = `All Tags - ${this.config.title}`
-    }
-  }
+	import { mapGetters } from 'vuex'
+	export default {
+		name    : 'tags',
+		created() {
+			document.title = `All Tags - ${this.config.title}`
+		},
+		computed: {
+			...mapGetters(['config'])
+		}
+	}
 
 </script>
 
 <style lang = "postcss">
-	@import "../css/images.css";
+	@import "../css/images.scss";
 </style>
