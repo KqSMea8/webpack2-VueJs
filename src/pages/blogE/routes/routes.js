@@ -1,3 +1,4 @@
+// TODO-vueRouter:异步读取组件
 import Reg from '../components/backEnd/Reg'
 import Login from '../components/backEnd/Login'
 import Admin from '../components/backEnd/Admin'
@@ -13,14 +14,20 @@ import Article from '../components/fronted/Article'
 import NotFound from '../components/NotFound'
 
 export default [
-
+	// 登录
+	{
+		path:'/login',
+		component:Login,
+		hidden:true
+	},
+	// 注册
   {
     path:'/reg',
     component:Reg,
     meta:{auth:false},
     hidden:true
   },
-
+	// 前端路由
   {
     path:'/',
     component:Front, // 这是文章页
@@ -33,13 +40,8 @@ export default [
       {path:'article/:id', component:Article, meta:{auth:false, scrollToTop: true}}
     ]
   },
+	// 后台路由
   {
-    path:'/login',
-    component:Login,
-    hidden:true
-  },
-  {
-    // 后台路由
     path:'/admin',
     component:Admin,
     name:'管理面板',

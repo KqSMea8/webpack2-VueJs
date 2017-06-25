@@ -50,4 +50,4 @@
 2. [用 axios.all 同时处理多个并发请求](https://github.com/mzabriskie/axios)
 
 ####Issues
-1.从主站跳转到分站时，URL指向不合理
+1. 从主站跳转到分站时，URL指向不合理

@@ -18,18 +18,19 @@ const router = new VueRouter({
     scrollBehavior,
     routes
 })
-// 全局路由钩子 see：http://www.shouce.ren/api/view/a/11762
+// Todo-vuerouter:全局路由钩子 see：http://www.shouce.ren/api/view/a/11762
 // 拦截需要验证登录的页面以及登陆之后访问登录和注册的页面
 router.beforeEach(({meta, path}, from, next) => {
   store.dispatch('showProgress', 0)
   // NProgress.start();
-  let {auth = true} = meta
+	console.log(`beforeEach->meta`, meta)
+	console.log(`beforeEach->path`, path)
+	// let {auth = true} = meta
+	// todo-server：前后端未能分离，因此改为false
+	let {auth = false} = meta
   let isLogin = Boolean(store.state.token)
-
-  /*
-      访问不需要权限的设置meta:false
-      注册也要设置成meta:false
-  */
+	console.log(`beforeEach->auth`, auth)
+  // 访问不需要权限的设置meta:false,注册也要设置成meta:false
   if (auth && !isLogin && path !== '/login') {
     return next({path:'/login'})
   }

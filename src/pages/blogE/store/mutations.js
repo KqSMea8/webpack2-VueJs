@@ -1,3 +1,4 @@
+// todo-vuex:type 还是应该通过 * as type 来引用
 import {USER_SIGNIN, USER_SIGNOUT, USER_REG, SHOW_PROGRESS, HEAD_LINE} from './types'
 export default {
   [USER_REG] (state, token) {

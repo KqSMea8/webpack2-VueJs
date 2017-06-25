@@ -31,6 +31,7 @@ front_instance.interceptors.response.use(response => {
 	store.dispatch('showProgress', 100)
 	return Promise.reject(err)
 })
+// Todo-server:前后端分离，需要涉及到webpack->config->index:proxyTable
 export default {
 	// 注册
 	localReg (data) {

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// TODO-vuex:异步读取组件
+// TODO-vueRouter:异步读取组件
 import Home from '../views/home.vue'
 import Post from '../views/post.vue'
 import Category from '../views/category.vue'

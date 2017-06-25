@@ -1,4 +1,4 @@
-// 各种Store
+
 export default {
   token:isLoggedIn() || null,
   progress:0,
