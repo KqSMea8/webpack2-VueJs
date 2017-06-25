@@ -66,19 +66,10 @@
 					</a>
 					<ul class = "dropdown-menu">
 						<li>
-							<a href = "/pages/blog/app.html">blog</a>
+							<a href = "/pages/blog/app.html">blog 生命周期</a>
 						</li>
 						<li>
-							<a href = "/pages/blogE/app.html">blogE</a>
-						</li>
-						<li>
-							<a href = "/pages/cnodeJ/app.html">cnodeJ</a>
-						</li>
-						<li>
-							<a href = "/pages/cnodeB/app.html">cnodeB</a>
-						</li>
-						<li>
-							<a href = "/pages/cnodeV/app.html">cnodeV</a>
+							<a href = "/pages/blogE/app.html">blogE 前后端分离</a>
 						</li>
 					</ul>
 				</li>

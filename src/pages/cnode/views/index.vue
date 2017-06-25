@@ -1,46 +1,46 @@
 <template>
 	<div style = "text-align: center;">
 		<img class = "index" src = "../images/logo.png">
-		<button class = "jumpover" @click="jump()">跳过( {{ remainTime / 1000 }}秒 )</button>
+		<button class = "jumpover" @click = "jump()">跳过( {{ remainTime / 1000 }}秒 )</button>
 	</div>
 </template>
 
 <script>
-  require('../css/CV.scss');
-  require('../css/iconfont/iconfont.css');
-  require('../css/github-markdown.css');
-  export default {
-    data(){
-      return {
-        remainTime: 3000,
-        flag      : false
-      };
-    },
-    mounted() {
-      let time = setInterval(() => {
-        if (this.flag === true) {
-          clearInterval(time)
-          this.jump()
-        }
-        this.timeDown()
-      }, 1000)
-     
-    },
-    methods:{
-      timeDown(){
-        if (this.remainTime > 0) {
-          this.remainTime = this.remainTime - 1000
-        }else{
-          this.flag=true
-        }
-      },
-      jump(){
-        this.$router.push({
-          name: 'list'
-        });
-      }
-    }
-  };
+	require('../css/CV.scss');
+	require('../css/iconfont/iconfont.css');
+	require('../css/github-markdown.css');
+	export default {
+		data(){
+			return {
+				remainTime: 3000,
+				flag      : false
+			};
+		},
+	    // todo-vue:广告中转站倒计时
+		mounted() {
+			let time = setInterval(() => {
+				if (this.flag === true) {
+					clearInterval(time)
+					this.jump()
+				}
+				this.timeDown()
+			}, 1000)
+		},
+		methods: {
+			timeDown(){
+				if (this.remainTime > 0) {
+					this.remainTime = this.remainTime - 1000
+				} else {
+					this.flag = true
+				}
+			},
+			jump(){
+				this.$router.push({
+					name: 'list'
+				});
+			}
+		}
+	};
 </script>
 <style lang = "scss">
 	/*body页面加载CSS效果由common.scss决定*/

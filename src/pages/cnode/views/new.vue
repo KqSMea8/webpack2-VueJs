@@ -70,9 +70,10 @@
           content    : this.topic.content + this.authorTxt,
           accesstoken: this.userInfo.token
         };
+	    console.log(`提交主题的数据:`,postData)
         Zepto.ajax({
           type    : 'POST',
-          url     : 'https://cnodejs.org/api/v1/topics',
+          url     : 'https://ccnodejs.org/api/v1/topics',
           data    : postData,
           dataType: 'json',
           success : (res) => {
@@ -97,26 +98,36 @@
 	.add-container {
 		margin-top: 50px;
 		background-color: #fff;
+		/*选择分类*/
 		.line {
 			padding: 10px 15px;
 			border-bottom: solid 1px #d4d4d4;
+			
+			/*发布*/
 			.add-btn {
-				color: #fff;
-				background-color: #80bd01;
+				
 				padding: 5px 15px;
 				border-radius: 5px;
+				
+				background-color: #80bd01;
+				color: #fff;
+	
 			}
+			/*选择类型*/
 			.add-tab {
 				display: inline-block;
+				
 				width: calc(100% - 140px);
 				min-width: 50%;
-				font-size: 16px;
+				
 				background: transparent;
+				font-size: 16px;
+	
 				:after {
 					content: 'xe60e';
 				}
-			;
 			}
+			/*标题*/
 			.add-title {
 				font-size: 16px;
 				border: none;

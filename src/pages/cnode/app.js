@@ -11,18 +11,15 @@ import plugin from './plugin/index'
 // var filters =  require('./plugin/filters')
 import * as filters from './plugin/filters'
 
-// 导入组件
-
 // 导入样式
-// require('./app.css')
+require('./app.css')
 
-// console.log(vuexStore)
-const isDevelopment = process.env.NODE_ENV === 'development'
-Vue.config.devtools = isDevelopment
+// const isDevelopment = process.env.NODE_ENV === 'development'
+Vue.config.devtools = true
 Vue.config.productionTip = false
 Vue.use(plugin)
 
-// 实例化Vue的filter
+// todo-vue:实例化Vue的filter
 Object.keys(filters).forEach(k => Vue.filter(k, filters[k]))
 
 Zepto.ajaxSettings.crossDomain = true
@@ -33,11 +30,12 @@ if (window.sessionStorage.user) {
   vuexStore.dispatch('setUserInfo', JSON.parse(window.sessionStorage.user))
 }
 
-// 页面需要登录而没有登录的情况直接跳转登录
+// todo-vuerouter:router.beforeEach
 router.beforeEach((to, from, next) => {
   // 处理左侧滚动不影响右边
   Zepto('html, body, #page').removeClass('scroll-hide')
-  // console.table(to.matched)
+	// console.log('router.beforeEach：', to)
+	// 需要登录的页面而没有登录的情况直接跳转登录
   if (to.matched.some(record => record.meta.requiresAuth)) {
     if (vuexStore.state.userInfo.userId) {
       next()

@@ -18,40 +18,36 @@
 	</div>
 </template>
 <script>
-  import { mapGetters } from 'vuex';
-  
-  export default {
-    replace : true,
-    computed: {
-      ...mapGetters({
-        userInfo: 'getUserInfo'
-      })
-    },
-    methods : {
-      /*登录框*/
-      goEnter() {
-        this.$router.push({
-          name : 'login',
-          query: {
-            // https://router.vuejs.org/zh-cn/api/route-object.html
-            // $route.path 字符串，对应当前路由的路径，总是解析为绝对路径，如 "/foo/bar"
-            redirect: encodeURIComponent(this.$route.path)
-          }
-        });
-      },
-      /*用户信息*/
-      goUser() {
-        this.$router.push({
-          name  : 'user',
-          params: {
-            loginname: this.userInfo.loginname
-          }
-        });
-      }
-    }
-  };
+	import { mapGetters } from 'vuex';
+	export default {
+		replace : true,
+		computed: {
+			...mapGetters({
+				userInfo: 'getUserInfo'
+			})
+		},
+		methods : {
+			/*登录框*/
+			goEnter() {
+				this.$router.push({
+					name : 'login',
+					query: {
+						// todo-vuerouter:在query里面的redirect记录当前路由地址
+						redirect: encodeURIComponent(this.$route.path)
+					}
+				});
+			},
+			/*用户信息*/
+			goUser() {
+				this.$router.push({
+					name  : 'user',
+					params: {
+						loginname: this.userInfo.loginname
+					}
+				});
+			}
+		}
+	};
 </script>
 
-<style lang = "scss">
-
-</style>
+<style lang = "scss"></style>

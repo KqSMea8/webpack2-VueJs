@@ -42,70 +42,73 @@
 	</div>
 </template>
 <script>
-  import Zepto from 'webpack-zepto';
-  import * as utils from '../assist/utils.js';
-  // var utils =  require('../assist/utils.js')
-  import nvHead from '../components/header.vue';
-  import { mapGetters } from 'vuex';
-  
-  export default {
-    components: {
-      nvHead
-    },
-    data() {
-      return {
-        showMenu   : false,
-        selectItem : 2,
-        message    : {},
-        noData     : false,
-        currentData: [],
-        no_read_len: 0
-      };
-    },
-    computed  : {
-      ...mapGetters({
-        userInfo: 'getUserInfo'
-      })
-    },
-    mounted() {
-      // get /message/count 获取未读消息数
-      Zepto.get('https://cnodejs.org/api/v1/messages?accesstoken=' + this.userInfo.token, (d) => {
-        if (d && d.data) {
-          this.message = d.data;
-          this.no_read_len = d.data.hasnot_read_messages.length;
-          if (d.data.hasnot_read_messages.length > 0) {
-            this.currentData = d.data.hasnot_read_messages;
-          } else {
-            this.currentData = d.data.has_read_messages;
-            this.selectItem = 2;
-          }
-          this.noData = this.currentData.length === 0;
-        } else {
-          this.noData = true;
-        }
-      });
-    },
-    methods   : {
-      // 切换tab
-      changeItem(idx) {
-        this.selectItem = idx;
-        this.currentData = idx === 1 ? this.message.hasnot_read_messages : this.message.has_read_messages;
-        this.noData = this.currentData.length === 0;
-      },
-      // post /message/mark_all 标记全部已读
-      markall() {
-        Zepto.post('https://cnodejs.org/api/v1/message/mark_all', {
-          accesstoken: this.userInfo.token
-        }, (d) => {
-          if (d && d.success) {
-            window.location.reload();
-          }
-        });
-      },
-      getLastTimeStr(date, friendly) {
-        return utils.getLastTimeStr(date, friendly);
-      }
-    }
-  };
+	import Zepto from 'webpack-zepto';
+	import * as utils from '../assist/utils.js';
+	import nvHead from '../components/header.vue';
+	import { mapGetters } from 'vuex';
+	export default {
+		components: {
+			nvHead
+		},
+		data() {
+			return {
+				// TODO-vue: 跨组件控制menu隐藏？
+				showMenu: false,
+				// 存储未读消息以及已读消息
+				message    : {},
+				// 无数据时显示
+				noData     : false,
+				// 当前面板要填充的数据
+				currentData: [],
+				selectItem : 2,
+				// 未读消息数量
+				no_read_len: 0
+			};
+		},
+		computed  : {
+			...mapGetters({
+				userInfo: 'getUserInfo'
+			})
+		},
+		mounted() {
+			// get /message/count 获取未读消息数
+			Zepto.get('https://cnodejs.org/api/v1/messages?accesstoken=' + this.userInfo.token, (d) => {
+				if (d && d.data) {
+					this.message = d.data;
+					this.no_read_len = d.data.hasnot_read_messages.length;
+					if (d.data.hasnot_read_messages.length > 0) {
+						this.currentData = d.data.hasnot_read_messages;
+					} else {
+						this.currentData = d.data.has_read_messages;
+						this.selectItem = 2;
+					}
+					this.noData = this.currentData.length === 0;
+				} else {
+					this.noData = true;
+				}
+			});
+		},
+		methods   : {
+			// 切换tab
+			changeItem(idx) {
+				this.selectItem = idx;
+				this.currentData = idx === 1 ? this.message.hasnot_read_messages : this.message.has_read_messages;
+				this.noData = this.currentData.length === 0;
+			},
+			// post /message/mark_all 标记全部已读
+			markall() {
+				Zepto.post('https://cnodejs.org/api/v1/message/mark_all', {
+					accesstoken: this.userInfo.token
+				}, (d) => {
+					if (d && d.success) {
+						window.location.reload();
+					}
+				});
+			},
+			getLastTimeStr(date, friendly) {
+				return utils.getLastTimeStr(date, friendly);
+			}
+		}
+	};
 </script>
 

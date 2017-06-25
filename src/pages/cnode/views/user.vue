@@ -39,72 +39,70 @@
 	</div>
 </template>
 <style scoped>
-	.topics{
+	.topics {
 		background-color: white;
 	}
 </style>
 <script>
-  import Zepto from 'webpack-zepto';
-  import * as utils from '../assist/utils.js';
-  // var utils =  require('../assist/utils.js')
-  import nvHead from '../components/header.vue';
-  
-  // Todo：loading标识符总是有
-  // background-color:white
-  export default {
-    components: {
-      nvHead
-    },
-    data() {
-      return {
-        user       : {},
-        currentData: [],
-        selectItem : 1
-      };
-    },
-    mounted() {
-      this.getUser();
-    },
-    methods   : {
-      // 切换tab
-      changeItem(idx) {
-        this.selectItem = idx;
-        this.currentData = idx === 1 ? this.user.recent_replies : this.user.recent_topics;
-      },
-      getLastTimeStr(date, friendly) {
-        return utils.getLastTimeStr(date, friendly);
-      },
-      getUser() {
-        let loginname = this.$route.params.loginname;
-        if (!loginname) {
-          this.$alert('缺少用户名参数');
-          this.$router.push({
-            path: '/'
-          });
-          return false;
-        }
-        // get /user/:loginname 用户详情
-        Zepto.get('https://cnodejs.org/api/v1/user/' + loginname, (d) => {
-          if (d && d.data) {
-            let data = d.data;
-            this.user = data;
-            if (data.recent_replies.length > 0) {
-              this.currentData = data.recent_replies;
-            } else {
-              this.currentData = data.recent_topics;
-              this.selectItem = 2;
-            }
-          }
-        });
-      }
-    },
-    watch     : {
-      // http://www.cnblogs.com/fayin/p/6418950.html
-      // 如果路由有变化，会再次执行该方法
-      '$route' (to, from) {
-        this.getUser();
-      }
-    },
-    
-  };
+	import Zepto from 'webpack-zepto';
+	import * as utils from '../assist/utils.js';
+	import nvHead from '../components/header.vue';
+	export default {
+		components: {
+			nvHead
+		},
+		data() {
+			return {
+				// 当前用户信息
+				user       : {},
+			    // tab容器信息，最近回复以及最近主题数据
+				currentData: [],
+			    // 切换tab容器
+				selectItem : 1
+			};
+		},
+		mounted() {
+			this.getUser();
+		},
+		methods   : {
+			// 切换tab
+			changeItem(idx) {
+				this.selectItem = idx;
+				this.currentData = idx === 1 ? this.user.recent_replies : this.user.recent_topics;
+			},
+			getLastTimeStr(date, friendly) {
+				return utils.getLastTimeStr(date, friendly);
+			},
+			getUser() {
+				let loginname = this.$route.params.loginname;
+				if (!loginname) {
+					this.$alert('缺少用户名参数');
+					this.$router.push({
+						path: '/'
+					});
+					return false;
+				}
+				// get /user/:loginname 用户详情
+				Zepto.get('https://cnodejs.org/api/v1/user/' + loginname, (d) => {
+					if (d && d.data) {
+						let data = d.data;
+						this.user = data;
+						if (data.recent_replies.length > 0) {
+							this.currentData = data.recent_replies;
+						} else {
+							this.currentData = data.recent_topics;
+							this.selectItem = 2;
+						}
+					}
+				});
+			}
+		},
+		watch     : {
+			// todo-vue: watch 切换路由时，只是menu菜单切换时才触发？？
+			'$route' (to, from) {
+				console.log(`watch->$route:`, this.$route)
+				this.getUser();
+			}
+		},
+	};
 </script>

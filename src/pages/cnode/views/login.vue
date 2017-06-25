@@ -48,7 +48,7 @@
             };
             window.window.sessionStorage.user = JSON.stringify(user);
             this.$store.dispatch('settingUserInfo', user);
-            /*跳转到 /list */
+            // todo-vuerouter:跳转到在query里面的redirect记录的旧路由地址或者/list
             let redirect = decodeURIComponent(this.$route.query.redirect || '/');
             this.$router.push({
               path: redirect
@@ -56,6 +56,7 @@
           },
           error   : (res) => {
             var error = JSON.parse(res.responseText);
+            // todo-vue：触发注册在全局上的Vue.prototype.$alert插件
             this.$alert(error.error_msg);
           }
         });
@@ -66,36 +67,42 @@
 </script>
 <style lang = "scss">
 	.page-body {
-		padding: 50px 15px;
 		min-height: 400px;
+		padding: 50px 15px;
 		background-color: #fff;
 		.label {
 			display: inline-block;
-			width: 100%;
-			margin-top: 15px;
-			position: relative;
+			position: absolute;
 			left: 0;
 			top: 0;
+			
+			width: 100%;
+			margin-top: 15px;
+		
 			.txt {
+				width: 100%;
 				padding: 12px 0;
 				border: none;
 				border-bottom: 1px solid #4fc08d;
+				
 				background-color: transparent;
-				width: 100%;
-				font-size: 14px;
 				color: #313131;
+				font-size: 14px;
 			}
 			.button {
 				display: inline-block;
+				
 				width: 99%;
 				height: 42px;
-				line-height: 42px;
-				border-radius: 3px;
-				color: #fff;
-				font-size: 16px;
-				background-color: #4fc08d;
+				
 				border: none;
 				border-bottom: 2px solid #3aa373;
+				border-radius: 3px;
+				
+				background-color: #4fc08d;
+				color: #fff;
+				font-size: 16px;
+				line-height: 42px;
 				text-align: center;
 				vertical-align: middle;
 			}
@@ -103,9 +110,11 @@
 				position: absolute;
 				top: 0;
 				left: 0;
-				height: 42px;
+		
 				width: 48%;
+				height: 42px;
 				outline: medium none;
+				
 				opacity: 0;
 			}
 		}
