@@ -20,7 +20,7 @@
 			return {
 				hasErr    : false,
 				content   : '',
-				author_txt: '<br/><br/><a class="form" href="https://github.com/shinygang/Vue-cnodejs">I‘m webapp-cnodejs-vue</a>'
+				author_txt: '<br/><br/><a class="form" href="https://github.com/xlldll/webpack2-VueJs">I‘m webpack2-VueJs</a>'
 			};
 		},
 		computed: {
@@ -55,7 +55,7 @@
 					if (this.replyId) {
 						postData.reply_id = this.replyId;
 					}
-					// Todo:评论真的有用吗
+					// Todo:评论真的有用吗，待测试
 					Zepto.ajax({
 						type    : 'POST',
 						url     : `https://cnodejs.org/api/v1/topic/Zepto{this.topicId}/replies`,

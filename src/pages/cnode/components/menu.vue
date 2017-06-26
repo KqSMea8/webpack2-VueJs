@@ -1,4 +1,5 @@
 <template>
+	<!--左侧菜单栏-->
 	<section id = "sideBar" class = "nav-list" :class = "{'show':showMenu}">
 		<user-info></user-info>
 		<section class = "list-ul">

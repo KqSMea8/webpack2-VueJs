@@ -45,11 +45,10 @@
 </template>
 
 <script>
-	import Zepto from 'webpack-zepto';
-	import * as utils from '../assist/utils.js';
-	// var utils =  require('../assist/utils.js')
-	import nvHead from '../components/header.vue';
-	import nvTop from '../components/backtotop.vue';
+	import Zepto from 'webpack-zepto'
+	import * as utils from '../assist/utils.js'
+	import nvHead from '../components/header.vue'
+	import nvTop from '../components/backtotop.vue'
 	export default {
 		components: {
 			nvHead,
@@ -57,13 +56,13 @@
 		},
 		data() {
 			return {
-				// 获取主题列表数据期间，无限滚动无法再触发加载
+				// 获取主题列表数据期间，无限滚动无法再触发加载，true表示可以滚动，false不可滚动
 				scroll       : true,
-			    // 主题内容
+				// 主题内容
 				topics       : [],
-			    // 记录插入主题时的编号，先后顺序
+				// 记录插入主题时的编号，先后顺序
 				index        : {},
-			    // 没有用到！
+				// 没有用到！
 				searchDataStr: '',
 				// URL查找参数
 				searchKey    : {
@@ -74,9 +73,9 @@
 				}
 			};
 		},
-	    beforeCreate(){
+		beforeCreate(){
 			console.log(`beforeCreate`)
-	    },
+		},
 		mounted() {
 			console.log(`mounted->searchKey:${this.searchKey}`)
 			// 主题分类
@@ -98,7 +97,7 @@
 		},
 		// todo-vuerouter:beforeRouteEnter && beforeRouteLeave
 		beforeRouteEnter(to, from, next) {
-			console.log(`beforeRouteEnter:`,to)
+			console.log(`beforeRouteEnter:`, to)
 			// 如果页面不是从主题详情页切换过来的，移除之前记录的数据集
 			if (from.name !== 'topic') {
 				if (window.window.sessionStorage.tab) {
@@ -110,8 +109,8 @@
 			next();
 		},
 		beforeRouteLeave(to, from, next) {
-		    console.log(`beforeRouteLeave:`,to)
-		    console.log(`beforeRouteLeave->this.$route:`,this.$route)
+			console.log(`beforeRouteLeave:`, to)
+			console.log(`beforeRouteLeave->this.$route:`, this.$route)
 			// 主题列表页如果跳转到主题详情页面，则记录关键数据
 			// 方便从详情页面返回到该页面时，继续加载之前位置的数据
 			if (to.name === 'topic') {
@@ -128,7 +127,7 @@
 			Zepto(window).off('scroll');
 			next();
 		},
-		methods: {
+		methods   : {
 			// 获取当前主题分类标题
 			getTitleStr(tab) {
 				let str = '';
@@ -159,8 +158,10 @@
 			getTopics() {
 				// todo-es6: 通过zepto.param序列化URL查找参数
 				// params=page=1&limit=20&tab=all&mdrender=true
+				// console.log(`准备获取主题列表数据:`, this.topics)
 				let params = Zepto.param(this.searchKey);
 				Zepto.get('https://cnodejs.org/api/v1/topics?' + params, (response) => {
+					// console.log(`成功获取主题列表数据:`, this.topics)
 					this.scroll = true;
 					// console.log('https://cnodejs.org/api/v1/topics?' + params);
 					// console.log(response.data);
@@ -170,7 +171,7 @@
 				});
 			},
 			// 20条主题数据的唯一标识符存入index作为键，值为number，可看做为插入的顺序编号
-		    // 主题内容存入topics
+			// 主题内容存入topics
 			// topic.id=58d0fb3517f61387400b7e15，为每个主题的唯一标识符
 			mergeTopics(topic) {
 				// TODO-ES6：如果检测到该主题的数据已加载过，那么更新该主题数据
@@ -187,11 +188,12 @@
 				if (this.scroll) {
 					// 当前可视窗口的高度,950
 					// console.log(`windowHeight:`,Zepto(window).height())
-				    // 整个窗口向下滚动的像素值,0
-				    // console.log(`windowscrollTop:`,Zepto(window).scrollTop())
-				    // 整个document的高度,2000
-				    // console.log(`documentHeight:`,Zepto(document).height())
-					if (Zepto(document).height() <= Zepto(window).scrollTop() + (Zepto(window).height()*1.1)) {
+					// 整个窗口向下滚动的像素值,0
+					// console.log(`windowscrollTop:`,Zepto(window).scrollTop())
+					// 整个document的高度,2000
+					// console.log(`documentHeight:`,Zepto(document).height())
+					if (Zepto(document).height() <= Zepto(window).scrollTop() + (Zepto(window).height() * 1.1)) {
+						// console.log(`触发无限滚动加载数据:`, this.scroll)
 						this.scroll = false;
 						this.searchKey.page += 1;
 						this.getTopics();
@@ -199,23 +201,69 @@
 				}
 			}
 		},
-		watch  : {
-			// todo-vue: watch 切换路由时，只是menu菜单切换时才触发？？
-			'$route'(to, from) {
-				console.log(`watch->$route:`,this.$route)
-				// 如果是当前页面切换分类的情况
-				if (to.query && to.query.tab) {
-					this.searchKey.tab = to.query.tab;
-					this.topics = [];
-					this.index = {};
-				}
-				this.searchKey.page = 1;
-				this.getTopics();
-				// 将全局header组建中的DATA数据:show，改为false，隐藏遮罩层以及左侧菜单栏
-				this.$refs.head.show = false;
-			}
+		beforeDestory(){
+			console.log(`beforeDestory:`, this.$route)
 		},
-		filters: {
+		destoryed(){
+			console.log(`destoryed:`, this.$route)
+		},
+		watch     : {
+			// todo-vue: watch 监测路由变化时，只是menu菜单切换时才触发？
+			// 可能的解释就是：监测的路由变化只是该页面的$route部分，其它跳转，不触发，而是被beforeRouteLeave以及Enter捕捉触发
+			'$route'         : {
+				handler: function (newVal, oldVal) {
+					console.log(`watch->$routeChange:`, newVal, oldVal)
+					// 如果是当前页面切换分类的情况
+					if (newVal.query && newVal.query.tab) {
+						this.searchKey.tab = newVal.query.tab;
+						this.topics = [];
+						this.index = {};
+					}
+					this.searchKey.page = 1;
+					this.getTopics();
+					// 将全局header组建中的DATA数据:show，改为false，隐藏遮罩层以及左侧菜单栏
+					this.$refs.head.show = false;
+				},
+				// 为了发现对象内部值的变化，可以在选项参数中指定 deep: true
+				deep   : true
+			},
+			'$route.path'    : {
+				handler: function (newVal, oldVal) {
+					console.log(`watch->$route.path->Change:`, newVal, oldVal)
+				}
+			},
+			'$route.query'   : {
+				handler: function (newVal, oldVal) {
+					console.log(`watch->$route.query->Change:`, newVal, oldVal)
+				}
+			},
+			'$route.fullPath': {
+				handler: function (newVal, oldVal) {
+					console.log(`watch->$route.fullPath->Change:`, newVal, oldVal)
+				}
+			},
+			'$route.matched' : {
+				handler: function (newVal, oldVal) {
+					console.log(`watch->$route.matched->Change:`, newVal, oldVal)
+				}
+			},
+			'$route.name'    : {
+				handler: function (newVal, oldVal) {
+					console.log(`watch->$route.name->Change:`, newVal, oldVal)
+				}
+			},
+			/*scroll  : {
+				handler: function (newVal, oldVal) {
+					console.log(`watch->scroll->newVal:`, newVal)
+					console.log(`watch->scroll->oldVal:`, oldVal)
+				}
+			},*/
+			/*topics(newVal, oldVal){
+				console.log(`watch->scroll->topics newVal:`, newVal)
+				console.log(`watch->scroll->topics oldVal:`, oldVal)
+			}*/
+		},
+		filters   : {
 			// 已经全局注册了该filters
 			/*getLastTimeStr(time, isFromNow) {
 				return utils.getLastTimeStr(time, isFromNow);

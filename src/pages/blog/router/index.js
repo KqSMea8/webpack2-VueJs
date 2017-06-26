@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// TODO-vueRouter:异步读取组件
+// TODO-vueRouter:没有进行异步读取组件
 import Home from '../views/home.vue'
 import Post from '../views/post.vue'
 import Category from '../views/category.vue'
@@ -37,7 +37,7 @@ const routes = [
 	{path: '/pages/:name', component: Page, name: 'page'},
 	{path: '*', redirect: '/'}
 ]
-// TODO-vuerouter:scrollBehavior
+// TODO-vuerouter:scrollBehavior 记录路由跳转前的位置
 const scrollBehavior = (to, from, savedPosition) => {
 	// console.log('scrollBehavior')
 	// console.log(to)

@@ -18,7 +18,7 @@ const router = new VueRouter({
     scrollBehavior,
     routes
 })
-// Todo-vuerouter:全局路由钩子 see：http://www.shouce.ren/api/view/a/11762
+// Todo-vuerouter:全局路由钩子 beforeEach see：http://www.shouce.ren/api/view/a/11762
 // 拦截需要验证登录的页面以及登陆之后访问登录和注册的页面
 router.beforeEach(({meta, path}, from, next) => {
   store.dispatch('showProgress', 0)

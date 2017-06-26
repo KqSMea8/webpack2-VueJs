@@ -98,9 +98,7 @@
 			}
 		},
 		watch     : {
-			// todo-vue: watch 切换路由时，只是menu菜单切换时才触发？？
 			'$route' (to, from) {
-				console.log(`watch->$route:`, this.$route)
 				this.getUser();
 			}
 		},

@@ -30,7 +30,7 @@ if (window.sessionStorage.user) {
   vuexStore.dispatch('setUserInfo', JSON.parse(window.sessionStorage.user))
 }
 
-// todo-vuerouter:router.beforeEach
+// todo-vuerouter:router.beforeEach 每个路由进入前触发事件
 router.beforeEach((to, from, next) => {
   // 处理左侧滚动不影响右边
   Zepto('html, body, #page').removeClass('scroll-hide')

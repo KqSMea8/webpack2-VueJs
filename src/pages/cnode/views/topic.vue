@@ -58,7 +58,7 @@
 						</section>
 						<!--回复内容-->
 						<div class = "reply_content" v-html = "item.content"></div>
-						<!--回复编辑框-->
+						<!--回复该主题的层主编辑框-->
 						<nv-reply :topic.sync = "topic"
 						          :topic-id = "topicId"
 						          :reply-id = "item.id"
@@ -71,7 +71,7 @@
 			</section>
 			<!--回到顶部-->
 			<nv-top></nv-top>
-			<!--回复编辑框-->
+			<!--回复该主题的编辑框-->
 			<nv-reply v-if = "userInfo.userId" :topic = "topic" :topic-id = "topicId"></nv-reply>
 		</div>
 		<div class = 'no-data' v-if = "noData">
@@ -82,7 +82,6 @@
 <script>
 	import Zepto from 'webpack-zepto';
 	import * as utils from '../assist/utils.js';
-	// var utils =  require('../assist/utils.js')
 	import nvHead from '../components/header.vue';
 	import nvReply from '../components/reply.vue';
 	import nvTop from '../components/backtotop.vue';

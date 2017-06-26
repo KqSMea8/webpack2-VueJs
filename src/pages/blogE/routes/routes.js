@@ -1,4 +1,4 @@
-// TODO-vueRouter:异步读取组件
+// TODO-vueRouter:没有进行异步读取组件
 import Reg from '../components/backEnd/Reg'
 import Login from '../components/backEnd/Login'
 import Admin from '../components/backEnd/Admin'

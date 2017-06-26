@@ -72,9 +72,7 @@
 		background-color: #fff;
 		.label {
 			display: inline-block;
-			position: absolute;
-			left: 0;
-			top: 0;
+			position: relative;
 			
 			width: 100%;
 			margin-top: 15px;
