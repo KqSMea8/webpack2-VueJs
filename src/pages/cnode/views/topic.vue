@@ -60,10 +60,10 @@
 						<div class = "reply_content" v-html = "item.content"></div>
 						<!--回复该主题的层主编辑框-->
 						<nv-reply :topic.sync = "topic"
+						          :show.sync = "curReplyId"
 						          :topic-id = "topicId"
 						          :reply-id = "item.id"
 						          :reply-to = "item.author.loginname"
-						          :show.sync = "curReplyId"
 						          @close = "hideItemReply"
 						          v-if = "userInfo.userId && curReplyId === item.id"></nv-reply>
 					</li>
@@ -94,11 +94,15 @@
 		},
 		data() {
 			return {
-				showMenu  : false, // 是否展开左侧菜单
-				topic     : {}, // 主题
-				noData    : false,
+				// 是否展开左侧菜单
+				showMenu  : false,
+				// 主题详情
+				topic     : {},
+				// 主题详情ID
 				topicId   : '',
-				curReplyId: ''
+				// 回复列表项目ID
+				curReplyId: '',
+				noData    : false
 			};
 		},
 		computed  : {
@@ -130,6 +134,7 @@
 			isUps(ups) {
 				return Zepto.inArray(this.userInfo.userId, ups) >= 0;
 			},
+			// 回复主题
 			addReply(id) {
 				this.curReplyId = id;
 				if (!this.userInfo.userId) {
@@ -141,6 +146,7 @@
 					});
 				}
 			},
+		    // 清空回复者ID，间接关闭了回复层主的编辑框
 			hideItemReply() {
 				this.curReplyId = '';
 			},

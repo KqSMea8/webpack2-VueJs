@@ -2,11 +2,19 @@
 - [Source](https://github.com/shinygang/Vue-cnodejs)
 - [Api接口](https://cnodejs.org/api)
 - 登录Token： 3bd2d872-7a56-4d47-8b03-b3f33dbdbb4e
+
 ####项目简介
-> 
+> 使用cnode社区的API完成的页面
 
 ####需求以及文件结构
-* 
+* 首页的广告展览三秒
+* 自动跳转到所有主题列表页，点击查看主题详情，回复主题以及层主
+* 点击汉堡按钮，显示左侧菜单栏
+* 登录查看用户信息、最近回复以及最新发布主题
+* 新建主题，回到顶部按钮，无限滚动加载主题列表
+* views存放路由引入的页面 components存放组件 css为手写样式
+* utils 辅助函数包括了从文本中提取出 @username 标记的用户名数组、将 Date 转化为指定格式的String、调用Timeago库显示到现在的时间、格式化日期或时间、节流函数
+* plugin Vue插件包括了格式化时间、弹出框
 
 
 ####技术栈
@@ -43,7 +51,7 @@
 7. vue中的扩折号命名等于驼峰式命名，例如 page-type = pageType
 8. 全局组件header通过传参，决定样式表现
 9. [watch](https://cn.vuejs.org/v2/api/#watch) [参数说明](https://cn.vuejs.org/v2/api/#vm-watch) 观察表达式
-
+10. 回复该主题的层主编辑框 topic.vue [sync-修饰符](https://cn.vuejs.org/v2/guide/components.html#sync-修饰符)
 
 ####vue-router
 1. router.beforeEach 处理需要登录的页面而没有登录的情况直接跳转登录
@@ -52,12 +60,12 @@
 4. [this.$route.path](https://router.vuejs.org/zh-cn/api/route-object.html) 字符串，对应当前路由的路径，总是解析为绝对路径，如 "/foo/bar"
 
 ####vuex
-1. 
+1. 简单应用
 
 
-####Axois
-1. 
+####Server
+1. 直接使用了Zepto进行Ajax异步读取发送
 
 
 ####Issues
-1. 
+1. 刷新页面时，总是会跳回到根路径节点

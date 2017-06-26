@@ -26,8 +26,11 @@ Zepto.ajaxSettings.crossDomain = true
 FastClick.attach(document.body)
 
 // 处理刷新的时候vuex被清空但是用户已经登录的情况
-if (window.sessionStorage.user) {
-  vuexStore.dispatch('setUserInfo', JSON.parse(window.sessionStorage.user))
+/* if (window.sessionStorage.user) {
+  vuexStore.dispatch('settingUserInfo', JSON.parse(window.sessionStorage.user))
+} */
+if (window.localStorage.user) {
+	vuexStore.dispatch('settingUserInfo', JSON.parse(window.localStorage.user))
 }
 
 // todo-vuerouter:router.beforeEach 每个路由进入前触发事件

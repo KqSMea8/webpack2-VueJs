@@ -46,7 +46,7 @@
               userId    : res.id,
               token     : this.token
             };
-            window.window.sessionStorage.user = JSON.stringify(user);
+            window.localStorage.user = JSON.stringify(user);
             this.$store.dispatch('settingUserInfo', user);
             // todo-vuerouter:跳转到在query里面的redirect记录的旧路由地址或者/list
             let redirect = decodeURIComponent(this.$route.query.redirect || '/');
