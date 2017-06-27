@@ -8,7 +8,9 @@
         </div>
         <!-- 已登录 -->
         <div class="login-yes" v-else>
-            <img v-if="userInfo.avatar_url" :src="userInfo.avatar_url">
+	        <router-link :to = "{name:'user',params:{loginname:userInfo.loginname}}">
+		        <img class = "head" :src = "userInfo.avatar_url" />
+	        </router-link>
             <span class="login-name" v-text="userInfo.loginname"></span>
             <span class="login-out" @click="handleLoginOut">退出</span>
         </div>
@@ -17,21 +19,27 @@
 
 <style lang="less" scoped>
     .login-no a {
+	    display: block;
+	
+	    padding: 24px;
+	
+	    color: #313131;
         font-size: 2rem;
         font-weight: 700;
-        color: #313131;
-        padding: 24px;
-        display: block;
     }
     .login-yes {
+	    display: flex;
+	    align-items: center;
+	    
         padding: 20px 15px;
-        display: flex;
-        align-items: center;
+	    
         img {
             width: 40px;
             height: 40px;
+	        margin-right: 15px;
+	        
             border-radius: 50%;
-            margin-right: 15px;
+      
         }
         .login-name {
             flex: 1;
@@ -53,7 +61,6 @@
                 this.$router.push({name: 'list'});
             }
         },
-
         computed: {
             ...mapState(['userInfo']),
         },

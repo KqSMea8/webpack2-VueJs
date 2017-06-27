@@ -1,4 +1,5 @@
 <template>
+	<!--发布新主题-->
 	<div>
 		<nv-head title = "主题"></nv-head>
 		<div class = "topic-create">
@@ -8,16 +9,14 @@
 					<option value = "share">分享</option>
 					<option value = "ask">问答</option>
 					<option value = "job">招聘</option>
+					<option value = "dev">客户端测试</option>
 				</select>
 			</div>
 			<div class = "title">
-				<input type = "text" v-model.trim = "topic.title"
-				       placeholder = "标题，字数10字以上" maxLength = "100">
+				<input type = "text" v-model.trim = "topic.title" placeholder = "标题，字数10字以上" maxLength = "100">
 			</div>
 			<div class = "content">
-                <textarea v-model.trim = "topic.content" rows = "15"
-                          placeholder = '支持Markdown语法,请注意标记代码'>
-                </textarea>
+                <textarea v-model.trim = "topic.content" rows = "15" placeholder = '支持Markdown语法，请注意标记代码'></textarea>
 			</div>
 			<button @click = "handleSubmit">提交</button>
 		</div>
@@ -25,56 +24,51 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex';
-  import nvHead from '../components/header';
-  import '../styles/create.less';
-  import { addTopic } from '../apis/publicApi';
-  export default {
-    data() {
-      return {
-        topic: {
-          tab    : 'share',
-          title  : '',
-          content: ''
-        }
-      }
-    },
-    
-    methods: {
-      handleSubmit() {
-        let {title, content} = this.topic;
-        if (!title || title.length < 10) {
-          return
-        }
-        if (!content) {
-          return
-        }
-        
-        const data = {
-          accesstoken: this.userInfo.accesstoken,
-          ...this.topic
-        }
-        console.log(`data:${data}`);
-        addTopic(data).then(() => {
-          if (res.success) {
-            sessionStorage.removeItem('scrollTop');
-            sessionStorage.removeItem('searchOption');
-            sessionStorage.removeItem('tab');
-            this.$router.push({
-              name: 'list'
-            });
-          }
-        })
-      }
-    },
-    
-    computed: {
-      ...mapState(['userInfo'])
-    },
-    
-    components: {
-      nvHead
-    }
-  }
+	import { mapState } from 'vuex';
+	import nvHead from '../components/header';
+	import '../styles/create.less';
+	import { addTopic } from '../apis/publicApi';
+	export default {
+		data() {
+			return {
+				topic: {
+					tab    : 'share',
+					title  : '',
+					content: ''
+				}
+			}
+		},
+		methods: {
+			handleSubmit() {
+				let {title, content} = this.topic;
+				if (!title || title.length < 10) {
+					return
+				}
+				if (!content) {
+					return
+				}
+				const data = {
+					accesstoken: this.userInfo.accesstoken,
+					...this.topic
+				}
+				addTopic(data).then(() => {
+					if (res.success) {
+						sessionStorage.removeItem('scrollTop');
+						sessionStorage.removeItem('searchOption');
+						sessionStorage.removeItem('tab');
+						this.$router.push({
+							name: 'list'
+						});
+					}
+				})
+			}
+		},
+		computed: {
+			...mapState(['userInfo'])
+		},
+		components: {
+			nvHead
+		}
+	}
 
 </script>

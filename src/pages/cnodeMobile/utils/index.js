@@ -1,3 +1,4 @@
+// 计算多久前
 export const getTimeInfo = (str) => {
   if (!str) {
     return ''

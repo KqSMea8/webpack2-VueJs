@@ -51,14 +51,16 @@
 		padding-top: 9%;
 		.item {
 			display: block;
-			font-size: 14px;
-			font-weight: 200;
+			
 			padding: 9% 0;
+			
+			color: #313131;
+			font-size: 14px;
+			line-height: 15px;
+			font-weight: 700;
 			text-align: left;
 			text-indent: 1px;
-			line-height: 15px;
-			color: #313131;
-			font-weight: 700;
+			
 			&:last-child {
 				margin-bottom: 50px;
 			}

@@ -1,7 +1,6 @@
 ##基于vue.js重写Cnodejs.org社区的webapp
 - [Source](https://github.com/shinygang/Vue-cnodejs)
 - [Api接口](https://cnodejs.org/api)
-- 登录Token： 3bd2d872-7a56-4d47-8b03-b3f33dbdbb4e
 
 ####项目简介
 > 使用cnode社区的API完成的页面

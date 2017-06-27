@@ -29,7 +29,9 @@
                     accesstoken: this.token
                 }
                 this.$store.dispatch(LOGIN, data).then(() => {
-                    const redirect = decodeURIComponent(this.$route.query.redirect || 'list');
+                	// 跳转回登录前页面 或者 默认页面
+                    const redirect = decodeURIComponent(this.$route.query.redirect  || 'list');
+                    console.log(`redirect:`, redirect)
                     this.$router.push({name: redirect});
                 })
             }
@@ -42,10 +44,11 @@
         components:{
             nvHead
         },
-
+		// 进入该路由之前，如果用户名已存在，则返回到默认页面
         beforeRouteEnter(to, from, next) {
             next((vm) => {
                 if (vm.userInfo.loginname) {
+                	// todo-vuerouter:vm.$router.replace
                     vm.$router.replace({name: 'list'});
                 }
             });

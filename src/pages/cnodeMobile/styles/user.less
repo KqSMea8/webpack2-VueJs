@@ -1,81 +1,94 @@
 .user-page {
-    padding-top: 40px;
-    .info {
-        background-color: #e7e7e7;
-        padding: 15px 0;
-        img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            display: block;
-            margin: 0 auto;
-        }
-        span.name {
-            text-align: center;
-            margin-top: 5px;
-            display: block;
-        }
-        .bottom {
-            margin-top: 15px;
-            display: -webkit-flex;
-            display: flex;
-            .time {
-                text-align: center;
-                flex: 1;
-            }
-            .score {
-                text-align: center;
-                color: #80bd01;
-                flex: 1;
-            }
-        }
+  padding-top: 40px;
+  //用户信息
+  .info {
+    background-color: #e7e7e7;
+    padding: 15px 0;
+    img {
+      display: block;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+
+      border-radius: 50%;
+
 
     }
-    .user-active {
-        .active-content {
-            display: -webkit-flex;
-            display: flex;
-            padding: 10px;
-            border-bottom: 1px solid #f0f0f0;
-            .head {
-                img {
-                    width: 40px;
-                    height: 40px;
-                    margin-right: 15px;
-                    border-radius: 50%;
-                    border: 2px solid #fff6e6;
-                }
-            }
-            .right {
-                flex: 1;
-                overflow: hidden;
-                .tpoic-title {
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    display: block;
-                    font-weight: 700;
-                    font-size: 1.8rem;
-                    color: #333;
-                }
-                .topic-bottom {
-                    display: -webkit-flex;
-                    display: flex;
-                    margin-top: 5px;
-                    .name {
-                        color: #626262;
-                        flex: 1;
-                    }
-                    .time {
-                        color: #80bd01;
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-        }
-        .no-data {
-            height: -webkit-calc(~'100vh - 270px');
-            height: calc(~'100vh - 270px');
-        }
+    span.name {
+      display: block;
+
+      margin-top: 5px;
+      text-align: center;
+
     }
+    .bottom {
+
+      display: -webkit-flex;
+      display: flex;
+      margin-top: 15px;
+      .time {
+        flex: 1;
+        text-align: center;
+
+      }
+      .score {
+        flex: 1;
+
+        color: #80bd01;
+        text-align: center;
+      }
+    }
+
+  }
+  //用户面板
+  .user-active {
+    // 面板内容
+    .active-content {
+      display: -webkit-flex;
+      display: flex;
+      padding: 10px;
+      border-bottom: 1px solid #f0f0f0;
+      .head {
+        img {
+          width: 40px;
+          height: 40px;
+          margin-right: 15px;
+          border: 2px solid #fff6e6;
+          border-radius: 50%;
+        }
+      }
+      .right {
+        flex: 1;
+        overflow: hidden;
+        .tpoic-title {
+          display: block;
+          overflow: hidden;
+
+
+          color: #333;
+          font-weight: 700;
+          font-size: 1.8rem;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .topic-bottom {
+          display: -webkit-flex;
+          display: flex;
+          margin-top: 5px;
+          .name {
+            color: #626262;
+            flex: 1;
+          }
+          .time {
+            color: #80bd01;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .no-data {
+      height: -webkit-calc(~'100vh - 270px');
+      height: calc(~'100vh - 270px');
+    }
+  }
 }

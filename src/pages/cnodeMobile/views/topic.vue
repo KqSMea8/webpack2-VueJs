@@ -45,11 +45,15 @@
 									      :class = "{'uped': isUps(item.ups)}"
 									      @click = "handleUpReply(item)"></span>
 									<span style = "margin-right: 5px">{{item.ups.length}}</span>
+									<!--回复层主-->
 									<span class = "iconfont icon-hf" @click = "addReply(item.id)"></span>
+									<!--自定义测试-->
+									<span class = "iconfont icon-hf" @click = "addItem(item)">自定义测试</span>
 								</span>
 							</div>
 						</section>
 						<div class = "reply-content markdown-body" v-html = "item.content"></div>
+						<!--回复层主-->
 						<nv-reply v-if = "userInfo.loginname && replyId === item.id"
 						          :reply-to = "item.author.loginname"
 						          :reply-id = "item.id"
@@ -59,8 +63,8 @@
 					</li>
 				</ul>
 			</section>
-			<nv-reply v-if = "userInfo.loginname"
-			          :topic-id = "topicId"></nv-reply>
+			<!--回复主题-->
+			<nv-reply v-if = "userInfo.loginname" :topic-id = "topicId"></nv-reply>
 		</div>
 		<nv-top></nv-top>
 		<nv-load :show = "showLoad"></nv-load>
@@ -68,107 +72,105 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex';
-  import nvHead from '../components/header';
-  import nvReply from '../components/reply';
-  import nvTop from '../components/backTop';
-  import nvLoad from '../components/loading';
-  import { GET_TOPIC_INFO, UP_REPLY } from '../constants/mutationTypes';
-  import { getTimeInfo } from '../utils/index';
-  import { topicTab } from '../constants/topicInfo';
-  import { upReply } from '../apis/publicApi';
-  import store from '../vuex/index';
-  export default {
-    data() {
-      return {
-        replyId: '',
-        topicId: '',
-      }
-    },
-    
-    mounted() {
-      this.topicId = this.$route.params.id;
-      this.getTopicInfo();
-    },
-    
-    methods: {
-      getTopicInfo() {
-        this.$store.dispatch(GET_TOPIC_INFO, this.topicId);
-      },
-      
-      getTabInfo(item) {
-        let tab = item.tab;
-        if (item.good) {
-          tab = 'good';
-        } else if (item.top) {
-          tab = 'top';
-        }
-        return topicTab[tab]
-      },
-      
-      addReply(id) {
-        if (!this.userInfo.loginname) {
-          this.$router.push({
-            name : 'login',
-            query: {redirect: encodeURIComponent(this.$route.name)}
-          });
-        }
-        this.replyId = id;
-      },
-      
-      handleReply() {
-        this.replyId = '';
-      },
-      
-      isUps(ups) {
-        return ups.indexOf(this.userInfo.id) > -1
-      },
-      
-      handleUpReply(item) {
-        if (!this.userInfo.loginname) {
-          this.$router.push({
-            name : 'login',
-            query: {redirect: encodeURIComponent(this.$route.name)}
-          });
-          return;
-        }
-        
-        upReply({accesstoken: this.userInfo.accesstoken}, item.id).then((res) => {
-          if (res.success) {
-            if (res.action === 'down') {
-              const index = item.ups.indexOf(this.userInfo.id);
-              if (index > -1) {
-                item.ups.splice(index, 1);
-              }
-            } else {
-              item.ups.push(this.userInfo.id);
-            }
-          }
-        })
-      }
-    },
-    
-    filters: {
-      getTimeInfo(str) {
-        return getTimeInfo(str)
-      }
-    },
-    
-    beforeRouteEnter(to, from, next) {
-      store.state.topicInfo = {};
-      next();
-    },
-    
-    computed: {
-      ...mapState(['topicInfo', 'userInfo', 'showLoad'])
-    },
-    
-    components: {
-      nvHead,
-      nvReply,
-      nvTop,
-      nvLoad
-    }
-    
-  }
+	import { mapState } from 'vuex';
+	import nvHead from '../components/header';
+	import nvReply from '../components/reply';
+	import nvTop from '../components/backTop';
+	import nvLoad from '../components/loading';
+	import { GET_TOPIC_INFO, UP_REPLY } from '../constants/mutationTypes';
+	import { getTimeInfo } from '../utils/index';
+	import { topicTab } from '../constants/topicInfo';
+	import { upReply } from '../apis/publicApi';
+	import store from '../vuex/index';
+	export default {
+		components: {
+			nvHead,
+			nvReply,
+			nvTop,
+			nvLoad
+		},
+		data() {
+			return {
+				replyId: '',
+				topicId: '',
+			}
+		},
+		beforeRouteEnter(to, from, next) {
+			//清空主题详情内容
+			store.state.topicInfo = {};
+			next();
+		},
+		mounted() {
+			this.topicId = this.$route.params.id;
+			this.getTopicInfo();
+		},
+		computed  : {
+			...mapState(['topicInfo', 'userInfo', 'showLoad'])
+		},
+		methods   : {
+			getTopicInfo() {
+				this.$store.dispatch(GET_TOPIC_INFO, this.topicId);
+			},
+			getTabInfo(item) {
+				let tab = item.tab;
+				if (item.good) {
+					tab = 'good';
+				} else if (item.top) {
+					tab = 'top';
+				}
+				return topicTab[tab]
+			},
+			// 回复层主
+			addReply(id) {
+				if (!this.userInfo.loginname) {
+					this.$router.push({
+						name : 'login',
+						query: {redirect: encodeURIComponent(this.$route.name)}
+					});
+				}
+				this.replyId = id;
+			},
+			handleReply() {
+				this.replyId = '';
+			},
+			isUps(ups) {
+				return ups.indexOf(this.userInfo.id) > -1
+			},
+			// todo-vue:可以直接操作item!
+			addItem(item){
+				item.ups.push(this.userInfo.id);
+				item.author.loginname = 'my'
+			},
+			// 点赞时提交回复
+			handleUpReply(item) {
+				if (!this.userInfo.loginname) {
+					this.$router.push({
+						name : 'login',
+						query: {redirect: encodeURIComponent(this.$route.name)}
+					});
+					return;
+				}
+				upReply({accesstoken: this.userInfo.accesstoken}, item.id).then((res) => {
+					if (res.success) {
+						// 取消点赞
+						if (res.action === 'down') {
+							console.log(`取消点赞 item :`, item)
+							const index = item.ups.indexOf(this.userInfo.id);
+							if (index > -1) {
+								item.ups.splice(index, 1);
+							}
+						} else {
+							console.log(`点赞 item :`, item)
+							item.ups.push(this.userInfo.id);
+						}
+					}
+				})
+			}
+		},
+		filters   : {
+			getTimeInfo(str) {
+				return getTimeInfo(str)
+			}
+		}
+	}
 </script>

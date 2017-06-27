@@ -2,23 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27f112a7-7eff-475a-87e9-5e7eddde3df5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/cnode/ReadMe2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/cnode/components/loading.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/cnode/components/nvAlert.vue" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/views/index.vue" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/screenshots/cnodeMobile.xmind" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/screenshots/cnodeMobile.xmind" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/blog/router/index.js" afterPath="$PROJECT_DIR$/src/pages/blog/router/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/blogE/routes/index.js" afterPath="$PROJECT_DIR$/src/pages/blogE/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/blogE/routes/routes.js" afterPath="$PROJECT_DIR$/src/pages/blogE/routes/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnode/app.js" afterPath="$PROJECT_DIR$/src/pages/cnode/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newpage/ReadMe.md" afterPath="$PROJECT_DIR$/src/newpage/ReadMe.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnode/components/menu.vue" afterPath="$PROJECT_DIR$/src/pages/cnode/components/menu.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnode/components/reply.vue" afterPath="$PROJECT_DIR$/src/pages/cnode/components/reply.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnode/css/about.scss" afterPath="$PROJECT_DIR$/src/pages/cnode/css/about.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnode/css/topic.scss" afterPath="$PROJECT_DIR$/src/pages/cnode/css/topic.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnode/readme.md" afterPath="$PROJECT_DIR$/src/pages/cnode/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnode/views/list.vue" afterPath="$PROJECT_DIR$/src/pages/cnode/views/list.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnode/views/login.vue" afterPath="$PROJECT_DIR$/src/pages/cnode/views/login.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnode/views/topic.vue" afterPath="$PROJECT_DIR$/src/pages/cnode/views/topic.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnode/views/user.vue" afterPath="$PROJECT_DIR$/src/pages/cnode/views/user.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/ReadMe.md" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/ReadMe.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/apis/index.js" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/apis/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/apis/publicApi.js" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/apis/publicApi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/app.js" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/components/backTop.vue" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/components/backTop.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/components/header.vue" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/components/header.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/components/loading.vue" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/components/loading.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/components/menu.vue" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/components/menu.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/components/reply.vue" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/components/reply.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/components/userInfo.vue" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/components/userInfo.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/configs/routes.js" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/configs/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/constants/topicInfo.js" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/constants/topicInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/styles/create.less" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/styles/create.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/styles/header.less" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/styles/header.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/styles/menu.less" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/styles/menu.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/styles/topic.less" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/styles/topic.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/styles/user.less" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/styles/user.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/utils/index.js" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/utils/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/views/about.vue" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/views/about.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/views/login.vue" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/views/login.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/views/message.vue" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/views/message.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/views/newTopic.vue" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/views/newTopic.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/views/topic.vue" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/views/topic.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/views/topicList.vue" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/views/topicList.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/views/user.vue" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/views/user.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/cnodeMobile/vuex/index.js" afterPath="$PROJECT_DIR$/src/pages/cnodeMobile/vuex/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,28 +50,21 @@
     <favorites_list name="VueJs_Demo_Github" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package_json" />
-        <option value="tsconfig.json" />
         <option value="vue" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="tsconfig.json" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>list-edit</find>
-      <find>options-web</find>
-      <find>nav-group</find>
-      <find>setConfig</find>
-      <find>total</find>
-      <find>config</find>
-      <find>$load</find>
       <find>ttl</find>
       <find>axios</find>
       <find>posts</find>
@@ -71,15 +79,22 @@
       <find>nv-toolbar</find>
       <find>scroll</find>
       <find>getLastTimeStr</find>
-      <find>index</find>
       <find>searchDataStr</find>
       <find>loading</find>
       <find>file</find>
-      <find>show</find>
       <find>show-menu</find>
       <find>wx_alert_inner</find>
       <find>reply_num</find>
       <find>reply-list</find>
+      <find>replyTo</find>
+      <find>topic</find>
+      <find>err</find>
+      <find>show</find>
+      <find>$alert</find>
+      <find>tab-item</find>
+      <find>topic-list</find>
+      <find>index</find>
+      <find>deja</find>
     </findStrings>
     <replaceStrings>
       <replace>views</replace>
@@ -114,57 +129,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/pages/blog/css/code.css" />
-        <option value="$PROJECT_DIR$/src/pages/blog/views/post.vue" />
-        <option value="$PROJECT_DIR$/src/pages/blog/views/tag.vue" />
-        <option value="$PROJECT_DIR$/src/pages/blog/views/tags.vue" />
-        <option value="$PROJECT_DIR$/src/pages/blog/views/category.vue" />
-        <option value="$PROJECT_DIR$/src/pages/blog/views/categories.vue" />
-        <option value="$PROJECT_DIR$/src/pages/blog/views/page.vue" />
-        <option value="$PROJECT_DIR$/src/pages/blog/views/archives.vue" />
-        <option value="$PROJECT_DIR$/src/pages/blog/views/home.vue" />
-        <option value="$PROJECT_DIR$/src/pages/blog/components/posts/posts.vue" />
-        <option value="$PROJECT_DIR$/src/pages/blog/router.md" />
-        <option value="$PROJECT_DIR$/src/pages/blog/assist/utils.js" />
-        <option value="$PROJECT_DIR$/src/pages/blog/ReadMe.md" />
-        <option value="$PROJECT_DIR$/src/newpage/ReadMe.md" />
-        <option value="$PROJECT_DIR$/src/pages/blogE/store/mutations.js" />
-        <option value="$PROJECT_DIR$/src/pages/blogE/store/states.js" />
-        <option value="$PROJECT_DIR$/src/pages/blogE/app.vue" />
-        <option value="$PROJECT_DIR$/src/pages/blogE/assets/css/commen.css" />
-        <option value="$PROJECT_DIR$/src/pages/blogE/components/backEnd/Reg.vue" />
-        <option value="$PROJECT_DIR$/src/pages/blogE/components/backEnd/Login.vue" />
-        <option value="$PROJECT_DIR$/src/pages/blogE/api/index.js" />
-        <option value="$PROJECT_DIR$/webpack/option/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/blogE/store/MsgAlert.js" />
-        <option value="$PROJECT_DIR$/src/pages/blogE/components/fronted/Front.vue" />
-        <option value="$PROJECT_DIR$/src/pages/blogE/ReadMe.md" />
-        <option value="$PROJECT_DIR$/src/layouts/NavBar.vue" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/components/backtotop.vue" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/views/index.vue" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/css/header.scss" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/router/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/components/header.vue" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/components/user-info.vue" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/plugin/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/ReadMe2.md" />
         <option value="$PROJECT_DIR$/src/pages/cnode/views/about.vue" />
         <option value="$PROJECT_DIR$/src/pages/cnode/views/message.vue" />
         <option value="$PROJECT_DIR$/src/pages/cnode/views/new.vue" />
         <option value="$PROJECT_DIR$/src/pages/cnode/components/nvAlert.vue" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/ReadMe.md" />
         <option value="$PROJECT_DIR$/src/pages/cnode/views/list.vue" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/app.js" />
         <option value="$PROJECT_DIR$/src/pages/blogE/routes/routes.js" />
         <option value="$PROJECT_DIR$/src/pages/blogE/routes/index.js" />
         <option value="$PROJECT_DIR$/src/pages/blog/router/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/views/login.vue" />
         <option value="$PROJECT_DIR$/src/pages/cnode/views/user.vue" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/views/topic.vue" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/components/reply.vue" />
-        <option value="$PROJECT_DIR$/src/pages/cnode/components/menu.vue" />
         <option value="$PROJECT_DIR$/src/pages/cnode/css/about.scss" />
         <option value="$PROJECT_DIR$/src/pages/cnode/css/topic.scss" />
+        <option value="$PROJECT_DIR$/src/pages/cnode/views/login.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnode/store/state.js" />
+        <option value="$PROJECT_DIR$/src/pages/cnode/views/topic.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnode/mock/tsconfig.json" />
+        <option value="$PROJECT_DIR$/src/pages/cnode/mock/topic主题详情.json" />
+        <option value="$PROJECT_DIR$/src/pages/cnode/components/reply.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnode/assist/utils.js" />
+        <option value="$PROJECT_DIR$/src/pages/cnode/css/detail.scss" />
+        <option value="$PROJECT_DIR$/src/pages/cnode/app.js" />
+        <option value="$PROJECT_DIR$/src/pages/cnode/router/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/app.js" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/utils/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/components/header.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/styles/header.less" />
+        <option value="$PROJECT_DIR$/src/pages/cnode/components/menu.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/styles/menu.less" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/components/backTop.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/components/loading.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/constants/topicInfo.js" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/styles/create.less" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/configs/routes.js" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/views/topicList.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/styles/user.less" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/views/user.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/styles/topic.less" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/vuex/index.js" />
+        <option value="$PROJECT_DIR$/src/newpage/ReadMe.md" />
+        <option value="$PROJECT_DIR$/src/pages/cnode/ReadMe.md" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/apis/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/components/reply.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/apis/publicApi.js" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/views/topic.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/views/newTopic.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/views/message.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/views/about.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/views/login.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/ReadMe.md" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/components/menu.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/components/userInfo.vue" />
+        <option value="$PROJECT_DIR$/src/pages/cnodeMobile/ReadMe2.md" />
       </list>
     </option>
   </component>
@@ -228,6 +243,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -250,38 +267,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webpack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webpack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="option" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VueJs_Demo_Github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -322,7 +307,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cnode" />
+              <option name="myItemId" value="cnodeMobile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -340,14 +325,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="newpage" />
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cnodeMobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vuex" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,19 +375,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\wamp64\www\VueJs_Demo_Github\webpack" />
-      <recent name="E:\wamp64\www\VueJs_Demo_Github\src\pages\blog\screenshots" />
-      <recent name="E:\wamp64\www\VueJs_Demo_Github\src\pages\cloudmusic\screenshots" />
-      <recent name="E:\wamp64\www\VueJs_Demo_Github\src\static\cloudmusic" />
-      <recent name="E:\wamp64\www\VueJs_Demo_Github\src\static\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\wamp64\www\VueJs_Demo_Github\src\pages\cnodeMobile" />
       <recent name="E:\wamp64\www\VueJs_Demo_Github\src\pages\cnode" />
       <recent name="E:\wamp64\www\VueJs_Demo_Github\src\newpage" />
       <recent name="E:\wamp64\www\VueJs_Demo_Github\src\pages\todoMvc\screenshot" />
       <recent name="E:\wamp64\www\VueJs_Demo_Github\src\pages\todoMvc" />
-      <recent name="E:\wamp64\www\VueJs_Demo_Github\src\pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\wamp64\www\VueJs_Demo_Github\src\pages\cnode\json" />
+      <recent name="E:\wamp64\www\VueJs_Demo_Github\webpack" />
+      <recent name="E:\wamp64\www\VueJs_Demo_Github\src\pages\blog\screenshots" />
+      <recent name="E:\wamp64\www\VueJs_Demo_Github\src\pages\cloudmusic\screenshots" />
+      <recent name="E:\wamp64\www\VueJs_Demo_Github\src\static\cloudmusic" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -585,7 +576,9 @@
       <workItem from="1498304337049" duration="10602000" />
       <workItem from="1498349739060" duration="26508000" />
       <workItem from="1498399958097" duration="5816000" />
-      <workItem from="1498434949232" duration="7105000" />
+      <workItem from="1498434949232" duration="29102000" />
+      <workItem from="1498521993878" duration="6804000" />
+      <workItem from="1498531213505" duration="14284000" />
     </task>
     <task id="LOCAL-00001" summary="MPA+WEBPACK2+VUE2">
       <created>1496327526043</created>
@@ -769,11 +762,25 @@
       <option name="project" value="LOCAL" />
       <updated>1498405414416</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="MPA+WEBPACK2+VUE2">
+      <created>1498447834301</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1498447834301</updated>
+    </task>
+    <task id="LOCAL-00028" summary="MPA+WEBPACK2+VUE2">
+      <created>1498475541342</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1498475541342</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="643900000" />
+    <option name="totallyTimeSpent" value="686985000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -790,13 +797,13 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39285713" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SvgViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24034335" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7688839" sideWeight="0.5099778" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.76785713" sideWeight="0.5099778" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3169643" sideWeight="0.49725273" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22156653" sideWeight="0.4765625" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18454936" sideWeight="0.48549107" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52566963" sideWeight="0.49002218" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51004463" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18454936" sideWeight="0.5234375" order="0" side_tool="false" content_ui="combo" x="760" y="72" width="399" height="896" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18454936" sideWeight="0.5145089" order="0" side_tool="false" content_ui="combo" x="760" y="72" width="399" height="896" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20922747" sideWeight="0.43638393" order="3" side_tool="true" content_ui="tabs" />
@@ -810,20 +817,20 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39285713" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SvgViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24034335" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7688839" sideWeight="0.5099778" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.76785713" sideWeight="0.5099778" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3199554" sideWeight="0.49725273" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20922747" sideWeight="0.45424107" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46651787" sideWeight="0.49002218" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3169643" sideWeight="0.49725273" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18454936" sideWeight="0.4810268" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52566963" sideWeight="0.49002218" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51004463" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20922747" sideWeight="0.5457589" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18454936" sideWeight="0.51897323" order="0" side_tool="false" content_ui="combo" x="760" y="72" width="399" height="896" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -863,84 +870,19 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pages/blogE/store/actions.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/cnode/json/config.json" />
+    <entry file="file://$PROJECT_DIR$/src/pages/cnode/assist/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        <state relative-caret-position="2449">
+          <caret line="176" column="9" lean-forward="true" selection-start-line="176" selection-start-column="5" selection-end-line="176" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/blogE/components/backEnd/Login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/blogE/components/backEnd/Reg.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="53" column="21" lean-forward="true" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/blogE/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/blogE/app.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/blogE/components/fronted/Front.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-312">
-          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/blogE/components/fronted/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="47" column="20" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/blogE/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/blogE/ReadMe.md">
+    <entry file="file://$PROJECT_DIR$/src/pages/blog/ReadMe.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="72">
-            <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/NavBar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="63" column="38" lean-forward="false" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/API.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="96">
-            <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           </first_editor>
           <second_editor />
         </state>
@@ -949,170 +891,364 @@
     <entry file="file://$PROJECT_DIR$/src/pages/cnode/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/app.vue" />
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/ReadMe.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/plugin/filters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/assist/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1585">
-          <caret line="171" column="9" lean-forward="false" selection-start-line="171" selection-start-column="5" selection-end-line="171" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/blogE/store/MsgAlert.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/components/backtotop.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/views/about.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/views/message.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-794">
-          <caret line="54" column="41" lean-forward="false" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
-          <folding>
-            <element signature="e#1536#1570#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/views/new.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/plugin/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/app.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/cnode/views/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-          <folding />
+        <state relative-caret-position="192">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/app.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/cnode/plugin/filters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="24">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/components/user-info.vue">
+    <entry file="file://$PROJECT_DIR$/src/pages/cnode/plugin/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="96">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnode/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/isomorphic-fetch/fetch-npm-node.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt/prng/accum.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/blogE/routes/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/app.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/webpack_config/resolve.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/images/menu.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/styles/header.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1272">
+          <caret line="53" column="28" lean-forward="true" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnode/components/menu.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="99" lean-forward="false" selection-start-line="10" selection-start-column="96" selection-end-line="10" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnode/store/state.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnode/plugin/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/utils/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/styles/menu.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnode/components/backtotop.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/components/backTop.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
           <folding>
-            <element signature="e#29#72#0" expanded="true" />
+            <element signature="n#style#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/blogE/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/components/loading.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        <state relative-caret-position="24">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/blog/router/index.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/constants/topicInfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="39" column="43" lean-forward="false" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+        <state relative-caret-position="168">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/router/index.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/styles/create.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="45" column="23" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+        <state relative-caret-position="-438">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/styles/user.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="90" column="23" lean-forward="true" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/views/user.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2616">
+          <caret line="109" column="16" lean-forward="true" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
+          <folding>
+            <element signature="e#1512#1558#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/constants/mutationTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/styles/topic.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="204" column="20" lean-forward="true" selection-start-line="204" selection-start-column="20" selection-end-line="204" selection-end-column="20" />
+          <folding>
+            <element signature="e#53#1639#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newpage/ReadMe.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="72">
+            <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/views/topicList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="96" lean-forward="true" selection-start-line="15" selection-start-column="96" selection-end-line="15" selection-end-column="96" />
+          <folding>
+            <element signature="n#style#0;n#!!top" expanded="false" />
+            <element signature="e#1907#1939#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnode/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="46" column="23" lean-forward="true" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/apis/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/components/reply.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="10" lean-forward="true" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+          <folding>
+            <element signature="e#372#404#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/apis/publicApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="50" column="14" lean-forward="true" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/views/newTopic.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding>
+            <element signature="e#746#778#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/views/message.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="e#1380#1425#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/views/about.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="17" column="62" lean-forward="true" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/configs/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/views/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/views/list.vue">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state relative-caret-position="-384">
+          <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/views/topic.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="36" column="42" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="36" selection-end-column="42" />
           <folding>
-            <element signature="n#section#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#1373#1406#0" expanded="true" />
-            <element signature="e#3950#4255#0" expanded="false" />
-            <element signature="e#4338#4398#0" expanded="false" />
+            <element signature="e#2678#2710#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/views/login.vue">
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/components/header.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="74" column="31" lean-forward="false" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+        <state relative-caret-position="600">
+          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/components/menu.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="30" column="57" lean-forward="false" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
           <folding>
-            <element signature="e#377#411#0" expanded="true" />
+            <element signature="n#style#0;n#!!top" expanded="false" />
+            <element signature="e#1836#1868#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/components/userInfo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <element signature="e#1298#1328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/views/login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="45" column="10" lean-forward="true" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+          <folding>
+            <element signature="e#390#420#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1120,161 +1256,41 @@
     <entry file="file://$PROJECT_DIR$/src/pages/cnode/ReadMe.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="72">
-            <caret line="3" column="47" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="47" />
+          <first_editor relative-caret-position="120">
+            <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="20" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/views/user.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="52" column="10" lean-forward="true" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
-          <folding>
-            <element signature="e#1625#1659#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/components/loading.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/components/header.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/components/menu.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/css/user.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/components/nvAlert.vue">
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/vuex/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="34" />
+          <caret line="2" column="86" lean-forward="false" selection-start-line="2" selection-start-column="86" selection-end-line="2" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/css/CV.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/ReadMe.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="384">
+            <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/css/detail.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/css/header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2112">
-          <caret line="88" column="8" lean-forward="false" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/css/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/css/github-markdown.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/css/common/common.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/css/iconfont/iconfont.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/css/common/reset.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="50" lean-forward="false" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/css/about.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/views/topic.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="73" column="25" lean-forward="false" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="25" />
-          <folding>
-            <element signature="e#2800#2834#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/components/reply.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-582">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding>
-            <element signature="e#340#374#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/cnode/css/topic.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2136">
-          <caret line="156" column="26" lean-forward="false" selection-start-line="156" selection-start-column="26" selection-end-line="156" selection-end-column="26" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/src/pages/cnodeMobile/ReadMe.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1392">
+            <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
