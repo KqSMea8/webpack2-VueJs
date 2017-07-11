@@ -1,18 +1,22 @@
 <template>
 	<div>
+		<!--悬浮按钮-发布文章-->
 		<div class = "action-btn"
 		     @mouseenter = "mouseenter"
 		     @mouseleave = "mouseleave">
+			<!--十字动画-->
 			<a href = "#" class = "action-btn__link action-btn__plus">
 				<img src = "../assets/img/cross.png" alt = "">
 			</a>
 			<ul>
+				<!--如果存在主题详情ID，则显示回复-->
 				<li v-if = "topicId">
 					<a href = "#" class = "tooltips tooltips--left action-btn__link action-btn__reply" aria-label = "回复"
 					   @click.prevent = "toggleModal('reply')">
 						<i class = "fa fa-reply fa-lg" aria-hidden = "true"></i>
 					</a>
 				</li>
+				<!--发布主题选项-->
 				<li>
 					<a href = "#" class = "tooltips tooltips--left action-btn__link action-btn__post" aria-label = "发布文章"
 					   @click.prevent = "toggleModal('post')">
@@ -23,8 +27,10 @@
 		</div>
 		<!--模态面板-->
 		<div class = "modal-container">
+			<!--发布主题-->
 			<vc_post-modal ref = "postModal" :show = "showPostModal"
 			               @post = "post" @close = "closeModal"></vc_post-modal>
+			<!--回复主题-->
 			<vc_reply-modal ref = "replyModal" :show = "showReplyModal"
 			                @reply = "reply" @close = "closeModal"></vc_reply-modal>
 		</div>
@@ -59,9 +65,11 @@
 		},
 		methods   : {
 			mouseenter() {
+				// 十字动画
 				this.$el.firstChild.classList.add('is-active');
 			},
 			mouseleave() {
+				// 十字动画
 				this.$el.firstChild.classList.remove('is-active');
 			},
 			// 用户是否登入
@@ -95,21 +103,18 @@
 					Tools.handleAjaxError(reject, this);
 				});
 			},
-		 
-		    // TODO:编辑文章信息
+			// TODO:编辑文章信息
 			editArticle(article) {
 				this.state = 'edit';
 				this.$refs.postModal.setArticle(article);
 				this.showPostModal = true;
 			},
-		 
 			// TODO:设置@的人 从topic.vue的handleReply函数中this.$refs.actionBtn.setReply(cont)调用
 			setReply(content) {
 				this.$refs.replyModal.setReply(content);
 				this.showReplyModal = true;
 			},
-		 
-		    // post /topic/:topic_id/replies 新建评论
+			// post /topic/:topic_id/replies 新建评论
 			reply(content, cb) {
 				const params = {
 					accesstoken: this.host.accesstoken,

@@ -28,6 +28,7 @@ const timeFormatCN = function timeFormatCN (time) {
 	}
 	return str
 }
+// 统一了AJAX的GET和POST请求
 const ajax = function ajax (type, url, params) {
 	return new Promise((resolve, reject) => {
 		const xhr = new XMLHttpRequest()
@@ -35,11 +36,13 @@ const ajax = function ajax (type, url, params) {
 			if (xhr.status >= 200 && xhr.status < 400) {
 				resolve(JSON.parse(xhr.responseText))
 			} else {
-				reject()
+				let error = 'xhr.status 错误！'
+				reject(error)
 			}
 		}
 		xhr.onerror = () => {
-			reject('服务器异常')
+			let error = '服务器异常！'
+			reject(error)
 		}
 		if (type === 'get') {
 			xhr.open('GET', url, true)
@@ -69,7 +72,7 @@ const handleAjaxError = function handleAjaxError (reject, vm, callback) {
 		callback()
 	}
 }
-// Cookie模块
+// 查找、增加和更新Cookie模块
 const CookieUtil = {
 	get: (name) => {
 		const cookie = document.cookie
@@ -107,6 +110,7 @@ const CookieUtil = {
 		this.set(name, '', path, domain, secure)
 	}
 }
+
 // 获取未读信息
 const getHostNotifiesCount = function getHostNotifiesCount (accesstoken) {
 	return new Promise((resolve, reject) => {
@@ -118,10 +122,12 @@ const getHostNotifiesCount = function getHostNotifiesCount (accesstoken) {
 				reject(data.error_msg)
 			}
 		}, () => {
-			reject('获取未读信息失败')
+			let error = '获取未读信息失败！'
+			reject(error)
 		})
 	})
 }
+
 // 用户登录设置cookie过期时间以及返回未读信息
 const getHost = function isLogin (accessToken) {
 	return new Promise((resolve, reject) => {
@@ -145,14 +151,14 @@ const getHost = function isLogin (accessToken) {
 					data.notifiesCount = count
 					data.accesstoken = token
 					resolve(data)
-				}, (errorMsg) => {
-					reject(errorMsg)
+				}, (error) => {
+					reject(error)
 				})
 			} else {
 				reject(data.error_msg)
 			}
-		}, (reject) => {
-			reject('getHost：服务器异常')
+		}, (error) => {
+			reject(error)
 		})
 	})
 }

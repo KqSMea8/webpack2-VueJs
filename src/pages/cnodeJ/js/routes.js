@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 import Index from '../page/index.vue';
 import User from '../page/user.vue';
 import Topic from '../page/topic.vue';

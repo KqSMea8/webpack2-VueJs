@@ -1,10 +1,11 @@
 <template>
 	<header class = "globalnav globalnav--fixed" :class = "{ 'is-loading': isLoading}">
 		<div class = "container">
+			<!--网站文字LOGO-->
 			<router-link to = "/" class = "globalnav__brand t-pull-left">CNodeJ</router-link>
 			<!--导航旋转加载条-->
 			<div class = "globalnav__spinner">
-				<svg version = "1.1" id = "L9" xmlns = "http://www.w3.org/2000/svg" xmlns:xlink = "http://www.w3.org/1999/xlink" x = "0px" y = "0px" viewBox = "0 0 100 100" enable-background = "new 0 0 0 0" xml:space = "preserve">
+				<svg xmlns:xlink = "http://www.w3.org/1999/xlink" version = "1.1" id = "L9" xmlns = "http://www.w3.org/2000/svg" x = "0px" y = "0px" viewBox = "0 0 100 100" enable-background = "new 0 0 0 0" xml:space = "preserve">
 					<path fill = "#00a9e8" d = "M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50" transform = "rotate(222 50 50)">
 						<animateTransform attributeName = "transform"
 						                 attributeType = "XML" type = "rotate" dur = "0.5s"
@@ -12,19 +13,20 @@
 					</path>
                 </svg>
 			</div>
+			<!--全局导航栏的右半边部分-->
 			<ul class = "globalnav__nav t-pull-right">
-				<!--如果有用户，显示用户头像-->
-				<li class = "globalnav__link" v-if = "host">
-					<router-link :to = "{ path: '/user/' + host.loginname }" class = "globalnav__avatar">
-						<img :src = "host.avatar_url">
-					</router-link>
-				</li>
 				<!--如果没有用户，显示登录-->
 				<li class = "globalnav__link" v-if = "!host">
 					<a href = "#" @click.stop.prevent = "toggleMenu(1)">登录</a>
 					<div class = "globalnav__menu globalnav__loginFormMenu">
 						<loginForm @signIn = "getHost" :show = "showLoginForm"></loginForm>
 					</div>
+				</li>
+				<!--如果有用户，显示用户头像-->
+				<li class = "globalnav__link" v-if = "host">
+					<router-link :to = "{ path: '/user/' + host.loginname }" class = "globalnav__avatar">
+						<img :src = "host.avatar_url">
+					</router-link>
 				</li>
 				<!--如果有用户，点击图标弹出信息框-->
 				<li class = "globalnav__link globalnav__link--withicon globalnav__notifies" v-if = "host">
@@ -61,7 +63,7 @@
 				</li>
 			</ul>
 			<ul class = "globalnav__nav">
-				<!--接收该组件的内容容器，全局导航栏-->
+				<!--接收该组件的内容容器，全局导航栏的左半边部分-->
 				<slot></slot>
 			</ul>
 		</div>
@@ -76,7 +78,7 @@
 			return {
 				// 用户信息对象：accesstoken,avatar_url,loginname,id,notifiesCount,success
 				host            : null,
-			    // 登录框
+				// 登录框
 				showLoginForm   : false,
 				// 消息框
 				showNotification: false,
@@ -96,10 +98,11 @@
 		},
 		mounted() {
 			this.getHost();
-			// 监听注册index.vue页面的点击事件
-			// see https://css-tricks.com/dangers-stopping-event-propagation/
+			// 监听注册GlobalNav.vue页面的点击事件
 			document.documentElement.addEventListener('click', (event) => {
+							// console.log(`GlobalNav.vue页面的点击事件event:`, event)
 				let parent = event.target;
+							// console.log(`GlobalNav.vue页面的点击事件event.target:`, parent)
 				let isInside = false;
 				if (this.showNotification || this.showLoginForm || this.showMoreMenu) {
 					let checkedClassName;
@@ -111,17 +114,19 @@
 						checkedClassName = 'globalnav__moreMenu';
 					}
 					// 如果点击的元素是登录框、消息框以及更多导航菜单，那么无需关闭模态框
-				    // 如果不是点击的这些框，则关闭模态框
+					// 如果不是点击的这些框，则关闭模态框
 					while (parent) {
+						// 该元素以及父元素中的class是否含有弹出框的class，如果有，证明点击的事件发生在框内
 						if (parent.classList && parent.classList.contains(checkedClassName)) {
-							console.log(`parent.classList`);
-							console.info(parent.classList);
+													// console.log(`parent:`, parent)
+													// console.log(`parent.classList`);
+													// console.info(parent.classList);
 							isInside = true;
 							break;
 						}
 						parent = parent.parentNode;
 					}
-					// 关闭模态框
+					// 如果，isInside为false，并未改变，关闭模态框
 					if (!isInside) {
 						if (this.showNotification) {
 							this.showNotification = false;
@@ -149,7 +154,7 @@
 					this.$message.error(errorMsg);
 				});
 			},
-		    // 多个弹出框之间点击切换
+			// 多个弹出框之间点击切换
 			toggleMenu(type) {
 				switch (type) {
 					case 1: // loginForm

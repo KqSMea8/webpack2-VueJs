@@ -1,4 +1,5 @@
 <template>
+	<!--回复模态框-->
 	<transition name = "fade">
 		<div class = "modal postModal" v-show = "show">
 			<div class = "modal-header">
@@ -31,29 +32,31 @@
 				state: 'ready' // 当前的状态 ready || posting
 			};
 		},
-		props: {
+		props  : {
 			show: {
 				type   : Boolean,
 				default: false
 			}
 		},
-		watch: {
+		watch  : {
 			show(newVal) {
 				if (newVal && !this.mde) {
 					this.mde = createSimplemde({
+					    // 给modal-body的textarea实例化
 						element: document.getElementById('reply')
 					});
 				}
 			}
 		},
 		methods: {
+			// 关闭模态框
 			close() {
 				this.$emit('close', 'reply', () => {
 					this.state = 'ready';
 					this.mde && this.mde.value('');
 				});
 			},
-		    // 从ActionButton.vue的setReply函数中this.$refs.replyModal.setReply(content)调用
+			// 从ActionButton.vue的setReply函数中this.$refs.replyModal.setReply(content)调用
 			setReply(content) {
 				this.state = 'ready';
 				if (!this.mde) {
@@ -81,4 +84,3 @@
 	};
 </script>
 
-<style rel = "stylesheet/scss" lang = "scss" scoped></style>

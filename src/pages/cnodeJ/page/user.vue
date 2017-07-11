@@ -1,12 +1,16 @@
-<!-- 个人中心 -->
+
 <template>
+	<!--用户详情-->
 	<div class = "page">
+		
 		<PageLoading :show = "isLoading"></PageLoading>
+		
 		<GlobalNav @ready = "ready" :isLoading = "isNavLoading">
 			<li class = "globalnav__link" :class = "{'is-active': currType === n.tag}" v-for = "n in navs">
 				<a href = "#" @click.prevent = "getArticleType(n.tag)">{{ n.name }}</a>
 			</li>
 		</GlobalNav>
+		
 		<ActionBtn :host = "host"></ActionBtn>
 		<div class = "page__main">
 			<div class = "container">

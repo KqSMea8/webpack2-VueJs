@@ -10,7 +10,7 @@ import 'github-markdown-css'
 
 Object.keys(filters).forEach(k => Vue.filter(k, filters[k])) // 注册过滤器
 
-// TODO: ...App是什么写法
+// TODO-Vue: ...App是	template: '<App/>',components: { App } 的缩写
 new Vue({
     el: '#app',
     router,

@@ -15,7 +15,7 @@ import Login from '../pages/Login'
 import NotFound from '../pages/NotFound'
 
 /**
- * 路由懒加载 https://router.vuejs.org/zh-cn/advanced/lazy-loading.html
+ * todo-vuerouter:路由懒加载 https://router.vuejs.org/zh-cn/advanced/lazy-loading.html
  * 结合 Vue 的 异步组件 和 Webpack 的 code splitting feature, 轻松实现路由组件的懒加载。
  */
 // const Login = resolve => require(['../pages/Login.vue'], resolve)

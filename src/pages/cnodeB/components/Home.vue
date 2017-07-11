@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 	<div class="content">
 		<!--左栏-->
 		<div class="panel cancel-margin-right">

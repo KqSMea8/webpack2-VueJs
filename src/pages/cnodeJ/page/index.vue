@@ -2,7 +2,9 @@
 	<div class = "page">
 		<!--父组件Door中自定义了ready事件-->
 		<Door :state = "doorState" @ready = "doorIsReady"></Door>
+		<!--悬浮按钮-发布文章-->
 		<ActionBtn :host = "host"></ActionBtn>
+		<!--全局导航条-->
 		<GlobalNav @ready = "ready" :isLoading = "isLoading">
 			<li class = "globalnav__link" :class = "{'is-active': currType === n.tag}" v-for = "n in navs">
 				<a href = "#" @click.prevent = "selectNav(n.tag)">{{ n.name }}</a>
@@ -11,7 +13,9 @@
 		<div class = "page__main">
 			<div class = "container">
 				<div class = "home-content" v-if = "articles && articles.length > 0">
+					<!--主题列表-->
 					<ArticleList :articles = "articles"></ArticleList>
+					<!--加载更多主题-->
 					<div class = "loadmore-wrap" v-show = "showLoadMoreModal">
 						<LoadMore :state = "loadMoreType" @loadMore = "loadMore"></LoadMore>
 					</div>
@@ -32,8 +36,9 @@
 	import ActionBtn from '../components/ActionButton';
 	// 全局导航条
 	import GlobalNav from '../components/GlobalNav';
-	// 文章列表
+	// 主题列表
 	import ArticleList from '../components/ArticleBrief';
+	// 加载更多主题
 	import LoadMore from '../components/LoadMore';
 	export default {
 		data() {
@@ -42,7 +47,8 @@
 				{name: '精华', tag: 'good'},
 				{name: '分享', tag: 'share'},
 				{name: '问答', tag: 'ask'},
-				{name: '招聘', tag: 'job'}
+				{name: '招聘', tag: 'job'},
+				{name: '测试', tag: 'dev'}
 			];
 			return {
 				navs,
@@ -118,16 +124,20 @@
 			},
 			// 添加页面滚动，加载主题列表事件
 			addScrollEvt() {
+				// 可视屏幕高度
 				const winH = window.innerHeight;
 				const doc = document.documentElement;
 				const body = document.body;
 				this.scrollEv = () => {
 					// 是否正在加載更多
 					if (this.isLoadingMore) return;
+					// 在第一个可视屏幕的高度和整个HTML页面的高度中去一个最大
 					const docH = Math.max(doc.clientHeight, doc.scrollHeight);
 					// fix firefox body.scrollTop always return 0
 					// see http://stackoverflow.com/questions/28633221/document-body-scrolltop-firefox-returns-0-only-js
-					const bodyScrollTop = window.pageYOffset || body.scrollTop || doc.scrollTop || 0;
+					// 页面往下滚的高度
+					const bodyScrollTop = window.pageYOffset || body.scrollTop || 0;
+					// 滚到最底部了，才执行加载更多
 					if ((bodyScrollTop + winH - docH) >= 0) {
 						// 0(loading) | 1(load more) | 2(none)
 						if (this.loadMoreType === 2) {
@@ -171,13 +181,13 @@
 						}
 						this.isLoadingMore = false;
 					}, (reject) => {
-						Tools.handleAjaxError(reject, this);
 						this.loadMoreType = 1;
 						this.isLoadingMore = false;
+						Tools.handleAjaxError(reject, this);
 					});
 				}, 1000);
 			},
-		    // 导航条
+			// 导航条
 			selectNav(tag) {
 				this.isLoading = true;
 				this.getArticleType(tag, () => {
@@ -187,5 +197,4 @@
 		}
 	};
 </script>
-<style lang = "scss" rel = "stylesheet/scss" scoped>
-</style>
+

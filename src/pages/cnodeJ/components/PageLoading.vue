@@ -12,7 +12,6 @@
 
 <script>
   /* global mina */
-
   // see https://github.com/negomi/react-burger-menu/commit/1b4a99906601c04d13c8ae27f13e77eaa1cc559a
   let Snap;
   try {
