@@ -6,7 +6,6 @@
 				<li v-for = "(item, index) in itemTab" class = "nav-bar-item" :class = "{'nav-bar-active':initIndex === index}" v-on:click = "changeTab(index)">{{item.title}}</li>
 			</ul>
 		</nav>
-		
 		<section class = "scroll-posts-list" v-if = "topicsList">
 			<div class = "posts-list" v-for = "(item,index) in topicsList">
 				<router-link :to = "{name:'detail',params:{id:item.id}}">

@@ -63,6 +63,7 @@
 		computed: {
 			href() {
 				if (this.to && !this.added && this.$router) {
+									console.log(this.to);
 					const resolved = this.$router.match(this.to);
 					if (!resolved.matched.length) return this.to;
 					this.$nextTick(() => {
@@ -70,7 +71,7 @@
 						this.$el.addEventListener('click', this.handleClick);
 					});
 					console.log(`resolved:${resolved}`);
-					console.info(resolved);
+					console.log(resolved);
 					return resolved.path;
 				}
 				return this.to;

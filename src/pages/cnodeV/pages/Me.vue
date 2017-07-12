@@ -1,5 +1,6 @@
 <template>
     <div class="me">
+	    <!--用户头像和信息-->
         <div class="auserinfo">
             <img class="auserinfo-avatar " v-if="userInfo.avatar_url" :src="userInfo.avatar_url">
             <img class="auserinfo-avatar " src="../assets/timg.jpg" v-else>
@@ -75,3 +76,4 @@
     vertical-align: middle;
 }
 </style>
+

@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import App from './app.vue'
 import Axios from './utils/diyaxios'
 import router from './router/router'
 import store from './store'
 // 注册为全局组件
+import App from './app.vue'
 import toast from './components/toast.vue'
 
 // see http://www.muse-ui.org/#/install

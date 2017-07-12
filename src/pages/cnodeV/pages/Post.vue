@@ -104,28 +104,35 @@
 	}
 	
 	input, select, textarea {
-		background: #eee;
 		box-sizing: border-box;
+		
 		width: 100%;
 		height: 32px;
-		padding: 10px;
-		line-height: 28px;
-		border: none;
-		font-size: 14px;
-		resize: none;
-		border-radius: 5px;
 		margin-top: 5px;
+		padding: 10px;
+		border: none;
+		border-radius: 5px;
+		
+		background: #eee;
+		font-size: 14px;
+		line-height: 28px;
+		
+		resize: none;
 	}
 	
 	.submit {
 		display: block;
+		
 		width: 250px;
-		padding: 10px 15px;
 		margin: auto;
 		margin-top: 20px;
-		text-align: center;
+		padding: 10px 15px;
+		border-radius: 5px;
+
 		background: #80bd01;
 		color: #fff;
-		border-radius: 5px;
+		text-align: center;
+		
+		
 	}
 </style>

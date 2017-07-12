@@ -1,9 +1,5 @@
 <template>
 	<div>
-		<!-- keep-alive https://segmentfault.com/a/1190000008123035 -->
-		<!--<keep-alive>
-			<router-view></router-view>
-		</keep-alive>-->
 		<keep-alive>
 			<router-view v-if="$route.meta.keepAlive"></router-view>
 		</keep-alive>

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+/* todo-vuerouter:异步加载路由组件示例 */
 const Index = resolve => {
   // https://router.vuejs.org/zh-cn/advanced/lazy-loading.html
   // require.ensure 是 Webpack 的特殊语法，用来设置 code-split point

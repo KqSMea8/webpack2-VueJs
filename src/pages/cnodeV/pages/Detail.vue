@@ -1,11 +1,5 @@
 <template>
 	<div class = "detail">
-		<div class = "top-box">
-			<header class = "head-logo clearfix">
-				<i class = "head-logo-menu iconfont icon-fenlei1"></i>
-				<i class = "head-logo-icon iconfont icon-logo"></i>
-			</header>
-		</div>
 		<div class = "loading-dox" v-show = "loading">
 			<loading :size = "50"></loading>
 		</div>
@@ -75,7 +69,6 @@
 			</div>
 		
 		</div>
-	
 	</div>
 </template>
 
@@ -121,10 +114,10 @@
 	}
 	
 	.detail-post-meta {
-		margin-top: 23px;
-		padding: 15px;
 		display: flex;
 		align-items: center;
+		margin-top: 30px;
+		padding: 15px;
 		border-bottom: 1px solid #eee;
 	}
 	
