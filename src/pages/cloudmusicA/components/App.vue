@@ -9,8 +9,7 @@
             <router-view class="router-view"></router-view>
         </div>
         <!--登录弹窗-->
-        <Login class="c-popup"></Login>
-
+	    <Login class="c-popup"></Login>
         <!--tips弹窗-->
         <Popup class="c-popup"></Popup>
     </div>

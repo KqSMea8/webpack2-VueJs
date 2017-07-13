@@ -35,7 +35,6 @@
 				comments: state => state.comments
 			})
 		},
-	    //TODO:将评论改成异步组件
 		mounted() {
 			this.$store.dispatch('getComments');
 		}

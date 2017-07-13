@@ -32,9 +32,11 @@
         },
         methods: {
             playthis(index) {
+            	// 获取歌曲URL地址
 	            this.$store.dispatch('getSongs', {
 		            newtrack: index
 	            });
+	            // 从歌单里选择一首歌并立即播放
                 this.$store.dispatch('selectTrack', {
                     newtrack: index,
                     isSelected: true

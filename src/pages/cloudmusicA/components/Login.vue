@@ -46,9 +46,7 @@
                 };
                 this.$store.dispatch('login', params)
             },
-            signup(){
-                // TODO
-            },
+            signup(){},
             cancel() {
                 this.$store.commit(types.LOGIN_SHOW_HIDE, 0);
             }
@@ -58,14 +56,18 @@
 
 <style lang="scss" rel="stylesheet/scss" scoped>
     .login {
-        background: #b6423a;
+      
         padding: 40px;
+	    
+	    background: #b6423a;
         color: #f2f2f2;
         .cancel {
-            cursor: pointer;
+          
             position: absolute;
             right: 10px;
             top: 10px;
+	
+	        cursor: pointer;
         }
     }
 
@@ -74,8 +76,8 @@
         text-align: right;
         letter-spacing: 0.6px;
         input {
+	        border: 1px solid #b6423a;
             line-height: 20px;
-            border: 1px solid #b6423a;
             text-indent: 5px;
             &:focus {
                 outline: none;
@@ -83,12 +85,15 @@
             }
         }
         .submit {
-            color: inherit;
+       
+	        padding: 5px;
             border: none;
+	        
             background: #b6423a;
+	        color: inherit;
             cursor: pointer;
             transition: all .6s;
-            padding: 5px;
+          
             &--login {
                 &:hover {
                     background: #f9774e;

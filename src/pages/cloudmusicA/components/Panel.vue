@@ -3,20 +3,24 @@
     <div>
         <header class="panel">
             <div class="panel--left">
+	            <!--用户登录-->
                 <div class="panel__item hover-1" @click="userActions">
                     <span class="fa fa-user-circle"></span>
                     <span v-if="hasLogin">My</span>
                     <span v-else>Login</span>
                 </div>
+	            <!--歌曲列表-->
                 <router-link to="/songlist" class="panel__item hover-1">
                     <span class="fa fa-list"></span>
                     <span>SongList</span>
                 </router-link>
+	            <!--评论-->
                 <router-link to="/comments" class="panel__item hover-1">
                     <span class="fa fa-comments-o"></span>
                     <span>Comments</span>
                 </router-link>
             </div>
+	        <!--搜索-->
             <div class="panel--right">
                 <Search></Search>
             </div>

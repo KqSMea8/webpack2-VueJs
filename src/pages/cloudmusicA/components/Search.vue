@@ -2,8 +2,7 @@
 <template>
     <div class="search">
         <div class="search__input input input--yoko">
-            <input class="input__field input__field--yoko" type="text" id="input-16" v-model.trim="keywords"
-                   @keyup.enter="searchSongs">
+            <input class="input__field input__field--yoko" type="text" id="input-16" v-model.trim="keywords" @keyup.enter="searchSongs">
             <label class="input__label input__label--yoko" for="input-16" @click="searchSongs">
                 <span class="input__label-content input__label-content--yoko">{{searching?'Searching..':'Search'}}</span>
             </label>
