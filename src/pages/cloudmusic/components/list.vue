@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<!--歌曲播放列表-->
 		<!--http://www.muse-ui.org/#/bottomSheet-->
 		<!--:open 是否打开-->
 		<mu-bottom-sheet :open = "bottomSheet" @close = "closeBottomSheet ">
@@ -37,14 +38,13 @@
           document.querySelector('.playList').style.position = 'static'
         }
       },
-      // Todo:不知道哪里触发的 以及 遮罩层哪里设置的
+      // playerDetail.vue中触发
       show () {
         this.bottomSheet = true
         if (document.querySelector('.playList')) {
           document.querySelector('.playList').style.position = 'fixed'
         }
       },
-      
       // 点击播放列表中的歌曲
       play (index) {
         this.$store.commit('setAudioIndex', index)

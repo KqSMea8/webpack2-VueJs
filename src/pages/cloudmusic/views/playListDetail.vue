@@ -1,4 +1,5 @@
 <template>
+	<!--歌单列表-->
 	<div class = "playList" :class = "{view: songList.length > 0}">
 		<!--歌单标题开始-->
 		<div class = "fixed-title" :style = "{'background': 'rgba(206, 61, 62, '+ opacity +')'}" style = "transition: opacity .1s;">
@@ -40,6 +41,7 @@
 				<mu-divider />
 			</div>
 			<div>
+				<!--旋转加载条-->
 				<mu-circular-progress :size = "40" class = "center" v-if = "isloading" />
 				<mu-list :value = "value" v-show = "!isloading" @change = "change">
 					<div v-for = "(item, index) in list" @click = "playAudio(item)">
@@ -59,7 +61,7 @@
   export default {
     data () {
       return {
-        // Todo: 初始图片失败
+        // Todo-vue: 初始图片加载失败
         coverImgUrl: '../../../static/default_cover.png',
         name       : '歌单标题',
         id         : 0,
@@ -178,7 +180,7 @@
   }
 </script>
 
-<!--Todo:热更新的样式无响应-->
+<!--Todo-vue:热更新的样式无响应-->
 <!--开发环境下的 webpack 配置中不要使用 extract-text-webpack-plugin 就行了-->
 <!--<style src="../less/playListDetail.less" lang="less"></style>-->
 

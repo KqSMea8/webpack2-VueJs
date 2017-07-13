@@ -11,6 +11,7 @@
 					</router-link>
 				</mu-flexbox-item>
 			</mu-flexbox>
+			<!--todo-vue：mu-infinite-scroll 下拉加载歌单-->
 			<mu-infinite-scroll :scroller = "scroller" :loading = "loading" @load = "loadMore" />
 		</div>
 	</div>
@@ -35,7 +36,7 @@
     methods: {
       get () {
         this.loading = true
-        this.$http.get(api.getPlayListByWhere('全部', 'hot', this.offset, true, 6)).then((res) => {
+        this.$http.get(api.getPlayListByWhere('全部', 'hot', this.offset, true, 12)).then((res) => {
           var total = res.data.total
           var list = (res.data.playlists)
           for (let i = 0; i < list.length; i++) {
@@ -64,14 +65,10 @@
 <style lang = "less" scoped>
 	@import "../assets/theme.less";
 	
-	.img-response {
-		max-width: 100%;
-		height: auto;
-	}
-	
 	.wrapper {
 		width: 100%;
-		padding: 0 10px;
+		height: 570px;
+		padding: 10px;
 		overflow: auto;
 		-webkit-overflow-scrolling: touch;
 	}
@@ -80,6 +77,11 @@
 		margin: .2rem 0 .3rem 0;
 		padding-left: .2rem;
 		border-left: .15rem solid @primaryColor;
+	}
+	
+	.img-response {
+		max-width: 100%;
+		height: auto;
 	}
 	
 	.list {

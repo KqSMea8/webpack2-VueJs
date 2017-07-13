@@ -1,4 +1,5 @@
 <template>
+	<!--迷你播放器-->
 	<div class = "foot">
 		<div class = "player-mini">
 			<div class = "mini-content">

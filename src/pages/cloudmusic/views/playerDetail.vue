@@ -1,4 +1,5 @@
 <template>
+	<!--详细播放器-->
 	<div class = "content">
 		<div class = "player-wrapper">
 			<div class = "player-inner">
@@ -14,6 +15,7 @@
 					<mu-icon-button icon = 'share' slot = "right" />
 				</mu-appbar>
 				<div class = "bar-line"></div>
+				<!--播放旋转封面、歌词、控制条-->
 				<mu-flexbox orient = "vertical" class = "main">
 					<mu-flexbox-item order = "0">
 						<div class = "cd-holder" :class = "{'cd-play': playing}">
@@ -96,7 +98,7 @@
       })
     },
     watch           : {
-      // Todo:watch 的方法名根据什么来的
+      // Todo-vue:watch 的方法名从data、mapGetters中来
       // 切换歌曲时，会触发该方法
       audio (val) {
         this.loadLrc(val.id)
@@ -125,7 +127,7 @@
         this.$store.commit('changeTime', time)
         this.$store.commit('setChange', true)
       },
-      // 显示歌单列表
+      // 显示播放列表
       showList () {
         this.$refs.bottomSheet.show()
       },
