@@ -1,5 +1,5 @@
 import { STORAGE_NEWS_KEY, STORAGE_TOPICS_KEY, STORAGE_SECTIONS_KEY, STORAGE_POSTS_KEY } from './store'
-
+// todo-vuex：store.subscribe示范用例
 const localStoragePlugin = store => {
   store.subscribe((mutation, { news }) => {
     window.localStorage.setItem(STORAGE_NEWS_KEY, JSON.stringify(news))

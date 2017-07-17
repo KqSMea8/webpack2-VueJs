@@ -1,13 +1,9 @@
 ﻿<template>
 	<div id = "app">
+		<!--待播放歌曲的浮动操作栏-->
 		<action-sheet></action-sheet>
-		<transition :name = "routerViewAnimation">
-			<router-view v-show = "!blurBgShow"></router-view>
-		</transition>
 		<!--搜索栏-->
-		<search v-show = "!blurBgShow"
-		        @searchshow = "rankshow=false"
-		        @searchhide = "rankshow=true"></search>
+		<search v-show = "!blurBgShow" @searchshow = "rankshow=false" @searchhide = "rankshow=true"></search>
 		<!--热门歌单和MV推荐-->
 		<div class = "content-warper" v-show = "rankshow&&!blurBgShow">
 			<swiper :options = "swiperOption" class = "swiper-box">
@@ -20,6 +16,27 @@
 				<div class = "swiper-pagination" slot = "pagination"></div>
 			</swiper>
 		</div>
+		<!--迷你播放器-->
+		<transition name = "bar-slide">
+			<div id = "play-bar" v-show = "!playPageShow">
+				<audio id = "music"
+				       :src = "dataUrl"
+				       @timeupdate = "updateTime"
+				       @ended = "playContinue"
+				       autoplay></audio>
+				<!--歌曲封面-->
+				<div class = "play-bar-image-container" @touchstart = "showPlayPage" @click = "showPlayPage">
+					<img class = "play-bar-image" v-lazy = "coverImgUrl">
+				</div>
+				<!--歌曲名称-->
+				<p class = "play-bar-text" @touchstart = "showPlayPage" @click = "showPlayPage">{{song.name}}</p>
+				<!--歌曲播放暂停-->
+				<img class = "play-bar-button"
+				     :src = "playing?iconPause:iconPlay"
+				     @touchend = "tapButton"
+				     @click = "tapButton">
+			</div>
+		</transition>
 		<!--详细播放器-->
 		<transition name = "play-slide"
 		            @after-enter = "showBlurBg"
@@ -31,23 +48,9 @@
 		<transition name = "play-slide">
 			<playing-list v-if = "$store.state.NotifyService.playingList.show"></playing-list>
 		</transition>
-		<!--迷你播放器-->
-		<transition name = "bar-slide">
-			<div id = "play-bar" v-show = "!playPageShow">
-				<audio id = "music"
-				       :src = "dataUrl"
-				       @timeupdate = "updateTime"
-				       @ended = "playContinue"
-				       autoplay></audio>
-				<div class = "play-bar-image-container" @touchstart = "showPlayPage" @click = "showPlayPage">
-					<img class = "play-bar-image" v-lazy = "coverImgUrl">
-				</div>
-				<p class = "play-bar-text" @touchstart = "showPlayPage" @click = "showPlayPage">{{song.name}}</p>
-				<img class = "play-bar-button"
-				     :src = "playing?iconPause:iconPlay"
-				     @touchend = "tapButton"
-				     @click = "tapButton">
-			</div>
+		
+		<transition :name = "routerViewAnimation">
+			<router-view v-show = "!blurBgShow"></router-view>
 		</transition>
 	</div>
 </template>
@@ -107,12 +110,14 @@
 				iconPlay           : require('./assets/icon-play.png'),
 				iconPause          : require('./assets/icon-pause.png'),
 				playPageShow       : false,
+			    // 界面遮罩层
 				blurBgShow         : false,
 				rankshow           : true,
 				routerViewAnimation: 'page-slide',
 				swiperOption       : {
 					pagination         : '.swiper-pagination',
 					paginationClickable: true,
+				    /*面板分类项目名称*/
 					paginationBulletRender(swiper, index, className) {
 						return `<span class="${className} swiper-pagination-bullet-custom">${TAB_NAME[index]}</span>`
 						// return '<span class="' + className + ' swiper-pagination-bullet-custom' + '">' + (index + 1) + '</span>';
@@ -372,6 +377,7 @@
 		animation-name: imgFadeIn;
 	}
 	
+	/*热门歌单和MV推荐*/
 	.content-warper {
 		margin-top: 60px;
 	}
@@ -385,22 +391,23 @@
 	.swiper-item {
 		height: 100%;
 	}
-	
+	/*面板分类项目名称*/
 	.swiper-pagination-bullet-custom {
 		width: 100% !important;
 		height: 100% !important;
 		margin: 0 !important;
+		border-radius: 0 !important;
+		
+		background: #fff !important;
+		color: #999999;
 		text-align: center;
 		line-height: 50px;
-		color: #999999;
-		border-radius: 0 !important;
-		background: #fff !important;
+		
 		opacity: 1 !important;
 	}
 	
 	.swiper-pagination-bullet-custom.swiper-pagination-bullet-active {
 		color: #000;
-		
 	}
 	
 	.swiper-pagination {

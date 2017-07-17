@@ -1,4 +1,5 @@
 <template>
+	<!--新闻列表-->
 	<router-link :to = "'/news/' + item.id">
 		<div class = "news">
 			<img v-if = "item.images" v-lazy = "imgProxy(item.images[0])">

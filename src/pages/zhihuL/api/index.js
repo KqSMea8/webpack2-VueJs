@@ -3,11 +3,13 @@ var axios = require('axios')
 const API_ROOT = 'http://119.29.68.183:8088/'
 axios.default.withCredentials = true
 
-// export API interface
+// todo-server:导出分门别类的API接口
 export default {
+	// 获取当天新闻
   NewsResource () {
     return axios.get(API_ROOT.concat('news'))
   },
+	
   NewsIdResource (id) {
     return axios.get(API_ROOT.concat('newsById'), {params: {id: id}})
   },

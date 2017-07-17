@@ -5,15 +5,16 @@ import router from './router'
 import store from './store'
 
 import App from './app.vue'
-import './assets/material.font.css'
+/* materialize UI库 */
 import 'materialize-css/dist/js/materialize.min.js'
 import 'materialize-css/dist/css/materialize.min.css'
-
+import './assets/material.font.css'
+// API初始设置
 const jsonBird = 'https://bird.ioliu.cn/v1/?url='
 const zhihu = 'http://news-at.zhihu.com'
-
 Vue.prototype.$url = `${jsonBird}${zhihu}`
 Vue.prototype.$http = axios
+// 图片API代理设置
 Vue.filter('imageUrlPrefix', (value) => {
 	const url = value.substr(7)
 	const prefix = 'https://images.weserv.nl/?url='

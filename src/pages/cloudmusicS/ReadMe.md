@@ -1,40 +1,83 @@
-##ZhiHu-Daily (知乎日报)
-- Source：https://github.com/moonou/zhihu-daily-vue
+##Vue 音乐
+- [Issues]()
+- [Source](https://github.com/Sioxas/vue-music)
+- [Demo]()
+- [Api接口](https://cnodejs.org/api)
+- [Api](https://api.imjad.cn/)
 
-###亮点
-1. WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。https://weui.io/
-2. rxjs http://reactivex.io/rxjs/manual/tutorial.html
-```
-search.vue中的搜索，单曲结果的操作菜单
-```
-3. jsonp的API形式
-4. vue-lazyload vue-awesome-swiper
-5. 歌词安排显示
+####项目简介
+> 
 
-
-
-###需求
-1.
+####需求以及文件结构
+* 
 
 
-###遗憾
+####技术栈
+> vue + vue-router + vuex + vue-resource + vue-lazyload 
+> vue-awesome-swiper
+
+> [rxjs](http://reactivex.io/rxjs/manual/tutorial.html)
+
+> [WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一](https://weui.io/)
+
+####技术亮点
+1. 动态歌词跟滚
+2. 分类型搜索以及搜索历史
+
+
+####Css
 1. 
 
-###文档
-1. 移动端touch事件和click事件的区别
-- 在移动端，手指点击一个元素，会经过：touchstart --> touchmove -> touchend --> click
-- http://blog.csdn.net/lululove19870526/article/details/44345759
-2. vm.$emit( event, […args] )触发当前实例上的事件，附加参数都会传给监听器回调。this.$emit('searchshow')，触发组件参数中注册的事件
-3. v-if-vs-v-show 的区别
+####Js
+1. 
 
+####vue
+1. 	app.vue通过routerViewAnimation变量动态调整路由动画
 ```
-v-if 是“真正的”条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。
-v-if 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。
-相比之下， v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
-一般来说， v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。
-因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件不太可能改变，则使用 v-if 较好。
+<transition :name = "routerViewAnimation">
+	<router-view v-show = "!blurBgShow"></router-view>
+</transition>
 ```
 
 
+####vue-router
+1. 
 
 
+####vuex
+1. vuex结合rxjs/Rx使用示例，全局菜单选项操作
+```
+RankPage.vue 触发 action notifyActionSheet 并传入 options
+{
+menus  : {
+	'title.noop' : this.topListData.songlist[num].data.songorig + '<br/><span style="color:#666;font-size:12px;">' + this.getSingerStr(this.topListData.songlist[num].data.singer) + '</span>',
+	playAsNext   : '下一首播放',
+	addToPlayList: '添加到播放列表'
+},
+handler: {
+	['cancel'](){},
+	['playAsNext'](){
+		that.$store.commit('addToPlayListAsNextPlay', {})
+	},
+	['addToPlayList'](){
+		that.$store.commit('addToPlayList', {})
+	}
+}
+}
+options 内包含菜单的键值对象以及触发菜单项的操作函数
+notifyActionSheet 则注册订阅了菜单项的操作函数
+state.actionSheet.subject.subscribe({
+	next    : (v) => options.handler[v](),
+	complete: () => commit('closeActionSheet')
+})
+当在 ActionSheet.vue 中触发 on-click-menu 时，触发responceFromActionSheet
+传入键，响应菜单操作
+```
+
+
+####Server
+1. 
+
+
+####Issues
+1. 加载热门歌单API错误

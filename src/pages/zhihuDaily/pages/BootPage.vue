@@ -1,19 +1,21 @@
 <template>
 	<div class = "start_image">
 		<transition name = "start-image">
-			<img v-if = "show.bgimg" :src = "proxyserver+startImage.img" :alt = "startImage.text">
+			<!--<img v-if = "show.bgimg" :src = "proxyserver+startImage.img" :alt = "startImage.text">-->
+			<img src = "https://images.weserv.nl/?url=pic3.zhimg.com/v2-5af460972557190bd4306ad66f360d4a.jpg">
 		</transition>
 		<div class = "mask">
 			<transition name = "start-text">
-				<div v-if = "show.text" class = "text">图片来源：{{ startImage.text }}</div>
+				<!--<div v-if = "show.text" class = "text">图片来源：{{ startImage.text }}</div>-->
+				<div class = "text">图片来源</div>
 			</transition>
 		</div>
 		<div class = "content">
 			<transition name = "start-btn">
-				<router-link to = "/home" class = "btn" v-if = "show.enterbtn" tag = "button">查看知乎日报</router-link>
+				<router-link to = "/home" class = "btn" tag = "button">查看知乎日报</router-link>
 			</transition>
 		</div>
-		<div class = "mask" v-if = "show.loading">加载中...</div>
+		<!--<div class = "mask" v-if = "show.loading">加载中...</div>-->
 	</div>
 </template>
 

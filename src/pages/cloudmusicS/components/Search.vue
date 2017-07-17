@@ -18,6 +18,7 @@
 				取消
 			</div>
 		</div>
+		
 		<!--默认不显示搜索历史列表；在没有搜索结果时，才显示搜索历史列表以及热门搜索列表-->
 		<div class = "hotkey" v-if = "searchRes==null&&searchShow">
 			<div class = "search-history">

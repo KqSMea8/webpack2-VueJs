@@ -11,7 +11,7 @@
 			    }">
 					<div class = "title">{{ newsitem.title }}</div>
 					<div class = "image">
-						<img :src = "proxyserver + newsitem.images[0]" alt = "">
+						<img :src = "newsitem.images[0] | imageUrlPrefix" alt = "">
 					</div>
 				</router-link>
 			</li>

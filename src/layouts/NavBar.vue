@@ -90,9 +90,6 @@
 						<li>
 							<a href = "/pages/cloudmusicS/app.html">cloudmusicS</a>
 						</li>
-						<li>
-							<a href = "/pages/cnodeV/app.html">cnodeV</a>
-						</li>
 					</ul>
 				</li>
 				<li class = "dropdown">

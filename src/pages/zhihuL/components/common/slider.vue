@@ -1,4 +1,5 @@
 <template>
+	<!--顶部轮播图-->
 	<div class = "swiper-container">
 		<div class = "swiper-wrapper">
 			<div class = "swiper-slide" v-for = "item in list">

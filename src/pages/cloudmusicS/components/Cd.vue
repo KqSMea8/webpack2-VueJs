@@ -1,8 +1,7 @@
 <template>
 	<div id = "singer">
 		<div class = "singer-photo">
-			<img v-lazy = "imgurl"
-			     alt = "cdlogo">
+			<img v-lazy = "imgurl" alt = "cdlogo">
 		</div>
 		<!--推荐歌单的详情标题-->
 		<div class = "header-bar" :style = "{background:background}" :class = "{dark:isDark}">
@@ -95,8 +94,7 @@
 						addToPlayList: '添加到播放列表'
 					},
 					handler: {
-						['cancel'](){
-						},
+						['cancel'](){},
 						['playAsNext'](){
 							that.$store.commit('addToPlayListAsNextPlay', {
 								id    : that.cd.songlist[that.menuedIndex].id,

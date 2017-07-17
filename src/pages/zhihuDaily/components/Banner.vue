@@ -1,16 +1,17 @@
 <template>
+	<!--左侧轮播-->
 	<div class = "banner_component">
 		<div class = "content">
 			<div v-if = "news[0]">
 				<transition name = "banner">
-					<div class = "panel" v-for = "(story, index) in news[0].top_stories" v-if = "activeindex === index+1">
+					<div v-if = "activeindex === index+1" class = "panel" v-for = "(story, index) in news[0].top_stories" >
 						<router-link :to = "{
 							name: 'content',
 							params: {
 								id: story.id
 							}
 						}">
-							<img :src = "proxyserver + story.image" alt = "">
+							<img :src = "story.image  | imageUrlPrefix" alt = "">
 							<div class = "mask">
 								<div class = "title">{{ story.title }}</div>
 							</div>
@@ -42,6 +43,7 @@
 			if (interv) {
 				clearInterval(interv)
 			}
+			// 异步加载
 			interv = setInterval(() => {
 				// 最新消息
 				if (this.news[0]) {
@@ -57,7 +59,6 @@
 				clearInterval(interv)
 			}
 		},
-		methods : {},
 		computed: {
 			...mapGetters(['news'])
 		}

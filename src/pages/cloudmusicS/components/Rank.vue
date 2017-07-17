@@ -20,9 +20,7 @@
 </template>
 
 <script type = "text/ecmascript-6">
-	import RankPage from './RankPage'
 	export default {
-		components: {RankPage},
 		data () {
 			return {
 				topList: null

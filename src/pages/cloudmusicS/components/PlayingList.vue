@@ -1,19 +1,19 @@
 <template>
 	<div id = "playing-list">
-		<!--改变播放模式-->
-		<div class = "tittle border-1px border-1px-after ">
+		<!--改变播放模式 PLAY_MODE_NAME = ['单曲循环', '顺序播放', '随机播放']-->
+		<div class = "tittle border-1px border-1px-after">
 			<img :src = "buttonImage" :alt = "playModeName" @click = "changePlayMode">
 			<p class = "tittle-text">{{playModeName}} {{playList.length}}首歌曲</p>
 			<p class = "tittle-button" @touchend.prevent = "hidePlayList" @click = "hidePlayList">完成</p>
 		</div>
+		<!--播放列表-->
 		<div class = "m-list">
 			<ul>
 				<li class = "border-1px border-1px-after list-item" v-for = "(item,num) in playList">
 					<div class = "music-info" @click = "play(num)">
 						<p class = "music-name">{{item.name}}</p>
 						<p class = "music-author">-{{item.singer | singer}}</p>
-						<img class = "music-playing" src = "./../assets/icon-playing.svg" alt = "正在播放"
-						     v-show = "index==num">
+						<img v-show = "index==num" class = "music-playing" src = "./../assets/icon-playing.svg" alt = "正在播放" >
 					</div>
 					<div class = "action-button" @touchend.prevent = "showMenu(num)" @click = "showMenu(num)">
 						<img src = "./../assets/icon-...black.png">
@@ -51,8 +51,7 @@
 						delete      : '删除'
 					},
 					handler: {
-						['cancel'](){
-						},
+						['cancel'](){},
 						['delete'](){
 							that.$store.commit('deleteFromPlayList', that.menuedIndex)
 						}

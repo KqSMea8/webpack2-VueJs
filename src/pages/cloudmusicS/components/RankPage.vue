@@ -1,9 +1,6 @@
 <template>
 	<div id = "rankpage">
-		<div class = "singer-photo">
-			<img v-lazy = "imgurl"
-			     alt = "singerphoto">
-		</div>
+		<!--返回以及动态显示标题栏-->
 		<div class = "header-bar" :style = "{background:background}" :class = "{dark:isDark}">
 			<div class = "back-button" @touchend.prevent = "hideSinger" @click = "hideSinger">
 				<div class = "back-icon">
@@ -15,6 +12,11 @@
 				</div>
 			</div>
 		</div>
+		<!--该排行榜背景图片-->
+		<div class = "singer-photo">
+			<img v-lazy = "imgurl" alt = "singerphoto">
+		</div>
+		<!--排行榜标题、播放数量以及播放全部-->
 		<div id = "singer-header" class = "header border-1px border-1px-after" v-if = "topListData!=null">
 			<div class = "header-blank"></div>
 			<div class = "header-warp" :style = "{background:gradientcolor}">
@@ -27,6 +29,7 @@
 				</div>
 			</div>
 		</div>
+		<!--排行榜歌曲列表-->
 		<div class = "list" :style = "{background:color}" v-if = "topListData!=null">
 			<ul>
 				<li class = "border-1px border-1px-after" v-for = "(item,index) in topListData.songlist">
@@ -50,7 +53,6 @@
 </template>
 
 <script type = "text/ecmascript-6">
-	
 	export default {
 		data () {
 			return {
@@ -91,8 +93,7 @@
 						addToPlayList: '添加到播放列表'
 					},
 					handler: {
-						['cancel'](){
-						},
+						['cancel'](){},
 						['playAsNext'](){
 							that.$store.commit('addToPlayListAsNextPlay', {
 								id      : that.topListData.songlist[that.menuedIndex].data.songid,
@@ -246,14 +247,16 @@
 	#rankpage {
 		display: flex;
 		flex-direction: column;
+		position: absolute;
+		top: 0;
+		z-index: 1;
+		
 		width: 100%;
 		max-width: 68vh;
 		min-height: 100%;
 		overflow-x: hidden;
-		position: absolute;
-		top: 0;
+	
 		background: #fff;
-		z-index: 2;
 	}
 	
 	.singer-photo {

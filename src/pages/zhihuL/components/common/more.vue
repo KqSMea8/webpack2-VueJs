@@ -1,4 +1,5 @@
 <template>
+	<!--加载更多-->
 	<div class = "more" :class = "loading ? 'isloading' : ''">
 		<loading :mask = "false" v-if = "loading"></loading>
 		<span class = "more-icon" v-else @click = "addFun">加载更多</span>

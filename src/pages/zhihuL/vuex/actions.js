@@ -16,7 +16,7 @@ export const getNews = ({ commit }) => {
     })
 }
 
-// 主题日报缓存
+// 主题日报
 export const getTopics = ({ commit }) => {
   API.TopicsResource().then(res => {
     if (res.statusText === 'OK') {
@@ -26,7 +26,7 @@ export const getTopics = ({ commit }) => {
   })
 }
 
-// 栏目总览缓存
+// 栏目总览
 export const getSections = ({ commit }) => {
   API.SectionsResource().then(res => {
     if (res.statusText === 'OK') {

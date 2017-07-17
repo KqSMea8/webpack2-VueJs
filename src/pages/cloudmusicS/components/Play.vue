@@ -1,6 +1,6 @@
 <template>
+	<!--详细播放器-->
 	<div id = "play" class = "music-play-page">
-		<!--音乐封面-->
 		<div class = "music-album">
 			<!--隐藏按钮-->
 			<div class = "play-page-hide-btn"
@@ -8,13 +8,14 @@
 			     @click = "hidePlayPage">
 				<img src = "../assets/icon-jiantou.png" alt = "">
 			</div>
+			<!--音乐封面-->
 			<img v-lazy = "coverImgUrl"
 			     @touchstart = "movestart"
 			     @touchend = "moveend">
 		</div>
 		<!--音乐控制-->
 		<div class = "button-group">
-			<!--虚幻音乐封面-->
+			<!--模糊音乐封面-->
 			<img class = "blurbg" :src = "coverImgUrl">
 			<div class = "progress-bar-group">
 				<!--进度条-->

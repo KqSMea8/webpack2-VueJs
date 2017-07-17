@@ -32,23 +32,6 @@
 					</div>
 				</div>
 			</div>
-			
-			<!--<div class="hotlist">-->
-			<!--<div class="list-title">-->
-			<!--<p class="title-text">电台</p>-->
-			<!--</div>-->
-			<!--<div class="list-content">-->
-			<!--<div class="list-item" v-for="item in radioList">-->
-			<!--<div class="list-img">-->
-			<!--<img v-lazy="item.picUrl">-->
-			<!--</div>-->
-			<!--<div class="list-info">-->
-			<!--<p class="list-name">{{item.Ftitle}}</p>-->
-			<!--</div>-->
-			<!--</div>-->
-			<!--</div>-->
-			<!--</div>-->
-			
 			<div class = "mvlist">
 				<div class = "list-title">
 					<p class = "title-text">热门MV</p>

@@ -15,6 +15,11 @@ const errorImg = require('./static/error.jpg')
 const loadingImg = require('./static/loading.gif')
 
 Vue.use(VueRouter)
+Vue.use(VueLazyLoad, {
+	error: `${errorImg}`,
+	loading:  `${loadingImg}`,
+	attempt: 1
+})
 
 const router = new VueRouter({
 	routes: Router.routes
@@ -26,12 +31,6 @@ router.beforeEach((to, from, next) => {
 
 sync(store, router)
 
-Vue.use(VueLazyLoad, {
-	error: `${errorImg}`,
-	loading:  `${loadingImg}`,
-	attempt: 1
-})
-
 /* eslint-disable no-new */
 new Vue({
 	el: '#app',
@@ -39,4 +38,3 @@ new Vue({
 	store,
 	...App
 })
-

@@ -22,17 +22,19 @@
 <style lang = "scss" rel = "stylesheet/scss">
 	.agree {
 		.up {
-			display: block;
 			position: relative;
-			height: 45px;
-			line-height: 24px;
+			display: block;
+			
 			width: 38px;
+			height: 45px;
 			border-radius: 3px;
 			border: 0;
-			cursor: pointer;
+			
 			background: #eff6fa;
 			color: #698ebf;
 			font-size: 1.2rem;
+			line-height: 24px;
+			cursor: pointer;
 			text-align: center;
 			&:hover {
 				background: #698ebf;

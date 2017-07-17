@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<!--轮播图-->
 		<mt-swipe :auto = "5000">
 			<mt-swipe-item>
 				<img src = "../assets/banner1.jpg">
@@ -14,7 +15,7 @@
 				<img src = "../assets/banner4.jpg">
 			</mt-swipe-item>
 		</mt-swipe>
-		
+		<!--歌曲列表-->
 		<div>
 			<mt-cell v-for = "(item,index) in songList" :title = "item.title" @click.native = "playAudio(index)" :key = "index">
 				<img src = "../assets/images/download_icon.png" width = "20" height = "20">
@@ -52,7 +53,7 @@
 					/*for (let [index, elem] of this.songList.entries()) {
 						console.log(index, elem);
 					}*/
-				}, 500);
+				}, 2000);
 			},
 			playAudio(index){
 				var hash = this.songList[index].hash;

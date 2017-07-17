@@ -10,6 +10,7 @@
 </template>
 
 <script type = "text/ecmascript-6">
+	// todo-vue: imgProxy 被外部引入到 methods 的示例
 	import { imgProxy } from '../../common/js/utils'
 	export default {
 		props  : {
@@ -31,11 +32,14 @@
 		position: absolute;
 		top: 80px;
 		right: 0;
+		
+		padding: 2px;
+		z-index: 1001;
+		
 		background: #fff;
 		color: #aaa;;
-		z-index: 1001;
 		font-size: 1.6rem;
-		padding: 2px;
+
 		ul {
 			margin: 0;
 			padding: 0;

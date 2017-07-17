@@ -1,10 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+// 首页
 import latest from '../components/latest'
-import hot from '../components/hot'
+// 主题日报
 import subject from '../components/subject'
-import story from '../components/story'
+// 我的收藏
 import favorites from '../components/favorites'
+// 热门文章
+import hot from '../components/hot'
+// 首页
+import story from '../components/story'
 
 Vue.use(Router)
 const routes = [

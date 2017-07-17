@@ -1,4 +1,4 @@
-const host = '//apiproxy.moonou.me/?target=http://news-at.zhihu.com'
+const host = 'https://bird.ioliu.cn/v1/?url=http://news-at.zhihu.com'
 const apiUrl = host + '/api'
 const apiVersion = 4
 const proxy = require('./proxy.json')
@@ -24,7 +24,7 @@ function addPrestr (data, prestr) {
 		} else {
 			// console.log(data[key], prestr)
 			if (key === 'startImage') {
-				data[key] = '//apiproxy.moonou.me/?target=http://news-at.zhihu.com/api/7' + data[key]
+				data[key] = apiUrl + '/7' + data[key]
 			} else {
 				data[key] = prestr + data[key]
 			}
@@ -42,6 +42,7 @@ function deepCopy (target, source) {
 		}
 	}
 }
+// 导出数据接口
 export const getApi = () => {
 	let _config = {}
 	deepCopy(_config, config)
@@ -51,4 +52,6 @@ export const getApi = () => {
 	// proxyEnable ? addPrestr(_config, proxy.host) : ''
 	return _config
 }
+// 导出代理接口
 export const proxyserver = proxy.host
+

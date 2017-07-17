@@ -1,12 +1,13 @@
 <template>
 	<div class = "navbar">
 		<div class = "navbar-fixed">
+			<!--purple lighten-2 是materialize.css中的样式-->
 			<nav class = "nav purple lighten-2">
 				<div class = "nav-wrapper">
 					<router-link to = '/' class = "left brand-logo">
 						<img class = "app-logo" :src = "logo" alt = "知乎日报" title = "首页">
 					</router-link>
-					<!-- route-name -->
+					<!-- 根据路由显示标题 -->
 					<span class = "brand-logo center app-route-name" v-if = "this.$route.name === 'favorites'"> 共计: {{ this.$store.getters.getFavoritesStoryNum }} </span>
 					<span class = "brand-logo center app-route-name" v-else-if = "this.$route.name === 'hot'"> 热门文章 </span>
 					<span class = "brand-logo center app-route-name" v-else> {{ this.$route.params.id | routeName }} </span>
@@ -22,7 +23,7 @@
 						</li>
 					</ul>
 					<ul id = "subjects" class = "dropdown-content">
-						<li class = "waves-effect waves-light" v-for = "subject of subjects">
+						<li class = "waves-effect waves-light" v-for = "subject in subjects">
 							<router-link class = "app-route-link" :title = "subject.description"
 							             :to = "{name: 'subject', params: {id: subject.id}}">{{subject.name}}
 							</router-link>
@@ -37,7 +38,7 @@
 							<router-link class = "app-route-link" to = "/hot">热门文章</router-link>
 						</li>
 					</ul>
-					
+				
 				</div>
 			</nav>
 		</div>
@@ -58,6 +59,7 @@
 			}
 		},
 		methods: {
+		    // 主题日报列表查看
 			getSubjects(){
 				this.$http(`${this.$url}/api/4/themes`).then(res => {
 					res.data.others.map(subject => {

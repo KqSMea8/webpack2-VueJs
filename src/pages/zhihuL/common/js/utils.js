@@ -2,7 +2,7 @@
 export const imgProxy = (imgUrl) => {
   return imgUrl && imgUrl.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
 }
-
+// 返回顶部
 export const goTop = (btnId) => {
   let btn = document.getElementById(btnId)
   let d = document.documentElement
@@ -26,7 +26,7 @@ export const goTop = (btnId) => {
   }
 }
 
-// str 日期 idx 天数
+// 返回str日期的前几天，具体为idx指定的天数，形式为20170612
 export const prevDate = (str, idx) => {
   let reg = /^\d*$/
   if (str.length !== 8 || !reg.test(str)) {

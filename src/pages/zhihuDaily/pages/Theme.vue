@@ -2,7 +2,7 @@
 	<div class = "theme_container">
 		<div v-if = "themesContent&&loading" class = "panel">
 			<div class = "left">
-				<img :src = "proxyserver + themesContent.background" alt = "">
+				<img :src = "themesContent.background | imageUrlPrefix" alt = "">
 				<div class = "mask">
 					<div class = "title">
 						<h1>{{ themesContent.name }}</h1>
@@ -24,7 +24,7 @@
 									<div class = "title">{{ story.title }}</div>
 								</div>
 								<div class = "image">
-									<img :src = "proxyserver + story.images[0]" alt = "">
+									<img :src = "story.images[0] | imageUrlPrefix" alt = "">
 								</div>
 							</div>
 							<div class = "item_title" v-else>
@@ -79,14 +79,16 @@
 <style lang = "scss" scoped>
 	.theme_container {
 		display: flex;
-		display: flex;
+		align-items: center;
+		
 		position: absolute;
 		top: 0;
 		left: 0;
+		
 		width: 100%;
 		height: 100%;
 		justify-content: center;
-		align-items: center;
+
 		> .panel {
 			max-width: 1024px;
 			width: 85%;

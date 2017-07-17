@@ -1,7 +1,7 @@
 <template>
 	<div class = "loading">
-		<div class = "loading-start"></div>
 		<div class = "floating" v-if = "mask"></div>
+		<div class = "loading-start"></div>
 	</div>
 </template>
 
@@ -18,17 +18,19 @@
 
 <style lang = "scss" rel = "stylesheet/scss">
 	.loading-start {
-		margin: 20px auto;
+		
 		position: relative;
 		box-sizing: border-box;
-		height: 30px;
+		
 		width: 30px;
+		height: 30px;
+		margin: 20px auto;
 		border: 2px solid #008BED;
 		border-right-color: transparent;
 		border-radius: 50%;
+		
 		animation: rotate-forever 1s infinite linear;
 	}
-	
 	@keyframes rotate-forever {
 		0% {
 			transform: rotate(0deg)

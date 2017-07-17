@@ -1,12 +1,13 @@
 <template>
+	<!--新闻内容-->
 	<div class = "newscontent">
 		<div class = "post">
 			<img class = "postimage" :src = "imgProxy(post.image)">
 			<div v-html = "imgProxy(post.body)"></div>
 			<div class = "comments" v-show = "showComments && post.body">
 				<div class = "comment" v-for = "item in comments">
-					<div class="avatar">
-						<img  v-lazy = "imgProxy(item.avatar)">
+					<div class = "avatar">
+						<img v-lazy = "imgProxy(item.avatar)">
 					</div>
 					<div class = "content">
 						<span class = "author">{{ item.author }}</span>
@@ -17,6 +18,7 @@
 			</div>
 		</div>
 		<span class = "imgFrom">图片库: {{ post.image_source }}</span>
+		<!--点赞功能-->
 		<badge class = "left" v-if = "post.body" :popularity = "post.popularity"></badge>
 	</div>
 </template>
@@ -34,6 +36,19 @@
 				shortComments: [],
 				showComments : false
 			}
+		},
+		// todo-vueRouter:路由切换钩子函数示例
+		// 注意在路由导航阶段无法调用vue实例的this对象，要使用vm对象
+		beforeRouteEnter (to, from, next) {
+			next((vm) => {
+				vm.$emit('loadingStart')
+				let id = vm.$route.params.id
+				if (!vm.post.body) {
+					vm.getPost(id)
+				}
+				vm.getComment()
+				vm.$emit('loadingDone')
+			})
 		},
 		computed  : {
 			...mapGetters(['posts']),
@@ -73,17 +88,6 @@
 					})
 				}
 			}
-		},
-		beforeRouteEnter (to, from, next) {
-			next((vm) => {
-				vm.$emit('loadingStart')
-				let id = vm.$route.params.id
-				if (!vm.post.body) {
-					vm.getPost(id)
-				}
-				vm.getComment()
-				vm.$emit('loadingDone')
-			})
 		}
 	}
 </script>
@@ -106,7 +110,7 @@
 					width: 68px;
 					height: 68px;
 					margin: 0 35px;
-					img{
+					img {
 						width: 68px;
 						height: 68px;
 						border-radius: 100%;
@@ -126,17 +130,19 @@
 			}
 		}
 	}
-		.imgFrom {
-			position: absolute;
-			top: 680px;
-			right: 40px;
-			color: rgba(255, 255, 255, .6);
-		}
-		.left {
-			position: fixed;
-			left: 50%;
-			top: 20%;
-			margin-left: -360px;
-		}
+	
+	.imgFrom {
+		position: absolute;
+		top: 680px;
+		right: 40px;
+		color: rgba(255, 255, 255, .6);
+	}
+	
+	.left {
+		position: fixed;
+		left: 50%;
+		top: 20%;
+		margin-left: -360px;
+	}
 
 </style>

@@ -14,7 +14,7 @@
 							<div class = "description">{{theme.description}}</div>
 						</div>
 						<div class = "image">
-							<img :src = "proxyserver+theme.thumbnail" alt = "">
+							<img :src = "theme.thumbnail | imageUrlPrefix" alt = "">
 						</div>
 					</div>
 				</router-link>
@@ -49,8 +49,8 @@
 	.themes {
 		.theme_item {
 			display: flex;
-			border-bottom: solid 1px #ddd;
 			padding: 5px 0 0 0;
+			border-bottom: solid 1px #ddd;
 			transition: all .3s ease;
 			&:hover {
 				background-color: #f5f5f5;

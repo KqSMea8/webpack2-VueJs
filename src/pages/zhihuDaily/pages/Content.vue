@@ -11,8 +11,8 @@
 				</div>
 			</div>
 			<div class = "backpanel">
-				<img :src = "proxyserver + data.image" v-if = "data.image" alt = "">
-				<img :src = "proxyserver + data.images[0]" v-if = "data.images" alt = "">
+				<img :src = "data.image | imageUrlPrefix" v-if = "data.image" alt = "">
+				<img :src = "data.images[0] | imageUrlPrefix" v-if = "data.images" alt = "">
 				<div class = "imagecopy">背景图来源：{{ data.image_source }}</div>
 			</div>
 			<div class = "page" @scroll = "scroll($event)">
@@ -42,34 +42,10 @@
 				headop     : 0
 			}
 		},
-		created () {
-			/*if (this.$route.params.id) {
-				this.newsid = this.$route.params.id
-			}
-			// 消息内容获取与离线下载
-			fetch(`${getApi().news.content}/${this.newsid}`).then((data) => {
-				return data.json()
-			}).then((data) => {
-				// type : 新闻的类型
-				// 某个主题日报的站外文章推送至知乎日报首页。此时返回的 JSON 数据缺少 body，image-source，image，js 属性。
-				// 多出 theme_name，editor_name，theme_id 三个属性。
-				// type 由 0 变为 1。
-				if (data.type === 1) {
-					this.$router.push({
-						name  : 'theme',
-						params: {
-							id: data.theme.id
-						}
-					})
-				} else {
-					data.body = this.fixImageUrl(data.body)
-					this.data = data
-				}
-			})*/
-		},
+		created () {},
 		methods: {
 			fixImageUrl (data) {
-				return data.replace(/src="http/g, `src="${proxyserver}http`)
+				return data.replace(/src="http:\/\//g, `src="https://images.weserv.nl/?url=`)
 			},
 			scroll (e) {
 				var top = e.target.scrollTop
@@ -115,7 +91,9 @@
 			// 导航离开该组件的对应路由时调用
 			// 可以访问组件实例 `this`
 			this.data = undefined
-			next(this.$router.go(-1))
+		    console.log(`离开路由时:`, this.$router)
+					// next(this.$router.go(-1))
+			next(this.$router.back())
 		}
 	}
 </script>
@@ -198,11 +176,13 @@
 			}
 			.content {
 				width: 60%;
-				background-color: #fff;
 				margin: 400px auto 50px auto;
-				box-shadow: 4px 4px 10px -1px #ddd;
-				border-radius: 4px;
+		
 				border: solid 1px #eee;
+				border-radius: 4px;
+				background-color: #fff;
+				
+				box-shadow: 4px 4px 10px -1px #ddd;
 				.title {
 					box-sizing: border-box;
 					padding: 20px 10px;
@@ -227,9 +207,9 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
+		display: flex;
 		justify-content: center;
 		align-items: center;
-		display: flex;
 		z-index: 4;
 		> .panel {
 			padding: 10px 30px;

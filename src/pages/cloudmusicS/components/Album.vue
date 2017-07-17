@@ -1,6 +1,6 @@
 <template>
 	<div class = "album">
-		<!--搜索结果进入的专辑详情-->
+		<!--专辑详情-->
 		<div class = "header play-list-page-header">
 			<div class = "back-button" @touchend.prevent = "hideAlbum" @click = "hideAlbum">
 				<div class = "back-icon">

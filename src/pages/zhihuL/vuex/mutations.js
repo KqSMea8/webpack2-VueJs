@@ -4,7 +4,7 @@ export const ADD_NEWS = (state, news) => {
     return b.date - a.date
   })
 }
-
+// todo-vuex：高效率更新news数据
 export const UPDATE_NEWS = (state, news) => {
   let find = false
 	// forEach遍历数组，从localStorage取得值或者空数组
@@ -60,7 +60,7 @@ export const ADD_TOPICPOSTS = (state, posts) => {
 export const ADD_SECTIONLIST = (state, section) => {
   state.sectionList = section
 }
-
+// 往news内添加更多内容时，index++
 export const ADD_INDEX = (state) => {
   state.index++
 }

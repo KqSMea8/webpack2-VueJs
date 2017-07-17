@@ -1,9 +1,11 @@
 <template>
 	<div class = "home">
 		<div class = "container">
+			<!--左侧轮播-->
 			<div class = "banner">
 				<banner></banner>
 			</div>
+			<!--右侧标签页-->
 			<div class = "list">
 				<div class = "artcles">
 					<div class = "header">
@@ -24,9 +26,10 @@
 </template>
 
 <script>
+	import Banner from '../components/Banner'
 	import NewsList from '../components/NewsList'
 	import ThemeList from '../components/ThemeList'
-	import Banner from '../components/Banner'
+
 	require('particles.js')
 	import json from '../static/dot'
 	export default {

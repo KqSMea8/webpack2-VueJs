@@ -1,5 +1,6 @@
 import NProgress from 'nprogress'
 
+/* todo-vueRouter:异步加载组件以及进度条范例 */
 const BootPage = r => {
   NProgress.start()
   require.ensure([], () => {
@@ -30,14 +31,14 @@ const Content = r => {
 }
 
 export default [
+	{
+		path: '/',
+		component: BootPage
+	},
   {
     path: '/home',
     component: Home,
     name: 'home'
-  },
-  {
-    path: '/',
-    component: BootPage
   },
   {
     path: '/theme/:id',
