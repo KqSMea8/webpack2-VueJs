@@ -1,6 +1,6 @@
 <template>
 	<div id = "carousel-example-generic" class = "carousel slide" data-ride = "carousel">
-		<!-- Indicators -->
+		<!-- 圆形Indicators -->
 		<ol class = "carousel-indicators">
 			<li v-for = "(i, index) in list" :class = "{ active: i.classObj.active }" @click = "to(i)"></li>
 		</ol>
@@ -10,7 +10,7 @@
 			<slot></slot>
 		</div>
 		
-		<!-- Controls -->
+		<!-- 边缘遮罩前后控制器Controls -->
 		<a class = "left carousel-control" @click = "prev()" role = "button" data-slide = "prev">
 			<span class = "glyphicon glyphicon-chevron-left"></span>
 			<span class = "sr-only">Previous</span>

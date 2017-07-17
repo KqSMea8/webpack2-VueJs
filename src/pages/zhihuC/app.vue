@@ -13,10 +13,7 @@
 				</a>
 			</nav>
 		</header>
-		<transition
-			name="slide"
-			:enter-active-class="enterActiveClass"
-		>
+		<transition name="slide" :enter-active-class="enterActiveClass">
 			<keep-alive>
 				<router-view class="view"></router-view>
 			</keep-alive>
@@ -32,12 +29,15 @@
 			}
 		},
 		watch: {
+			// todo-vue：路由转场动画功能示例
 			'$route' (to, from) {
 				const toDepth = to.path.split('/').length
 				const fromDepth = from.path.split('/').length
 				if (toDepth > fromDepth) {
+					// 后退时
 					this.enterActiveClass = 'animated fadeInRight'
 				} else {
+					// 前进时
 					this.enterActiveClass = 'animated fadeInLeft'
 				}
 			}

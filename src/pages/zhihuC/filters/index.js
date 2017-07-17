@@ -1,3 +1,4 @@
+// todo-vue:filters-返回年月日星期形式
 export function date (val) {
   if (!val) {
     return ''

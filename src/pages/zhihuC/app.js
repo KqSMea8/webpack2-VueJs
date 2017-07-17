@@ -24,3 +24,5 @@ new Vue({
 	store,
 	...App // Object spread copying everything from App.vue
 })
+
+router.push('/')
