@@ -1,6 +1,7 @@
 <template>
 	<transition name="homeTransition">
 		<div>
+			<!--响应式导航栏-->
 			<!-- ===the navigation bar fixed in the top, when the page rolling after to 400px=== -->
 			<div :class="ZhihuHeadFixClass">
 				<ZhihuHeadFix></ZhihuHeadFix>
@@ -22,11 +23,11 @@
 				<button v-show="!DONE_LOADING_ONE && !DONE_LOADING_TWO" @click="LoadMoreNews()" class="load-more-button pl2 pr2 pt1 pb1 mb2 mt1">更多</button>
 				<!-- ===the loading when news list loading=== -->
 				<LoadingOne v-show="DONE_LOADING_ONE"></LoadingOne>
-				<!-- ===back to top button=== -->
-				<button @click="backToTop" v-show="BackToTopIsShow" class="back-to-top p1">
-					<img src="../static/top.png" alt="" style="width: 1rem; background-color: white;">
-				</button>
 			</div>
+			<!-- ===back to top button=== -->
+			<button @click="backToTop" v-show="BackToTopIsShow" class="back-to-top p1">
+				<img src="../static/top.png" alt="" style="width: 1rem; background-color: white;">
+			</button>
 		</div>
 	</transition>
 </template>

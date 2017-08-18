@@ -1,7 +1,5 @@
 <template>
-    <div class="theme-link m1 pt1 pb1 pl1 rounded h5">
-       {{title}}
-    </div>
+    <div class="theme-link m1 pt1 pb1 pl1 rounded h5">	{{ title }}</div>
 </template>
 
 <script>
