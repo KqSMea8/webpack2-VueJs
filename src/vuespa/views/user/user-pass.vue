@@ -18,7 +18,9 @@
 		//声明接收利用从父组件user-login中获得的参数plahol
 		props : [ "plahol" ],
 		data  : function() {
-			return { passwrd : '' };
+			return {
+				passwrd : ''
+			};
 		},
 		methods:{
 			passchg(){

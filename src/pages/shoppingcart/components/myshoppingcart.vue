@@ -3,7 +3,7 @@
 */
 
 <template>
-	<div id = "myshoppingcart">
+	<div>
 		<h4>商品列表</h4>
 		<productList></productList>
 		<hr>

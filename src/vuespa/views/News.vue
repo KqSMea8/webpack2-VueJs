@@ -7,6 +7,7 @@
 		<div class = "news">
 			<div class = "news-hader" v-for = "news in this.$store.getters.getNews">
 				<h2>
+					<!--todo-vuerouter：此处php的url地址读取错误-->
 					<router-link :to = "{name:'NewsDetail',params:{newsid:news.newsid}}">{{news.title}} </router-link>
 					<small>{{news.pubtime}}</small>
 				</h2>
