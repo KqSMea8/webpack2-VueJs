@@ -9,6 +9,7 @@ import Archives from '../views/archives.vue'
 import Categories from '../views/categories.vue'
 import Tags from '../views/tags.vue'
 import Page from '../views/page.vue'
+
 const routes = [
 	{path: '/', component: Home, name: 'home'},
 	{path: '/page/:page', component: Home, name: 'homePage'},

@@ -24,7 +24,7 @@
 					:disabled = "disablednextClk()"
 				>{{ nextStr }}
 				</button>
-				<span>{{ page }} / {{ total }}</span>
+						<span>{{ page }} / {{ total }}</span>
 			</div>
 		</div>
 	</div>
