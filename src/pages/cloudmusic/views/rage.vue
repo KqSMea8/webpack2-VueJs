@@ -119,6 +119,7 @@
 </script>
 
 <style lang = "less" scoped>
+
 	.img-response {
 		max-width: 100%;
 		height: auto;
@@ -218,6 +219,7 @@
 		background: url('../../../static/cloudmusic/banner-item-load.png') no-repeat;
 		background-size: cover;
 	}
+
 	/*初始加载时的加载提示*/
 	.loading {
 		position: absolute;
@@ -233,6 +235,7 @@
 		-webkit-animation: rotating 5s linear infinite;
 		animation: rotating 5s linear infinite;
 	}
+
 	/*正在加载中*/
 	.loading-txt {
 		position: absolute;

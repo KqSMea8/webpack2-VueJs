@@ -38,7 +38,6 @@
 		z-index: 10;
 		
 		width: 100%;
-		padding: 20px 0;
 		
 		background: #3e3e3e;
 		text-align: center;

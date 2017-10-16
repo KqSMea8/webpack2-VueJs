@@ -34,6 +34,7 @@
 		<!--播放列表-->
 		<BottomSheet ref = "bottomSheet"></BottomSheet>
 	</div>
+	
 </template>
 <script>
   import { mapMutations, mapGetters } from 'vuex'
@@ -175,7 +176,7 @@
 		float: left;
 		padding-left: 0.2rem;
 		padding-top: 0.3rem;
-		background: ur('../../static/player-bar.png') no-repeat;
+		background: url('../../../static/cloudmusic/player-bar.png') no-repeat;
 		background-size: cover;
 	}
 	

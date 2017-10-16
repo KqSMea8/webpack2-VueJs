@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 	<header>
 		<div class="bg"></div>
 		<nav class="header-bg">

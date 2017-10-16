@@ -71,10 +71,6 @@
 						<li>
 							<a href = "/pages/blogE/app.html">blogE 前后端分离</a>
 						</li>
-						<li>
-							<a href = "/pages/blogmy/app.html">自定义</a>
-						</li>
-						
 					</ul>
 				</li>
 				<li class = "dropdown">

@@ -39,5 +39,6 @@
 
 
 ####Issues
-1. 前后端分离，需要涉及到webpack->config->index:proxyTable
+1. 前后端分离，需要涉及到webpack->config->index:proxyTable，并没有解决
+
 

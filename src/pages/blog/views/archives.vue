@@ -117,7 +117,7 @@
 
 <style lang = "postcss">
 	
-	@import "../css/nav.css";
+	@import "../css/nav.scss";
 	
 	.archives {
 		& h2 {

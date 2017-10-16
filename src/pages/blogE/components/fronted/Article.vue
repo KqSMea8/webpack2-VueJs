@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <article v-loading="loading2"  element-loading-text="加载中" class="article_wrap article">
     <header>
         <div class="home_title">{{oneArticle.title}}</div>

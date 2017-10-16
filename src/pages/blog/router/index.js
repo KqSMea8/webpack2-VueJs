@@ -51,6 +51,7 @@ const scrollBehavior = (to, from, savedPosition) => {
 	}
 }
 Vue.use(VueRouter)
+
 export default new VueRouter({
 	mode: 'history',
 	scrollBehavior,

@@ -3,11 +3,13 @@
     <div class="app">
         <!--左侧播放器-->
         <Player class="c-player"></Player>
+	    
         <div class="container">
             <Panel class="c-panel"></Panel>
             <!--右侧歌单、评论区-->
             <router-view class="router-view"></router-view>
         </div>
+	    
         <!--登录弹窗-->
 	    <Login class="c-popup"></Login>
         <!--tips弹窗-->
