@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27f112a7-7eff-475a-87e9-5e7eddde3df5" name="Default" comment="MPA+WEBPACK2+VUE2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Readme.md" />
+    <list default="true" id="27f112a7-7eff-475a-87e9-5e7eddde3df5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,8 +23,8 @@
       <file leaf-file-name="Readme.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+            <state relative-caret-position="192">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -592,7 +591,7 @@
       <workItem from="1506508793826" duration="1909000" />
       <workItem from="1506603788987" duration="1730000" />
       <workItem from="1506693310110" duration="2436000" />
-      <workItem from="1508165292390" duration="2590000" />
+      <workItem from="1508165292390" duration="2631000" />
     </task>
     <task id="LOCAL-00001" summary="MPA+WEBPACK2+VUE2">
       <created>1496327526043</created>
@@ -867,11 +866,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508165389058</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="MPA+WEBPACK2+VUE2">
+      <created>1508167888387</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1508167888387</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1104718000" />
+    <option name="totallyTimeSpent" value="1104759000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1374,8 +1380,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        <state relative-caret-position="192">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
