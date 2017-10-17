@@ -1,9 +1,9 @@
 node_modules/
 dist/
-/npm.log
-/desktop.ini
+npm.log
+desktop.ini
 .happypack/
-/.UglifyJsCache/
-/.idea/**/*
-/newVuePage/
-/development/
+.UglifyJsCache/
+.idea/**/*
+.idea/workspace.xml
+development/
