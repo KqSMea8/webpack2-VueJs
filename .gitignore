@@ -8,3 +8,9 @@ test/unit/coverage
 test/e2e/reports
 selenium-debug.log
 .happypack/
+.idea/workspace.xml
+.idea/**/*
+npm.log
+desktop.ini
+.UglifyJsCache/
+development/
