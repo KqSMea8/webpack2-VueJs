@@ -5,5 +5,4 @@ desktop.ini
 .happypack/
 .UglifyJsCache/
 .idea/**/*
-.idea/workspace.xml
 development/

@@ -43,6 +43,7 @@
 <script>
   import TodoList from './TodoList.vue'
   import { mapGetters, mapMutations, mapActions } from 'vuex'
+  
   const types = {
     '全部' : todos => todos,
     '未完成': todos => todos.filter(todo => !todo.done),

@@ -14,7 +14,6 @@
 <script>
   import age  from "./About-myage.vue";
   import name  from "./About-myname.vue";
-  
   export default{
     data() {
       return {

@@ -21,7 +21,7 @@
     "dlld": "cross-env NODE_ENV=development webpack --config webpack/webpack.dll.config.js --progress"
   },
   "keywords": [],
-  "author": "",
+  "author": "linchuqiang",
   "license": "ISC",
   "dependencies": {
     "animate.css": "^3.5.2",

@@ -64,8 +64,11 @@ var match = glob.sync(path.resolve(process.cwd(), 'src/pages/**/*/app.ejs'))
 // match:  [ 'E:/wamp64/www/VueJs_Demo_Github/src/pages/data/app.ejs' ]
 // console.log('match: ', match)
 var chunks = []
+//指定前半个路径
+const entryPath = 'C:/My/webpack2-VueJs/src/'
+
 match.forEach(path => {
-  var chunk = path.split('E:/wamp64/www/VueJs_Demo_Github/src/')[1].split('/app.ejs')[0]
+  var chunk = path.split(entryPath)[1].split('/app.ejs')[0]
   chunks.push(chunk)
 })
 // console.log('chunks: ', chunks)

@@ -7,6 +7,7 @@ import Vuex from 'vuex'
 import getters from './getters'
 import mutations from './mutations'
 import actions from './actions'
+
 // 导入Store插件
 import plugins from './plugins'
 
@@ -14,6 +15,7 @@ import plugins from './plugins'
 import UserModule from './modules/UserModules'
 import NewsModules from './modules/NewsModules'
 import TodoList from './modules/TodoList'
+import MyToDos from './modules/MyToDos'
 
 Vue.use(Vuex)
 
@@ -24,7 +26,8 @@ export default new Vuex.Store({
   modules: {
     users: UserModule,
     news: NewsModules,
-    todolist: TodoList
+    todolist: TodoList,
+    todos: MyToDos
   },
   plugins
 })

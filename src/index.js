@@ -1,6 +1,3 @@
-/**
- * Created by Administrator on 2017/4/18.
- */
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
@@ -20,6 +17,8 @@ import NavBar from './layouts/NavBar.vue'
 // bootstrap v3.3.7
 require('bootstrap')
 require('@/vuespa/css/index.css')
+require('./static/scss/common.scss')
+
 
 function determineDate () {
   require.ensure([], function (require) {
